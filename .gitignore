@@ -1,0 +1,7 @@
+/cmake-build-debug-visual-studio
+/cmake-build-release-visual-studio
+/.idea
+/.vscode
+vcpkg_install.bat
+help-command-file.txt
+/vcpkg_installed

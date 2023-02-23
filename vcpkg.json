@@ -1,0 +1,11 @@
+{
+    "name": "cqhttp-websocket-client",
+    "version": "1.0.0",
+    "dependencies": [
+        {
+            "name": "drogon",
+            "version>=": "1.8.2"
+        }
+    ],
+    "builtin-baseline":"a325228200d7f229f3337e612e0077f2a5307090"
+}
