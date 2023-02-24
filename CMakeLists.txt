@@ -20,3 +20,7 @@ include(CPack)
 
 find_package(Drogon CONFIG REQUIRED)
 target_link_libraries(cq-websocket-server PRIVATE Drogon::Drogon)
+
+# this is heuristically generated, and may not be correct
+find_package(protobuf CONFIG REQUIRED)
+target_link_libraries(cq-websocket-server PRIVATE protobuf::libprotoc protobuf::libprotobuf protobuf::libprotobuf-lite)
