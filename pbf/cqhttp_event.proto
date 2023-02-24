@@ -1,0 +1,212 @@
+syntax = "proto3";
+package cqhttp;
+import "cqhttp_base.proto";
+
+message PrivateMessageEvent {
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE message_type = 4;
+    CQHTTP_TYPE sub_type = 5;
+    int32 message_id = 6;
+    int64 user_id = 7;
+    string message = 8;
+    string raw_message = 9;
+    int32 font = 10;
+    Sender sender = 11;
+    int32 temp_source = 12;
+}
+
+message GroupMessageEvent {
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE message_type = 4;
+    CQHTTP_TYPE sub_type = 5;
+    int32 message_id = 6;
+    int64 user_id = 7;
+    string message = 8;
+    string raw_message = 9;
+    int32 font = 10;
+    Sender sender = 11;
+    int64 group_id = 12;
+    Anonymous anonymous = 13;
+}
+
+message FriendRecallEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    int64 user_id = 5;
+    int64 message_id = 6;
+}
+
+message GroupRecallEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    int64 group_id = 5;
+    int64 user_id = 6;
+    int64 operator_id = 7;
+    int64 message_id = 8;
+}
+
+message GroupIncreaseEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    string sub_type = 5;
+    int64 group_id = 6;
+    int64 operator_id = 7;
+    int64 user_id = 8;
+}
+
+message GroupDecreaseEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    string sub_type = 5;
+    int64 group_id = 6;
+    int64 operator_id = 7;
+    int64 user_id = 8;
+}
+
+message GroupAdminChangeEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    string sub_type = 5;
+    int64 group_id = 6;
+    int64 user_id = 7;
+}
+
+
+message GroupFileUploadEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    int64 group_id = 5;
+    int64 user_id = 6;
+    GroupFile file = 7;
+}
+
+message GroupBanEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    string sub_type = 5;
+    int64 group_id = 6;
+    int64 operator_id = 7;
+    int64 user_id = 8;
+    int64 duration = 9;
+}
+
+message FriednAddEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    int64 user_id = 5;
+}
+
+message NotifyEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    CQHTTP_TYPE sub_type = 5;
+    int64 sender_id = 6;
+    int64 user_id = 7;
+    int64 target_id = 8;
+    int64 group_id = 9;
+    string honor_type = 10;
+    string title = 11;
+}
+
+message GroupCardChangedEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    int64 group_id = 5;
+    int64 user_id = 6;
+    string card_new = 7;
+    string card_old = 8;
+}
+
+
+message ReceviedOfflineFileEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    int64 user_id = 5;
+    OfflineFile file = 6;
+}
+
+message ClientChangedEvent{
+    CQHTTP_TYPE post_type = 1; 
+    CQHTTP_TYPE notice_type = 2;
+    Device client = 3;
+    bool online = 4;
+}
+
+message EssenceMsgChangedEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE notice_type = 4;
+    string sub_type = 5;
+    int64 group_id = 6;
+    int64 sender_id = 7;
+    int64 operator_id = 8;
+    int32 message_id = 9;
+}
+
+message FriendAddRequestEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE request_type = 4;
+    int64 user_id = 5;
+    string comment = 6;
+    string flag = 7;
+}
+
+message GroupAddRequestEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE request_type = 4;
+    string sub_type =5;
+    int64 group_id = 6;
+    int64 user_id = 7;
+    string comment = 8;
+    string flag = 9;
+}
+
+message MetaEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE meta_event_type = 4;
+    Status status = 5;
+    int64 interval = 6;
+}
+
+message LifecycleEvent{
+    int64 time = 1;
+    int64 self_id = 2;
+    CQHTTP_TYPE post_type = 3;
+    CQHTTP_TYPE meta_event_type = 4;
+    Status status = 5;
+    int64 interval = 6;
+    CQHTTP_TYPE sub_type = 7;
+}

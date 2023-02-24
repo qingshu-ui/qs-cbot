@@ -285,8 +285,15 @@ std::shared_ptr<GroupListInfoResp> Bot::getGroupList(bool no_cache) {
     return p_resp ? p_resp : nullptr;
 }
 
-void Bot::getGroupMemberInfo(int64_t group_id, int64_t user_id, bool no_cache) {
-
+std::shared_ptr<GroupMemberInfoResp>
+Bot::getGroupMemberInfo(const int64_t &group_id, const int64_t &user_id, bool no_cache) {
+    Msg builder;
+    this->build(builder, Action::GET_GROUP_MEMBER_INFO);
+    builder.setNoCache(no_cache);
+    builder.setGroupId(group_id);
+    builder.setUserId(user_id);
+    std::shared_ptr<GroupMemberInfoResp> p_resp = this->sendAndWaitResp<GroupMemberInfoResp>(builder);
+    return p_resp ? p_resp : nullptr;
 }
 
 void Bot::getGroupMemberList(int64_t group_id, bool no_cache) {

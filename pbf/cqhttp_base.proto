@@ -1,0 +1,139 @@
+syntax = "proto3";
+package cqhttp;
+
+message Sender{
+    int64 user_id = 1;
+    string nickname = 2;
+    string sex = 3;
+    int32 age = 4;
+    string card = 5;
+    string area = 6;
+    string level = 7;
+    string role = 8;
+    string title = 9;
+}
+
+message Anonymous{
+    int64 id = 1;
+    string name = 2;
+    string flag = 3;
+}
+
+enum CQHTTP_TYPE{
+    message = 0;
+    request = 1;
+    notice = 2;
+    meta_event = 3;
+
+    private = 4;
+    group = 5;
+
+    friend = 6;
+    normal = 7;
+    anonymous = 8;
+    group_self = 9;
+
+    group_upload = 10;
+    group_admin = 11;
+    group_decrease = 12;
+    group_increase = 13;
+    group_ban = 14;
+    friend_add = 15;
+    group_recall = 16;
+    friend_recall = 17;
+    group_card = 18;
+    offline_file = 19;
+    client_status = 20;
+    essence = 21;
+    notify = 22;
+
+    honor = 23;
+    poke = 24;
+    lucky_king = 25;
+    title = 26;
+
+    lifecycle = 27;
+    heartbeat = 28;
+
+    enable = 29;
+    disable = 39;
+    connect = 31;
+
+}
+
+
+message Status_Statistics{
+    uint64 PacketReceived = 1;
+    uint64 PacketSent = 2;
+    uint64 PacketLost = 3;
+    uint64 MessageReceived = 4;
+    uint64 MessageSent = 5;
+    uint32 DisconnectTimes = 6;
+    uint32 LostTimes = 7;
+    int64 LastMessageTime = 8;
+}
+
+message Status{
+    bool app_initialized = 1;
+    bool app_enabled = 2;
+    bool plugins_good = 3;
+    bool app_good = 4;
+    bool online = 5;
+    Status_Statistics stat = 6;
+}
+
+
+message OfflineFile{
+    string name = 1;
+    int64 size = 2;
+    string url = 3;
+}
+
+
+message GroupFile{
+    string id = 1;
+    string name = 2;
+    int64 size = 3;
+    int64 busid = 4;
+}
+
+message Device{
+    int64 app_id = 1;
+    string device_name = 2;
+    string device_kind = 3;
+}
+
+message File{
+    int32 group_id = 1;
+    string file_id = 2;
+    string file_name = 3;
+    int32 busid = 4;
+    int64 file_size = 5;
+    int64 upload_time = 6;
+    int64 dead_time = 7;
+    int64 modify_time = 8;
+    int32 download_times = 9;
+    int64 uploader = 10;
+    string uploader_name = 11;
+}
+
+message Folder{
+    int32 group_id = 1;
+    string folder_id = 2;
+    string folder_name = 3;
+    int64 create_time = 4;
+    int64 creator = 5;
+    string creator_name = 6;
+    int32 total_file_count = 7;
+}
+
+message ForwardMessage{
+    string type = 1;
+    Data data = 2;
+
+    message Data{
+        string name = 1;
+        string uin = 2;
+        string content = 3;
+    }
+}

@@ -22,6 +22,7 @@
 #include "resp/RespBody.h"
 #include "resp/ForwardMessageResp.h"
 #include "resp/ImageInfoResp.h"
+#include "resp/GroupMemberInfoResp.h"
 
 class Bot {
 private:
@@ -142,8 +143,9 @@ public:
     // 获取群列表
     std::shared_ptr<GroupListInfoResp> getGroupList(bool no_cache = false);
 
-    // get_group_member_info
-    void getGroupMemberInfo(int64_t group_id, int64_t user_id, bool no_cache = false);
+    // 获取群成员信息
+    std::shared_ptr<GroupMemberInfoResp>
+    getGroupMemberInfo(const int64_t &group_id, const int64_t &user_id, bool no_cache = false);
 
     // get_group_member_list
     void getGroupMemberList(int64_t group_id, bool no_cache = false);

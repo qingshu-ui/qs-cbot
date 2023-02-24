@@ -1,0 +1,1053 @@
+syntax = "proto3";
+package cqhttp;
+
+import "cqhttp_base.proto";
+
+
+message SendPrivateMsg{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 user_id = 1;
+        int64 group_id = 2;
+        string messgae = 3;
+        bool auto_escape = 4;
+    }
+}
+
+message SendPrivateMsgResp{
+    int32 message_id = 1;
+}
+
+message SendGroupMsg{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params {
+        int64 group_id = 1;
+        int64 messgae = 2;
+        bool auto_escape = 3;
+    }
+}
+
+message SendGroupMsgResp{
+    int32 message_id = 1;
+}
+
+message SendGroupForwardMsg{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+    
+    message Params{
+        int64 group_id = 1;
+        int64 messgae = 2;
+    }
+}
+
+message SendGroupForwardMsgResp{
+    int64 message_id = 1;
+    string forward_id = 2;
+}
+
+message SendMessage{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string message_type = 1;
+        int64 user_id = 2;
+        int64 group_id = 3;
+        string message = 4;
+        bool auto_escape = 5;
+    }
+}
+
+message SendMessageResp{
+    int32 message_id = 2;
+}
+
+message DeleteMsg{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int32 message_id = 1;
+    }
+}
+
+message getMsg{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int32 message_id = 1;
+    }
+}
+
+message getMsgResp{
+    bool group = 1;
+    int64 group_id = 2;
+    int32 message_id = 3;
+    int32 real_id = 4;
+    string message_type = 5;
+    Sender sender = 6;
+    int32 time = 7;
+    string message = 8;
+    string raw_message = 9;
+}
+
+message GetForwardMsg{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string message_id = 1;
+    }
+}
+
+message GetForwardMsgResp{
+    repeated Messages messages = 1;
+
+    message Messages{
+        string content = 1;
+        Sender sender = 2;
+        int64 time = 3;
+    }
+}
+
+message GetImage{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string file = 1;
+    }
+}
+
+message GetImageResp{
+    int32 size = 1;
+    string filename = 2;
+    string url = 3;
+}
+
+message MarkMsgAsRead{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int32 message_id = 1;
+    }
+}
+
+message SetGroupKick{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 message_id = 1;
+        int64 user_id = 2;
+        bool reject_add_request = 3;
+    }
+}
+
+message SetGroupBan{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        int64 user_id = 2;
+        int32 duration = 3;
+    }
+}
+
+message SetGroupAnonymousBan{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        Anonymous anonymous = 2;
+        string anonymous_flag = 3;
+        int32 duration = 4;
+    }
+}
+
+message SetGroupWholeBan{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        bool enable = 2;
+    }
+}
+
+message SetGroupAdmin{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        int64 user_id = 2;
+        bool enable = 3;
+    }
+}
+
+message SetGroupAnonymous{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        bool enable = 2;
+    }
+}
+
+message SetGroupCard{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        int64 user_id = 2;
+        string card = 3;
+    }
+}
+
+message SetGroupName{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string group_name = 2;
+    }
+}
+
+message SetGroupLeave{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        bool is_dismiss = 2;
+    }
+}
+
+message SetGroupSpecialTitle{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        int64 user_id = 2;
+        string special_title = 3;
+        int32 duration = 4;
+    }
+}
+
+message SendGroupSign{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+    }
+}
+
+message SetFriendAddRequest{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        string flag = 1;
+        bool approve = 2;
+        string remark = 3;
+    }
+}
+
+message SetGroupAddRequest{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        string flag = 1;
+        string sub_type = 2;
+        bool approve = 3;
+        string reason = 4;
+    }
+}
+
+message GetLoginInfo{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 user_id = 1;
+        string nickname = 2;
+    }
+}
+
+message GetLoginInfoResp{
+    int64 user_id = 1;
+    string nickname = 2;
+}
+
+message QiDianGetAccountInfo{
+    string action = 1;
+    string echo = 2;
+}
+
+message QiDianGetAccountInfoResp{
+    int64 master_id = 1;
+    string ext_name = 2;
+    int64 create_time = 3;
+}
+
+message SetQQProfile{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        string nickname = 1;
+        string company = 2;
+        string email = 3;
+        string college = 4;
+        string personal_note = 5;
+    }
+}
+
+message GetStrangerInfo{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 user_id = 1;
+        bool no_cache = 2;
+    }
+}
+
+message GetStrangerInfoResp{
+    int64 user_id = 1;
+    string nickname = 2;
+    string sex = 3;
+    int32 age = 4;
+    string qid = 5;
+    int32 level = 6;
+    int32 login_days = 7;
+}
+
+message GetFriendList{
+    string action = 1;
+    string echo = 2;
+}
+
+message GetFriendListResp{
+    repeated Friend friends = 1;
+
+    message Friend{
+        int64 user_id = 1;
+        string nickname = 2;
+        string remark = 3;
+    }
+}
+
+message UnidirectionalFriendList{
+    string action = 1;
+    string echo = 2;
+}
+
+message UnidirectionalFriendListResp{
+    repeated Friend friend = 1;
+    
+    message Friend{
+        int64 user_id = 1;
+        string nickname = 2;
+        string source = 3;
+    }
+}
+
+message DeleteFriend{
+    string action = 1;
+    Params params = 2;
+    message Params{
+        int64 user_id = 1;
+    }
+}
+
+message GetGroupInfo{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+        bool no_cache = 2;
+    }
+}
+
+message GetGroupInfoResp{
+    int64 group_id = 1;
+    string group_name = 2;
+    string group_memo = 3;
+    uint32 group_create_time = 4;
+    uint32 group_level = 5;
+    int32 member_count = 6;
+    int32 max_member_count = 7;
+}
+
+message GetGroupList{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        bool no_cache = 1;
+    }
+}
+
+message GetGroupListResp{
+    repeated GetGroupInfoResp group_list = 1;
+}
+
+message GetGroupMemberInfo{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+        int64 user_id = 2;
+        bool no_cache = 3;
+    }
+}
+
+message GetGroupMemberInfoResp{
+    int64 group_id = 1;
+    int64 user_id = 2;
+    string nickname = 3;
+    string card = 4;
+    string sex = 5;
+    int32 age = 6;
+    string area = 7;
+    int32 join_time = 8;
+    int32 last_sent_time = 9;
+    string level = 10;
+    string role = 11;
+    bool unfriendly = 12;
+    string title = 13;
+    int64 title_expire_time = 14;
+    bool card_changeable = 15;
+    int64 shut_up_timestamp = 16;
+}
+
+message GetGroupMemberList{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+        bool no_cache = 2;
+    }
+}
+
+message GetGroupMemberListResp{
+    repeated GetGroupMemberInfoResp group_member_list = 1;
+}
+
+message GetGroupHonorInfo{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+        string type = 2;
+    }
+}
+
+message GetGroupHonorInfoResp{
+    int64 group_id = 1;
+    Talkative current_talkative = 2;
+    repeated Talkative talkative_list = 3;
+    repeated Talkative performer_list = 4;
+    repeated Talkative legend_list = 5;
+    repeated Talkative strong_newbie_list = 6;
+    repeated Talkative emotion_list = 7;
+
+    message Talkative{
+        int64 user_id = 1;
+        string nickname = 2;
+        string avatar = 3;
+        int32 day_count = 4;
+        string description = 5;
+    }
+}
+
+message GetCoolies{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string  domain = 1;
+    }
+}
+
+message GetCooliesResp{
+    string cookies = 1;
+}
+
+message GetCsrfToken{
+    string action = 1;
+    string echo = 2;
+}
+
+message GetCsrfTokenResp{
+    int32 token = 1;
+}
+
+message GetCredentials{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string domain = 1;
+    }
+}
+
+message GetCredentialsResp{
+    string cookies = 1;
+    int32 csrf_token = 2;
+}
+
+message GetRecord{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string file = 1;
+        string out_format = 2;
+    }
+}
+
+message GetRecordResp{
+    string file = 1;
+}
+
+message CanSendImage{
+    string action = 1;
+    string echo = 2;
+}
+
+message CanSendImageResp{
+    bool yes = 1;
+}
+
+message CanSendRecord{
+    string action = 1;
+    string echo = 2;
+}
+
+message CanSendRecordResp{
+    bool yes = 1;
+}
+
+message GetVersionInfo{
+    string action = 1;
+    string echo = 2;
+}
+
+message GetVersionInfoResp{
+    string app_name = 1;
+    string app_version = 2;
+    string app_full_name = 3;
+    string protocol_version = 4;
+    string coolq_edition = 5;
+    string coolq_directory = 6;
+    bool cqhttp = 7;
+    string plugin_version = 8;
+    int32 plugin_build_number = 9;
+    string plugin_build_configuration = 10;
+    string runtime_version = 11;
+    string runtime_os = 12;
+    string version = 13;
+    int32 protocol = 14;
+}
+
+message SetRestart{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int32 delay = 1;
+    }
+}
+
+message CleanCache{
+    string action = 1;
+}
+
+message SetGroupPortrait{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string file = 2;
+        int32 cache = 3;
+    }
+}
+
+message GetWordSlices{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string content = 1;
+    }
+}
+
+message GetWordSlicesResp{
+    repeated string slices = 1;
+}
+
+message OcrImage{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string image = 1;
+    }
+}
+
+message OcrImageResp{
+    repeated TextDetection texts = 1;
+    string language = 2;
+
+    message TextDetection{
+        string text = 1;
+        int32 confidence = 2;
+        string coordinates = 3;
+    }
+}
+
+message GetGroupSystemMsg{
+    string action = 1;
+    string echo = 2;
+}
+
+message GetGroupSystemMsgResp{
+    repeated InvitedRequest invited_requests = 1;
+    repeated JoinRequest join_requests = 2;
+
+    message InvitedRequest{
+        int64 request_id = 1;
+        int64 invitor_uin = 2;
+        string invitor_nick = 3;
+        int64 group_id = 4;
+        string group_name = 5;
+        bool checked = 6;
+        int64 actor = 7;
+    }
+
+    message JoinRequest{
+        int64 request_id = 1;
+        int64 requester_uin = 2;
+        string requester_nick = 3;
+        string message = 4;
+        int64 group_id = 5;
+        string group_name = 6;
+        bool checked = 7;
+        int64 actor = 8;
+    }
+}
+
+message UploadPrivateFile{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 user_id = 1;
+        string file = 2;
+        string name = 3;
+    }
+}
+
+message UploadGroupFile{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string file = 2;
+        string name = 3;
+        string folder = 4;
+    }
+}
+
+message GetGroupFileSystemInfo{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+    }
+}
+
+message GetGroupFileSystemInfoResp{
+    int32 file_count = 1;
+    int32 limit_count = 2;
+    int64 used_space = 3;
+    int64 total_space = 4;
+}
+
+message GetGroupRootFiles{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+    }
+}
+
+message GetGroupRootFilesResp{
+    repeated File files = 1;
+    repeated Folder folders = 2;
+}
+
+message getGroupFileByFolder{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+        string folder_id = 2;
+    }
+}
+
+message getGroupFileByFolderResp{
+    repeated File files = 1;
+    repeated Folder folders = 2;
+}
+
+message CreateGroupFileFolder{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string name = 2;
+        string parent_id = 3;
+    }
+}
+
+message DeleteGroupFolder{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string folder_id = 2;
+    }
+}
+
+message DeleteGroupFile{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string file_id = 2;
+        int32 busid = 3;
+    }
+}
+
+message GetGroupFileUrl{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+        string file_id = 2;
+        int32 busid = 3;
+    }
+}
+
+message GetGroupFileUrlResp{
+    string url = 1;
+}
+
+message GetStatus{
+    string action = 1;
+    string echo = 2;
+}
+
+message GetStatusResp{
+    bool app_initialized = 1;
+    bool app_enabled = 2;
+    bool plugins_good = 3;
+    bool app_good = 4;
+    bool online = 5;
+    bool good = 6;
+    Statistics stat = 7;
+
+    message Statistics{
+        uint64 PacketReceived = 1;
+        uint64 PacketSent = 2;
+        uint32 PacketLost = 3;
+        uint64 MessageReceived = 4;
+        uint64 MessageSent = 5;
+        uint32 DisconnectTimes = 6;
+        uint32 LostTimes = 7;
+        int64 LastMessageTime = 8;
+    }
+}
+
+message GetGroupAtAllRemain{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+    }
+}
+
+message GetGroupAtAllRemainResp{
+    bool can_at_all = 1;
+    int32 remain_at_all_count_for_group = 2;
+    int32 remain_at_all_count_for_uin = 3;
+}
+
+message HandleQuickOperation{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        string content = 1;
+        string operation = 2;
+    }
+}
+
+message SendGroupNotice{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 group_id = 1;
+        string content = 2;
+        string image = 3;
+    }
+}
+
+message GetGroupNotice{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params {
+        int64 group_id = 1;
+    }
+}
+
+message GetGroupNoticeResp{
+    repeated Notice notices = 1;
+
+    message Notice{
+        int64 sender_id = 1;
+        int64 publish_time = 2;
+        NoticeMessage message = 3;
+
+        message NoticeMessage{
+            string text = 1;
+            repeated Image images = 2;
+
+            message Image{
+                string height = 1;
+                string width = 2;
+                string id = 3;
+            }
+        }
+    }
+}
+
+message ReloadEventFilter{
+    string action = 1;
+    Params params = 2;
+    
+    message Params{
+        string file = 1;
+    }
+}
+
+message DownloadFile{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string url = 1;
+        int32 thread_count = 2;
+        string headers = 3;
+    }
+}
+
+message DownloadFileResp{
+    string file = 1;
+}
+
+message GetOnlineClients{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        bool no_cache = 1;
+    }
+}
+
+message GetOnlineClientsResp{
+    repeated Device clients = 1;
+}
+
+message GetGroupMsgHistory{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 message_seq = 1;
+        int64 group_id = 2;
+    }
+}
+
+message GetGroupMsgHistoryResp{
+    repeated string messages = 1;
+}
+
+message SetEssenceMsg{
+    string action = 1;
+    Params params = 2;
+    
+    message Params{
+        int32 message_id = 1;
+    }
+}
+
+message DeleteEssenceMsg{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int32 message_id = 1;
+    }
+}
+
+message GetEssenceMsgList{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 group_id = 1;
+    }
+}
+
+message GetEssenceMsgListResp{
+    int64 sender_id = 1;
+    string sender_nick = 2;
+    int64 sender_time = 3;
+    int64 operator_id = 4;
+    string operator_nick = 5;
+    int64 operator_time = 6;
+    int32 message_id = 7;
+}
+
+message CheckUlrSafely{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string url = 1;
+    }
+}
+
+message CheckUlrSafelyResp{
+    int32 level = 1;
+}
+
+message GetModelShow{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        string model =1;
+    }
+}
+
+message GetModelShowResp{
+    repeated Variant variants = 1;
+
+    message Variant{
+        string model_show = 1;
+        bool need_pay = 2;
+    }
+}
+
+message SetModelShow{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        string model = 1;
+        string model_show = 2;
+    }
+}
+
+message DeleteUnidirectionalFriend{
+    string action = 1;
+    Params params = 2;
+
+    message Params{
+        int64 user_id = 1;
+    }
+}
+
+message SendPrivateForwardMsg{
+    string action = 1;
+    Params params = 2;
+    string echo = 3;
+
+    message Params{
+        int64 user_id = 1;
+        repeated ForwardMessage messages = 2; 
+    }
+}
+
+message SendPrivateForwardMsgResp{
+    int64 message_id = 1;
+    string forward_id = 2;
+}
