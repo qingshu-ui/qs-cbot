@@ -17,6 +17,8 @@ extern BaseResp m_resp;
 extern std::queue<BaseResp> m_queue;
 extern google::protobuf::util::JsonPrintOptions print_options;
 extern google::protobuf::util::JsonParseOptions parse_options;
+typedef std::map<std::string, std::shared_ptr<std::promise<std::string>>> PromiseMap;
+extern std::shared_ptr<PromiseMap> promiseMap;
 
 class WebsocketController : public drogon::WebSocketController<WebsocketController> {
 public:

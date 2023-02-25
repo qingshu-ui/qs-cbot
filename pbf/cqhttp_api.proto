@@ -28,7 +28,7 @@ message SendGroupMsg{
 
     message Params {
         int64 group_id = 1;
-        int64 message = 2;
+        string message = 2;
         bool auto_escape = 3;
     }
 }
@@ -44,7 +44,7 @@ message SendGroupForwardMsg{
     
     message Params{
         int64 group_id = 1;
-        int64 message = 2;
+        string message = 2;
     }
 }
 

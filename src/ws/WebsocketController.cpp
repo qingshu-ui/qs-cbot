@@ -16,6 +16,7 @@ BaseResp m_resp;
 std::queue<BaseResp> m_queue;
 google::protobuf::util::JsonPrintOptions print_options;
 google::protobuf::util::JsonParseOptions parse_options;
+std::shared_ptr<PromiseMap> promiseMap = std::make_shared<PromiseMap>();
 
 void WebsocketController::handleNewMessage(const drogon::WebSocketConnectionPtr &ptr, std::string &&message,
                                            const drogon::WebSocketMessageType &messageType) {
@@ -25,9 +26,11 @@ void WebsocketController::handleNewMessage(const drogon::WebSocketConnectionPtr 
 
     Json::Reader r;
     Json::Value v;
+    Json::FastWriter w;
     if (r.parse(message, v) && !v["echo"].empty()) {
-        BaseResp resp{message};
-        m_queue.push(resp);
+        if (promiseMap->count(v["echo"].asString()) > 0) {
+            promiseMap->at(v["echo"].asString())->set_value(w.write(v["data"]));
+        }
     }
 
     // Use multithreading.

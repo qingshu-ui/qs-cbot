@@ -5,7 +5,6 @@
 #include "eventhandler.h"
 #include <trantor/utils/Logger.h>
 #include <sstream>
-#include "google/protobuf/util/json_util.h"
 #include "../ws/WebsocketController.h"
 
 using namespace google::protobuf::util;
@@ -22,9 +21,6 @@ EventHandler::handlePrivateMessage(const std::shared_ptr<Bot> &bot, const std::s
     auto resp = bot->sendPrivateMsg(out.str(), e->user_id());
     if (nullptr != resp) {
         LOG_INFO << "Send private msg is successfully. id: " << resp->message_id();
-        std::string resp_str;
-        MessageToJsonString(*resp.get(), &resp_str, print_options);
-        LOG_INFO << resp_str;
     }
 }
 
@@ -35,6 +31,16 @@ void EventHandler::handleGroupMessage(const std::shared_ptr<Bot> &bot, const std
         << "QQ_Id: " << e->sender().user_id() << "\n"
         << "Content: " << e->message();
     LOG_INFO << out.str();
+
+    auto relay_resp = bot->sendGroupMsg(out.str(), 1718692748);
+    LOG_INFO << (relay_resp ? "Relay the message is OK, id: " + std::to_string(relay_resp->message_id()) : "");
+
+    if (e->user_id() == 1718692748) {
+        auto resp = bot->sendGroupMsg("宝，当海王真不好，当海王事不少，天天都有人找，好烦恼好烦恼~", e->group_id());
+        if (nullptr != resp) {
+            LOG_INFO << "Send group message is successfully, id: " << resp->message_id();
+        }
+    }
 }
 
 void

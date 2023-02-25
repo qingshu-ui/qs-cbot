@@ -1450,10 +1450,24 @@ class SendGroupMsg_Params final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdFieldNumber = 1,
     kMessageFieldNumber = 2,
+    kGroupIdFieldNumber = 1,
     kAutoEscapeFieldNumber = 3,
   };
+  // string message = 2;
+  void clear_message();
+  const std::string& message() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* message);
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   int64_t group_id() const;
@@ -1461,15 +1475,6 @@ class SendGroupMsg_Params final :
   private:
   int64_t _internal_group_id() const;
   void _internal_set_group_id(int64_t value);
-  public:
-
-  // int64 message = 2;
-  void clear_message();
-  int64_t message() const;
-  void set_message(int64_t value);
-  private:
-  int64_t _internal_message() const;
-  void _internal_set_message(int64_t value);
   public:
 
   // bool auto_escape = 3;
@@ -1489,8 +1494,8 @@ class SendGroupMsg_Params final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
     int64_t group_id_;
-    int64_t message_;
     bool auto_escape_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1954,9 +1959,23 @@ class SendGroupForwardMsg_Params final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGroupIdFieldNumber = 1,
     kMessageFieldNumber = 2,
+    kGroupIdFieldNumber = 1,
   };
+  // string message = 2;
+  void clear_message();
+  const std::string& message() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* message);
+  private:
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
+  public:
+
   // int64 group_id = 1;
   void clear_group_id();
   int64_t group_id() const;
@@ -1964,15 +1983,6 @@ class SendGroupForwardMsg_Params final :
   private:
   int64_t _internal_group_id() const;
   void _internal_set_group_id(int64_t value);
-  public:
-
-  // int64 message = 2;
-  void clear_message();
-  int64_t message() const;
-  void set_message(int64_t value);
-  private:
-  int64_t _internal_message() const;
-  void _internal_set_message(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:cqhttp.SendGroupForwardMsg.Params)
@@ -1983,8 +1993,8 @@ class SendGroupForwardMsg_Params final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
     int64_t group_id_;
-    int64_t message_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -34088,24 +34098,54 @@ inline void SendGroupMsg_Params::set_group_id(int64_t value) {
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupMsg.Params.group_id)
 }
 
-// int64 message = 2;
+// string message = 2;
 inline void SendGroupMsg_Params::clear_message() {
-  _impl_.message_ = int64_t{0};
+  _impl_.message_.ClearToEmpty();
 }
-inline int64_t SendGroupMsg_Params::_internal_message() const {
-  return _impl_.message_;
-}
-inline int64_t SendGroupMsg_Params::message() const {
+inline const std::string& SendGroupMsg_Params::message() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendGroupMsg.Params.message)
   return _internal_message();
 }
-inline void SendGroupMsg_Params::_internal_set_message(int64_t value) {
-  
-  _impl_.message_ = value;
-}
-inline void SendGroupMsg_Params::set_message(int64_t value) {
-  _internal_set_message(value);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendGroupMsg_Params::set_message(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupMsg.Params.message)
+}
+inline std::string* SendGroupMsg_Params::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:cqhttp.SendGroupMsg.Params.message)
+  return _s;
+}
+inline const std::string& SendGroupMsg_Params::_internal_message() const {
+  return _impl_.message_.Get();
+}
+inline void SendGroupMsg_Params::_internal_set_message(const std::string& value) {
+  
+  _impl_.message_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SendGroupMsg_Params::_internal_mutable_message() {
+  
+  return _impl_.message_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SendGroupMsg_Params::release_message() {
+  // @@protoc_insertion_point(field_release:cqhttp.SendGroupMsg.Params.message)
+  return _impl_.message_.Release();
+}
+inline void SendGroupMsg_Params::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendGroupMsg.Params.message)
 }
 
 // bool auto_escape = 3;
@@ -34340,24 +34380,54 @@ inline void SendGroupForwardMsg_Params::set_group_id(int64_t value) {
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupForwardMsg.Params.group_id)
 }
 
-// int64 message = 2;
+// string message = 2;
 inline void SendGroupForwardMsg_Params::clear_message() {
-  _impl_.message_ = int64_t{0};
+  _impl_.message_.ClearToEmpty();
 }
-inline int64_t SendGroupForwardMsg_Params::_internal_message() const {
-  return _impl_.message_;
-}
-inline int64_t SendGroupForwardMsg_Params::message() const {
+inline const std::string& SendGroupForwardMsg_Params::message() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendGroupForwardMsg.Params.message)
   return _internal_message();
 }
-inline void SendGroupForwardMsg_Params::_internal_set_message(int64_t value) {
-  
-  _impl_.message_ = value;
-}
-inline void SendGroupForwardMsg_Params::set_message(int64_t value) {
-  _internal_set_message(value);
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void SendGroupForwardMsg_Params::set_message(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupForwardMsg.Params.message)
+}
+inline std::string* SendGroupForwardMsg_Params::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:cqhttp.SendGroupForwardMsg.Params.message)
+  return _s;
+}
+inline const std::string& SendGroupForwardMsg_Params::_internal_message() const {
+  return _impl_.message_.Get();
+}
+inline void SendGroupForwardMsg_Params::_internal_set_message(const std::string& value) {
+  
+  _impl_.message_.Set(value, GetArenaForAllocation());
+}
+inline std::string* SendGroupForwardMsg_Params::_internal_mutable_message() {
+  
+  return _impl_.message_.Mutable(GetArenaForAllocation());
+}
+inline std::string* SendGroupForwardMsg_Params::release_message() {
+  // @@protoc_insertion_point(field_release:cqhttp.SendGroupForwardMsg.Params.message)
+  return _impl_.message_.Release();
+}
+inline void SendGroupForwardMsg_Params::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendGroupForwardMsg.Params.message)
 }
 
 // -------------------------------------------------------------------

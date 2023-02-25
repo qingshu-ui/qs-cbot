@@ -17,8 +17,27 @@ public:
 
     explicit Bot(const drogon::WebSocketConnectionPtr &bot);
 
+    /**
+     * @brief 发送私聊信息
+     * @param msg 消息内容
+     * @param user_id 对方QQ号
+     * @param auto_escape 消息内容是否作为纯文本发送 ( 即不解析 CQ 码 )
+     * @return 成功响应消息ID
+     */
     std::shared_ptr<SendPrivateMsgResp>
     sendPrivateMsg(const std::string &msg, const int64_t &user_id, bool auto_escape = false);
+
+    /**
+     * @brief 发送群聊消息
+     * @param msg 要发送的内容
+     * @param group_id 群号
+     * @param auto_escape 消息内容是否作为纯文本发送 ( 即不解析 CQ 码 )
+     * @return 成功响应消息ID
+     */
+    std::shared_ptr<SendGroupMsgResp>
+    sendGroupMsg(const std::string &msg, const int64_t &group_id, bool auto_escape = false);
+
+
 
 private:
     std::mutex m_mutex;

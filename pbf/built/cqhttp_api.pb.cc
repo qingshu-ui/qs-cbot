@@ -67,8 +67,8 @@ struct SendPrivateMsgRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendPrivateMsgRespDefaultTypeInternal _SendPrivateMsgResp_default_instance_;
 PROTOBUF_CONSTEXPR SendGroupMsg_Params::SendGroupMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.group_id_)*/int64_t{0}
-  , /*decltype(_impl_.message_)*/int64_t{0}
+    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.group_id_)*/int64_t{0}
   , /*decltype(_impl_.auto_escape_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupMsg_ParamsDefaultTypeInternal {
@@ -110,8 +110,8 @@ struct SendGroupMsgRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendGroupMsgRespDefaultTypeInternal _SendGroupMsgResp_default_instance_;
 PROTOBUF_CONSTEXPR SendGroupForwardMsg_Params::SendGroupForwardMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.group_id_)*/int64_t{0}
-  , /*decltype(_impl_.message_)*/int64_t{0}
+    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.group_id_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupForwardMsg_ParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendGroupForwardMsg_ParamsDefaultTypeInternal()
@@ -4789,13 +4789,13 @@ const char descriptor_table_protodef_cqhttp_5fapi_2eproto[] PROTOBUF_SECTION_VAR
   "(\005\"\253\001\n\014SendGroupMsg\022\036\n\006action\030\001 \001(\0162\016.cq"
   "http.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.Sen"
   "dGroupMsg.Params\022\014\n\004echo\030\003 \001(\t\032@\n\006Params"
-  "\022\020\n\010group_id\030\001 \001(\003\022\017\n\007message\030\002 \001(\003\022\023\n\013a"
+  "\022\020\n\010group_id\030\001 \001(\003\022\017\n\007message\030\002 \001(\t\022\023\n\013a"
   "uto_escape\030\003 \001(\010\"&\n\020SendGroupMsgResp\022\022\n\n"
   "message_id\030\001 \001(\005\"\244\001\n\023SendGroupForwardMsg"
   "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0222\n\006para"
   "ms\030\002 \001(\0132\".cqhttp.SendGroupForwardMsg.Pa"
   "rams\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\020\n\010group_id"
-  "\030\001 \001(\003\022\017\n\007message\030\002 \001(\003\"A\n\027SendGroupForw"
+  "\030\001 \001(\003\022\017\n\007message\030\002 \001(\t\"A\n\027SendGroupForw"
   "ardMsgResp\022\022\n\nmessage_id\030\001 \001(\003\022\022\n\nforwar"
   "d_id\030\002 \001(\t\"\320\001\n\013SendMessage\022\036\n\006action\030\001 \001"
   "(\0162\016.cqhttp.Action\022*\n\006params\030\002 \001(\0132\032.cqh"
@@ -5952,12 +5952,20 @@ SendGroupMsg_Params::SendGroupMsg_Params(const SendGroupMsg_Params& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendGroupMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.group_id_){}
-    , decltype(_impl_.message_){}
+      decltype(_impl_.message_){}
+    , decltype(_impl_.group_id_){}
     , decltype(_impl_.auto_escape_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_message().empty()) {
+    _this->_impl_.message_.Set(from._internal_message(), 
+      _this->GetArenaForAllocation());
+  }
   ::memcpy(&_impl_.group_id_, &from._impl_.group_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.auto_escape_) -
     reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.auto_escape_));
@@ -5969,11 +5977,15 @@ inline void SendGroupMsg_Params::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.group_id_){int64_t{0}}
-    , decltype(_impl_.message_){int64_t{0}}
+      decltype(_impl_.message_){}
+    , decltype(_impl_.group_id_){int64_t{0}}
     , decltype(_impl_.auto_escape_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SendGroupMsg_Params::~SendGroupMsg_Params() {
@@ -5987,6 +5999,7 @@ SendGroupMsg_Params::~SendGroupMsg_Params() {
 
 inline void SendGroupMsg_Params::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.message_.Destroy();
 }
 
 void SendGroupMsg_Params::SetCachedSize(int size) const {
@@ -5999,6 +6012,7 @@ void SendGroupMsg_Params::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.message_.ClearToEmpty();
   ::memset(&_impl_.group_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.auto_escape_) -
       reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.auto_escape_));
@@ -6019,11 +6033,13 @@ const char* SendGroupMsg_Params::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // int64 message = 2;
+      // string message = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.message_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendGroupMsg.Params.message"));
         } else
           goto handle_unusual;
         continue;
@@ -6070,10 +6086,14 @@ uint8_t* SendGroupMsg_Params::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_group_id(), target);
   }
 
-  // int64 message = 2;
-  if (this->_internal_message() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_message(), target);
+  // string message = 2;
+  if (!this->_internal_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "cqhttp.SendGroupMsg.Params.message");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_message(), target);
   }
 
   // bool auto_escape = 3;
@@ -6098,14 +6118,16 @@ size_t SendGroupMsg_Params::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // string message = 2;
+  if (!this->_internal_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message());
+  }
+
   // int64 group_id = 1;
   if (this->_internal_group_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_group_id());
-  }
-
-  // int64 message = 2;
-  if (this->_internal_message() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_message());
   }
 
   // bool auto_escape = 3;
@@ -6131,11 +6153,11 @@ void SendGroupMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
+  }
   if (from._internal_group_id() != 0) {
     _this->_internal_set_group_id(from._internal_group_id());
-  }
-  if (from._internal_message() != 0) {
-    _this->_internal_set_message(from._internal_message());
   }
   if (from._internal_auto_escape() != 0) {
     _this->_internal_set_auto_escape(from._internal_auto_escape());
@@ -6156,7 +6178,13 @@ bool SendGroupMsg_Params::IsInitialized() const {
 
 void SendGroupMsg_Params::InternalSwap(SendGroupMsg_Params* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.message_, lhs_arena,
+      &other->_impl_.message_, rhs_arena
+  );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SendGroupMsg_Params, _impl_.auto_escape_)
       + sizeof(SendGroupMsg_Params::_impl_.auto_escape_)
@@ -6644,14 +6672,20 @@ SendGroupForwardMsg_Params::SendGroupForwardMsg_Params(const SendGroupForwardMsg
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendGroupForwardMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.group_id_){}
-    , decltype(_impl_.message_){}
+      decltype(_impl_.message_){}
+    , decltype(_impl_.group_id_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.group_id_, &from._impl_.group_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.message_) -
-    reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.message_));
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_message().empty()) {
+    _this->_impl_.message_.Set(from._internal_message(), 
+      _this->GetArenaForAllocation());
+  }
+  _this->_impl_.group_id_ = from._impl_.group_id_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendGroupForwardMsg.Params)
 }
 
@@ -6660,10 +6694,14 @@ inline void SendGroupForwardMsg_Params::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.group_id_){int64_t{0}}
-    , decltype(_impl_.message_){int64_t{0}}
+      decltype(_impl_.message_){}
+    , decltype(_impl_.group_id_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
+  _impl_.message_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.message_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SendGroupForwardMsg_Params::~SendGroupForwardMsg_Params() {
@@ -6677,6 +6715,7 @@ SendGroupForwardMsg_Params::~SendGroupForwardMsg_Params() {
 
 inline void SendGroupForwardMsg_Params::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.message_.Destroy();
 }
 
 void SendGroupForwardMsg_Params::SetCachedSize(int size) const {
@@ -6689,9 +6728,8 @@ void SendGroupForwardMsg_Params::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.group_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.message_) -
-      reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.message_));
+  _impl_.message_.ClearToEmpty();
+  _impl_.group_id_ = int64_t{0};
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6709,11 +6747,13 @@ const char* SendGroupForwardMsg_Params::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // int64 message = 2;
+      // string message = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.message_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_message();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendGroupForwardMsg.Params.message"));
         } else
           goto handle_unusual;
         continue;
@@ -6752,10 +6792,14 @@ uint8_t* SendGroupForwardMsg_Params::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_group_id(), target);
   }
 
-  // int64 message = 2;
-  if (this->_internal_message() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_message(), target);
+  // string message = 2;
+  if (!this->_internal_message().empty()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "cqhttp.SendGroupForwardMsg.Params.message");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_message(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6774,14 +6818,16 @@ size_t SendGroupForwardMsg_Params::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // string message = 2;
+  if (!this->_internal_message().empty()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_message());
+  }
+
   // int64 group_id = 1;
   if (this->_internal_group_id() != 0) {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_group_id());
-  }
-
-  // int64 message = 2;
-  if (this->_internal_message() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_message());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6802,11 +6848,11 @@ void SendGroupForwardMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
+  }
   if (from._internal_group_id() != 0) {
     _this->_internal_set_group_id(from._internal_group_id());
-  }
-  if (from._internal_message() != 0) {
-    _this->_internal_set_message(from._internal_message());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6824,13 +6870,14 @@ bool SendGroupForwardMsg_Params::IsInitialized() const {
 
 void SendGroupForwardMsg_Params::InternalSwap(SendGroupForwardMsg_Params* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg_Params, _impl_.message_)
-      + sizeof(SendGroupForwardMsg_Params::_impl_.message_)
-      - PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg_Params, _impl_.group_id_)>(
-          reinterpret_cast<char*>(&_impl_.group_id_),
-          reinterpret_cast<char*>(&other->_impl_.group_id_));
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.message_, lhs_arena,
+      &other->_impl_.message_, rhs_arena
+  );
+  swap(_impl_.group_id_, other->_impl_.group_id_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendGroupForwardMsg_Params::GetMetadata() const {
