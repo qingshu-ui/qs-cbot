@@ -23,7 +23,7 @@ namespace _pbi = _pb::internal;
 namespace cqhttp {
 PROTOBUF_CONSTEXPR SendPrivateMsg_Params::SendPrivateMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.messgae_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.user_id_)*/int64_t{0}
   , /*decltype(_impl_.group_id_)*/int64_t{0}
   , /*decltype(_impl_.auto_escape_)*/false
@@ -39,9 +39,9 @@ struct SendPrivateMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendPrivateMsg_ParamsDefaultTypeInternal _SendPrivateMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendPrivateMsg::SendPrivateMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendPrivateMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendPrivateMsgDefaultTypeInternal()
@@ -68,7 +68,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR SendGroupMsg_Params::SendGroupMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.group_id_)*/int64_t{0}
-  , /*decltype(_impl_.messgae_)*/int64_t{0}
+  , /*decltype(_impl_.message_)*/int64_t{0}
   , /*decltype(_impl_.auto_escape_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupMsg_ParamsDefaultTypeInternal {
@@ -82,9 +82,9 @@ struct SendGroupMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendGroupMsg_ParamsDefaultTypeInternal _SendGroupMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendGroupMsg::SendGroupMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendGroupMsgDefaultTypeInternal()
@@ -111,7 +111,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORIT
 PROTOBUF_CONSTEXPR SendGroupForwardMsg_Params::SendGroupForwardMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.group_id_)*/int64_t{0}
-  , /*decltype(_impl_.messgae_)*/int64_t{0}
+  , /*decltype(_impl_.message_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupForwardMsg_ParamsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendGroupForwardMsg_ParamsDefaultTypeInternal()
@@ -124,9 +124,9 @@ struct SendGroupForwardMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendGroupForwardMsg_ParamsDefaultTypeInternal _SendGroupForwardMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendGroupForwardMsg::SendGroupForwardMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupForwardMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendGroupForwardMsgDefaultTypeInternal()
@@ -170,9 +170,9 @@ struct SendMessage_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMessage_ParamsDefaultTypeInternal _SendMessage_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendMessage::SendMessage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendMessageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendMessageDefaultTypeInternal()
@@ -211,8 +211,8 @@ struct DeleteMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteMsg_ParamsDefaultTypeInternal _DeleteMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR DeleteMsg::DeleteMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteMsgDefaultTypeInternal()
@@ -238,9 +238,9 @@ struct getMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 getMsg_ParamsDefaultTypeInternal _getMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR getMsg::getMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct getMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR getMsgDefaultTypeInternal()
@@ -287,9 +287,9 @@ struct GetForwardMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetForwardMsg_ParamsDefaultTypeInternal _GetForwardMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetForwardMsg::GetForwardMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetForwardMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetForwardMsgDefaultTypeInternal()
@@ -343,9 +343,9 @@ struct GetImage_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetImage_ParamsDefaultTypeInternal _GetImage_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetImage::GetImage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetImageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetImageDefaultTypeInternal()
@@ -386,8 +386,8 @@ struct MarkMsgAsRead_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MarkMsgAsRead_ParamsDefaultTypeInternal _MarkMsgAsRead_Params_default_instance_;
 PROTOBUF_CONSTEXPR MarkMsgAsRead::MarkMsgAsRead(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct MarkMsgAsReadDefaultTypeInternal {
   PROTOBUF_CONSTEXPR MarkMsgAsReadDefaultTypeInternal()
@@ -415,8 +415,8 @@ struct SetGroupKick_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupKick_ParamsDefaultTypeInternal _SetGroupKick_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupKick::SetGroupKick(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupKickDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupKickDefaultTypeInternal()
@@ -444,8 +444,8 @@ struct SetGroupBan_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupBan_ParamsDefaultTypeInternal _SetGroupBan_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupBan::SetGroupBan(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupBanDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupBanDefaultTypeInternal()
@@ -474,8 +474,8 @@ struct SetGroupAnonymousBan_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupAnonymousBan_ParamsDefaultTypeInternal _SetGroupAnonymousBan_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupAnonymousBan::SetGroupAnonymousBan(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupAnonymousBanDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupAnonymousBanDefaultTypeInternal()
@@ -502,8 +502,8 @@ struct SetGroupWholeBan_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupWholeBan_ParamsDefaultTypeInternal _SetGroupWholeBan_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupWholeBan::SetGroupWholeBan(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupWholeBanDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupWholeBanDefaultTypeInternal()
@@ -531,8 +531,8 @@ struct SetGroupAdmin_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupAdmin_ParamsDefaultTypeInternal _SetGroupAdmin_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupAdmin::SetGroupAdmin(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupAdminDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupAdminDefaultTypeInternal()
@@ -559,8 +559,8 @@ struct SetGroupAnonymous_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupAnonymous_ParamsDefaultTypeInternal _SetGroupAnonymous_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupAnonymous::SetGroupAnonymous(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupAnonymousDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupAnonymousDefaultTypeInternal()
@@ -588,8 +588,8 @@ struct SetGroupCard_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupCard_ParamsDefaultTypeInternal _SetGroupCard_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupCard::SetGroupCard(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupCardDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupCardDefaultTypeInternal()
@@ -616,8 +616,8 @@ struct SetGroupName_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupName_ParamsDefaultTypeInternal _SetGroupName_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupName::SetGroupName(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupNameDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupNameDefaultTypeInternal()
@@ -644,8 +644,8 @@ struct SetGroupLeave_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupLeave_ParamsDefaultTypeInternal _SetGroupLeave_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupLeave::SetGroupLeave(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupLeaveDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupLeaveDefaultTypeInternal()
@@ -674,8 +674,8 @@ struct SetGroupSpecialTitle_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupSpecialTitle_ParamsDefaultTypeInternal _SetGroupSpecialTitle_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupSpecialTitle::SetGroupSpecialTitle(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupSpecialTitleDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupSpecialTitleDefaultTypeInternal()
@@ -701,8 +701,8 @@ struct SendGroupSign_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendGroupSign_ParamsDefaultTypeInternal _SendGroupSign_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendGroupSign::SendGroupSign(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupSignDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendGroupSignDefaultTypeInternal()
@@ -730,8 +730,8 @@ struct SetFriendAddRequest_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetFriendAddRequest_ParamsDefaultTypeInternal _SetFriendAddRequest_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetFriendAddRequest::SetFriendAddRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetFriendAddRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetFriendAddRequestDefaultTypeInternal()
@@ -760,8 +760,8 @@ struct SetGroupAddRequest_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupAddRequest_ParamsDefaultTypeInternal _SetGroupAddRequest_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupAddRequest::SetGroupAddRequest(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupAddRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupAddRequestDefaultTypeInternal()
@@ -788,9 +788,9 @@ struct GetLoginInfo_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetLoginInfo_ParamsDefaultTypeInternal _GetLoginInfo_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetLoginInfo::GetLoginInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetLoginInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetLoginInfoDefaultTypeInternal()
@@ -817,8 +817,8 @@ struct GetLoginInfoRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetLoginInfoRespDefaultTypeInternal _GetLoginInfoResp_default_instance_;
 PROTOBUF_CONSTEXPR QiDianGetAccountInfo::QiDianGetAccountInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct QiDianGetAccountInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR QiDianGetAccountInfoDefaultTypeInternal()
@@ -863,8 +863,8 @@ struct SetQQProfile_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetQQProfile_ParamsDefaultTypeInternal _SetQQProfile_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetQQProfile::SetQQProfile(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetQQProfileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetQQProfileDefaultTypeInternal()
@@ -891,9 +891,9 @@ struct GetStrangerInfo_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetStrangerInfo_ParamsDefaultTypeInternal _GetStrangerInfo_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetStrangerInfo::GetStrangerInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetStrangerInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetStrangerInfoDefaultTypeInternal()
@@ -925,8 +925,8 @@ struct GetStrangerInfoRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetStrangerInfoRespDefaultTypeInternal _GetStrangerInfoResp_default_instance_;
 PROTOBUF_CONSTEXPR GetFriendList::GetFriendList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetFriendListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetFriendListDefaultTypeInternal()
@@ -967,8 +967,8 @@ struct GetFriendListRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetFriendListRespDefaultTypeInternal _GetFriendListResp_default_instance_;
 PROTOBUF_CONSTEXPR UnidirectionalFriendList::UnidirectionalFriendList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UnidirectionalFriendListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UnidirectionalFriendListDefaultTypeInternal()
@@ -1022,8 +1022,8 @@ struct DeleteFriend_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteFriend_ParamsDefaultTypeInternal _DeleteFriend_Params_default_instance_;
 PROTOBUF_CONSTEXPR DeleteFriend::DeleteFriend(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteFriendDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteFriendDefaultTypeInternal()
@@ -1050,9 +1050,9 @@ struct GetGroupInfo_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupInfo_ParamsDefaultTypeInternal _GetGroupInfo_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupInfo::GetGroupInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupInfoDefaultTypeInternal()
@@ -1097,9 +1097,9 @@ struct GetGroupList_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupList_ParamsDefaultTypeInternal _GetGroupList_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupList::GetGroupList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupListDefaultTypeInternal()
@@ -1140,9 +1140,9 @@ struct GetGroupMemberInfo_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupMemberInfo_ParamsDefaultTypeInternal _GetGroupMemberInfo_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupMemberInfo::GetGroupMemberInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupMemberInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupMemberInfoDefaultTypeInternal()
@@ -1197,9 +1197,9 @@ struct GetGroupMemberList_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupMemberList_ParamsDefaultTypeInternal _GetGroupMemberList_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupMemberList::GetGroupMemberList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupMemberListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupMemberListDefaultTypeInternal()
@@ -1239,9 +1239,9 @@ struct GetGroupHonorInfo_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupHonorInfo_ParamsDefaultTypeInternal _GetGroupHonorInfo_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupHonorInfo::GetGroupHonorInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupHonorInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupHonorInfoDefaultTypeInternal()
@@ -1303,9 +1303,9 @@ struct GetCoolies_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetCoolies_ParamsDefaultTypeInternal _GetCoolies_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetCoolies::GetCoolies(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetCooliesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetCooliesDefaultTypeInternal()
@@ -1331,8 +1331,8 @@ struct GetCooliesRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetCooliesRespDefaultTypeInternal _GetCooliesResp_default_instance_;
 PROTOBUF_CONSTEXPR GetCsrfToken::GetCsrfToken(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetCsrfTokenDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetCsrfTokenDefaultTypeInternal()
@@ -1371,9 +1371,9 @@ struct GetCredentials_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetCredentials_ParamsDefaultTypeInternal _GetCredentials_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetCredentials::GetCredentials(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetCredentialsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetCredentialsDefaultTypeInternal()
@@ -1414,9 +1414,9 @@ struct GetRecord_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRecord_ParamsDefaultTypeInternal _GetRecord_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetRecord::GetRecord(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetRecordDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetRecordDefaultTypeInternal()
@@ -1442,8 +1442,8 @@ struct GetRecordRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetRecordRespDefaultTypeInternal _GetRecordResp_default_instance_;
 PROTOBUF_CONSTEXPR CanSendImage::CanSendImage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CanSendImageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CanSendImageDefaultTypeInternal()
@@ -1469,8 +1469,8 @@ struct CanSendImageRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CanSendImageRespDefaultTypeInternal _CanSendImageResp_default_instance_;
 PROTOBUF_CONSTEXPR CanSendRecord::CanSendRecord(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CanSendRecordDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CanSendRecordDefaultTypeInternal()
@@ -1496,8 +1496,8 @@ struct CanSendRecordRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CanSendRecordRespDefaultTypeInternal _CanSendRecordResp_default_instance_;
 PROTOBUF_CONSTEXPR GetVersionInfo::GetVersionInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetVersionInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetVersionInfoDefaultTypeInternal()
@@ -1549,8 +1549,8 @@ struct SetRestart_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetRestart_ParamsDefaultTypeInternal _SetRestart_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetRestart::SetRestart(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetRestartDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetRestartDefaultTypeInternal()
@@ -1563,7 +1563,7 @@ struct SetRestartDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetRestartDefaultTypeInternal _SetRestart_default_instance_;
 PROTOBUF_CONSTEXPR CleanCache::CleanCache(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CleanCacheDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CleanCacheDefaultTypeInternal()
@@ -1591,8 +1591,8 @@ struct SetGroupPortrait_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetGroupPortrait_ParamsDefaultTypeInternal _SetGroupPortrait_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetGroupPortrait::SetGroupPortrait(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetGroupPortraitDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetGroupPortraitDefaultTypeInternal()
@@ -1618,9 +1618,9 @@ struct GetWordSlices_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetWordSlices_ParamsDefaultTypeInternal _GetWordSlices_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetWordSlices::GetWordSlices(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetWordSlicesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetWordSlicesDefaultTypeInternal()
@@ -1659,9 +1659,9 @@ struct OcrImage_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OcrImage_ParamsDefaultTypeInternal _OcrImage_Params_default_instance_;
 PROTOBUF_CONSTEXPR OcrImage::OcrImage(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct OcrImageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR OcrImageDefaultTypeInternal()
@@ -1703,8 +1703,8 @@ struct OcrImageRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 OcrImageRespDefaultTypeInternal _OcrImageResp_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupSystemMsg::GetGroupSystemMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupSystemMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupSystemMsgDefaultTypeInternal()
@@ -1785,8 +1785,8 @@ struct UploadPrivateFile_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UploadPrivateFile_ParamsDefaultTypeInternal _UploadPrivateFile_Params_default_instance_;
 PROTOBUF_CONSTEXPR UploadPrivateFile::UploadPrivateFile(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UploadPrivateFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UploadPrivateFileDefaultTypeInternal()
@@ -1815,8 +1815,8 @@ struct UploadGroupFile_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UploadGroupFile_ParamsDefaultTypeInternal _UploadGroupFile_Params_default_instance_;
 PROTOBUF_CONSTEXPR UploadGroupFile::UploadGroupFile(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct UploadGroupFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR UploadGroupFileDefaultTypeInternal()
@@ -1842,9 +1842,9 @@ struct GetGroupFileSystemInfo_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupFileSystemInfo_ParamsDefaultTypeInternal _GetGroupFileSystemInfo_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupFileSystemInfo::GetGroupFileSystemInfo(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupFileSystemInfoDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupFileSystemInfoDefaultTypeInternal()
@@ -1886,9 +1886,9 @@ struct GetGroupRootFiles_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupRootFiles_ParamsDefaultTypeInternal _GetGroupRootFiles_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupRootFiles::GetGroupRootFiles(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupRootFilesDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupRootFilesDefaultTypeInternal()
@@ -1929,9 +1929,9 @@ struct getGroupFileByFolder_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 getGroupFileByFolder_ParamsDefaultTypeInternal _getGroupFileByFolder_Params_default_instance_;
 PROTOBUF_CONSTEXPR getGroupFileByFolder::getGroupFileByFolder(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct getGroupFileByFolderDefaultTypeInternal {
   PROTOBUF_CONSTEXPR getGroupFileByFolderDefaultTypeInternal()
@@ -1973,8 +1973,8 @@ struct CreateGroupFileFolder_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreateGroupFileFolder_ParamsDefaultTypeInternal _CreateGroupFileFolder_Params_default_instance_;
 PROTOBUF_CONSTEXPR CreateGroupFileFolder::CreateGroupFileFolder(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CreateGroupFileFolderDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CreateGroupFileFolderDefaultTypeInternal()
@@ -2001,8 +2001,8 @@ struct DeleteGroupFolder_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteGroupFolder_ParamsDefaultTypeInternal _DeleteGroupFolder_Params_default_instance_;
 PROTOBUF_CONSTEXPR DeleteGroupFolder::DeleteGroupFolder(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteGroupFolderDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteGroupFolderDefaultTypeInternal()
@@ -2030,8 +2030,8 @@ struct DeleteGroupFile_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteGroupFile_ParamsDefaultTypeInternal _DeleteGroupFile_Params_default_instance_;
 PROTOBUF_CONSTEXPR DeleteGroupFile::DeleteGroupFile(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteGroupFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteGroupFileDefaultTypeInternal()
@@ -2059,9 +2059,9 @@ struct GetGroupFileUrl_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupFileUrl_ParamsDefaultTypeInternal _GetGroupFileUrl_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupFileUrl::GetGroupFileUrl(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupFileUrlDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupFileUrlDefaultTypeInternal()
@@ -2087,8 +2087,8 @@ struct GetGroupFileUrlRespDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupFileUrlRespDefaultTypeInternal _GetGroupFileUrlResp_default_instance_;
 PROTOBUF_CONSTEXPR GetStatus::GetStatus(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetStatusDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetStatusDefaultTypeInternal()
@@ -2153,9 +2153,9 @@ struct GetGroupAtAllRemain_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupAtAllRemain_ParamsDefaultTypeInternal _GetGroupAtAllRemain_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupAtAllRemain::GetGroupAtAllRemain(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupAtAllRemainDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupAtAllRemainDefaultTypeInternal()
@@ -2197,8 +2197,8 @@ struct HandleQuickOperation_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HandleQuickOperation_ParamsDefaultTypeInternal _HandleQuickOperation_Params_default_instance_;
 PROTOBUF_CONSTEXPR HandleQuickOperation::HandleQuickOperation(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct HandleQuickOperationDefaultTypeInternal {
   PROTOBUF_CONSTEXPR HandleQuickOperationDefaultTypeInternal()
@@ -2226,8 +2226,8 @@ struct SendGroupNotice_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendGroupNotice_ParamsDefaultTypeInternal _SendGroupNotice_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendGroupNotice::SendGroupNotice(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendGroupNoticeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendGroupNoticeDefaultTypeInternal()
@@ -2253,9 +2253,9 @@ struct GetGroupNotice_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupNotice_ParamsDefaultTypeInternal _GetGroupNotice_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupNotice::GetGroupNotice(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupNoticeDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupNoticeDefaultTypeInternal()
@@ -2338,8 +2338,8 @@ struct ReloadEventFilter_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ReloadEventFilter_ParamsDefaultTypeInternal _ReloadEventFilter_Params_default_instance_;
 PROTOBUF_CONSTEXPR ReloadEventFilter::ReloadEventFilter(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct ReloadEventFilterDefaultTypeInternal {
   PROTOBUF_CONSTEXPR ReloadEventFilterDefaultTypeInternal()
@@ -2367,9 +2367,9 @@ struct DownloadFile_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DownloadFile_ParamsDefaultTypeInternal _DownloadFile_Params_default_instance_;
 PROTOBUF_CONSTEXPR DownloadFile::DownloadFile(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DownloadFileDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DownloadFileDefaultTypeInternal()
@@ -2408,9 +2408,9 @@ struct GetOnlineClients_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetOnlineClients_ParamsDefaultTypeInternal _GetOnlineClients_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetOnlineClients::GetOnlineClients(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetOnlineClientsDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetOnlineClientsDefaultTypeInternal()
@@ -2450,9 +2450,9 @@ struct GetGroupMsgHistory_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetGroupMsgHistory_ParamsDefaultTypeInternal _GetGroupMsgHistory_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetGroupMsgHistory::GetGroupMsgHistory(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetGroupMsgHistoryDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetGroupMsgHistoryDefaultTypeInternal()
@@ -2491,8 +2491,8 @@ struct SetEssenceMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetEssenceMsg_ParamsDefaultTypeInternal _SetEssenceMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetEssenceMsg::SetEssenceMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetEssenceMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetEssenceMsgDefaultTypeInternal()
@@ -2518,8 +2518,8 @@ struct DeleteEssenceMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteEssenceMsg_ParamsDefaultTypeInternal _DeleteEssenceMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR DeleteEssenceMsg::DeleteEssenceMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteEssenceMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteEssenceMsgDefaultTypeInternal()
@@ -2545,9 +2545,9 @@ struct GetEssenceMsgList_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetEssenceMsgList_ParamsDefaultTypeInternal _GetEssenceMsgList_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetEssenceMsgList::GetEssenceMsgList(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetEssenceMsgListDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetEssenceMsgListDefaultTypeInternal()
@@ -2592,9 +2592,9 @@ struct CheckUlrSafely_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CheckUlrSafely_ParamsDefaultTypeInternal _CheckUlrSafely_Params_default_instance_;
 PROTOBUF_CONSTEXPR CheckUlrSafely::CheckUlrSafely(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct CheckUlrSafelyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CheckUlrSafelyDefaultTypeInternal()
@@ -2633,9 +2633,9 @@ struct GetModelShow_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetModelShow_ParamsDefaultTypeInternal _GetModelShow_Params_default_instance_;
 PROTOBUF_CONSTEXPR GetModelShow::GetModelShow(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct GetModelShowDefaultTypeInternal {
   PROTOBUF_CONSTEXPR GetModelShowDefaultTypeInternal()
@@ -2689,8 +2689,8 @@ struct SetModelShow_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SetModelShow_ParamsDefaultTypeInternal _SetModelShow_Params_default_instance_;
 PROTOBUF_CONSTEXPR SetModelShow::SetModelShow(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SetModelShowDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SetModelShowDefaultTypeInternal()
@@ -2716,8 +2716,8 @@ struct DeleteUnidirectionalFriend_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteUnidirectionalFriend_ParamsDefaultTypeInternal _DeleteUnidirectionalFriend_Params_default_instance_;
 PROTOBUF_CONSTEXPR DeleteUnidirectionalFriend::DeleteUnidirectionalFriend(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.params_)*/nullptr
+    /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DeleteUnidirectionalFriendDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DeleteUnidirectionalFriendDefaultTypeInternal()
@@ -2744,9 +2744,9 @@ struct SendPrivateForwardMsg_ParamsDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendPrivateForwardMsg_ParamsDefaultTypeInternal _SendPrivateForwardMsg_Params_default_instance_;
 PROTOBUF_CONSTEXPR SendPrivateForwardMsg::SendPrivateForwardMsg(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.action_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
+  , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct SendPrivateForwardMsgDefaultTypeInternal {
   PROTOBUF_CONSTEXPR SendPrivateForwardMsgDefaultTypeInternal()
@@ -2785,7 +2785,7 @@ const uint32_t TableStruct_cqhttp_5fapi_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendPrivateMsg_Params, _impl_.user_id_),
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendPrivateMsg_Params, _impl_.group_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendPrivateMsg_Params, _impl_.messgae_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendPrivateMsg_Params, _impl_.message_),
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendPrivateMsg_Params, _impl_.auto_escape_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendPrivateMsg, _internal_metadata_),
@@ -2810,7 +2810,7 @@ const uint32_t TableStruct_cqhttp_5fapi_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupMsg_Params, _impl_.group_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupMsg_Params, _impl_.messgae_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupMsg_Params, _impl_.message_),
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupMsg_Params, _impl_.auto_escape_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupMsg, _internal_metadata_),
@@ -2835,7 +2835,7 @@ const uint32_t TableStruct_cqhttp_5fapi_2eproto::offsets[] PROTOBUF_SECTION_VARI
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupForwardMsg_Params, _impl_.group_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupForwardMsg_Params, _impl_.messgae_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupForwardMsg_Params, _impl_.message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupForwardMsg, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -4780,225 +4780,244 @@ static const ::_pb::Message* const file_default_instances[] = {
 
 const char descriptor_table_protodef_cqhttp_5fapi_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\020cqhttp_api.proto\022\006cqhttp\032\021cqhttp_base."
-  "proto\"\260\001\n\016SendPrivateMsg\022\016\n\006action\030\001 \001(\t"
-  "\022-\n\006params\030\002 \001(\0132\035.cqhttp.SendPrivateMsg"
-  ".Params\022\014\n\004echo\030\003 \001(\t\032Q\n\006Params\022\017\n\007user_"
-  "id\030\001 \001(\003\022\020\n\010group_id\030\002 \001(\003\022\017\n\007messgae\030\003 "
-  "\001(\t\022\023\n\013auto_escape\030\004 \001(\010\"(\n\022SendPrivateM"
-  "sgResp\022\022\n\nmessage_id\030\001 \001(\005\"\233\001\n\014SendGroup"
-  "Msg\022\016\n\006action\030\001 \001(\t\022+\n\006params\030\002 \001(\0132\033.cq"
-  "http.SendGroupMsg.Params\022\014\n\004echo\030\003 \001(\t\032@"
-  "\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007messgae\030\002 "
-  "\001(\003\022\023\n\013auto_escape\030\003 \001(\010\"&\n\020SendGroupMsg"
-  "Resp\022\022\n\nmessage_id\030\001 \001(\005\"\224\001\n\023SendGroupFo"
-  "rwardMsg\022\016\n\006action\030\001 \001(\t\0222\n\006params\030\002 \001(\013"
-  "2\".cqhttp.SendGroupForwardMsg.Params\022\014\n\004"
-  "echo\030\003 \001(\t\032+\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017"
-  "\n\007messgae\030\002 \001(\003\"A\n\027SendGroupForwardMsgRe"
-  "sp\022\022\n\nmessage_id\030\001 \001(\003\022\022\n\nforward_id\030\002 \001"
-  "(\t\"\300\001\n\013SendMessage\022\016\n\006action\030\001 \001(\t\022*\n\006pa"
-  "rams\030\002 \001(\0132\032.cqhttp.SendMessage.Params\022\014"
-  "\n\004echo\030\003 \001(\t\032g\n\006Params\022\024\n\014message_type\030\001"
-  " \001(\t\022\017\n\007user_id\030\002 \001(\003\022\020\n\010group_id\030\003 \001(\003\022"
-  "\017\n\007message\030\004 \001(\t\022\023\n\013auto_escape\030\005 \001(\010\"%\n"
-  "\017SendMessageResp\022\022\n\nmessage_id\030\002 \001(\005\"c\n\t"
-  "DeleteMsg\022\016\n\006action\030\001 \001(\t\022(\n\006params\030\002 \001("
+  "proto\"\300\001\n\016SendPrivateMsg\022\036\n\006action\030\001 \001(\016"
+  "2\016.cqhttp.Action\022-\n\006params\030\002 \001(\0132\035.cqhtt"
+  "p.SendPrivateMsg.Params\022\014\n\004echo\030\003 \001(\t\032Q\n"
+  "\006Params\022\017\n\007user_id\030\001 \001(\003\022\020\n\010group_id\030\002 \001"
+  "(\003\022\017\n\007message\030\003 \001(\t\022\023\n\013auto_escape\030\004 \001(\010"
+  "\"(\n\022SendPrivateMsgResp\022\022\n\nmessage_id\030\001 \001"
+  "(\005\"\253\001\n\014SendGroupMsg\022\036\n\006action\030\001 \001(\0162\016.cq"
+  "http.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.Sen"
+  "dGroupMsg.Params\022\014\n\004echo\030\003 \001(\t\032@\n\006Params"
+  "\022\020\n\010group_id\030\001 \001(\003\022\017\n\007message\030\002 \001(\003\022\023\n\013a"
+  "uto_escape\030\003 \001(\010\"&\n\020SendGroupMsgResp\022\022\n\n"
+  "message_id\030\001 \001(\005\"\244\001\n\023SendGroupForwardMsg"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0222\n\006para"
+  "ms\030\002 \001(\0132\".cqhttp.SendGroupForwardMsg.Pa"
+  "rams\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\020\n\010group_id"
+  "\030\001 \001(\003\022\017\n\007message\030\002 \001(\003\"A\n\027SendGroupForw"
+  "ardMsgResp\022\022\n\nmessage_id\030\001 \001(\003\022\022\n\nforwar"
+  "d_id\030\002 \001(\t\"\320\001\n\013SendMessage\022\036\n\006action\030\001 \001"
+  "(\0162\016.cqhttp.Action\022*\n\006params\030\002 \001(\0132\032.cqh"
+  "ttp.SendMessage.Params\022\014\n\004echo\030\003 \001(\t\032g\n\006"
+  "Params\022\024\n\014message_type\030\001 \001(\t\022\017\n\007user_id\030"
+  "\002 \001(\003\022\020\n\010group_id\030\003 \001(\003\022\017\n\007message\030\004 \001(\t"
+  "\022\023\n\013auto_escape\030\005 \001(\010\"%\n\017SendMessageResp"
+  "\022\022\n\nmessage_id\030\002 \001(\005\"s\n\tDeleteMsg\022\036\n\006act"
+  "ion\030\001 \001(\0162\016.cqhttp.Action\022(\n\006params\030\002 \001("
   "\0132\030.cqhttp.DeleteMsg.Params\032\034\n\006Params\022\022\n"
-  "\nmessage_id\030\001 \001(\005\"k\n\006getMsg\022\016\n\006action\030\001 "
-  "\001(\t\022%\n\006params\030\002 \001(\0132\025.cqhttp.getMsg.Para"
-  "ms\022\014\n\004echo\030\003 \001(\t\032\034\n\006Params\022\022\n\nmessage_id"
-  "\030\001 \001(\005\"\274\001\n\ngetMsgResp\022\r\n\005group\030\001 \001(\010\022\020\n\010"
-  "group_id\030\002 \001(\003\022\022\n\nmessage_id\030\003 \001(\005\022\017\n\007re"
-  "al_id\030\004 \001(\005\022\024\n\014message_type\030\005 \001(\t\022\036\n\006sen"
-  "der\030\006 \001(\0132\016.cqhttp.Sender\022\014\n\004time\030\007 \001(\005\022"
-  "\017\n\007message\030\010 \001(\t\022\023\n\013raw_message\030\t \001(\t\"y\n"
-  "\rGetForwardMsg\022\016\n\006action\030\001 \001(\t\022,\n\006params"
-  "\030\002 \001(\0132\034.cqhttp.GetForwardMsg.Params\022\014\n\004"
-  "echo\030\003 \001(\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\t"
-  "\"\224\001\n\021GetForwardMsgResp\0224\n\010messages\030\001 \003(\013"
-  "2\".cqhttp.GetForwardMsgResp.Messages\032I\n\010"
-  "Messages\022\017\n\007content\030\001 \001(\t\022\036\n\006sender\030\002 \001("
-  "\0132\016.cqhttp.Sender\022\014\n\004time\030\003 \001(\003\"i\n\010GetIm"
-  "age\022\016\n\006action\030\001 \001(\t\022\'\n\006params\030\002 \001(\0132\027.cq"
-  "http.GetImage.Params\022\014\n\004echo\030\003 \001(\t\032\026\n\006Pa"
-  "rams\022\014\n\004file\030\001 \001(\t\";\n\014GetImageResp\022\014\n\004si"
-  "ze\030\001 \001(\005\022\020\n\010filename\030\002 \001(\t\022\013\n\003url\030\003 \001(\t\""
-  "k\n\rMarkMsgAsRead\022\016\n\006action\030\001 \001(\t\022,\n\006para"
-  "ms\030\002 \001(\0132\034.cqhttp.MarkMsgAsRead.Params\032\034"
-  "\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\226\001\n\014SetGrou"
-  "pKick\022\016\n\006action\030\001 \001(\t\022+\n\006params\030\002 \001(\0132\033."
-  "cqhttp.SetGroupKick.Params\032I\n\006Params\022\022\n\n"
-  "message_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\032\n\022rej"
-  "ect_add_request\030\003 \001(\010\"\210\001\n\013SetGroupBan\022\016\n"
-  "\006action\030\001 \001(\t\022*\n\006params\030\002 \001(\0132\032.cqhttp.S"
-  "etGroupBan.Params\032=\n\006Params\022\020\n\010group_id\030"
-  "\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\020\n\010duration\030\003 \001(\005"
-  "\"\307\001\n\024SetGroupAnonymousBan\022\016\n\006action\030\001 \001("
-  "\t\0223\n\006params\030\002 \001(\0132#.cqhttp.SetGroupAnony"
-  "mousBan.Params\032j\n\006Params\022\020\n\010group_id\030\001 \001"
-  "(\003\022$\n\tanonymous\030\002 \001(\0132\021.cqhttp.Anonymous"
-  "\022\026\n\016anonymous_flag\030\003 \001(\t\022\020\n\010duration\030\004 \001"
-  "(\005\"\177\n\020SetGroupWholeBan\022\016\n\006action\030\001 \001(\t\022/"
-  "\n\006params\030\002 \001(\0132\037.cqhttp.SetGroupWholeBan"
-  ".Params\032*\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\016\n\006e"
-  "nable\030\002 \001(\010\"\212\001\n\rSetGroupAdmin\022\016\n\006action\030"
-  "\001 \001(\t\022,\n\006params\030\002 \001(\0132\034.cqhttp.SetGroupA"
-  "dmin.Params\032;\n\006Params\022\020\n\010group_id\030\001 \001(\003\022"
-  "\017\n\007user_id\030\002 \001(\003\022\016\n\006enable\030\003 \001(\010\"\201\001\n\021Set"
-  "GroupAnonymous\022\016\n\006action\030\001 \001(\t\0220\n\006params"
-  "\030\002 \001(\0132 .cqhttp.SetGroupAnonymous.Params"
-  "\032*\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\016\n\006enable\030\002"
-  " \001(\010\"\206\001\n\014SetGroupCard\022\016\n\006action\030\001 \001(\t\022+\n"
-  "\006params\030\002 \001(\0132\033.cqhttp.SetGroupCard.Para"
-  "ms\0329\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_i"
-  "d\030\002 \001(\003\022\014\n\004card\030\003 \001(\t\"{\n\014SetGroupName\022\016\n"
-  "\006action\030\001 \001(\t\022+\n\006params\030\002 \001(\0132\033.cqhttp.S"
-  "etGroupName.Params\032.\n\006Params\022\020\n\010group_id"
-  "\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\"}\n\rSetGroupLe"
-  "ave\022\016\n\006action\030\001 \001(\t\022,\n\006params\030\002 \001(\0132\034.cq"
-  "http.SetGroupLeave.Params\032.\n\006Params\022\020\n\010g"
-  "roup_id\030\001 \001(\003\022\022\n\nis_dismiss\030\002 \001(\010\"\261\001\n\024Se"
-  "tGroupSpecialTitle\022\016\n\006action\030\001 \001(\t\0223\n\006pa"
-  "rams\030\002 \001(\0132#.cqhttp.SetGroupSpecialTitle"
-  ".Params\032T\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007u"
-  "ser_id\030\002 \001(\003\022\025\n\rspecial_title\030\003 \001(\t\022\020\n\010d"
-  "uration\030\004 \001(\005\"i\n\rSendGroupSign\022\016\n\006action"
-  "\030\001 \001(\t\022,\n\006params\030\002 \001(\0132\034.cqhttp.SendGrou"
-  "pSign.Params\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003"
-  "\"\222\001\n\023SetFriendAddRequest\022\016\n\006action\030\001 \001(\t"
-  "\0222\n\006params\030\002 \001(\0132\".cqhttp.SetFriendAddRe"
-  "quest.Params\0327\n\006Params\022\014\n\004flag\030\001 \001(\t\022\017\n\007"
-  "approve\030\002 \001(\010\022\016\n\006remark\030\003 \001(\t\"\242\001\n\022SetGro"
-  "upAddRequest\022\016\n\006action\030\001 \001(\t\0221\n\006params\030\002"
-  " \001(\0132!.cqhttp.SetGroupAddRequest.Params\032"
-  "I\n\006Params\022\014\n\004flag\030\001 \001(\t\022\020\n\010sub_type\030\002 \001("
-  "\t\022\017\n\007approve\030\003 \001(\010\022\016\n\006reason\030\004 \001(\t\"\206\001\n\014G"
-  "etLoginInfo\022\016\n\006action\030\001 \001(\t\022+\n\006params\030\002 "
-  "\001(\0132\033.cqhttp.GetLoginInfo.Params\022\014\n\004echo"
-  "\030\003 \001(\t\032+\n\006Params\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nic"
-  "kname\030\002 \001(\t\"5\n\020GetLoginInfoResp\022\017\n\007user_"
-  "id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\"4\n\024QiDianGetA"
-  "ccountInfo\022\016\n\006action\030\001 \001(\t\022\014\n\004echo\030\002 \001(\t"
-  "\"T\n\030QiDianGetAccountInfoResp\022\021\n\tmaster_i"
-  "d\030\001 \001(\003\022\020\n\010ext_name\030\002 \001(\t\022\023\n\013create_time"
-  "\030\003 \001(\003\"\257\001\n\014SetQQProfile\022\016\n\006action\030\001 \001(\t\022"
-  "+\n\006params\030\002 \001(\0132\033.cqhttp.SetQQProfile.Pa"
-  "rams\032b\n\006Params\022\020\n\010nickname\030\001 \001(\t\022\017\n\007comp"
-  "any\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007college\030\004 \001("
-  "\t\022\025\n\rpersonal_note\030\005 \001(\t\"\214\001\n\017GetStranger"
-  "Info\022\016\n\006action\030\001 \001(\t\022.\n\006params\030\002 \001(\0132\036.c"
-  "qhttp.GetStrangerInfo.Params\022\014\n\004echo\030\003 \001"
-  "(\t\032+\n\006Params\022\017\n\007user_id\030\001 \001(\003\022\020\n\010no_cach"
-  "e\030\002 \001(\010\"\202\001\n\023GetStrangerInfoResp\022\017\n\007user_"
-  "id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022"
-  "\013\n\003age\030\004 \001(\005\022\013\n\003qid\030\005 \001(\t\022\r\n\005level\030\006 \001(\005"
-  "\022\022\n\nlogin_days\030\007 \001(\005\"-\n\rGetFriendList\022\016\n"
-  "\006action\030\001 \001(\t\022\014\n\004echo\030\002 \001(\t\"\203\001\n\021GetFrien"
-  "dListResp\0221\n\007friends\030\001 \003(\0132 .cqhttp.GetF"
-  "riendListResp.Friend\032;\n\006Friend\022\017\n\007user_i"
-  "d\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006remark\030\003 \001("
-  "\t\"8\n\030UnidirectionalFriendList\022\016\n\006action\030"
-  "\001 \001(\t\022\014\n\004echo\030\002 \001(\t\"\230\001\n\034UnidirectionalFr"
-  "iendListResp\022;\n\006friend\030\001 \003(\0132+.cqhttp.Un"
-  "idirectionalFriendListResp.Friend\032;\n\006Fri"
-  "end\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016"
-  "\n\006source\030\003 \001(\t\"f\n\014DeleteFriend\022\016\n\006action"
-  "\030\001 \001(\t\022+\n\006params\030\002 \001(\0132\033.cqhttp.DeleteFr"
-  "iend.Params\032\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\207"
-  "\001\n\014GetGroupInfo\022\016\n\006action\030\001 \001(\t\022+\n\006param"
-  "s\030\002 \001(\0132\033.cqhttp.GetGroupInfo.Params\022\014\n\004"
-  "echo\030\003 \001(\t\032,\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\020"
-  "\n\010no_cache\030\002 \001(\010\"\254\001\n\020GetGroupInfoResp\022\020\n"
-  "\010group_id\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\022\022\n\ng"
-  "roup_memo\030\003 \001(\t\022\031\n\021group_create_time\030\004 \001"
-  "(\r\022\023\n\013group_level\030\005 \001(\r\022\024\n\014member_count\030"
-  "\006 \001(\005\022\030\n\020max_member_count\030\007 \001(\005\"u\n\014GetGr"
-  "oupList\022\016\n\006action\030\001 \001(\t\022+\n\006params\030\002 \001(\0132"
-  "\033.cqhttp.GetGroupList.Params\022\014\n\004echo\030\003 \001"
-  "(\t\032\032\n\006Params\022\020\n\010no_cache\030\001 \001(\010\"@\n\020GetGro"
-  "upListResp\022,\n\ngroup_list\030\001 \003(\0132\030.cqhttp."
-  "GetGroupInfoResp\"\244\001\n\022GetGroupMemberInfo\022"
-  "\016\n\006action\030\001 \001(\t\0221\n\006params\030\002 \001(\0132!.cqhttp"
-  ".GetGroupMemberInfo.Params\022\014\n\004echo\030\003 \001(\t"
-  "\032=\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030"
-  "\002 \001(\003\022\020\n\010no_cache\030\003 \001(\010\"\275\002\n\026GetGroupMemb"
-  "erInfoResp\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030"
-  "\002 \001(\003\022\020\n\010nickname\030\003 \001(\t\022\014\n\004card\030\004 \001(\t\022\013\n"
-  "\003sex\030\005 \001(\t\022\013\n\003age\030\006 \001(\005\022\014\n\004area\030\007 \001(\t\022\021\n"
-  "\tjoin_time\030\010 \001(\005\022\026\n\016last_sent_time\030\t \001(\005"
-  "\022\r\n\005level\030\n \001(\t\022\014\n\004role\030\013 \001(\t\022\022\n\nunfrien"
-  "dly\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\031\n\021title_expire"
-  "_time\030\016 \001(\003\022\027\n\017card_changeable\030\017 \001(\010\022\031\n\021"
-  "shut_up_timestamp\030\020 \001(\003\"\223\001\n\022GetGroupMemb"
-  "erList\022\016\n\006action\030\001 \001(\t\0221\n\006params\030\002 \001(\0132!"
-  ".cqhttp.GetGroupMemberList.Params\022\014\n\004ech"
-  "o\030\003 \001(\t\032,\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\020\n\010n"
-  "o_cache\030\002 \001(\010\"S\n\026GetGroupMemberListResp\022"
-  "9\n\021group_member_list\030\001 \003(\0132\036.cqhttp.GetG"
-  "roupMemberInfoResp\"\215\001\n\021GetGroupHonorInfo"
-  "\022\016\n\006action\030\001 \001(\t\0220\n\006params\030\002 \001(\0132 .cqhtt"
-  "p.GetGroupHonorInfo.Params\022\014\n\004echo\030\003 \001(\t"
-  "\032(\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004type\030\002 \001"
-  "(\t\"\231\004\n\025GetGroupHonorInfoResp\022\020\n\010group_id"
-  "\030\001 \001(\003\022B\n\021current_talkative\030\002 \001(\0132\'.cqht"
-  "tp.GetGroupHonorInfoResp.Talkative\022\?\n\016ta"
-  "lkative_list\030\003 \003(\0132\'.cqhttp.GetGroupHono"
-  "rInfoResp.Talkative\022\?\n\016performer_list\030\004 "
+  "\nmessage_id\030\001 \001(\005\"{\n\006getMsg\022\036\n\006action\030\001 "
+  "\001(\0162\016.cqhttp.Action\022%\n\006params\030\002 \001(\0132\025.cq"
+  "http.getMsg.Params\022\014\n\004echo\030\003 \001(\t\032\034\n\006Para"
+  "ms\022\022\n\nmessage_id\030\001 \001(\005\"\274\001\n\ngetMsgResp\022\r\n"
+  "\005group\030\001 \001(\010\022\020\n\010group_id\030\002 \001(\003\022\022\n\nmessag"
+  "e_id\030\003 \001(\005\022\017\n\007real_id\030\004 \001(\005\022\024\n\014message_t"
+  "ype\030\005 \001(\t\022\036\n\006sender\030\006 \001(\0132\016.cqhttp.Sende"
+  "r\022\014\n\004time\030\007 \001(\005\022\017\n\007message\030\010 \001(\t\022\023\n\013raw_"
+  "message\030\t \001(\t\"\211\001\n\rGetForwardMsg\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132"
+  "\034.cqhttp.GetForwardMsg.Params\022\014\n\004echo\030\003 "
+  "\001(\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\t\"\224\001\n\021Ge"
+  "tForwardMsgResp\0224\n\010messages\030\001 \003(\0132\".cqht"
+  "tp.GetForwardMsgResp.Messages\032I\n\010Message"
+  "s\022\017\n\007content\030\001 \001(\t\022\036\n\006sender\030\002 \001(\0132\016.cqh"
+  "ttp.Sender\022\014\n\004time\030\003 \001(\003\"y\n\010GetImage\022\036\n\006"
+  "action\030\001 \001(\0162\016.cqhttp.Action\022\'\n\006params\030\002"
+  " \001(\0132\027.cqhttp.GetImage.Params\022\014\n\004echo\030\003 "
+  "\001(\t\032\026\n\006Params\022\014\n\004file\030\001 \001(\t\";\n\014GetImageR"
+  "esp\022\014\n\004size\030\001 \001(\005\022\020\n\010filename\030\002 \001(\t\022\013\n\003u"
+  "rl\030\003 \001(\t\"{\n\rMarkMsgAsRead\022\036\n\006action\030\001 \001("
+  "\0162\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132\034.cqht"
+  "tp.MarkMsgAsRead.Params\032\034\n\006Params\022\022\n\nmes"
+  "sage_id\030\001 \001(\005\"\246\001\n\014SetGroupKick\022\036\n\006action"
+  "\030\001 \001(\0162\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033"
+  ".cqhttp.SetGroupKick.Params\032I\n\006Params\022\022\n"
+  "\nmessage_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\032\n\022re"
+  "ject_add_request\030\003 \001(\010\"\230\001\n\013SetGroupBan\022\036"
+  "\n\006action\030\001 \001(\0162\016.cqhttp.Action\022*\n\006params"
+  "\030\002 \001(\0132\032.cqhttp.SetGroupBan.Params\032=\n\006Pa"
+  "rams\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022"
+  "\020\n\010duration\030\003 \001(\005\"\327\001\n\024SetGroupAnonymousB"
+  "an\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0223\n\006pa"
+  "rams\030\002 \001(\0132#.cqhttp.SetGroupAnonymousBan"
+  ".Params\032j\n\006Params\022\020\n\010group_id\030\001 \001(\003\022$\n\ta"
+  "nonymous\030\002 \001(\0132\021.cqhttp.Anonymous\022\026\n\016ano"
+  "nymous_flag\030\003 \001(\t\022\020\n\010duration\030\004 \001(\005\"\217\001\n\020"
+  "SetGroupWholeBan\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
+  "p.Action\022/\n\006params\030\002 \001(\0132\037.cqhttp.SetGro"
+  "upWholeBan.Params\032*\n\006Params\022\020\n\010group_id\030"
+  "\001 \001(\003\022\016\n\006enable\030\002 \001(\010\"\232\001\n\rSetGroupAdmin\022"
+  "\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022,\n\006param"
+  "s\030\002 \001(\0132\034.cqhttp.SetGroupAdmin.Params\032;\n"
+  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001"
+  "(\003\022\016\n\006enable\030\003 \001(\010\"\221\001\n\021SetGroupAnonymous"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0220\n\006para"
+  "ms\030\002 \001(\0132 .cqhttp.SetGroupAnonymous.Para"
+  "ms\032*\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\016\n\006enable"
+  "\030\002 \001(\010\"\226\001\n\014SetGroupCard\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp"
+  ".SetGroupCard.Params\0329\n\006Params\022\020\n\010group_"
+  "id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\014\n\004card\030\003 \001(\t\""
+  "\213\001\n\014SetGroupName\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
+  "p.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.SetGro"
+  "upName.Params\032.\n\006Params\022\020\n\010group_id\030\001 \001("
+  "\003\022\022\n\ngroup_name\030\002 \001(\t\"\215\001\n\rSetGroupLeave\022"
+  "\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022,\n\006param"
+  "s\030\002 \001(\0132\034.cqhttp.SetGroupLeave.Params\032.\n"
+  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\022\n\nis_dismiss\030"
+  "\002 \001(\010\"\301\001\n\024SetGroupSpecialTitle\022\036\n\006action"
+  "\030\001 \001(\0162\016.cqhttp.Action\0223\n\006params\030\002 \001(\0132#"
+  ".cqhttp.SetGroupSpecialTitle.Params\032T\n\006P"
+  "arams\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003"
+  "\022\025\n\rspecial_title\030\003 \001(\t\022\020\n\010duration\030\004 \001("
+  "\005\"y\n\rSendGroupSign\022\036\n\006action\030\001 \001(\0162\016.cqh"
+  "ttp.Action\022,\n\006params\030\002 \001(\0132\034.cqhttp.Send"
+  "GroupSign.Params\032\032\n\006Params\022\020\n\010group_id\030\001"
+  " \001(\003\"\242\001\n\023SetFriendAddRequest\022\036\n\006action\030\001"
+  " \001(\0162\016.cqhttp.Action\0222\n\006params\030\002 \001(\0132\".c"
+  "qhttp.SetFriendAddRequest.Params\0327\n\006Para"
+  "ms\022\014\n\004flag\030\001 \001(\t\022\017\n\007approve\030\002 \001(\010\022\016\n\006rem"
+  "ark\030\003 \001(\t\"\262\001\n\022SetGroupAddRequest\022\036\n\006acti"
+  "on\030\001 \001(\0162\016.cqhttp.Action\0221\n\006params\030\002 \001(\013"
+  "2!.cqhttp.SetGroupAddRequest.Params\032I\n\006P"
+  "arams\022\014\n\004flag\030\001 \001(\t\022\020\n\010sub_type\030\002 \001(\t\022\017\n"
+  "\007approve\030\003 \001(\010\022\016\n\006reason\030\004 \001(\t\"\226\001\n\014GetLo"
+  "ginInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022"
+  "+\n\006params\030\002 \001(\0132\033.cqhttp.GetLoginInfo.Pa"
+  "rams\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\017\n\007user_id\030"
+  "\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\"5\n\020GetLoginInfoR"
+  "esp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\"D"
+  "\n\024QiDianGetAccountInfo\022\036\n\006action\030\001 \001(\0162\016"
+  ".cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"T\n\030QiDianGe"
+  "tAccountInfoResp\022\021\n\tmaster_id\030\001 \001(\003\022\020\n\010e"
+  "xt_name\030\002 \001(\t\022\023\n\013create_time\030\003 \001(\003\"\277\001\n\014S"
+  "etQQProfile\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\022+\n\006params\030\002 \001(\0132\033.cqhttp.SetQQProfil"
+  "e.Params\032b\n\006Params\022\020\n\010nickname\030\001 \001(\t\022\017\n\007"
+  "company\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007college\030"
+  "\004 \001(\t\022\025\n\rpersonal_note\030\005 \001(\t\"\234\001\n\017GetStra"
+  "ngerInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action"
+  "\022.\n\006params\030\002 \001(\0132\036.cqhttp.GetStrangerInf"
+  "o.Params\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\017\n\007user"
+  "_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"\202\001\n\023GetStran"
+  "gerInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname"
+  "\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022\013\n\003age\030\004 \001(\005\022\013\n\003qid\030"
+  "\005 \001(\t\022\r\n\005level\030\006 \001(\005\022\022\n\nlogin_days\030\007 \001(\005"
+  "\"=\n\rGetFriendList\022\036\n\006action\030\001 \001(\0162\016.cqht"
+  "tp.Action\022\014\n\004echo\030\002 \001(\t\"\203\001\n\021GetFriendLis"
+  "tResp\0221\n\007friends\030\001 \003(\0132 .cqhttp.GetFrien"
+  "dListResp.Friend\032;\n\006Friend\022\017\n\007user_id\030\001 "
+  "\001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006remark\030\003 \001(\t\"H\n"
+  "\030UnidirectionalFriendList\022\036\n\006action\030\001 \001("
+  "\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\230\001\n\034Unid"
+  "irectionalFriendListResp\022;\n\006friend\030\001 \003(\013"
+  "2+.cqhttp.UnidirectionalFriendListResp.F"
+  "riend\032;\n\006Friend\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nick"
+  "name\030\002 \001(\t\022\016\n\006source\030\003 \001(\t\"v\n\014DeleteFrie"
+  "nd\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006pa"
+  "rams\030\002 \001(\0132\033.cqhttp.DeleteFriend.Params\032"
+  "\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\227\001\n\014GetGroupI"
+  "nfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006p"
+  "arams\030\002 \001(\0132\033.cqhttp.GetGroupInfo.Params"
+  "\022\014\n\004echo\030\003 \001(\t\032,\n\006Params\022\020\n\010group_id\030\001 \001"
+  "(\003\022\020\n\010no_cache\030\002 \001(\010\"\254\001\n\020GetGroupInfoRes"
+  "p\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\022"
+  "\022\n\ngroup_memo\030\003 \001(\t\022\031\n\021group_create_time"
+  "\030\004 \001(\r\022\023\n\013group_level\030\005 \001(\r\022\024\n\014member_co"
+  "unt\030\006 \001(\005\022\030\n\020max_member_count\030\007 \001(\005\"\205\001\n\014"
+  "GetGroupList\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
+  "tion\022+\n\006params\030\002 \001(\0132\033.cqhttp.GetGroupLi"
+  "st.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010no_"
+  "cache\030\001 \001(\010\"@\n\020GetGroupListResp\022,\n\ngroup"
+  "_list\030\001 \003(\0132\030.cqhttp.GetGroupInfoResp\"\264\001"
+  "\n\022GetGroupMemberInfo\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\0221\n\006params\030\002 \001(\0132!.cqhttp.Ge"
+  "tGroupMemberInfo.Params\022\014\n\004echo\030\003 \001(\t\032=\n"
+  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001"
+  "(\003\022\020\n\010no_cache\030\003 \001(\010\"\275\002\n\026GetGroupMemberI"
+  "nfoResp\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001"
+  "(\003\022\020\n\010nickname\030\003 \001(\t\022\014\n\004card\030\004 \001(\t\022\013\n\003se"
+  "x\030\005 \001(\t\022\013\n\003age\030\006 \001(\005\022\014\n\004area\030\007 \001(\t\022\021\n\tjo"
+  "in_time\030\010 \001(\005\022\026\n\016last_sent_time\030\t \001(\005\022\r\n"
+  "\005level\030\n \001(\t\022\014\n\004role\030\013 \001(\t\022\022\n\nunfriendly"
+  "\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\031\n\021title_expire_ti"
+  "me\030\016 \001(\003\022\027\n\017card_changeable\030\017 \001(\010\022\031\n\021shu"
+  "t_up_timestamp\030\020 \001(\003\"\243\001\n\022GetGroupMemberL"
+  "ist\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0221\n\006p"
+  "arams\030\002 \001(\0132!.cqhttp.GetGroupMemberList."
+  "Params\022\014\n\004echo\030\003 \001(\t\032,\n\006Params\022\020\n\010group_"
+  "id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"S\n\026GetGroupMe"
+  "mberListResp\0229\n\021group_member_list\030\001 \003(\0132"
+  "\036.cqhttp.GetGroupMemberInfoResp\"\235\001\n\021GetG"
+  "roupHonorInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.A"
+  "ction\0220\n\006params\030\002 \001(\0132 .cqhttp.GetGroupH"
+  "onorInfo.Params\022\014\n\004echo\030\003 \001(\t\032(\n\006Params\022"
+  "\020\n\010group_id\030\001 \001(\003\022\014\n\004type\030\002 \001(\t\"\231\004\n\025GetG"
+  "roupHonorInfoResp\022\020\n\010group_id\030\001 \001(\003\022B\n\021c"
+  "urrent_talkative\030\002 \001(\0132\'.cqhttp.GetGroup"
+  "HonorInfoResp.Talkative\022\?\n\016talkative_lis"
+  "t\030\003 \003(\0132\'.cqhttp.GetGroupHonorInfoResp.T"
+  "alkative\022\?\n\016performer_list\030\004 \003(\0132\'.cqhtt"
+  "p.GetGroupHonorInfoResp.Talkative\022<\n\013leg"
+  "end_list\030\005 \003(\0132\'.cqhttp.GetGroupHonorInf"
+  "oResp.Talkative\022C\n\022strong_newbie_list\030\006 "
   "\003(\0132\'.cqhttp.GetGroupHonorInfoResp.Talka"
-  "tive\022<\n\013legend_list\030\005 \003(\0132\'.cqhttp.GetGr"
-  "oupHonorInfoResp.Talkative\022C\n\022strong_new"
-  "bie_list\030\006 \003(\0132\'.cqhttp.GetGroupHonorInf"
-  "oResp.Talkative\022=\n\014emotion_list\030\007 \003(\0132\'."
-  "cqhttp.GetGroupHonorInfoResp.Talkative\032f"
-  "\n\tTalkative\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname"
-  "\030\002 \001(\t\022\016\n\006avatar\030\003 \001(\t\022\021\n\tday_count\030\004 \001("
-  "\005\022\023\n\013description\030\005 \001(\t\"o\n\nGetCoolies\022\016\n\006"
-  "action\030\001 \001(\t\022)\n\006params\030\002 \001(\0132\031.cqhttp.Ge"
-  "tCoolies.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Params\022"
-  "\016\n\006domain\030\001 \001(\t\"!\n\016GetCooliesResp\022\017\n\007coo"
-  "kies\030\001 \001(\t\",\n\014GetCsrfToken\022\016\n\006action\030\001 \001"
-  "(\t\022\014\n\004echo\030\002 \001(\t\"!\n\020GetCsrfTokenResp\022\r\n\005"
-  "token\030\001 \001(\005\"w\n\016GetCredentials\022\016\n\006action\030"
-  "\001 \001(\t\022-\n\006params\030\002 \001(\0132\035.cqhttp.GetCreden"
-  "tials.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Params\022\016\n\006"
-  "domain\030\001 \001(\t\"9\n\022GetCredentialsResp\022\017\n\007co"
-  "okies\030\001 \001(\t\022\022\n\ncsrf_token\030\002 \001(\005\"\177\n\tGetRe"
-  "cord\022\016\n\006action\030\001 \001(\t\022(\n\006params\030\002 \001(\0132\030.c"
-  "qhttp.GetRecord.Params\022\014\n\004echo\030\003 \001(\t\032*\n\006"
-  "Params\022\014\n\004file\030\001 \001(\t\022\022\n\nout_format\030\002 \001(\t"
-  "\"\035\n\rGetRecordResp\022\014\n\004file\030\001 \001(\t\",\n\014CanSe"
-  "ndImage\022\016\n\006action\030\001 \001(\t\022\014\n\004echo\030\002 \001(\t\"\037\n"
-  "\020CanSendImageResp\022\013\n\003yes\030\001 \001(\010\"-\n\rCanSen"
-  "dRecord\022\016\n\006action\030\001 \001(\t\022\014\n\004echo\030\002 \001(\t\" \n"
-  "\021CanSendRecordResp\022\013\n\003yes\030\001 \001(\010\".\n\016GetVe"
-  "rsionInfo\022\016\n\006action\030\001 \001(\t\022\014\n\004echo\030\002 \001(\t\""
-  "\325\002\n\022GetVersionInfoResp\022\020\n\010app_name\030\001 \001(\t"
-  "\022\023\n\013app_version\030\002 \001(\t\022\025\n\rapp_full_name\030\003"
-  " \001(\t\022\030\n\020protocol_version\030\004 \001(\t\022\025\n\rcoolq_"
-  "edition\030\005 \001(\t\022\027\n\017coolq_directory\030\006 \001(\t\022\016"
-  "\n\006cqhttp\030\007 \001(\010\022\026\n\016plugin_version\030\010 \001(\t\022\033"
-  "\n\023plugin_build_number\030\t \001(\005\022\"\n\032plugin_bu"
-  "ild_configuration\030\n \001(\t\022\027\n\017runtime_versi"
-  "on\030\013 \001(\t\022\022\n\nruntime_os\030\014 \001(\t\022\017\n\007version\030"
-  "\r \001(\t\022\020\n\010protocol\030\016 \001(\005\"`\n\nSetRestart\022\016\n"
-  "\006action\030\001 \001(\t\022)\n\006params\030\002 \001(\0132\031.cqhttp.S"
-  "etRestart.Params\032\027\n\006Params\022\r\n\005delay\030\001 \001("
-  "\005\"\034\n\nCleanCache\022\016\n\006action\030\001 \001(\t\"\214\001\n\020SetG"
-  "roupPortrait\022\016\n\006action\030\001 \001(\t\022/\n\006params\030\002"
-  " \001(\0132\037.cqhttp.SetGroupPortrait.Params\0327\n"
-  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022"
-  "\r\n\005cache\030\003 \001(\005\"v\n\rGetWordSlices\022\016\n\006actio"
-  "n\030\001 \001(\t\022,\n\006params\030\002 \001(\0132\034.cqhttp.GetWord"
-  "Slices.Params\022\014\n\004echo\030\003 \001(\t\032\031\n\006Params\022\017\n"
-  "\007content\030\001 \001(\t\"#\n\021GetWordSlicesResp\022\016\n\006s"
-  "lices\030\001 \003(\t\"j\n\010OcrImage\022\016\n\006action\030\001 \001(\t\022"
-  "\'\n\006params\030\002 \001(\0132\027.cqhttp.OcrImage.Params"
-  "\022\014\n\004echo\030\003 \001(\t\032\027\n\006Params\022\r\n\005image\030\001 \001(\t\""
-  "\233\001\n\014OcrImageResp\0221\n\005texts\030\001 \003(\0132\".cqhttp"
-  ".OcrImageResp.TextDetection\022\020\n\010language\030"
-  "\002 \001(\t\032F\n\rTextDetection\022\014\n\004text\030\001 \001(\t\022\022\n\n"
-  "confidence\030\002 \001(\005\022\023\n\013coordinates\030\003 \001(\t\"1\n"
-  "\021GetGroupSystemMsg\022\016\n\006action\030\001 \001(\t\022\014\n\004ec"
+  "tive\022=\n\014emotion_list\030\007 \003(\0132\'.cqhttp.GetG"
+  "roupHonorInfoResp.Talkative\032f\n\tTalkative"
+  "\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006a"
+  "vatar\030\003 \001(\t\022\021\n\tday_count\030\004 \001(\005\022\023\n\013descri"
+  "ption\030\005 \001(\t\"\177\n\nGetCoolies\022\036\n\006action\030\001 \001("
+  "\0162\016.cqhttp.Action\022)\n\006params\030\002 \001(\0132\031.cqht"
+  "tp.GetCoolies.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Pa"
+  "rams\022\016\n\006domain\030\001 \001(\t\"!\n\016GetCooliesResp\022\017"
+  "\n\007cookies\030\001 \001(\t\"<\n\014GetCsrfToken\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"!\n"
+  "\020GetCsrfTokenResp\022\r\n\005token\030\001 \001(\005\"\207\001\n\016Get"
+  "Credentials\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\022-\n\006params\030\002 \001(\0132\035.cqhttp.GetCredenti"
+  "als.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Params\022\016\n\006do"
+  "main\030\001 \001(\t\"9\n\022GetCredentialsResp\022\017\n\007cook"
+  "ies\030\001 \001(\t\022\022\n\ncsrf_token\030\002 \001(\005\"\217\001\n\tGetRec"
+  "ord\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022(\n\006p"
+  "arams\030\002 \001(\0132\030.cqhttp.GetRecord.Params\022\014\n"
+  "\004echo\030\003 \001(\t\032*\n\006Params\022\014\n\004file\030\001 \001(\t\022\022\n\no"
+  "ut_format\030\002 \001(\t\"\035\n\rGetRecordResp\022\014\n\004file"
+  "\030\001 \001(\t\"<\n\014CanSendImage\022\036\n\006action\030\001 \001(\0162\016"
+  ".cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\037\n\020CanSendI"
+  "mageResp\022\013\n\003yes\030\001 \001(\010\"=\n\rCanSendRecord\022\036"
+  "\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002"
+  " \001(\t\" \n\021CanSendRecordResp\022\013\n\003yes\030\001 \001(\010\">"
+  "\n\016GetVersionInfo\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
+  "p.Action\022\014\n\004echo\030\002 \001(\t\"\325\002\n\022GetVersionInf"
+  "oResp\022\020\n\010app_name\030\001 \001(\t\022\023\n\013app_version\030\002"
+  " \001(\t\022\025\n\rapp_full_name\030\003 \001(\t\022\030\n\020protocol_"
+  "version\030\004 \001(\t\022\025\n\rcoolq_edition\030\005 \001(\t\022\027\n\017"
+  "coolq_directory\030\006 \001(\t\022\016\n\006cqhttp\030\007 \001(\010\022\026\n"
+  "\016plugin_version\030\010 \001(\t\022\033\n\023plugin_build_nu"
+  "mber\030\t \001(\005\022\"\n\032plugin_build_configuration"
+  "\030\n \001(\t\022\027\n\017runtime_version\030\013 \001(\t\022\022\n\nrunti"
+  "me_os\030\014 \001(\t\022\017\n\007version\030\r \001(\t\022\020\n\010protocol"
+  "\030\016 \001(\005\"p\n\nSetRestart\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\022)\n\006params\030\002 \001(\0132\031.cqhttp.Se"
+  "tRestart.Params\032\027\n\006Params\022\r\n\005delay\030\001 \001(\005"
+  "\",\n\nCleanCache\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
+  "Action\"\234\001\n\020SetGroupPortrait\022\036\n\006action\030\001 "
+  "\001(\0162\016.cqhttp.Action\022/\n\006params\030\002 \001(\0132\037.cq"
+  "http.SetGroupPortrait.Params\0327\n\006Params\022\020"
+  "\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022\r\n\005cache\030"
+  "\003 \001(\005\"\206\001\n\rGetWordSlices\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132\034.cqhttp"
+  ".GetWordSlices.Params\022\014\n\004echo\030\003 \001(\t\032\031\n\006P"
+  "arams\022\017\n\007content\030\001 \001(\t\"#\n\021GetWordSlicesR"
+  "esp\022\016\n\006slices\030\001 \003(\t\"z\n\010OcrImage\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\022\'\n\006params\030\002 \001(\0132"
+  "\027.cqhttp.OcrImage.Params\022\014\n\004echo\030\003 \001(\t\032\027"
+  "\n\006Params\022\r\n\005image\030\001 \001(\t\"\233\001\n\014OcrImageResp"
+  "\0221\n\005texts\030\001 \003(\0132\".cqhttp.OcrImageResp.Te"
+  "xtDetection\022\020\n\010language\030\002 \001(\t\032F\n\rTextDet"
+  "ection\022\014\n\004text\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\005"
+  "\022\023\n\013coordinates\030\003 \001(\t\"A\n\021GetGroupSystemM"
+  "sg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004ec"
   "ho\030\002 \001(\t\"\343\003\n\025GetGroupSystemMsgResp\022F\n\020in"
   "vited_requests\030\001 \003(\0132,.cqhttp.GetGroupSy"
   "stemMsgResp.InvitedRequest\022@\n\rjoin_reque"
@@ -5011,143 +5030,154 @@ const char descriptor_table_protodef_cqhttp_5fapi_2eproto[] PROTOBUF_SECTION_VAR
   "\022\025\n\rrequester_uin\030\002 \001(\003\022\026\n\016requester_nic"
   "k\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\020\n\010group_id\030\005 \001"
   "(\003\022\022\n\ngroup_name\030\006 \001(\t\022\017\n\007checked\030\007 \001(\010\022"
-  "\r\n\005actor\030\010 \001(\003\"\214\001\n\021UploadPrivateFile\022\016\n\006"
-  "action\030\001 \001(\t\0220\n\006params\030\002 \001(\0132 .cqhttp.Up"
-  "loadPrivateFile.Params\0325\n\006Params\022\017\n\007user"
-  "_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"\231\001"
-  "\n\017UploadGroupFile\022\016\n\006action\030\001 \001(\t\022.\n\006par"
-  "ams\030\002 \001(\0132\036.cqhttp.UploadGroupFile.Param"
-  "s\032F\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 "
-  "\001(\t\022\014\n\004name\030\003 \001(\t\022\016\n\006folder\030\004 \001(\t\"\211\001\n\026Ge"
-  "tGroupFileSystemInfo\022\016\n\006action\030\001 \001(\t\0225\n\006"
-  "params\030\002 \001(\0132%.cqhttp.GetGroupFileSystem"
-  "Info.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010g"
-  "roup_id\030\001 \001(\003\"n\n\032GetGroupFileSystemInfoR"
-  "esp\022\022\n\nfile_count\030\001 \001(\005\022\023\n\013limit_count\030\002"
-  " \001(\005\022\022\n\nused_space\030\003 \001(\003\022\023\n\013total_space\030"
-  "\004 \001(\003\"\177\n\021GetGroupRootFiles\022\016\n\006action\030\001 \001"
-  "(\t\0220\n\006params\030\002 \001(\0132 .cqhttp.GetGroupRoot"
-  "Files.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010"
-  "group_id\030\001 \001(\003\"U\n\025GetGroupRootFilesResp\022"
-  "\033\n\005files\030\001 \003(\0132\014.cqhttp.File\022\037\n\007folders\030"
-  "\002 \003(\0132\016.cqhttp.Folder\"\230\001\n\024getGroupFileBy"
-  "Folder\022\016\n\006action\030\001 \001(\t\0223\n\006params\030\002 \001(\0132#"
-  ".cqhttp.getGroupFileByFolder.Params\022\014\n\004e"
-  "cho\030\003 \001(\t\032-\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\021\n"
-  "\tfolder_id\030\002 \001(\t\"X\n\030getGroupFileByFolder"
-  "Resp\022\033\n\005files\030\001 \003(\0132\014.cqhttp.File\022\037\n\007fol"
-  "ders\030\002 \003(\0132\016.cqhttp.Folder\"\232\001\n\025CreateGro"
-  "upFileFolder\022\016\n\006action\030\001 \001(\t\0224\n\006params\030\002"
-  " \001(\0132$.cqhttp.CreateGroupFileFolder.Para"
-  "ms\032;\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004name\030\002"
-  " \001(\t\022\021\n\tparent_id\030\003 \001(\t\"\204\001\n\021DeleteGroupF"
-  "older\022\016\n\006action\030\001 \001(\t\0220\n\006params\030\002 \001(\0132 ."
-  "cqhttp.DeleteGroupFolder.Params\032-\n\006Param"
-  "s\022\020\n\010group_id\030\001 \001(\003\022\021\n\tfolder_id\030\002 \001(\t\"\215"
-  "\001\n\017DeleteGroupFile\022\016\n\006action\030\001 \001(\t\022.\n\006pa"
-  "rams\030\002 \001(\0132\036.cqhttp.DeleteGroupFile.Para"
-  "ms\032:\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007file_i"
-  "d\030\002 \001(\t\022\r\n\005busid\030\003 \001(\005\"\233\001\n\017GetGroupFileU"
-  "rl\022\016\n\006action\030\001 \001(\t\022.\n\006params\030\002 \001(\0132\036.cqh"
-  "ttp.GetGroupFileUrl.Params\022\014\n\004echo\030\003 \001(\t"
-  "\032:\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007file_id\030"
-  "\002 \001(\t\022\r\n\005busid\030\003 \001(\005\"\"\n\023GetGroupFileUrlR"
-  "esp\022\013\n\003url\030\001 \001(\t\")\n\tGetStatus\022\016\n\006action\030"
-  "\001 \001(\t\022\014\n\004echo\030\002 \001(\t\"\365\002\n\rGetStatusResp\022\027\n"
-  "\017app_initialized\030\001 \001(\010\022\023\n\013app_enabled\030\002 "
-  "\001(\010\022\024\n\014plugins_good\030\003 \001(\010\022\020\n\010app_good\030\004 "
-  "\001(\010\022\016\n\006online\030\005 \001(\010\022\014\n\004good\030\006 \001(\010\022.\n\004sta"
-  "t\030\007 \001(\0132 .cqhttp.GetStatusResp.Statistic"
-  "s\032\277\001\n\nStatistics\022\026\n\016PacketReceived\030\001 \001(\004"
-  "\022\022\n\nPacketSent\030\002 \001(\004\022\022\n\nPacketLost\030\003 \001(\r"
-  "\022\027\n\017MessageReceived\030\004 \001(\004\022\023\n\013MessageSent"
-  "\030\005 \001(\004\022\027\n\017DisconnectTimes\030\006 \001(\r\022\021\n\tLostT"
-  "imes\030\007 \001(\r\022\027\n\017LastMessageTime\030\010 \001(\003\"\203\001\n\023"
-  "GetGroupAtAllRemain\022\016\n\006action\030\001 \001(\t\0222\n\006p"
-  "arams\030\002 \001(\0132\".cqhttp.GetGroupAtAllRemain"
-  ".Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group"
-  "_id\030\001 \001(\003\"y\n\027GetGroupAtAllRemainResp\022\022\n\n"
-  "can_at_all\030\001 \001(\010\022%\n\035remain_at_all_count_"
-  "for_group\030\002 \001(\005\022#\n\033remain_at_all_count_f"
-  "or_uin\030\003 \001(\005\"\211\001\n\024HandleQuickOperation\022\016\n"
-  "\006action\030\001 \001(\t\0223\n\006params\030\002 \001(\0132#.cqhttp.H"
-  "andleQuickOperation.Params\032,\n\006Params\022\017\n\007"
-  "content\030\001 \001(\t\022\021\n\toperation\030\002 \001(\t\"\215\001\n\017Sen"
-  "dGroupNotice\022\016\n\006action\030\001 \001(\t\022.\n\006params\030\002"
-  " \001(\0132\036.cqhttp.SendGroupNotice.Params\032:\n\006"
-  "Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007content\030\002 \001("
-  "\t\022\r\n\005image\030\003 \001(\t\"y\n\016GetGroupNotice\022\016\n\006ac"
-  "tion\030\001 \001(\t\022-\n\006params\030\002 \001(\0132\035.cqhttp.GetG"
-  "roupNotice.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Param"
-  "s\022\020\n\010group_id\030\001 \001(\003\"\331\002\n\022GetGroupNoticeRe"
-  "sp\0222\n\007notices\030\001 \003(\0132!.cqhttp.GetGroupNot"
-  "iceResp.Notice\032\216\002\n\006Notice\022\021\n\tsender_id\030\001"
-  " \001(\003\022\024\n\014publish_time\030\002 \001(\003\022@\n\007message\030\003 "
-  "\001(\0132/.cqhttp.GetGroupNoticeResp.Notice.N"
-  "oticeMessage\032\230\001\n\rNoticeMessage\022\014\n\004text\030\001"
-  " \001(\t\022E\n\006images\030\002 \003(\01325.cqhttp.GetGroupNo"
-  "ticeResp.Notice.NoticeMessage.Image\0322\n\005I"
-  "mage\022\016\n\006height\030\001 \001(\t\022\r\n\005width\030\002 \001(\t\022\n\n\002i"
-  "d\030\003 \001(\t\"m\n\021ReloadEventFilter\022\016\n\006action\030\001"
-  " \001(\t\0220\n\006params\030\002 \001(\0132 .cqhttp.ReloadEven"
-  "tFilter.Params\032\026\n\006Params\022\014\n\004file\030\001 \001(\t\"\227"
-  "\001\n\014DownloadFile\022\016\n\006action\030\001 \001(\t\022+\n\006param"
-  "s\030\002 \001(\0132\033.cqhttp.DownloadFile.Params\022\014\n\004"
-  "echo\030\003 \001(\t\032<\n\006Params\022\013\n\003url\030\001 \001(\t\022\024\n\014thr"
-  "ead_count\030\002 \001(\005\022\017\n\007headers\030\003 \001(\t\" \n\020Down"
-  "loadFileResp\022\014\n\004file\030\001 \001(\t\"}\n\020GetOnlineC"
-  "lients\022\016\n\006action\030\001 \001(\t\022/\n\006params\030\002 \001(\0132\037"
-  ".cqhttp.GetOnlineClients.Params\022\014\n\004echo\030"
-  "\003 \001(\t\032\032\n\006Params\022\020\n\010no_cache\030\001 \001(\010\"7\n\024Get"
-  "OnlineClientsResp\022\037\n\007clients\030\001 \003(\0132\016.cqh"
-  "ttp.Device\"\226\001\n\022GetGroupMsgHistory\022\016\n\006act"
-  "ion\030\001 \001(\t\0221\n\006params\030\002 \001(\0132!.cqhttp.GetGr"
-  "oupMsgHistory.Params\022\014\n\004echo\030\003 \001(\t\032/\n\006Pa"
-  "rams\022\023\n\013message_seq\030\001 \001(\003\022\020\n\010group_id\030\002 "
-  "\001(\003\"*\n\026GetGroupMsgHistoryResp\022\020\n\010message"
-  "s\030\001 \003(\t\"k\n\rSetEssenceMsg\022\016\n\006action\030\001 \001(\t"
-  "\022,\n\006params\030\002 \001(\0132\034.cqhttp.SetEssenceMsg."
-  "Params\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"q\n\020"
-  "DeleteEssenceMsg\022\016\n\006action\030\001 \001(\t\022/\n\006para"
-  "ms\030\002 \001(\0132\037.cqhttp.DeleteEssenceMsg.Param"
-  "s\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\177\n\021GetEs"
-  "senceMsgList\022\016\n\006action\030\001 \001(\t\0220\n\006params\030\002"
-  " \001(\0132 .cqhttp.GetEssenceMsgList.Params\022\014"
-  "\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003"
-  "\"\253\001\n\025GetEssenceMsgListResp\022\021\n\tsender_id\030"
-  "\001 \001(\003\022\023\n\013sender_nick\030\002 \001(\t\022\023\n\013sender_tim"
-  "e\030\003 \001(\003\022\023\n\013operator_id\030\004 \001(\003\022\025\n\roperator"
-  "_nick\030\005 \001(\t\022\025\n\roperator_time\030\006 \001(\003\022\022\n\nme"
-  "ssage_id\030\007 \001(\005\"t\n\016CheckUlrSafely\022\016\n\006acti"
-  "on\030\001 \001(\t\022-\n\006params\030\002 \001(\0132\035.cqhttp.CheckU"
-  "lrSafely.Params\022\014\n\004echo\030\003 \001(\t\032\025\n\006Params\022"
-  "\013\n\003url\030\001 \001(\t\"#\n\022CheckUlrSafelyResp\022\r\n\005le"
-  "vel\030\001 \001(\005\"r\n\014GetModelShow\022\016\n\006action\030\001 \001("
-  "\t\022+\n\006params\030\002 \001(\0132\033.cqhttp.GetModelShow."
-  "Params\022\014\n\004echo\030\003 \001(\t\032\027\n\006Params\022\r\n\005model\030"
-  "\001 \001(\t\"w\n\020GetModelShowResp\0222\n\010variants\030\001 "
-  "\003(\0132 .cqhttp.GetModelShowResp.Variant\032/\n"
-  "\007Variant\022\022\n\nmodel_show\030\001 \001(\t\022\020\n\010need_pay"
-  "\030\002 \001(\010\"x\n\014SetModelShow\022\016\n\006action\030\001 \001(\t\022+"
-  "\n\006params\030\002 \001(\0132\033.cqhttp.SetModelShow.Par"
-  "ams\032+\n\006Params\022\r\n\005model\030\001 \001(\t\022\022\n\nmodel_sh"
-  "ow\030\002 \001(\t\"\202\001\n\032DeleteUnidirectionalFriend\022"
-  "\016\n\006action\030\001 \001(\t\0229\n\006params\030\002 \001(\0132).cqhttp"
-  ".DeleteUnidirectionalFriend.Params\032\031\n\006Pa"
-  "rams\022\017\n\007user_id\030\001 \001(\003\"\260\001\n\025SendPrivateFor"
-  "wardMsg\022\016\n\006action\030\001 \001(\t\0224\n\006params\030\002 \001(\0132"
-  "$.cqhttp.SendPrivateForwardMsg.Params\022\014\n"
-  "\004echo\030\003 \001(\t\032C\n\006Params\022\017\n\007user_id\030\001 \001(\003\022("
-  "\n\010messages\030\002 \003(\0132\026.cqhttp.ForwardMessage"
-  "\"C\n\031SendPrivateForwardMsgResp\022\022\n\nmessage"
-  "_id\030\001 \001(\003\022\022\n\nforward_id\030\002 \001(\tb\006proto3"
+  "\r\n\005actor\030\010 \001(\003\"\234\001\n\021UploadPrivateFile\022\036\n\006"
+  "action\030\001 \001(\0162\016.cqhttp.Action\0220\n\006params\030\002"
+  " \001(\0132 .cqhttp.UploadPrivateFile.Params\0325"
+  "\n\006Params\022\017\n\007user_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022"
+  "\014\n\004name\030\003 \001(\t\"\251\001\n\017UploadGroupFile\022\036\n\006act"
+  "ion\030\001 \001(\0162\016.cqhttp.Action\022.\n\006params\030\002 \001("
+  "\0132\036.cqhttp.UploadGroupFile.Params\032F\n\006Par"
+  "ams\022\020\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022\014\n\004n"
+  "ame\030\003 \001(\t\022\016\n\006folder\030\004 \001(\t\"\231\001\n\026GetGroupFi"
+  "leSystemInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
+  "tion\0225\n\006params\030\002 \001(\0132%.cqhttp.GetGroupFi"
+  "leSystemInfo.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Par"
+  "ams\022\020\n\010group_id\030\001 \001(\003\"n\n\032GetGroupFileSys"
+  "temInfoResp\022\022\n\nfile_count\030\001 \001(\005\022\023\n\013limit"
+  "_count\030\002 \001(\005\022\022\n\nused_space\030\003 \001(\003\022\023\n\013tota"
+  "l_space\030\004 \001(\003\"\217\001\n\021GetGroupRootFiles\022\036\n\006a"
+  "ction\030\001 \001(\0162\016.cqhttp.Action\0220\n\006params\030\002 "
+  "\001(\0132 .cqhttp.GetGroupRootFiles.Params\022\014\n"
+  "\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003\""
+  "U\n\025GetGroupRootFilesResp\022\033\n\005files\030\001 \003(\0132"
+  "\014.cqhttp.File\022\037\n\007folders\030\002 \003(\0132\016.cqhttp."
+  "Folder\"\250\001\n\024getGroupFileByFolder\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\0223\n\006params\030\002 \001(\0132"
+  "#.cqhttp.getGroupFileByFolder.Params\022\014\n\004"
+  "echo\030\003 \001(\t\032-\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\021"
+  "\n\tfolder_id\030\002 \001(\t\"X\n\030getGroupFileByFolde"
+  "rResp\022\033\n\005files\030\001 \003(\0132\014.cqhttp.File\022\037\n\007fo"
+  "lders\030\002 \003(\0132\016.cqhttp.Folder\"\252\001\n\025CreateGr"
+  "oupFileFolder\022\036\n\006action\030\001 \001(\0162\016.cqhttp.A"
+  "ction\0224\n\006params\030\002 \001(\0132$.cqhttp.CreateGro"
+  "upFileFolder.Params\032;\n\006Params\022\020\n\010group_i"
+  "d\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\021\n\tparent_id\030\003 \001(\t"
+  "\"\224\001\n\021DeleteGroupFolder\022\036\n\006action\030\001 \001(\0162\016"
+  ".cqhttp.Action\0220\n\006params\030\002 \001(\0132 .cqhttp."
+  "DeleteGroupFolder.Params\032-\n\006Params\022\020\n\010gr"
+  "oup_id\030\001 \001(\003\022\021\n\tfolder_id\030\002 \001(\t\"\235\001\n\017Dele"
+  "teGroupFile\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\022.\n\006params\030\002 \001(\0132\036.cqhttp.DeleteGroup"
+  "File.Params\032:\n\006Params\022\020\n\010group_id\030\001 \001(\003\022"
+  "\017\n\007file_id\030\002 \001(\t\022\r\n\005busid\030\003 \001(\005\"\253\001\n\017GetG"
+  "roupFileUrl\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\022.\n\006params\030\002 \001(\0132\036.cqhttp.GetGroupFil"
+  "eUrl.Params\022\014\n\004echo\030\003 \001(\t\032:\n\006Params\022\020\n\010g"
+  "roup_id\030\001 \001(\003\022\017\n\007file_id\030\002 \001(\t\022\r\n\005busid\030"
+  "\003 \001(\005\"\"\n\023GetGroupFileUrlResp\022\013\n\003url\030\001 \001("
+  "\t\"9\n\tGetStatus\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
+  "Action\022\014\n\004echo\030\002 \001(\t\"\365\002\n\rGetStatusResp\022\027"
+  "\n\017app_initialized\030\001 \001(\010\022\023\n\013app_enabled\030\002"
+  " \001(\010\022\024\n\014plugins_good\030\003 \001(\010\022\020\n\010app_good\030\004"
+  " \001(\010\022\016\n\006online\030\005 \001(\010\022\014\n\004good\030\006 \001(\010\022.\n\004st"
+  "at\030\007 \001(\0132 .cqhttp.GetStatusResp.Statisti"
+  "cs\032\277\001\n\nStatistics\022\026\n\016PacketReceived\030\001 \001("
+  "\004\022\022\n\nPacketSent\030\002 \001(\004\022\022\n\nPacketLost\030\003 \001("
+  "\r\022\027\n\017MessageReceived\030\004 \001(\004\022\023\n\013MessageSen"
+  "t\030\005 \001(\004\022\027\n\017DisconnectTimes\030\006 \001(\r\022\021\n\tLost"
+  "Times\030\007 \001(\r\022\027\n\017LastMessageTime\030\010 \001(\003\"\223\001\n"
+  "\023GetGroupAtAllRemain\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\0222\n\006params\030\002 \001(\0132\".cqhttp.Ge"
+  "tGroupAtAllRemain.Params\022\014\n\004echo\030\003 \001(\t\032\032"
+  "\n\006Params\022\020\n\010group_id\030\001 \001(\003\"y\n\027GetGroupAt"
+  "AllRemainResp\022\022\n\ncan_at_all\030\001 \001(\010\022%\n\035rem"
+  "ain_at_all_count_for_group\030\002 \001(\005\022#\n\033rema"
+  "in_at_all_count_for_uin\030\003 \001(\005\"\231\001\n\024Handle"
+  "QuickOperation\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
+  "Action\0223\n\006params\030\002 \001(\0132#.cqhttp.HandleQu"
+  "ickOperation.Params\032,\n\006Params\022\017\n\007content"
+  "\030\001 \001(\t\022\021\n\toperation\030\002 \001(\t\"\235\001\n\017SendGroupN"
+  "otice\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022.\n"
+  "\006params\030\002 \001(\0132\036.cqhttp.SendGroupNotice.P"
+  "arams\032:\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007con"
+  "tent\030\002 \001(\t\022\r\n\005image\030\003 \001(\t\"\211\001\n\016GetGroupNo"
+  "tice\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022-\n\006"
+  "params\030\002 \001(\0132\035.cqhttp.GetGroupNotice.Par"
+  "ams\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_id\030"
+  "\001 \001(\003\"\331\002\n\022GetGroupNoticeResp\0222\n\007notices\030"
+  "\001 \003(\0132!.cqhttp.GetGroupNoticeResp.Notice"
+  "\032\216\002\n\006Notice\022\021\n\tsender_id\030\001 \001(\003\022\024\n\014publis"
+  "h_time\030\002 \001(\003\022@\n\007message\030\003 \001(\0132/.cqhttp.G"
+  "etGroupNoticeResp.Notice.NoticeMessage\032\230"
+  "\001\n\rNoticeMessage\022\014\n\004text\030\001 \001(\t\022E\n\006images"
+  "\030\002 \003(\01325.cqhttp.GetGroupNoticeResp.Notic"
+  "e.NoticeMessage.Image\0322\n\005Image\022\016\n\006height"
+  "\030\001 \001(\t\022\r\n\005width\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\"}\n\021Rel"
+  "oadEventFilter\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
+  "Action\0220\n\006params\030\002 \001(\0132 .cqhttp.ReloadEv"
+  "entFilter.Params\032\026\n\006Params\022\014\n\004file\030\001 \001(\t"
+  "\"\247\001\n\014DownloadFile\022\036\n\006action\030\001 \001(\0162\016.cqht"
+  "tp.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.Downl"
+  "oadFile.Params\022\014\n\004echo\030\003 \001(\t\032<\n\006Params\022\013"
+  "\n\003url\030\001 \001(\t\022\024\n\014thread_count\030\002 \001(\005\022\017\n\007hea"
+  "ders\030\003 \001(\t\" \n\020DownloadFileResp\022\014\n\004file\030\001"
+  " \001(\t\"\215\001\n\020GetOnlineClients\022\036\n\006action\030\001 \001("
+  "\0162\016.cqhttp.Action\022/\n\006params\030\002 \001(\0132\037.cqht"
+  "tp.GetOnlineClients.Params\022\014\n\004echo\030\003 \001(\t"
+  "\032\032\n\006Params\022\020\n\010no_cache\030\001 \001(\010\"7\n\024GetOnlin"
+  "eClientsResp\022\037\n\007clients\030\001 \003(\0132\016.cqhttp.D"
+  "evice\"\246\001\n\022GetGroupMsgHistory\022\036\n\006action\030\001"
+  " \001(\0162\016.cqhttp.Action\0221\n\006params\030\002 \001(\0132!.c"
+  "qhttp.GetGroupMsgHistory.Params\022\014\n\004echo\030"
+  "\003 \001(\t\032/\n\006Params\022\023\n\013message_seq\030\001 \001(\003\022\020\n\010"
+  "group_id\030\002 \001(\003\"*\n\026GetGroupMsgHistoryResp"
+  "\022\020\n\010messages\030\001 \003(\t\"{\n\rSetEssenceMsg\022\036\n\006a"
+  "ction\030\001 \001(\0162\016.cqhttp.Action\022,\n\006params\030\002 "
+  "\001(\0132\034.cqhttp.SetEssenceMsg.Params\032\034\n\006Par"
+  "ams\022\022\n\nmessage_id\030\001 \001(\005\"\201\001\n\020DeleteEssenc"
+  "eMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022/\n\006"
+  "params\030\002 \001(\0132\037.cqhttp.DeleteEssenceMsg.P"
+  "arams\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\217\001\n\021"
+  "GetEssenceMsgList\022\036\n\006action\030\001 \001(\0162\016.cqht"
+  "tp.Action\0220\n\006params\030\002 \001(\0132 .cqhttp.GetEs"
+  "senceMsgList.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Par"
+  "ams\022\020\n\010group_id\030\001 \001(\003\"\253\001\n\025GetEssenceMsgL"
+  "istResp\022\021\n\tsender_id\030\001 \001(\003\022\023\n\013sender_nic"
+  "k\030\002 \001(\t\022\023\n\013sender_time\030\003 \001(\003\022\023\n\013operator"
+  "_id\030\004 \001(\003\022\025\n\roperator_nick\030\005 \001(\t\022\025\n\roper"
+  "ator_time\030\006 \001(\003\022\022\n\nmessage_id\030\007 \001(\005\"\204\001\n\016"
+  "CheckUlrSafely\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
+  "Action\022-\n\006params\030\002 \001(\0132\035.cqhttp.CheckUlr"
+  "Safely.Params\022\014\n\004echo\030\003 \001(\t\032\025\n\006Params\022\013\n"
+  "\003url\030\001 \001(\t\"#\n\022CheckUlrSafelyResp\022\r\n\005leve"
+  "l\030\001 \001(\005\"\202\001\n\014GetModelShow\022\036\n\006action\030\001 \001(\016"
+  "2\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqhtt"
+  "p.GetModelShow.Params\022\014\n\004echo\030\003 \001(\t\032\027\n\006P"
+  "arams\022\r\n\005model\030\001 \001(\t\"w\n\020GetModelShowResp"
+  "\0222\n\010variants\030\001 \003(\0132 .cqhttp.GetModelShow"
+  "Resp.Variant\032/\n\007Variant\022\022\n\nmodel_show\030\001 "
+  "\001(\t\022\020\n\010need_pay\030\002 \001(\010\"\210\001\n\014SetModelShow\022\036"
+  "\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006params"
+  "\030\002 \001(\0132\033.cqhttp.SetModelShow.Params\032+\n\006P"
+  "arams\022\r\n\005model\030\001 \001(\t\022\022\n\nmodel_show\030\002 \001(\t"
+  "\"\222\001\n\032DeleteUnidirectionalFriend\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\0229\n\006params\030\002 \001(\0132"
+  ").cqhttp.DeleteUnidirectionalFriend.Para"
+  "ms\032\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\300\001\n\025SendPr"
+  "ivateForwardMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp"
+  ".Action\0224\n\006params\030\002 \001(\0132$.cqhttp.SendPri"
+  "vateForwardMsg.Params\022\014\n\004echo\030\003 \001(\t\032C\n\006P"
+  "arams\022\017\n\007user_id\030\001 \001(\003\022(\n\010messages\030\002 \003(\013"
+  "2\026.cqhttp.ForwardMessage\"C\n\031SendPrivateF"
+  "orwardMsgResp\022\022\n\nmessage_id\030\001 \001(\003\022\022\n\nfor"
+  "ward_id\030\002 \001(\tb\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_cqhttp_5fapi_2eproto_deps[1] = {
   &::descriptor_table_cqhttp_5fbase_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_cqhttp_5fapi_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_cqhttp_5fapi_2eproto = {
-    false, false, 14477, descriptor_table_protodef_cqhttp_5fapi_2eproto,
+    false, false, 15661, descriptor_table_protodef_cqhttp_5fapi_2eproto,
     "cqhttp_api.proto",
     &descriptor_table_cqhttp_5fapi_2eproto_once, descriptor_table_cqhttp_5fapi_2eproto_deps, 1, 189,
     schemas, file_default_instances, TableStruct_cqhttp_5fapi_2eproto::offsets,
@@ -5178,19 +5208,19 @@ SendPrivateMsg_Params::SendPrivateMsg_Params(const SendPrivateMsg_Params& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendPrivateMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.messgae_){}
+      decltype(_impl_.message_){}
     , decltype(_impl_.user_id_){}
     , decltype(_impl_.group_id_){}
     , decltype(_impl_.auto_escape_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.messgae_.InitDefault();
+  _impl_.message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.messgae_.Set("", GetArenaForAllocation());
+    _impl_.message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_messgae().empty()) {
-    _this->_impl_.messgae_.Set(from._internal_messgae(), 
+  if (!from._internal_message().empty()) {
+    _this->_impl_.message_.Set(from._internal_message(), 
       _this->GetArenaForAllocation());
   }
   ::memcpy(&_impl_.user_id_, &from._impl_.user_id_,
@@ -5204,15 +5234,15 @@ inline void SendPrivateMsg_Params::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.messgae_){}
+      decltype(_impl_.message_){}
     , decltype(_impl_.user_id_){int64_t{0}}
     , decltype(_impl_.group_id_){int64_t{0}}
     , decltype(_impl_.auto_escape_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.messgae_.InitDefault();
+  _impl_.message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.messgae_.Set("", GetArenaForAllocation());
+    _impl_.message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
@@ -5227,7 +5257,7 @@ SendPrivateMsg_Params::~SendPrivateMsg_Params() {
 
 inline void SendPrivateMsg_Params::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.messgae_.Destroy();
+  _impl_.message_.Destroy();
 }
 
 void SendPrivateMsg_Params::SetCachedSize(int size) const {
@@ -5240,7 +5270,7 @@ void SendPrivateMsg_Params::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.messgae_.ClearToEmpty();
+  _impl_.message_.ClearToEmpty();
   ::memset(&_impl_.user_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.auto_escape_) -
       reinterpret_cast<char*>(&_impl_.user_id_)) + sizeof(_impl_.auto_escape_));
@@ -5269,13 +5299,13 @@ const char* SendPrivateMsg_Params::_InternalParse(const char* ptr, ::_pbi::Parse
         } else
           goto handle_unusual;
         continue;
-      // string messgae = 3;
+      // string message = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
-          auto str = _internal_mutable_messgae();
+          auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendPrivateMsg.Params.messgae"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendPrivateMsg.Params.message"));
         } else
           goto handle_unusual;
         continue;
@@ -5328,14 +5358,14 @@ uint8_t* SendPrivateMsg_Params::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_group_id(), target);
   }
 
-  // string messgae = 3;
-  if (!this->_internal_messgae().empty()) {
+  // string message = 3;
+  if (!this->_internal_message().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_messgae().data(), static_cast<int>(this->_internal_messgae().length()),
+      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendPrivateMsg.Params.messgae");
+      "cqhttp.SendPrivateMsg.Params.message");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_messgae(), target);
+        3, this->_internal_message(), target);
   }
 
   // bool auto_escape = 4;
@@ -5360,11 +5390,11 @@ size_t SendPrivateMsg_Params::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string messgae = 3;
-  if (!this->_internal_messgae().empty()) {
+  // string message = 3;
+  if (!this->_internal_message().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_messgae());
+        this->_internal_message());
   }
 
   // int64 user_id = 1;
@@ -5400,8 +5430,8 @@ void SendPrivateMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_messgae().empty()) {
-    _this->_internal_set_messgae(from._internal_messgae());
+  if (!from._internal_message().empty()) {
+    _this->_internal_set_message(from._internal_message());
   }
   if (from._internal_user_id() != 0) {
     _this->_internal_set_user_id(from._internal_user_id());
@@ -5432,8 +5462,8 @@ void SendPrivateMsg_Params::InternalSwap(SendPrivateMsg_Params* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.messgae_, lhs_arena,
-      &other->_impl_.messgae_, rhs_arena
+      &_impl_.message_, lhs_arena,
+      &other->_impl_.message_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(SendPrivateMsg_Params, _impl_.auto_escape_)
@@ -5470,20 +5500,12 @@ SendPrivateMsg::SendPrivateMsg(const SendPrivateMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendPrivateMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -5495,6 +5517,7 @@ SendPrivateMsg::SendPrivateMsg(const SendPrivateMsg& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendPrivateMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendPrivateMsg)
 }
 
@@ -5503,15 +5526,11 @@ inline void SendPrivateMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -5529,7 +5548,6 @@ SendPrivateMsg::~SendPrivateMsg() {
 
 inline void SendPrivateMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -5544,12 +5562,12 @@ void SendPrivateMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -5559,13 +5577,12 @@ const char* SendPrivateMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendPrivateMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -5616,14 +5633,11 @@ uint8_t* SendPrivateMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendPrivateMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendPrivateMsg.Params params = 2;
@@ -5659,13 +5673,6 @@ size_t SendPrivateMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -5678,6 +5685,12 @@ size_t SendPrivateMsg::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -5698,15 +5711,15 @@ void SendPrivateMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendPrivateMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -5728,14 +5741,15 @@ void SendPrivateMsg::InternalSwap(SendPrivateMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendPrivateMsg, _impl_.action_)
+      + sizeof(SendPrivateMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendPrivateMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendPrivateMsg::GetMetadata() const {
@@ -5939,7 +5953,7 @@ SendGroupMsg_Params::SendGroupMsg_Params(const SendGroupMsg_Params& from)
   SendGroupMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.group_id_){}
-    , decltype(_impl_.messgae_){}
+    , decltype(_impl_.message_){}
     , decltype(_impl_.auto_escape_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
@@ -5956,7 +5970,7 @@ inline void SendGroupMsg_Params::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.group_id_){int64_t{0}}
-    , decltype(_impl_.messgae_){int64_t{0}}
+    , decltype(_impl_.message_){int64_t{0}}
     , decltype(_impl_.auto_escape_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
@@ -6005,10 +6019,10 @@ const char* SendGroupMsg_Params::_InternalParse(const char* ptr, ::_pbi::ParseCo
         } else
           goto handle_unusual;
         continue;
-      // int64 messgae = 2;
+      // int64 message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.messgae_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.message_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6056,10 +6070,10 @@ uint8_t* SendGroupMsg_Params::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_group_id(), target);
   }
 
-  // int64 messgae = 2;
-  if (this->_internal_messgae() != 0) {
+  // int64 message = 2;
+  if (this->_internal_message() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_messgae(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_message(), target);
   }
 
   // bool auto_escape = 3;
@@ -6089,9 +6103,9 @@ size_t SendGroupMsg_Params::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_group_id());
   }
 
-  // int64 messgae = 2;
-  if (this->_internal_messgae() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_messgae());
+  // int64 message = 2;
+  if (this->_internal_message() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_message());
   }
 
   // bool auto_escape = 3;
@@ -6120,8 +6134,8 @@ void SendGroupMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   if (from._internal_group_id() != 0) {
     _this->_internal_set_group_id(from._internal_group_id());
   }
-  if (from._internal_messgae() != 0) {
-    _this->_internal_set_messgae(from._internal_messgae());
+  if (from._internal_message() != 0) {
+    _this->_internal_set_message(from._internal_message());
   }
   if (from._internal_auto_escape() != 0) {
     _this->_internal_set_auto_escape(from._internal_auto_escape());
@@ -6178,20 +6192,12 @@ SendGroupMsg::SendGroupMsg(const SendGroupMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendGroupMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -6203,6 +6209,7 @@ SendGroupMsg::SendGroupMsg(const SendGroupMsg& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendGroupMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendGroupMsg)
 }
 
@@ -6211,15 +6218,11 @@ inline void SendGroupMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -6237,7 +6240,6 @@ SendGroupMsg::~SendGroupMsg() {
 
 inline void SendGroupMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -6252,12 +6254,12 @@ void SendGroupMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6267,13 +6269,12 @@ const char* SendGroupMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendGroupMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -6324,14 +6325,11 @@ uint8_t* SendGroupMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendGroupMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendGroupMsg.Params params = 2;
@@ -6367,13 +6365,6 @@ size_t SendGroupMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -6386,6 +6377,12 @@ size_t SendGroupMsg::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6406,15 +6403,15 @@ void SendGroupMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendGroupMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6436,14 +6433,15 @@ void SendGroupMsg::InternalSwap(SendGroupMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendGroupMsg, _impl_.action_)
+      + sizeof(SendGroupMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendGroupMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendGroupMsg::GetMetadata() const {
@@ -6647,13 +6645,13 @@ SendGroupForwardMsg_Params::SendGroupForwardMsg_Params(const SendGroupForwardMsg
   SendGroupForwardMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.group_id_){}
-    , decltype(_impl_.messgae_){}
+    , decltype(_impl_.message_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::memcpy(&_impl_.group_id_, &from._impl_.group_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.messgae_) -
-    reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.messgae_));
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.message_) -
+    reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.message_));
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendGroupForwardMsg.Params)
 }
 
@@ -6663,7 +6661,7 @@ inline void SendGroupForwardMsg_Params::SharedCtor(
   (void)is_message_owned;
   new (&_impl_) Impl_{
       decltype(_impl_.group_id_){int64_t{0}}
-    , decltype(_impl_.messgae_){int64_t{0}}
+    , decltype(_impl_.message_){int64_t{0}}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -6692,8 +6690,8 @@ void SendGroupForwardMsg_Params::Clear() {
   (void) cached_has_bits;
 
   ::memset(&_impl_.group_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.messgae_) -
-      reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.messgae_));
+      reinterpret_cast<char*>(&_impl_.message_) -
+      reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.message_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6711,10 +6709,10 @@ const char* SendGroupForwardMsg_Params::_InternalParse(const char* ptr, ::_pbi::
         } else
           goto handle_unusual;
         continue;
-      // int64 messgae = 2;
+      // int64 message = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.messgae_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          _impl_.message_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else
           goto handle_unusual;
@@ -6754,10 +6752,10 @@ uint8_t* SendGroupForwardMsg_Params::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt64ToArray(1, this->_internal_group_id(), target);
   }
 
-  // int64 messgae = 2;
-  if (this->_internal_messgae() != 0) {
+  // int64 message = 2;
+  if (this->_internal_message() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_messgae(), target);
+    target = ::_pbi::WireFormatLite::WriteInt64ToArray(2, this->_internal_message(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -6781,9 +6779,9 @@ size_t SendGroupForwardMsg_Params::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_group_id());
   }
 
-  // int64 messgae = 2;
-  if (this->_internal_messgae() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_messgae());
+  // int64 message = 2;
+  if (this->_internal_message() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_message());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -6807,8 +6805,8 @@ void SendGroupForwardMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   if (from._internal_group_id() != 0) {
     _this->_internal_set_group_id(from._internal_group_id());
   }
-  if (from._internal_messgae() != 0) {
-    _this->_internal_set_messgae(from._internal_messgae());
+  if (from._internal_message() != 0) {
+    _this->_internal_set_message(from._internal_message());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -6828,8 +6826,8 @@ void SendGroupForwardMsg_Params::InternalSwap(SendGroupForwardMsg_Params* other)
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg_Params, _impl_.messgae_)
-      + sizeof(SendGroupForwardMsg_Params::_impl_.messgae_)
+      PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg_Params, _impl_.message_)
+      + sizeof(SendGroupForwardMsg_Params::_impl_.message_)
       - PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg_Params, _impl_.group_id_)>(
           reinterpret_cast<char*>(&_impl_.group_id_),
           reinterpret_cast<char*>(&other->_impl_.group_id_));
@@ -6862,20 +6860,12 @@ SendGroupForwardMsg::SendGroupForwardMsg(const SendGroupForwardMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendGroupForwardMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -6887,6 +6877,7 @@ SendGroupForwardMsg::SendGroupForwardMsg(const SendGroupForwardMsg& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendGroupForwardMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendGroupForwardMsg)
 }
 
@@ -6895,15 +6886,11 @@ inline void SendGroupForwardMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -6921,7 +6908,6 @@ SendGroupForwardMsg::~SendGroupForwardMsg() {
 
 inline void SendGroupForwardMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -6936,12 +6922,12 @@ void SendGroupForwardMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -6951,13 +6937,12 @@ const char* SendGroupForwardMsg::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendGroupForwardMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -7008,14 +6993,11 @@ uint8_t* SendGroupForwardMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendGroupForwardMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendGroupForwardMsg.Params params = 2;
@@ -7051,13 +7033,6 @@ size_t SendGroupForwardMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -7070,6 +7045,12 @@ size_t SendGroupForwardMsg::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7090,15 +7071,15 @@ void SendGroupForwardMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendGroupForwardMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7120,14 +7101,15 @@ void SendGroupForwardMsg::InternalSwap(SendGroupForwardMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg, _impl_.action_)
+      + sizeof(SendGroupForwardMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendGroupForwardMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendGroupForwardMsg::GetMetadata() const {
@@ -7724,20 +7706,12 @@ SendMessage::SendMessage(const SendMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendMessage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -7749,6 +7723,7 @@ SendMessage::SendMessage(const SendMessage& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendMessage_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendMessage)
 }
 
@@ -7757,15 +7732,11 @@ inline void SendMessage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -7783,7 +7754,6 @@ SendMessage::~SendMessage() {
 
 inline void SendMessage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -7798,12 +7768,12 @@ void SendMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -7813,13 +7783,12 @@ const char* SendMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendMessage.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -7870,14 +7839,11 @@ uint8_t* SendMessage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendMessage.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendMessage.Params params = 2;
@@ -7913,13 +7879,6 @@ size_t SendMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -7932,6 +7891,12 @@ size_t SendMessage::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -7952,15 +7917,15 @@ void SendMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendMessage_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -7982,14 +7947,15 @@ void SendMessage::InternalSwap(SendMessage* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendMessage, _impl_.action_)
+      + sizeof(SendMessage::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendMessage, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendMessage::GetMetadata() const {
@@ -8375,22 +8341,15 @@ DeleteMsg::DeleteMsg(const DeleteMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DeleteMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DeleteMsg)
 }
 
@@ -8399,14 +8358,10 @@ inline void DeleteMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteMsg::~DeleteMsg() {
@@ -8420,7 +8375,6 @@ DeleteMsg::~DeleteMsg() {
 
 inline void DeleteMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -8434,11 +8388,11 @@ void DeleteMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8448,13 +8402,12 @@ const char* DeleteMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DeleteMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -8495,14 +8448,11 @@ uint8_t* DeleteMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DeleteMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DeleteMsg.Params params = 2;
@@ -8528,18 +8478,17 @@ size_t DeleteMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.DeleteMsg.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -8560,12 +8509,12 @@ void DeleteMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROT
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DeleteMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -8583,14 +8532,13 @@ bool DeleteMsg::IsInitialized() const {
 
 void DeleteMsg::InternalSwap(DeleteMsg* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteMsg, _impl_.action_)
+      + sizeof(DeleteMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DeleteMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteMsg::GetMetadata() const {
@@ -8798,20 +8746,12 @@ getMsg::getMsg(const getMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   getMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -8823,6 +8763,7 @@ getMsg::getMsg(const getMsg& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::getMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.getMsg)
 }
 
@@ -8831,15 +8772,11 @@ inline void getMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -8857,7 +8794,6 @@ getMsg::~getMsg() {
 
 inline void getMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -8872,12 +8808,12 @@ void getMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -8887,13 +8823,12 @@ const char* getMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.getMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -8944,14 +8879,11 @@ uint8_t* getMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.getMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.getMsg.Params params = 2;
@@ -8987,13 +8919,6 @@ size_t getMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -9006,6 +8931,12 @@ size_t getMsg::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -9026,15 +8957,15 @@ void getMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBU
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::getMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -9056,14 +8987,15 @@ void getMsg::InternalSwap(getMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(getMsg, _impl_.action_)
+      + sizeof(getMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(getMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata getMsg::GetMetadata() const {
@@ -9778,20 +9710,12 @@ GetForwardMsg::GetForwardMsg(const GetForwardMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetForwardMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -9803,6 +9727,7 @@ GetForwardMsg::GetForwardMsg(const GetForwardMsg& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetForwardMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetForwardMsg)
 }
 
@@ -9811,15 +9736,11 @@ inline void GetForwardMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -9837,7 +9758,6 @@ GetForwardMsg::~GetForwardMsg() {
 
 inline void GetForwardMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -9852,12 +9772,12 @@ void GetForwardMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -9867,13 +9787,12 @@ const char* GetForwardMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetForwardMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -9924,14 +9843,11 @@ uint8_t* GetForwardMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetForwardMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetForwardMsg.Params params = 2;
@@ -9967,13 +9883,6 @@ size_t GetForwardMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -9986,6 +9895,12 @@ size_t GetForwardMsg::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -10006,15 +9921,15 @@ void GetForwardMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetForwardMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -10036,14 +9951,15 @@ void GetForwardMsg::InternalSwap(GetForwardMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetForwardMsg, _impl_.action_)
+      + sizeof(GetForwardMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetForwardMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetForwardMsg::GetMetadata() const {
@@ -10743,20 +10659,12 @@ GetImage::GetImage(const GetImage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetImage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -10768,6 +10676,7 @@ GetImage::GetImage(const GetImage& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetImage_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetImage)
 }
 
@@ -10776,15 +10685,11 @@ inline void GetImage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -10802,7 +10707,6 @@ GetImage::~GetImage() {
 
 inline void GetImage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -10817,12 +10721,12 @@ void GetImage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -10832,13 +10736,12 @@ const char* GetImage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetImage.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -10889,14 +10792,11 @@ uint8_t* GetImage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetImage.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetImage.Params params = 2;
@@ -10932,13 +10832,6 @@ size_t GetImage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -10951,6 +10844,12 @@ size_t GetImage::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -10971,15 +10870,15 @@ void GetImage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetImage_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11001,14 +10900,15 @@ void GetImage::InternalSwap(GetImage* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetImage, _impl_.action_)
+      + sizeof(GetImage::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetImage, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetImage::GetMetadata() const {
@@ -11496,22 +11396,15 @@ MarkMsgAsRead::MarkMsgAsRead(const MarkMsgAsRead& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   MarkMsgAsRead* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::MarkMsgAsRead_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.MarkMsgAsRead)
 }
 
@@ -11520,14 +11413,10 @@ inline void MarkMsgAsRead::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 MarkMsgAsRead::~MarkMsgAsRead() {
@@ -11541,7 +11430,6 @@ MarkMsgAsRead::~MarkMsgAsRead() {
 
 inline void MarkMsgAsRead::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -11555,11 +11443,11 @@ void MarkMsgAsRead::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -11569,13 +11457,12 @@ const char* MarkMsgAsRead::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.MarkMsgAsRead.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -11616,14 +11503,11 @@ uint8_t* MarkMsgAsRead::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.MarkMsgAsRead.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.MarkMsgAsRead.Params params = 2;
@@ -11649,18 +11533,17 @@ size_t MarkMsgAsRead::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.MarkMsgAsRead.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -11681,12 +11564,12 @@ void MarkMsgAsRead::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::MarkMsgAsRead_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -11704,14 +11587,13 @@ bool MarkMsgAsRead::IsInitialized() const {
 
 void MarkMsgAsRead::InternalSwap(MarkMsgAsRead* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MarkMsgAsRead, _impl_.action_)
+      + sizeof(MarkMsgAsRead::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(MarkMsgAsRead, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MarkMsgAsRead::GetMetadata() const {
@@ -11976,22 +11858,15 @@ SetGroupKick::SetGroupKick(const SetGroupKick& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupKick* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupKick_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupKick)
 }
 
@@ -12000,14 +11875,10 @@ inline void SetGroupKick::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupKick::~SetGroupKick() {
@@ -12021,7 +11892,6 @@ SetGroupKick::~SetGroupKick() {
 
 inline void SetGroupKick::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -12035,11 +11905,11 @@ void SetGroupKick::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -12049,13 +11919,12 @@ const char* SetGroupKick::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupKick.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -12096,14 +11965,11 @@ uint8_t* SetGroupKick::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupKick.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupKick.Params params = 2;
@@ -12129,18 +11995,17 @@ size_t SetGroupKick::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupKick.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -12161,12 +12026,12 @@ void SetGroupKick::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupKick_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -12184,14 +12049,13 @@ bool SetGroupKick::IsInitialized() const {
 
 void SetGroupKick::InternalSwap(SetGroupKick* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupKick, _impl_.action_)
+      + sizeof(SetGroupKick::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupKick, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupKick::GetMetadata() const {
@@ -12456,22 +12320,15 @@ SetGroupBan::SetGroupBan(const SetGroupBan& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupBan* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupBan_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupBan)
 }
 
@@ -12480,14 +12337,10 @@ inline void SetGroupBan::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupBan::~SetGroupBan() {
@@ -12501,7 +12354,6 @@ SetGroupBan::~SetGroupBan() {
 
 inline void SetGroupBan::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -12515,11 +12367,11 @@ void SetGroupBan::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -12529,13 +12381,12 @@ const char* SetGroupBan::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupBan.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -12576,14 +12427,11 @@ uint8_t* SetGroupBan::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupBan.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupBan.Params params = 2;
@@ -12609,18 +12457,17 @@ size_t SetGroupBan::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupBan.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -12641,12 +12488,12 @@ void SetGroupBan::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupBan_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -12664,14 +12511,13 @@ bool SetGroupBan::IsInitialized() const {
 
 void SetGroupBan::InternalSwap(SetGroupBan* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupBan, _impl_.action_)
+      + sizeof(SetGroupBan::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupBan, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupBan::GetMetadata() const {
@@ -13011,22 +12857,15 @@ SetGroupAnonymousBan::SetGroupAnonymousBan(const SetGroupAnonymousBan& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupAnonymousBan* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupAnonymousBan_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupAnonymousBan)
 }
 
@@ -13035,14 +12874,10 @@ inline void SetGroupAnonymousBan::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupAnonymousBan::~SetGroupAnonymousBan() {
@@ -13056,7 +12891,6 @@ SetGroupAnonymousBan::~SetGroupAnonymousBan() {
 
 inline void SetGroupAnonymousBan::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -13070,11 +12904,11 @@ void SetGroupAnonymousBan::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -13084,13 +12918,12 @@ const char* SetGroupAnonymousBan::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupAnonymousBan.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -13131,14 +12964,11 @@ uint8_t* SetGroupAnonymousBan::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupAnonymousBan.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupAnonymousBan.Params params = 2;
@@ -13164,18 +12994,17 @@ size_t SetGroupAnonymousBan::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupAnonymousBan.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -13196,12 +13025,12 @@ void SetGroupAnonymousBan::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupAnonymousBan_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -13219,14 +13048,13 @@ bool SetGroupAnonymousBan::IsInitialized() const {
 
 void SetGroupAnonymousBan::InternalSwap(SetGroupAnonymousBan* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupAnonymousBan, _impl_.action_)
+      + sizeof(SetGroupAnonymousBan::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupAnonymousBan, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupAnonymousBan::GetMetadata() const {
@@ -13467,22 +13295,15 @@ SetGroupWholeBan::SetGroupWholeBan(const SetGroupWholeBan& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupWholeBan* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupWholeBan_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupWholeBan)
 }
 
@@ -13491,14 +13312,10 @@ inline void SetGroupWholeBan::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupWholeBan::~SetGroupWholeBan() {
@@ -13512,7 +13329,6 @@ SetGroupWholeBan::~SetGroupWholeBan() {
 
 inline void SetGroupWholeBan::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -13526,11 +13342,11 @@ void SetGroupWholeBan::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -13540,13 +13356,12 @@ const char* SetGroupWholeBan::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupWholeBan.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -13587,14 +13402,11 @@ uint8_t* SetGroupWholeBan::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupWholeBan.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupWholeBan.Params params = 2;
@@ -13620,18 +13432,17 @@ size_t SetGroupWholeBan::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupWholeBan.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -13652,12 +13463,12 @@ void SetGroupWholeBan::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupWholeBan_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -13675,14 +13486,13 @@ bool SetGroupWholeBan::IsInitialized() const {
 
 void SetGroupWholeBan::InternalSwap(SetGroupWholeBan* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupWholeBan, _impl_.action_)
+      + sizeof(SetGroupWholeBan::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupWholeBan, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupWholeBan::GetMetadata() const {
@@ -13947,22 +13757,15 @@ SetGroupAdmin::SetGroupAdmin(const SetGroupAdmin& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupAdmin* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupAdmin_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupAdmin)
 }
 
@@ -13971,14 +13774,10 @@ inline void SetGroupAdmin::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupAdmin::~SetGroupAdmin() {
@@ -13992,7 +13791,6 @@ SetGroupAdmin::~SetGroupAdmin() {
 
 inline void SetGroupAdmin::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -14006,11 +13804,11 @@ void SetGroupAdmin::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -14020,13 +13818,12 @@ const char* SetGroupAdmin::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupAdmin.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -14067,14 +13864,11 @@ uint8_t* SetGroupAdmin::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupAdmin.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupAdmin.Params params = 2;
@@ -14100,18 +13894,17 @@ size_t SetGroupAdmin::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupAdmin.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -14132,12 +13925,12 @@ void SetGroupAdmin::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupAdmin_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -14155,14 +13948,13 @@ bool SetGroupAdmin::IsInitialized() const {
 
 void SetGroupAdmin::InternalSwap(SetGroupAdmin* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupAdmin, _impl_.action_)
+      + sizeof(SetGroupAdmin::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupAdmin, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupAdmin::GetMetadata() const {
@@ -14403,22 +14195,15 @@ SetGroupAnonymous::SetGroupAnonymous(const SetGroupAnonymous& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupAnonymous* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupAnonymous_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupAnonymous)
 }
 
@@ -14427,14 +14212,10 @@ inline void SetGroupAnonymous::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupAnonymous::~SetGroupAnonymous() {
@@ -14448,7 +14229,6 @@ SetGroupAnonymous::~SetGroupAnonymous() {
 
 inline void SetGroupAnonymous::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -14462,11 +14242,11 @@ void SetGroupAnonymous::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -14476,13 +14256,12 @@ const char* SetGroupAnonymous::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupAnonymous.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -14523,14 +14302,11 @@ uint8_t* SetGroupAnonymous::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupAnonymous.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupAnonymous.Params params = 2;
@@ -14556,18 +14332,17 @@ size_t SetGroupAnonymous::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupAnonymous.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -14588,12 +14363,12 @@ void SetGroupAnonymous::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupAnonymous_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -14611,14 +14386,13 @@ bool SetGroupAnonymous::IsInitialized() const {
 
 void SetGroupAnonymous::InternalSwap(SetGroupAnonymous* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupAnonymous, _impl_.action_)
+      + sizeof(SetGroupAnonymous::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupAnonymous, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupAnonymous::GetMetadata() const {
@@ -14911,22 +14685,15 @@ SetGroupCard::SetGroupCard(const SetGroupCard& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupCard* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupCard_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupCard)
 }
 
@@ -14935,14 +14702,10 @@ inline void SetGroupCard::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupCard::~SetGroupCard() {
@@ -14956,7 +14719,6 @@ SetGroupCard::~SetGroupCard() {
 
 inline void SetGroupCard::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -14970,11 +14732,11 @@ void SetGroupCard::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -14984,13 +14746,12 @@ const char* SetGroupCard::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupCard.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -15031,14 +14792,11 @@ uint8_t* SetGroupCard::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupCard.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupCard.Params params = 2;
@@ -15064,18 +14822,17 @@ size_t SetGroupCard::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupCard.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -15096,12 +14853,12 @@ void SetGroupCard::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupCard_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -15119,14 +14876,13 @@ bool SetGroupCard::IsInitialized() const {
 
 void SetGroupCard::InternalSwap(SetGroupCard* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupCard, _impl_.action_)
+      + sizeof(SetGroupCard::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupCard, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupCard::GetMetadata() const {
@@ -15386,22 +15142,15 @@ SetGroupName::SetGroupName(const SetGroupName& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupName* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupName_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupName)
 }
 
@@ -15410,14 +15159,10 @@ inline void SetGroupName::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupName::~SetGroupName() {
@@ -15431,7 +15176,6 @@ SetGroupName::~SetGroupName() {
 
 inline void SetGroupName::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -15445,11 +15189,11 @@ void SetGroupName::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -15459,13 +15203,12 @@ const char* SetGroupName::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupName.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -15506,14 +15249,11 @@ uint8_t* SetGroupName::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupName.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupName.Params params = 2;
@@ -15539,18 +15279,17 @@ size_t SetGroupName::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupName.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -15571,12 +15310,12 @@ void SetGroupName::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupName_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -15594,14 +15333,13 @@ bool SetGroupName::IsInitialized() const {
 
 void SetGroupName::InternalSwap(SetGroupName* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupName, _impl_.action_)
+      + sizeof(SetGroupName::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupName, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupName::GetMetadata() const {
@@ -15842,22 +15580,15 @@ SetGroupLeave::SetGroupLeave(const SetGroupLeave& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupLeave* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupLeave_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupLeave)
 }
 
@@ -15866,14 +15597,10 @@ inline void SetGroupLeave::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupLeave::~SetGroupLeave() {
@@ -15887,7 +15614,6 @@ SetGroupLeave::~SetGroupLeave() {
 
 inline void SetGroupLeave::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -15901,11 +15627,11 @@ void SetGroupLeave::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -15915,13 +15641,12 @@ const char* SetGroupLeave::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupLeave.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -15962,14 +15687,11 @@ uint8_t* SetGroupLeave::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupLeave.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupLeave.Params params = 2;
@@ -15995,18 +15717,17 @@ size_t SetGroupLeave::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupLeave.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -16027,12 +15748,12 @@ void SetGroupLeave::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupLeave_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -16050,14 +15771,13 @@ bool SetGroupLeave::IsInitialized() const {
 
 void SetGroupLeave::InternalSwap(SetGroupLeave* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupLeave, _impl_.action_)
+      + sizeof(SetGroupLeave::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupLeave, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupLeave::GetMetadata() const {
@@ -16374,22 +16094,15 @@ SetGroupSpecialTitle::SetGroupSpecialTitle(const SetGroupSpecialTitle& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupSpecialTitle* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupSpecialTitle_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupSpecialTitle)
 }
 
@@ -16398,14 +16111,10 @@ inline void SetGroupSpecialTitle::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupSpecialTitle::~SetGroupSpecialTitle() {
@@ -16419,7 +16128,6 @@ SetGroupSpecialTitle::~SetGroupSpecialTitle() {
 
 inline void SetGroupSpecialTitle::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -16433,11 +16141,11 @@ void SetGroupSpecialTitle::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -16447,13 +16155,12 @@ const char* SetGroupSpecialTitle::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupSpecialTitle.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -16494,14 +16201,11 @@ uint8_t* SetGroupSpecialTitle::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupSpecialTitle.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupSpecialTitle.Params params = 2;
@@ -16527,18 +16231,17 @@ size_t SetGroupSpecialTitle::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupSpecialTitle.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -16559,12 +16262,12 @@ void SetGroupSpecialTitle::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupSpecialTitle_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -16582,14 +16285,13 @@ bool SetGroupSpecialTitle::IsInitialized() const {
 
 void SetGroupSpecialTitle::InternalSwap(SetGroupSpecialTitle* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupSpecialTitle, _impl_.action_)
+      + sizeof(SetGroupSpecialTitle::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupSpecialTitle, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupSpecialTitle::GetMetadata() const {
@@ -16797,22 +16499,15 @@ SendGroupSign::SendGroupSign(const SendGroupSign& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendGroupSign* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendGroupSign_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendGroupSign)
 }
 
@@ -16821,14 +16516,10 @@ inline void SendGroupSign::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SendGroupSign::~SendGroupSign() {
@@ -16842,7 +16533,6 @@ SendGroupSign::~SendGroupSign() {
 
 inline void SendGroupSign::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -16856,11 +16546,11 @@ void SendGroupSign::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -16870,13 +16560,12 @@ const char* SendGroupSign::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendGroupSign.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -16917,14 +16606,11 @@ uint8_t* SendGroupSign::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendGroupSign.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendGroupSign.Params params = 2;
@@ -16950,18 +16636,17 @@ size_t SendGroupSign::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SendGroupSign.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -16982,12 +16667,12 @@ void SendGroupSign::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendGroupSign_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -17005,14 +16690,13 @@ bool SendGroupSign::IsInitialized() const {
 
 void SendGroupSign::InternalSwap(SendGroupSign* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendGroupSign, _impl_.action_)
+      + sizeof(SendGroupSign::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendGroupSign, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendGroupSign::GetMetadata() const {
@@ -17322,22 +17006,15 @@ SetFriendAddRequest::SetFriendAddRequest(const SetFriendAddRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetFriendAddRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetFriendAddRequest_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetFriendAddRequest)
 }
 
@@ -17346,14 +17023,10 @@ inline void SetFriendAddRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetFriendAddRequest::~SetFriendAddRequest() {
@@ -17367,7 +17040,6 @@ SetFriendAddRequest::~SetFriendAddRequest() {
 
 inline void SetFriendAddRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -17381,11 +17053,11 @@ void SetFriendAddRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -17395,13 +17067,12 @@ const char* SetFriendAddRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetFriendAddRequest.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -17442,14 +17113,11 @@ uint8_t* SetFriendAddRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetFriendAddRequest.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetFriendAddRequest.Params params = 2;
@@ -17475,18 +17143,17 @@ size_t SetFriendAddRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetFriendAddRequest.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -17507,12 +17174,12 @@ void SetFriendAddRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetFriendAddRequest_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -17530,14 +17197,13 @@ bool SetFriendAddRequest::IsInitialized() const {
 
 void SetFriendAddRequest::InternalSwap(SetFriendAddRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetFriendAddRequest, _impl_.action_)
+      + sizeof(SetFriendAddRequest::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetFriendAddRequest, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetFriendAddRequest::GetMetadata() const {
@@ -17897,22 +17563,15 @@ SetGroupAddRequest::SetGroupAddRequest(const SetGroupAddRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupAddRequest* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupAddRequest_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupAddRequest)
 }
 
@@ -17921,14 +17580,10 @@ inline void SetGroupAddRequest::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupAddRequest::~SetGroupAddRequest() {
@@ -17942,7 +17597,6 @@ SetGroupAddRequest::~SetGroupAddRequest() {
 
 inline void SetGroupAddRequest::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -17956,11 +17610,11 @@ void SetGroupAddRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -17970,13 +17624,12 @@ const char* SetGroupAddRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupAddRequest.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -18017,14 +17670,11 @@ uint8_t* SetGroupAddRequest::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupAddRequest.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupAddRequest.Params params = 2;
@@ -18050,18 +17700,17 @@ size_t SetGroupAddRequest::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupAddRequest.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -18082,12 +17731,12 @@ void SetGroupAddRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupAddRequest_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -18105,14 +17754,13 @@ bool SetGroupAddRequest::IsInitialized() const {
 
 void SetGroupAddRequest::InternalSwap(SetGroupAddRequest* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupAddRequest, _impl_.action_)
+      + sizeof(SetGroupAddRequest::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupAddRequest, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupAddRequest::GetMetadata() const {
@@ -18372,20 +18020,12 @@ GetLoginInfo::GetLoginInfo(const GetLoginInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetLoginInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -18397,6 +18037,7 @@ GetLoginInfo::GetLoginInfo(const GetLoginInfo& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetLoginInfo_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetLoginInfo)
 }
 
@@ -18405,15 +18046,11 @@ inline void GetLoginInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -18431,7 +18068,6 @@ GetLoginInfo::~GetLoginInfo() {
 
 inline void GetLoginInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -18446,12 +18082,12 @@ void GetLoginInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -18461,13 +18097,12 @@ const char* GetLoginInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetLoginInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -18518,14 +18153,11 @@ uint8_t* GetLoginInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetLoginInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetLoginInfo.Params params = 2;
@@ -18561,13 +18193,6 @@ size_t GetLoginInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -18580,6 +18205,12 @@ size_t GetLoginInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -18600,15 +18231,15 @@ void GetLoginInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetLoginInfo_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -18630,14 +18261,15 @@ void GetLoginInfo::InternalSwap(GetLoginInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetLoginInfo, _impl_.action_)
+      + sizeof(GetLoginInfo::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetLoginInfo, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetLoginInfo::GetMetadata() const {
@@ -18892,19 +18524,11 @@ QiDianGetAccountInfo::QiDianGetAccountInfo(const QiDianGetAccountInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   QiDianGetAccountInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -18913,6 +18537,7 @@ QiDianGetAccountInfo::QiDianGetAccountInfo(const QiDianGetAccountInfo& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.QiDianGetAccountInfo)
 }
 
@@ -18921,14 +18546,10 @@ inline void QiDianGetAccountInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -18946,7 +18567,6 @@ QiDianGetAccountInfo::~QiDianGetAccountInfo() {
 
 inline void QiDianGetAccountInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -18960,8 +18580,8 @@ void QiDianGetAccountInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -18971,13 +18591,12 @@ const char* QiDianGetAccountInfo::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.QiDianGetAccountInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -19020,14 +18639,11 @@ uint8_t* QiDianGetAccountInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.QiDianGetAccountInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -19056,18 +18672,17 @@ size_t QiDianGetAccountInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -19088,11 +18703,11 @@ void QiDianGetAccountInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -19114,13 +18729,10 @@ void QiDianGetAccountInfo::InternalSwap(QiDianGetAccountInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata QiDianGetAccountInfo::GetMetadata() const {
@@ -19816,22 +19428,15 @@ SetQQProfile::SetQQProfile(const SetQQProfile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetQQProfile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetQQProfile_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetQQProfile)
 }
 
@@ -19840,14 +19445,10 @@ inline void SetQQProfile::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetQQProfile::~SetQQProfile() {
@@ -19861,7 +19462,6 @@ SetQQProfile::~SetQQProfile() {
 
 inline void SetQQProfile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -19875,11 +19475,11 @@ void SetQQProfile::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -19889,13 +19489,12 @@ const char* SetQQProfile::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetQQProfile.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -19936,14 +19535,11 @@ uint8_t* SetQQProfile::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetQQProfile.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetQQProfile.Params params = 2;
@@ -19969,18 +19565,17 @@ size_t SetQQProfile::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetQQProfile.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -20001,12 +19596,12 @@ void SetQQProfile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetQQProfile_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -20024,14 +19619,13 @@ bool SetQQProfile::IsInitialized() const {
 
 void SetQQProfile::InternalSwap(SetQQProfile* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetQQProfile, _impl_.action_)
+      + sizeof(SetQQProfile::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetQQProfile, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetQQProfile::GetMetadata() const {
@@ -20272,20 +19866,12 @@ GetStrangerInfo::GetStrangerInfo(const GetStrangerInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetStrangerInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -20297,6 +19883,7 @@ GetStrangerInfo::GetStrangerInfo(const GetStrangerInfo& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetStrangerInfo_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetStrangerInfo)
 }
 
@@ -20305,15 +19892,11 @@ inline void GetStrangerInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -20331,7 +19914,6 @@ GetStrangerInfo::~GetStrangerInfo() {
 
 inline void GetStrangerInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -20346,12 +19928,12 @@ void GetStrangerInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -20361,13 +19943,12 @@ const char* GetStrangerInfo::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetStrangerInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -20418,14 +19999,11 @@ uint8_t* GetStrangerInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetStrangerInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetStrangerInfo.Params params = 2;
@@ -20461,13 +20039,6 @@ size_t GetStrangerInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -20480,6 +20051,12 @@ size_t GetStrangerInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -20500,15 +20077,15 @@ void GetStrangerInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetStrangerInfo_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -20530,14 +20107,15 @@ void GetStrangerInfo::InternalSwap(GetStrangerInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetStrangerInfo, _impl_.action_)
+      + sizeof(GetStrangerInfo::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetStrangerInfo, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetStrangerInfo::GetMetadata() const {
@@ -20973,19 +20551,11 @@ GetFriendList::GetFriendList(const GetFriendList& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetFriendList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -20994,6 +20564,7 @@ GetFriendList::GetFriendList(const GetFriendList& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetFriendList)
 }
 
@@ -21002,14 +20573,10 @@ inline void GetFriendList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -21027,7 +20594,6 @@ GetFriendList::~GetFriendList() {
 
 inline void GetFriendList::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -21041,8 +20607,8 @@ void GetFriendList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -21052,13 +20618,12 @@ const char* GetFriendList::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetFriendList.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -21101,14 +20666,11 @@ uint8_t* GetFriendList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetFriendList.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -21137,18 +20699,17 @@ size_t GetFriendList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -21169,11 +20730,11 @@ void GetFriendList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -21195,13 +20756,10 @@ void GetFriendList::InternalSwap(GetFriendList* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetFriendList::GetMetadata() const {
@@ -21691,19 +21249,11 @@ UnidirectionalFriendList::UnidirectionalFriendList(const UnidirectionalFriendLis
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UnidirectionalFriendList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -21712,6 +21262,7 @@ UnidirectionalFriendList::UnidirectionalFriendList(const UnidirectionalFriendLis
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.UnidirectionalFriendList)
 }
 
@@ -21720,14 +21271,10 @@ inline void UnidirectionalFriendList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -21745,7 +21292,6 @@ UnidirectionalFriendList::~UnidirectionalFriendList() {
 
 inline void UnidirectionalFriendList::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -21759,8 +21305,8 @@ void UnidirectionalFriendList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -21770,13 +21316,12 @@ const char* UnidirectionalFriendList::_InternalParse(const char* ptr, ::_pbi::Pa
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.UnidirectionalFriendList.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -21819,14 +21364,11 @@ uint8_t* UnidirectionalFriendList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.UnidirectionalFriendList.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -21855,18 +21397,17 @@ size_t UnidirectionalFriendList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -21887,11 +21428,11 @@ void UnidirectionalFriendList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_ms
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -21913,13 +21454,10 @@ void UnidirectionalFriendList::InternalSwap(UnidirectionalFriendList* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UnidirectionalFriendList::GetMetadata() const {
@@ -22592,22 +22130,15 @@ DeleteFriend::DeleteFriend(const DeleteFriend& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteFriend* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DeleteFriend_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DeleteFriend)
 }
 
@@ -22616,14 +22147,10 @@ inline void DeleteFriend::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteFriend::~DeleteFriend() {
@@ -22637,7 +22164,6 @@ DeleteFriend::~DeleteFriend() {
 
 inline void DeleteFriend::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -22651,11 +22177,11 @@ void DeleteFriend::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -22665,13 +22191,12 @@ const char* DeleteFriend::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DeleteFriend.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -22712,14 +22237,11 @@ uint8_t* DeleteFriend::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DeleteFriend.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DeleteFriend.Params params = 2;
@@ -22745,18 +22267,17 @@ size_t DeleteFriend::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.DeleteFriend.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -22777,12 +22298,12 @@ void DeleteFriend::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DeleteFriend_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -22800,14 +22321,13 @@ bool DeleteFriend::IsInitialized() const {
 
 void DeleteFriend::InternalSwap(DeleteFriend* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteFriend, _impl_.action_)
+      + sizeof(DeleteFriend::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DeleteFriend, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteFriend::GetMetadata() const {
@@ -23048,20 +22568,12 @@ GetGroupInfo::GetGroupInfo(const GetGroupInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -23073,6 +22585,7 @@ GetGroupInfo::GetGroupInfo(const GetGroupInfo& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupInfo_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupInfo)
 }
 
@@ -23081,15 +22594,11 @@ inline void GetGroupInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -23107,7 +22616,6 @@ GetGroupInfo::~GetGroupInfo() {
 
 inline void GetGroupInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -23122,12 +22630,12 @@ void GetGroupInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -23137,13 +22645,12 @@ const char* GetGroupInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -23194,14 +22701,11 @@ uint8_t* GetGroupInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupInfo.Params params = 2;
@@ -23237,13 +22741,6 @@ size_t GetGroupInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -23256,6 +22753,12 @@ size_t GetGroupInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -23276,15 +22779,15 @@ void GetGroupInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupInfo_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -23306,14 +22809,15 @@ void GetGroupInfo::InternalSwap(GetGroupInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupInfo, _impl_.action_)
+      + sizeof(GetGroupInfo::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupInfo, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupInfo::GetMetadata() const {
@@ -23906,20 +23410,12 @@ GetGroupList::GetGroupList(const GetGroupList& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -23931,6 +23427,7 @@ GetGroupList::GetGroupList(const GetGroupList& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupList_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupList)
 }
 
@@ -23939,15 +23436,11 @@ inline void GetGroupList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -23965,7 +23458,6 @@ GetGroupList::~GetGroupList() {
 
 inline void GetGroupList::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -23980,12 +23472,12 @@ void GetGroupList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -23995,13 +23487,12 @@ const char* GetGroupList::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupList.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -24052,14 +23543,11 @@ uint8_t* GetGroupList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupList.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupList.Params params = 2;
@@ -24095,13 +23583,6 @@ size_t GetGroupList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -24114,6 +23595,12 @@ size_t GetGroupList::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -24134,15 +23621,15 @@ void GetGroupList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupList_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -24164,14 +23651,15 @@ void GetGroupList::InternalSwap(GetGroupList* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupList, _impl_.action_)
+      + sizeof(GetGroupList::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupList, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupList::GetMetadata() const {
@@ -24621,20 +24109,12 @@ GetGroupMemberInfo::GetGroupMemberInfo(const GetGroupMemberInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupMemberInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -24646,6 +24126,7 @@ GetGroupMemberInfo::GetGroupMemberInfo(const GetGroupMemberInfo& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupMemberInfo_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupMemberInfo)
 }
 
@@ -24654,15 +24135,11 @@ inline void GetGroupMemberInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -24680,7 +24157,6 @@ GetGroupMemberInfo::~GetGroupMemberInfo() {
 
 inline void GetGroupMemberInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -24695,12 +24171,12 @@ void GetGroupMemberInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -24710,13 +24186,12 @@ const char* GetGroupMemberInfo::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupMemberInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -24767,14 +24242,11 @@ uint8_t* GetGroupMemberInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupMemberInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupMemberInfo.Params params = 2;
@@ -24810,13 +24282,6 @@ size_t GetGroupMemberInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -24829,6 +24294,12 @@ size_t GetGroupMemberInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -24849,15 +24320,15 @@ void GetGroupMemberInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupMemberInfo_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -24879,14 +24350,15 @@ void GetGroupMemberInfo::InternalSwap(GetGroupMemberInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupMemberInfo, _impl_.action_)
+      + sizeof(GetGroupMemberInfo::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupMemberInfo, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupMemberInfo::GetMetadata() const {
@@ -25860,20 +25332,12 @@ GetGroupMemberList::GetGroupMemberList(const GetGroupMemberList& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupMemberList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -25885,6 +25349,7 @@ GetGroupMemberList::GetGroupMemberList(const GetGroupMemberList& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupMemberList_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupMemberList)
 }
 
@@ -25893,15 +25358,11 @@ inline void GetGroupMemberList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -25919,7 +25380,6 @@ GetGroupMemberList::~GetGroupMemberList() {
 
 inline void GetGroupMemberList::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -25934,12 +25394,12 @@ void GetGroupMemberList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -25949,13 +25409,12 @@ const char* GetGroupMemberList::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupMemberList.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -26006,14 +25465,11 @@ uint8_t* GetGroupMemberList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupMemberList.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupMemberList.Params params = 2;
@@ -26049,13 +25505,6 @@ size_t GetGroupMemberList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -26068,6 +25517,12 @@ size_t GetGroupMemberList::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -26088,15 +25543,15 @@ void GetGroupMemberList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupMemberList_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -26118,14 +25573,15 @@ void GetGroupMemberList::InternalSwap(GetGroupMemberList* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupMemberList, _impl_.action_)
+      + sizeof(GetGroupMemberList::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupMemberList, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupMemberList::GetMetadata() const {
@@ -26570,20 +26026,12 @@ GetGroupHonorInfo::GetGroupHonorInfo(const GetGroupHonorInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupHonorInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -26595,6 +26043,7 @@ GetGroupHonorInfo::GetGroupHonorInfo(const GetGroupHonorInfo& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupHonorInfo_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupHonorInfo)
 }
 
@@ -26603,15 +26052,11 @@ inline void GetGroupHonorInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -26629,7 +26074,6 @@ GetGroupHonorInfo::~GetGroupHonorInfo() {
 
 inline void GetGroupHonorInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -26644,12 +26088,12 @@ void GetGroupHonorInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -26659,13 +26103,12 @@ const char* GetGroupHonorInfo::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupHonorInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -26716,14 +26159,11 @@ uint8_t* GetGroupHonorInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupHonorInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupHonorInfo.Params params = 2;
@@ -26759,13 +26199,6 @@ size_t GetGroupHonorInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -26778,6 +26211,12 @@ size_t GetGroupHonorInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -26798,15 +26237,15 @@ void GetGroupHonorInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupHonorInfo_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -26828,14 +26267,15 @@ void GetGroupHonorInfo::InternalSwap(GetGroupHonorInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupHonorInfo, _impl_.action_)
+      + sizeof(GetGroupHonorInfo::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupHonorInfo, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupHonorInfo::GetMetadata() const {
@@ -27825,20 +27265,12 @@ GetCoolies::GetCoolies(const GetCoolies& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetCoolies* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -27850,6 +27282,7 @@ GetCoolies::GetCoolies(const GetCoolies& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetCoolies_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetCoolies)
 }
 
@@ -27858,15 +27291,11 @@ inline void GetCoolies::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -27884,7 +27313,6 @@ GetCoolies::~GetCoolies() {
 
 inline void GetCoolies::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -27899,12 +27327,12 @@ void GetCoolies::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -27914,13 +27342,12 @@ const char* GetCoolies::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetCoolies.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -27971,14 +27398,11 @@ uint8_t* GetCoolies::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetCoolies.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetCoolies.Params params = 2;
@@ -28014,13 +27438,6 @@ size_t GetCoolies::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -28033,6 +27450,12 @@ size_t GetCoolies::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -28053,15 +27476,15 @@ void GetCoolies::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetCoolies_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -28083,14 +27506,15 @@ void GetCoolies::InternalSwap(GetCoolies* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetCoolies, _impl_.action_)
+      + sizeof(GetCoolies::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetCoolies, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetCoolies::GetMetadata() const {
@@ -28318,19 +27742,11 @@ GetCsrfToken::GetCsrfToken(const GetCsrfToken& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetCsrfToken* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -28339,6 +27755,7 @@ GetCsrfToken::GetCsrfToken(const GetCsrfToken& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetCsrfToken)
 }
 
@@ -28347,14 +27764,10 @@ inline void GetCsrfToken::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -28372,7 +27785,6 @@ GetCsrfToken::~GetCsrfToken() {
 
 inline void GetCsrfToken::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -28386,8 +27798,8 @@ void GetCsrfToken::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -28397,13 +27809,12 @@ const char* GetCsrfToken::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetCsrfToken.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -28446,14 +27857,11 @@ uint8_t* GetCsrfToken::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetCsrfToken.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -28482,18 +27890,17 @@ size_t GetCsrfToken::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -28514,11 +27921,11 @@ void GetCsrfToken::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -28540,13 +27947,10 @@ void GetCsrfToken::InternalSwap(GetCsrfToken* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetCsrfToken::GetMetadata() const {
@@ -28957,20 +28361,12 @@ GetCredentials::GetCredentials(const GetCredentials& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetCredentials* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -28982,6 +28378,7 @@ GetCredentials::GetCredentials(const GetCredentials& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetCredentials_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetCredentials)
 }
 
@@ -28990,15 +28387,11 @@ inline void GetCredentials::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -29016,7 +28409,6 @@ GetCredentials::~GetCredentials() {
 
 inline void GetCredentials::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -29031,12 +28423,12 @@ void GetCredentials::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -29046,13 +28438,12 @@ const char* GetCredentials::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetCredentials.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -29103,14 +28494,11 @@ uint8_t* GetCredentials::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetCredentials.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetCredentials.Params params = 2;
@@ -29146,13 +28534,6 @@ size_t GetCredentials::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -29165,6 +28546,12 @@ size_t GetCredentials::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -29185,15 +28572,15 @@ void GetCredentials::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetCredentials_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -29215,14 +28602,15 @@ void GetCredentials::InternalSwap(GetCredentials* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetCredentials, _impl_.action_)
+      + sizeof(GetCredentials::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetCredentials, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetCredentials::GetMetadata() const {
@@ -29735,20 +29123,12 @@ GetRecord::GetRecord(const GetRecord& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetRecord* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -29760,6 +29140,7 @@ GetRecord::GetRecord(const GetRecord& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetRecord_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetRecord)
 }
 
@@ -29768,15 +29149,11 @@ inline void GetRecord::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -29794,7 +29171,6 @@ GetRecord::~GetRecord() {
 
 inline void GetRecord::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -29809,12 +29185,12 @@ void GetRecord::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -29824,13 +29200,12 @@ const char* GetRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetRecord.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -29881,14 +29256,11 @@ uint8_t* GetRecord::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetRecord.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetRecord.Params params = 2;
@@ -29924,13 +29296,6 @@ size_t GetRecord::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -29943,6 +29308,12 @@ size_t GetRecord::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -29963,15 +29334,15 @@ void GetRecord::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROT
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetRecord_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -29993,14 +29364,15 @@ void GetRecord::InternalSwap(GetRecord* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetRecord, _impl_.action_)
+      + sizeof(GetRecord::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetRecord, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetRecord::GetMetadata() const {
@@ -30228,19 +29600,11 @@ CanSendImage::CanSendImage(const CanSendImage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CanSendImage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -30249,6 +29613,7 @@ CanSendImage::CanSendImage(const CanSendImage& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.CanSendImage)
 }
 
@@ -30257,14 +29622,10 @@ inline void CanSendImage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -30282,7 +29643,6 @@ CanSendImage::~CanSendImage() {
 
 inline void CanSendImage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -30296,8 +29656,8 @@ void CanSendImage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -30307,13 +29667,12 @@ const char* CanSendImage::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.CanSendImage.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -30356,14 +29715,11 @@ uint8_t* CanSendImage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.CanSendImage.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -30392,18 +29748,17 @@ size_t CanSendImage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -30424,11 +29779,11 @@ void CanSendImage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -30450,13 +29805,10 @@ void CanSendImage::InternalSwap(CanSendImage* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CanSendImage::GetMetadata() const {
@@ -30659,19 +30011,11 @@ CanSendRecord::CanSendRecord(const CanSendRecord& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CanSendRecord* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -30680,6 +30024,7 @@ CanSendRecord::CanSendRecord(const CanSendRecord& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.CanSendRecord)
 }
 
@@ -30688,14 +30033,10 @@ inline void CanSendRecord::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -30713,7 +30054,6 @@ CanSendRecord::~CanSendRecord() {
 
 inline void CanSendRecord::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -30727,8 +30067,8 @@ void CanSendRecord::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -30738,13 +30078,12 @@ const char* CanSendRecord::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.CanSendRecord.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -30787,14 +30126,11 @@ uint8_t* CanSendRecord::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.CanSendRecord.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -30823,18 +30159,17 @@ size_t CanSendRecord::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -30855,11 +30190,11 @@ void CanSendRecord::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -30881,13 +30216,10 @@ void CanSendRecord::InternalSwap(CanSendRecord* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CanSendRecord::GetMetadata() const {
@@ -31090,19 +30422,11 @@ GetVersionInfo::GetVersionInfo(const GetVersionInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetVersionInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -31111,6 +30435,7 @@ GetVersionInfo::GetVersionInfo(const GetVersionInfo& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetVersionInfo)
 }
 
@@ -31119,14 +30444,10 @@ inline void GetVersionInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -31144,7 +30465,6 @@ GetVersionInfo::~GetVersionInfo() {
 
 inline void GetVersionInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -31158,8 +30478,8 @@ void GetVersionInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -31169,13 +30489,12 @@ const char* GetVersionInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetVersionInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -31218,14 +30537,11 @@ uint8_t* GetVersionInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetVersionInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -31254,18 +30570,17 @@ size_t GetVersionInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -31286,11 +30601,11 @@ void GetVersionInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -31312,13 +30627,10 @@ void GetVersionInfo::InternalSwap(GetVersionInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetVersionInfo::GetMetadata() const {
@@ -32313,22 +31625,15 @@ SetRestart::SetRestart(const SetRestart& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetRestart* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetRestart_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetRestart)
 }
 
@@ -32337,14 +31642,10 @@ inline void SetRestart::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetRestart::~SetRestart() {
@@ -32358,7 +31659,6 @@ SetRestart::~SetRestart() {
 
 inline void SetRestart::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -32372,11 +31672,11 @@ void SetRestart::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -32386,13 +31686,12 @@ const char* SetRestart::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetRestart.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -32433,14 +31732,11 @@ uint8_t* SetRestart::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetRestart.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetRestart.Params params = 2;
@@ -32466,18 +31762,17 @@ size_t SetRestart::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetRestart.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -32498,12 +31793,12 @@ void SetRestart::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetRestart_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -32521,14 +31816,13 @@ bool SetRestart::IsInitialized() const {
 
 void SetRestart::InternalSwap(SetRestart* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetRestart, _impl_.action_)
+      + sizeof(SetRestart::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetRestart, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetRestart::GetMetadata() const {
@@ -32557,14 +31851,7 @@ CleanCache::CleanCache(const CleanCache& from)
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.CleanCache)
 }
 
@@ -32573,13 +31860,9 @@ inline void CleanCache::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
+      decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CleanCache::~CleanCache() {
@@ -32593,7 +31876,6 @@ CleanCache::~CleanCache() {
 
 inline void CleanCache::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
 }
 
 void CleanCache::SetCachedSize(int size) const {
@@ -32606,7 +31888,7 @@ void CleanCache::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -32616,13 +31898,12 @@ const char* CleanCache::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.CleanCache.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -32655,14 +31936,11 @@ uint8_t* CleanCache::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.CleanCache.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -32681,11 +31959,10 @@ size_t CleanCache::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -32706,7 +31983,7 @@ void CleanCache::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
+  if (from._internal_action() != 0) {
     _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -32725,13 +32002,8 @@ bool CleanCache::IsInitialized() const {
 
 void CleanCache::InternalSwap(CleanCache* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CleanCache::GetMetadata() const {
@@ -33024,22 +32296,15 @@ SetGroupPortrait::SetGroupPortrait(const SetGroupPortrait& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetGroupPortrait* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetGroupPortrait_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetGroupPortrait)
 }
 
@@ -33048,14 +32313,10 @@ inline void SetGroupPortrait::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetGroupPortrait::~SetGroupPortrait() {
@@ -33069,7 +32330,6 @@ SetGroupPortrait::~SetGroupPortrait() {
 
 inline void SetGroupPortrait::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -33083,11 +32343,11 @@ void SetGroupPortrait::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -33097,13 +32357,12 @@ const char* SetGroupPortrait::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetGroupPortrait.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -33144,14 +32403,11 @@ uint8_t* SetGroupPortrait::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetGroupPortrait.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetGroupPortrait.Params params = 2;
@@ -33177,18 +32433,17 @@ size_t SetGroupPortrait::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetGroupPortrait.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -33209,12 +32464,12 @@ void SetGroupPortrait::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetGroupPortrait_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -33232,14 +32487,13 @@ bool SetGroupPortrait::IsInitialized() const {
 
 void SetGroupPortrait::InternalSwap(SetGroupPortrait* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetGroupPortrait, _impl_.action_)
+      + sizeof(SetGroupPortrait::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetGroupPortrait, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetGroupPortrait::GetMetadata() const {
@@ -33472,20 +32726,12 @@ GetWordSlices::GetWordSlices(const GetWordSlices& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetWordSlices* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -33497,6 +32743,7 @@ GetWordSlices::GetWordSlices(const GetWordSlices& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetWordSlices_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetWordSlices)
 }
 
@@ -33505,15 +32752,11 @@ inline void GetWordSlices::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -33531,7 +32774,6 @@ GetWordSlices::~GetWordSlices() {
 
 inline void GetWordSlices::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -33546,12 +32788,12 @@ void GetWordSlices::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -33561,13 +32803,12 @@ const char* GetWordSlices::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetWordSlices.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -33618,14 +32859,11 @@ uint8_t* GetWordSlices::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetWordSlices.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetWordSlices.Params params = 2;
@@ -33661,13 +32899,6 @@ size_t GetWordSlices::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -33680,6 +32911,12 @@ size_t GetWordSlices::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -33700,15 +32937,15 @@ void GetWordSlices::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetWordSlices_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -33730,14 +32967,15 @@ void GetWordSlices::InternalSwap(GetWordSlices* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetWordSlices, _impl_.action_)
+      + sizeof(GetWordSlices::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetWordSlices, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetWordSlices::GetMetadata() const {
@@ -34160,20 +33398,12 @@ OcrImage::OcrImage(const OcrImage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   OcrImage* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -34185,6 +33415,7 @@ OcrImage::OcrImage(const OcrImage& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::OcrImage_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.OcrImage)
 }
 
@@ -34193,15 +33424,11 @@ inline void OcrImage::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -34219,7 +33446,6 @@ OcrImage::~OcrImage() {
 
 inline void OcrImage::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -34234,12 +33460,12 @@ void OcrImage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -34249,13 +33475,12 @@ const char* OcrImage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx)
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.OcrImage.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -34306,14 +33531,11 @@ uint8_t* OcrImage::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.OcrImage.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.OcrImage.Params params = 2;
@@ -34349,13 +33571,6 @@ size_t OcrImage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -34368,6 +33583,12 @@ size_t OcrImage::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -34388,15 +33609,15 @@ void OcrImage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTO
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::OcrImage_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -34418,14 +33639,15 @@ void OcrImage::InternalSwap(OcrImage* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(OcrImage, _impl_.action_)
+      + sizeof(OcrImage::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(OcrImage, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata OcrImage::GetMetadata() const {
@@ -34967,19 +34189,11 @@ GetGroupSystemMsg::GetGroupSystemMsg(const GetGroupSystemMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupSystemMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -34988,6 +34202,7 @@ GetGroupSystemMsg::GetGroupSystemMsg(const GetGroupSystemMsg& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupSystemMsg)
 }
 
@@ -34996,14 +34211,10 @@ inline void GetGroupSystemMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -35021,7 +34232,6 @@ GetGroupSystemMsg::~GetGroupSystemMsg() {
 
 inline void GetGroupSystemMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -35035,8 +34245,8 @@ void GetGroupSystemMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -35046,13 +34256,12 @@ const char* GetGroupSystemMsg::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupSystemMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -35095,14 +34304,11 @@ uint8_t* GetGroupSystemMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupSystemMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -35131,18 +34337,17 @@ size_t GetGroupSystemMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -35163,11 +34368,11 @@ void GetGroupSystemMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -35189,13 +34394,10 @@ void GetGroupSystemMsg::InternalSwap(GetGroupSystemMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupSystemMsg::GetMetadata() const {
@@ -36544,22 +35746,15 @@ UploadPrivateFile::UploadPrivateFile(const UploadPrivateFile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UploadPrivateFile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::UploadPrivateFile_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.UploadPrivateFile)
 }
 
@@ -36568,14 +35763,10 @@ inline void UploadPrivateFile::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UploadPrivateFile::~UploadPrivateFile() {
@@ -36589,7 +35780,6 @@ UploadPrivateFile::~UploadPrivateFile() {
 
 inline void UploadPrivateFile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -36603,11 +35793,11 @@ void UploadPrivateFile::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -36617,13 +35807,12 @@ const char* UploadPrivateFile::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.UploadPrivateFile.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -36664,14 +35853,11 @@ uint8_t* UploadPrivateFile::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.UploadPrivateFile.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.UploadPrivateFile.Params params = 2;
@@ -36697,18 +35883,17 @@ size_t UploadPrivateFile::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.UploadPrivateFile.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -36729,12 +35914,12 @@ void UploadPrivateFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::UploadPrivateFile_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -36752,14 +35937,13 @@ bool UploadPrivateFile::IsInitialized() const {
 
 void UploadPrivateFile::InternalSwap(UploadPrivateFile* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(UploadPrivateFile, _impl_.action_)
+      + sizeof(UploadPrivateFile::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(UploadPrivateFile, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UploadPrivateFile::GetMetadata() const {
@@ -37119,22 +36303,15 @@ UploadGroupFile::UploadGroupFile(const UploadGroupFile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   UploadGroupFile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::UploadGroupFile_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.UploadGroupFile)
 }
 
@@ -37143,14 +36320,10 @@ inline void UploadGroupFile::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 UploadGroupFile::~UploadGroupFile() {
@@ -37164,7 +36337,6 @@ UploadGroupFile::~UploadGroupFile() {
 
 inline void UploadGroupFile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -37178,11 +36350,11 @@ void UploadGroupFile::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -37192,13 +36364,12 @@ const char* UploadGroupFile::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.UploadGroupFile.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -37239,14 +36410,11 @@ uint8_t* UploadGroupFile::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.UploadGroupFile.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.UploadGroupFile.Params params = 2;
@@ -37272,18 +36440,17 @@ size_t UploadGroupFile::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.UploadGroupFile.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -37304,12 +36471,12 @@ void UploadGroupFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::UploadGroupFile_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -37327,14 +36494,13 @@ bool UploadGroupFile::IsInitialized() const {
 
 void UploadGroupFile::InternalSwap(UploadGroupFile* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(UploadGroupFile, _impl_.action_)
+      + sizeof(UploadGroupFile::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(UploadGroupFile, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UploadGroupFile::GetMetadata() const {
@@ -37542,20 +36708,12 @@ GetGroupFileSystemInfo::GetGroupFileSystemInfo(const GetGroupFileSystemInfo& fro
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupFileSystemInfo* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -37567,6 +36725,7 @@ GetGroupFileSystemInfo::GetGroupFileSystemInfo(const GetGroupFileSystemInfo& fro
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupFileSystemInfo_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupFileSystemInfo)
 }
 
@@ -37575,15 +36734,11 @@ inline void GetGroupFileSystemInfo::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -37601,7 +36756,6 @@ GetGroupFileSystemInfo::~GetGroupFileSystemInfo() {
 
 inline void GetGroupFileSystemInfo::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -37616,12 +36770,12 @@ void GetGroupFileSystemInfo::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -37631,13 +36785,12 @@ const char* GetGroupFileSystemInfo::_InternalParse(const char* ptr, ::_pbi::Pars
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupFileSystemInfo.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -37688,14 +36841,11 @@ uint8_t* GetGroupFileSystemInfo::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupFileSystemInfo.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupFileSystemInfo.Params params = 2;
@@ -37731,13 +36881,6 @@ size_t GetGroupFileSystemInfo::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -37750,6 +36893,12 @@ size_t GetGroupFileSystemInfo::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -37770,15 +36919,15 @@ void GetGroupFileSystemInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg,
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupFileSystemInfo_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -37800,14 +36949,15 @@ void GetGroupFileSystemInfo::InternalSwap(GetGroupFileSystemInfo* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupFileSystemInfo, _impl_.action_)
+      + sizeof(GetGroupFileSystemInfo::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupFileSystemInfo, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupFileSystemInfo::GetMetadata() const {
@@ -38274,20 +37424,12 @@ GetGroupRootFiles::GetGroupRootFiles(const GetGroupRootFiles& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupRootFiles* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -38299,6 +37441,7 @@ GetGroupRootFiles::GetGroupRootFiles(const GetGroupRootFiles& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupRootFiles_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupRootFiles)
 }
 
@@ -38307,15 +37450,11 @@ inline void GetGroupRootFiles::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -38333,7 +37472,6 @@ GetGroupRootFiles::~GetGroupRootFiles() {
 
 inline void GetGroupRootFiles::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -38348,12 +37486,12 @@ void GetGroupRootFiles::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -38363,13 +37501,12 @@ const char* GetGroupRootFiles::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupRootFiles.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -38420,14 +37557,11 @@ uint8_t* GetGroupRootFiles::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupRootFiles.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupRootFiles.Params params = 2;
@@ -38463,13 +37597,6 @@ size_t GetGroupRootFiles::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -38482,6 +37609,12 @@ size_t GetGroupRootFiles::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -38502,15 +37635,15 @@ void GetGroupRootFiles::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupRootFiles_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -38532,14 +37665,15 @@ void GetGroupRootFiles::InternalSwap(GetGroupRootFiles* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupRootFiles, _impl_.action_)
+      + sizeof(GetGroupRootFiles::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupRootFiles, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupRootFiles::GetMetadata() const {
@@ -39024,20 +38158,12 @@ getGroupFileByFolder::getGroupFileByFolder(const getGroupFileByFolder& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   getGroupFileByFolder* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -39049,6 +38175,7 @@ getGroupFileByFolder::getGroupFileByFolder(const getGroupFileByFolder& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::getGroupFileByFolder_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.getGroupFileByFolder)
 }
 
@@ -39057,15 +38184,11 @@ inline void getGroupFileByFolder::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -39083,7 +38206,6 @@ getGroupFileByFolder::~getGroupFileByFolder() {
 
 inline void getGroupFileByFolder::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -39098,12 +38220,12 @@ void getGroupFileByFolder::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -39113,13 +38235,12 @@ const char* getGroupFileByFolder::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.getGroupFileByFolder.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -39170,14 +38291,11 @@ uint8_t* getGroupFileByFolder::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.getGroupFileByFolder.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.getGroupFileByFolder.Params params = 2;
@@ -39213,13 +38331,6 @@ size_t getGroupFileByFolder::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -39232,6 +38343,12 @@ size_t getGroupFileByFolder::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -39252,15 +38369,15 @@ void getGroupFileByFolder::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::getGroupFileByFolder_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -39282,14 +38399,15 @@ void getGroupFileByFolder::InternalSwap(getGroupFileByFolder* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(getGroupFileByFolder, _impl_.action_)
+      + sizeof(getGroupFileByFolder::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(getGroupFileByFolder, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata getGroupFileByFolder::GetMetadata() const {
@@ -39824,22 +38942,15 @@ CreateGroupFileFolder::CreateGroupFileFolder(const CreateGroupFileFolder& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CreateGroupFileFolder* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::CreateGroupFileFolder_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.CreateGroupFileFolder)
 }
 
@@ -39848,14 +38959,10 @@ inline void CreateGroupFileFolder::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 CreateGroupFileFolder::~CreateGroupFileFolder() {
@@ -39869,7 +38976,6 @@ CreateGroupFileFolder::~CreateGroupFileFolder() {
 
 inline void CreateGroupFileFolder::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -39883,11 +38989,11 @@ void CreateGroupFileFolder::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -39897,13 +39003,12 @@ const char* CreateGroupFileFolder::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.CreateGroupFileFolder.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -39944,14 +39049,11 @@ uint8_t* CreateGroupFileFolder::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.CreateGroupFileFolder.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.CreateGroupFileFolder.Params params = 2;
@@ -39977,18 +39079,17 @@ size_t CreateGroupFileFolder::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.CreateGroupFileFolder.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -40009,12 +39110,12 @@ void CreateGroupFileFolder::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::CreateGroupFileFolder_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -40032,14 +39133,13 @@ bool CreateGroupFileFolder::IsInitialized() const {
 
 void CreateGroupFileFolder::InternalSwap(CreateGroupFileFolder* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CreateGroupFileFolder, _impl_.action_)
+      + sizeof(CreateGroupFileFolder::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(CreateGroupFileFolder, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreateGroupFileFolder::GetMetadata() const {
@@ -40299,22 +39399,15 @@ DeleteGroupFolder::DeleteGroupFolder(const DeleteGroupFolder& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteGroupFolder* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DeleteGroupFolder_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DeleteGroupFolder)
 }
 
@@ -40323,14 +39416,10 @@ inline void DeleteGroupFolder::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteGroupFolder::~DeleteGroupFolder() {
@@ -40344,7 +39433,6 @@ DeleteGroupFolder::~DeleteGroupFolder() {
 
 inline void DeleteGroupFolder::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -40358,11 +39446,11 @@ void DeleteGroupFolder::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -40372,13 +39460,12 @@ const char* DeleteGroupFolder::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DeleteGroupFolder.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -40419,14 +39506,11 @@ uint8_t* DeleteGroupFolder::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DeleteGroupFolder.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DeleteGroupFolder.Params params = 2;
@@ -40452,18 +39536,17 @@ size_t DeleteGroupFolder::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.DeleteGroupFolder.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -40484,12 +39567,12 @@ void DeleteGroupFolder::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DeleteGroupFolder_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -40507,14 +39590,13 @@ bool DeleteGroupFolder::IsInitialized() const {
 
 void DeleteGroupFolder::InternalSwap(DeleteGroupFolder* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteGroupFolder, _impl_.action_)
+      + sizeof(DeleteGroupFolder::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DeleteGroupFolder, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteGroupFolder::GetMetadata() const {
@@ -40807,22 +39889,15 @@ DeleteGroupFile::DeleteGroupFile(const DeleteGroupFile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteGroupFile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DeleteGroupFile_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DeleteGroupFile)
 }
 
@@ -40831,14 +39906,10 @@ inline void DeleteGroupFile::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteGroupFile::~DeleteGroupFile() {
@@ -40852,7 +39923,6 @@ DeleteGroupFile::~DeleteGroupFile() {
 
 inline void DeleteGroupFile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -40866,11 +39936,11 @@ void DeleteGroupFile::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -40880,13 +39950,12 @@ const char* DeleteGroupFile::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DeleteGroupFile.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -40927,14 +39996,11 @@ uint8_t* DeleteGroupFile::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DeleteGroupFile.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DeleteGroupFile.Params params = 2;
@@ -40960,18 +40026,17 @@ size_t DeleteGroupFile::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.DeleteGroupFile.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -40992,12 +40057,12 @@ void DeleteGroupFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DeleteGroupFile_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -41015,14 +40080,13 @@ bool DeleteGroupFile::IsInitialized() const {
 
 void DeleteGroupFile::InternalSwap(DeleteGroupFile* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteGroupFile, _impl_.action_)
+      + sizeof(DeleteGroupFile::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DeleteGroupFile, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteGroupFile::GetMetadata() const {
@@ -41315,20 +40379,12 @@ GetGroupFileUrl::GetGroupFileUrl(const GetGroupFileUrl& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupFileUrl* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -41340,6 +40396,7 @@ GetGroupFileUrl::GetGroupFileUrl(const GetGroupFileUrl& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupFileUrl_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupFileUrl)
 }
 
@@ -41348,15 +40405,11 @@ inline void GetGroupFileUrl::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -41374,7 +40427,6 @@ GetGroupFileUrl::~GetGroupFileUrl() {
 
 inline void GetGroupFileUrl::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -41389,12 +40441,12 @@ void GetGroupFileUrl::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -41404,13 +40456,12 @@ const char* GetGroupFileUrl::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupFileUrl.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -41461,14 +40512,11 @@ uint8_t* GetGroupFileUrl::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupFileUrl.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupFileUrl.Params params = 2;
@@ -41504,13 +40552,6 @@ size_t GetGroupFileUrl::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -41523,6 +40564,12 @@ size_t GetGroupFileUrl::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -41543,15 +40590,15 @@ void GetGroupFileUrl::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupFileUrl_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -41573,14 +40620,15 @@ void GetGroupFileUrl::InternalSwap(GetGroupFileUrl* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupFileUrl, _impl_.action_)
+      + sizeof(GetGroupFileUrl::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupFileUrl, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupFileUrl::GetMetadata() const {
@@ -41808,19 +40856,11 @@ GetStatus::GetStatus(const GetStatus& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetStatus* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -41829,6 +40869,7 @@ GetStatus::GetStatus(const GetStatus& from)
     _this->_impl_.echo_.Set(from._internal_echo(), 
       _this->GetArenaForAllocation());
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetStatus)
 }
 
@@ -41837,14 +40878,10 @@ inline void GetStatus::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -41862,7 +40899,6 @@ GetStatus::~GetStatus() {
 
 inline void GetStatus::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
 }
 
@@ -41876,8 +40912,8 @@ void GetStatus::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -41887,13 +40923,12 @@ const char* GetStatus::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetStatus.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -41936,14 +40971,11 @@ uint8_t* GetStatus::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetStatus.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // string echo = 2;
@@ -41972,18 +41004,17 @@ size_t GetStatus::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 2;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_echo());
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -42004,11 +41035,11 @@ void GetStatus::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROT
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -42030,13 +41061,10 @@ void GetStatus::InternalSwap(GetStatus* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetStatus::GetMetadata() const {
@@ -42947,20 +41975,12 @@ GetGroupAtAllRemain::GetGroupAtAllRemain(const GetGroupAtAllRemain& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupAtAllRemain* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -42972,6 +41992,7 @@ GetGroupAtAllRemain::GetGroupAtAllRemain(const GetGroupAtAllRemain& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupAtAllRemain_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupAtAllRemain)
 }
 
@@ -42980,15 +42001,11 @@ inline void GetGroupAtAllRemain::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -43006,7 +42023,6 @@ GetGroupAtAllRemain::~GetGroupAtAllRemain() {
 
 inline void GetGroupAtAllRemain::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -43021,12 +42037,12 @@ void GetGroupAtAllRemain::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -43036,13 +42052,12 @@ const char* GetGroupAtAllRemain::_InternalParse(const char* ptr, ::_pbi::ParseCo
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupAtAllRemain.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -43093,14 +42108,11 @@ uint8_t* GetGroupAtAllRemain::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupAtAllRemain.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupAtAllRemain.Params params = 2;
@@ -43136,13 +42148,6 @@ size_t GetGroupAtAllRemain::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -43155,6 +42160,12 @@ size_t GetGroupAtAllRemain::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -43175,15 +42186,15 @@ void GetGroupAtAllRemain::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, co
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupAtAllRemain_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -43205,14 +42216,15 @@ void GetGroupAtAllRemain::InternalSwap(GetGroupAtAllRemain* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupAtAllRemain, _impl_.action_)
+      + sizeof(GetGroupAtAllRemain::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupAtAllRemain, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupAtAllRemain::GetMetadata() const {
@@ -43730,22 +42742,15 @@ HandleQuickOperation::HandleQuickOperation(const HandleQuickOperation& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   HandleQuickOperation* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::HandleQuickOperation_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.HandleQuickOperation)
 }
 
@@ -43754,14 +42759,10 @@ inline void HandleQuickOperation::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 HandleQuickOperation::~HandleQuickOperation() {
@@ -43775,7 +42776,6 @@ HandleQuickOperation::~HandleQuickOperation() {
 
 inline void HandleQuickOperation::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -43789,11 +42789,11 @@ void HandleQuickOperation::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -43803,13 +42803,12 @@ const char* HandleQuickOperation::_InternalParse(const char* ptr, ::_pbi::ParseC
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.HandleQuickOperation.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -43850,14 +42849,11 @@ uint8_t* HandleQuickOperation::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.HandleQuickOperation.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.HandleQuickOperation.Params params = 2;
@@ -43883,18 +42879,17 @@ size_t HandleQuickOperation::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.HandleQuickOperation.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -43915,12 +42910,12 @@ void HandleQuickOperation::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, c
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::HandleQuickOperation_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -43938,14 +42933,13 @@ bool HandleQuickOperation::IsInitialized() const {
 
 void HandleQuickOperation::InternalSwap(HandleQuickOperation* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(HandleQuickOperation, _impl_.action_)
+      + sizeof(HandleQuickOperation::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(HandleQuickOperation, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata HandleQuickOperation::GetMetadata() const {
@@ -44255,22 +43249,15 @@ SendGroupNotice::SendGroupNotice(const SendGroupNotice& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendGroupNotice* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendGroupNotice_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendGroupNotice)
 }
 
@@ -44279,14 +43266,10 @@ inline void SendGroupNotice::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SendGroupNotice::~SendGroupNotice() {
@@ -44300,7 +43283,6 @@ SendGroupNotice::~SendGroupNotice() {
 
 inline void SendGroupNotice::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -44314,11 +43296,11 @@ void SendGroupNotice::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -44328,13 +43310,12 @@ const char* SendGroupNotice::_InternalParse(const char* ptr, ::_pbi::ParseContex
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendGroupNotice.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -44375,14 +43356,11 @@ uint8_t* SendGroupNotice::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendGroupNotice.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendGroupNotice.Params params = 2;
@@ -44408,18 +43386,17 @@ size_t SendGroupNotice::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SendGroupNotice.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -44440,12 +43417,12 @@ void SendGroupNotice::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendGroupNotice_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -44463,14 +43440,13 @@ bool SendGroupNotice::IsInitialized() const {
 
 void SendGroupNotice::InternalSwap(SendGroupNotice* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendGroupNotice, _impl_.action_)
+      + sizeof(SendGroupNotice::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendGroupNotice, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendGroupNotice::GetMetadata() const {
@@ -44678,20 +43654,12 @@ GetGroupNotice::GetGroupNotice(const GetGroupNotice& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupNotice* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -44703,6 +43671,7 @@ GetGroupNotice::GetGroupNotice(const GetGroupNotice& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupNotice_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupNotice)
 }
 
@@ -44711,15 +43680,11 @@ inline void GetGroupNotice::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -44737,7 +43702,6 @@ GetGroupNotice::~GetGroupNotice() {
 
 inline void GetGroupNotice::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -44752,12 +43716,12 @@ void GetGroupNotice::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -44767,13 +43731,12 @@ const char* GetGroupNotice::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupNotice.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -44824,14 +43787,11 @@ uint8_t* GetGroupNotice::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupNotice.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupNotice.Params params = 2;
@@ -44867,13 +43827,6 @@ size_t GetGroupNotice::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -44886,6 +43839,12 @@ size_t GetGroupNotice::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -44906,15 +43865,15 @@ void GetGroupNotice::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupNotice_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -44936,14 +43895,15 @@ void GetGroupNotice::InternalSwap(GetGroupNotice* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupNotice, _impl_.action_)
+      + sizeof(GetGroupNotice::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupNotice, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupNotice::GetMetadata() const {
@@ -46153,22 +45113,15 @@ ReloadEventFilter::ReloadEventFilter(const ReloadEventFilter& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   ReloadEventFilter* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::ReloadEventFilter_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.ReloadEventFilter)
 }
 
@@ -46177,14 +45130,10 @@ inline void ReloadEventFilter::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 ReloadEventFilter::~ReloadEventFilter() {
@@ -46198,7 +45147,6 @@ ReloadEventFilter::~ReloadEventFilter() {
 
 inline void ReloadEventFilter::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -46212,11 +45160,11 @@ void ReloadEventFilter::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -46226,13 +45174,12 @@ const char* ReloadEventFilter::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.ReloadEventFilter.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -46273,14 +45220,11 @@ uint8_t* ReloadEventFilter::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.ReloadEventFilter.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.ReloadEventFilter.Params params = 2;
@@ -46306,18 +45250,17 @@ size_t ReloadEventFilter::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.ReloadEventFilter.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -46338,12 +45281,12 @@ void ReloadEventFilter::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::ReloadEventFilter_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -46361,14 +45304,13 @@ bool ReloadEventFilter::IsInitialized() const {
 
 void ReloadEventFilter::InternalSwap(ReloadEventFilter* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReloadEventFilter, _impl_.action_)
+      + sizeof(ReloadEventFilter::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(ReloadEventFilter, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ReloadEventFilter::GetMetadata() const {
@@ -46678,20 +45620,12 @@ DownloadFile::DownloadFile(const DownloadFile& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DownloadFile* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -46703,6 +45637,7 @@ DownloadFile::DownloadFile(const DownloadFile& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DownloadFile_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DownloadFile)
 }
 
@@ -46711,15 +45646,11 @@ inline void DownloadFile::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -46737,7 +45668,6 @@ DownloadFile::~DownloadFile() {
 
 inline void DownloadFile::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -46752,12 +45682,12 @@ void DownloadFile::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -46767,13 +45697,12 @@ const char* DownloadFile::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DownloadFile.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -46824,14 +45753,11 @@ uint8_t* DownloadFile::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DownloadFile.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DownloadFile.Params params = 2;
@@ -46867,13 +45793,6 @@ size_t DownloadFile::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -46886,6 +45805,12 @@ size_t DownloadFile::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -46906,15 +45831,15 @@ void DownloadFile::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DownloadFile_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -46936,14 +45861,15 @@ void DownloadFile::InternalSwap(DownloadFile* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DownloadFile, _impl_.action_)
+      + sizeof(DownloadFile::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DownloadFile, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DownloadFile::GetMetadata() const {
@@ -47354,20 +46280,12 @@ GetOnlineClients::GetOnlineClients(const GetOnlineClients& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetOnlineClients* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -47379,6 +46297,7 @@ GetOnlineClients::GetOnlineClients(const GetOnlineClients& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetOnlineClients_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetOnlineClients)
 }
 
@@ -47387,15 +46306,11 @@ inline void GetOnlineClients::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -47413,7 +46328,6 @@ GetOnlineClients::~GetOnlineClients() {
 
 inline void GetOnlineClients::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -47428,12 +46342,12 @@ void GetOnlineClients::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -47443,13 +46357,12 @@ const char* GetOnlineClients::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetOnlineClients.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -47500,14 +46413,11 @@ uint8_t* GetOnlineClients::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetOnlineClients.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetOnlineClients.Params params = 2;
@@ -47543,13 +46453,6 @@ size_t GetOnlineClients::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -47562,6 +46465,12 @@ size_t GetOnlineClients::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -47582,15 +46491,15 @@ void GetOnlineClients::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetOnlineClients_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -47612,14 +46521,15 @@ void GetOnlineClients::InternalSwap(GetOnlineClients* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetOnlineClients, _impl_.action_)
+      + sizeof(GetOnlineClients::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetOnlineClients, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetOnlineClients::GetMetadata() const {
@@ -48048,20 +46958,12 @@ GetGroupMsgHistory::GetGroupMsgHistory(const GetGroupMsgHistory& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetGroupMsgHistory* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -48073,6 +46975,7 @@ GetGroupMsgHistory::GetGroupMsgHistory(const GetGroupMsgHistory& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetGroupMsgHistory_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetGroupMsgHistory)
 }
 
@@ -48081,15 +46984,11 @@ inline void GetGroupMsgHistory::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -48107,7 +47006,6 @@ GetGroupMsgHistory::~GetGroupMsgHistory() {
 
 inline void GetGroupMsgHistory::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -48122,12 +47020,12 @@ void GetGroupMsgHistory::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -48137,13 +47035,12 @@ const char* GetGroupMsgHistory::_InternalParse(const char* ptr, ::_pbi::ParseCon
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetGroupMsgHistory.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -48194,14 +47091,11 @@ uint8_t* GetGroupMsgHistory::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetGroupMsgHistory.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetGroupMsgHistory.Params params = 2;
@@ -48237,13 +47131,6 @@ size_t GetGroupMsgHistory::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -48256,6 +47143,12 @@ size_t GetGroupMsgHistory::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -48276,15 +47169,15 @@ void GetGroupMsgHistory::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetGroupMsgHistory_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -48306,14 +47199,15 @@ void GetGroupMsgHistory::InternalSwap(GetGroupMsgHistory* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetGroupMsgHistory, _impl_.action_)
+      + sizeof(GetGroupMsgHistory::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetGroupMsgHistory, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetGroupMsgHistory::GetMetadata() const {
@@ -48711,22 +47605,15 @@ SetEssenceMsg::SetEssenceMsg(const SetEssenceMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetEssenceMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetEssenceMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetEssenceMsg)
 }
 
@@ -48735,14 +47622,10 @@ inline void SetEssenceMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetEssenceMsg::~SetEssenceMsg() {
@@ -48756,7 +47639,6 @@ SetEssenceMsg::~SetEssenceMsg() {
 
 inline void SetEssenceMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -48770,11 +47652,11 @@ void SetEssenceMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -48784,13 +47666,12 @@ const char* SetEssenceMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext*
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetEssenceMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -48831,14 +47712,11 @@ uint8_t* SetEssenceMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetEssenceMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetEssenceMsg.Params params = 2;
@@ -48864,18 +47742,17 @@ size_t SetEssenceMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetEssenceMsg.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -48896,12 +47773,12 @@ void SetEssenceMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetEssenceMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -48919,14 +47796,13 @@ bool SetEssenceMsg::IsInitialized() const {
 
 void SetEssenceMsg::InternalSwap(SetEssenceMsg* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetEssenceMsg, _impl_.action_)
+      + sizeof(SetEssenceMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetEssenceMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetEssenceMsg::GetMetadata() const {
@@ -49134,22 +48010,15 @@ DeleteEssenceMsg::DeleteEssenceMsg(const DeleteEssenceMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteEssenceMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DeleteEssenceMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DeleteEssenceMsg)
 }
 
@@ -49158,14 +48027,10 @@ inline void DeleteEssenceMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteEssenceMsg::~DeleteEssenceMsg() {
@@ -49179,7 +48044,6 @@ DeleteEssenceMsg::~DeleteEssenceMsg() {
 
 inline void DeleteEssenceMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -49193,11 +48057,11 @@ void DeleteEssenceMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -49207,13 +48071,12 @@ const char* DeleteEssenceMsg::_InternalParse(const char* ptr, ::_pbi::ParseConte
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DeleteEssenceMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -49254,14 +48117,11 @@ uint8_t* DeleteEssenceMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DeleteEssenceMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DeleteEssenceMsg.Params params = 2;
@@ -49287,18 +48147,17 @@ size_t DeleteEssenceMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.DeleteEssenceMsg.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -49319,12 +48178,12 @@ void DeleteEssenceMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DeleteEssenceMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -49342,14 +48201,13 @@ bool DeleteEssenceMsg::IsInitialized() const {
 
 void DeleteEssenceMsg::InternalSwap(DeleteEssenceMsg* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteEssenceMsg, _impl_.action_)
+      + sizeof(DeleteEssenceMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DeleteEssenceMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteEssenceMsg::GetMetadata() const {
@@ -49557,20 +48415,12 @@ GetEssenceMsgList::GetEssenceMsgList(const GetEssenceMsgList& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetEssenceMsgList* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -49582,6 +48432,7 @@ GetEssenceMsgList::GetEssenceMsgList(const GetEssenceMsgList& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetEssenceMsgList_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetEssenceMsgList)
 }
 
@@ -49590,15 +48441,11 @@ inline void GetEssenceMsgList::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -49616,7 +48463,6 @@ GetEssenceMsgList::~GetEssenceMsgList() {
 
 inline void GetEssenceMsgList::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -49631,12 +48477,12 @@ void GetEssenceMsgList::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -49646,13 +48492,12 @@ const char* GetEssenceMsgList::_InternalParse(const char* ptr, ::_pbi::ParseCont
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetEssenceMsgList.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -49703,14 +48548,11 @@ uint8_t* GetEssenceMsgList::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetEssenceMsgList.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetEssenceMsgList.Params params = 2;
@@ -49746,13 +48588,6 @@ size_t GetEssenceMsgList::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -49765,6 +48600,12 @@ size_t GetEssenceMsgList::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -49785,15 +48626,15 @@ void GetEssenceMsgList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, cons
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetEssenceMsgList_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -49815,14 +48656,15 @@ void GetEssenceMsgList::InternalSwap(GetEssenceMsgList* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetEssenceMsgList, _impl_.action_)
+      + sizeof(GetEssenceMsgList::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetEssenceMsgList, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetEssenceMsgList::GetMetadata() const {
@@ -50440,20 +49282,12 @@ CheckUlrSafely::CheckUlrSafely(const CheckUlrSafely& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   CheckUlrSafely* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -50465,6 +49299,7 @@ CheckUlrSafely::CheckUlrSafely(const CheckUlrSafely& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::CheckUlrSafely_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.CheckUlrSafely)
 }
 
@@ -50473,15 +49308,11 @@ inline void CheckUlrSafely::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -50499,7 +49330,6 @@ CheckUlrSafely::~CheckUlrSafely() {
 
 inline void CheckUlrSafely::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -50514,12 +49344,12 @@ void CheckUlrSafely::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -50529,13 +49359,12 @@ const char* CheckUlrSafely::_InternalParse(const char* ptr, ::_pbi::ParseContext
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.CheckUlrSafely.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -50586,14 +49415,11 @@ uint8_t* CheckUlrSafely::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.CheckUlrSafely.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.CheckUlrSafely.Params params = 2;
@@ -50629,13 +49455,6 @@ size_t CheckUlrSafely::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -50648,6 +49467,12 @@ size_t CheckUlrSafely::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -50668,15 +49493,15 @@ void CheckUlrSafely::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::CheckUlrSafely_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -50698,14 +49523,15 @@ void CheckUlrSafely::InternalSwap(CheckUlrSafely* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(CheckUlrSafely, _impl_.action_)
+      + sizeof(CheckUlrSafely::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(CheckUlrSafely, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CheckUlrSafely::GetMetadata() const {
@@ -51116,20 +49942,12 @@ GetModelShow::GetModelShow(const GetModelShow& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   GetModelShow* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -51141,6 +49959,7 @@ GetModelShow::GetModelShow(const GetModelShow& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::GetModelShow_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.GetModelShow)
 }
 
@@ -51149,15 +49968,11 @@ inline void GetModelShow::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -51175,7 +49990,6 @@ GetModelShow::~GetModelShow() {
 
 inline void GetModelShow::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -51190,12 +50004,12 @@ void GetModelShow::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -51205,13 +50019,12 @@ const char* GetModelShow::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetModelShow.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -51262,14 +50075,11 @@ uint8_t* GetModelShow::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.GetModelShow.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.GetModelShow.Params params = 2;
@@ -51305,13 +50115,6 @@ size_t GetModelShow::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -51324,6 +50127,12 @@ size_t GetModelShow::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -51344,15 +50153,15 @@ void GetModelShow::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::GetModelShow_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -51374,14 +50183,15 @@ void GetModelShow::InternalSwap(GetModelShow* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(GetModelShow, _impl_.action_)
+      + sizeof(GetModelShow::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetModelShow, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GetModelShow::GetMetadata() const {
@@ -52079,22 +50889,15 @@ SetModelShow::SetModelShow(const SetModelShow& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SetModelShow* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SetModelShow_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SetModelShow)
 }
 
@@ -52103,14 +50906,10 @@ inline void SetModelShow::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SetModelShow::~SetModelShow() {
@@ -52124,7 +50923,6 @@ SetModelShow::~SetModelShow() {
 
 inline void SetModelShow::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -52138,11 +50936,11 @@ void SetModelShow::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -52152,13 +50950,12 @@ const char* SetModelShow::_InternalParse(const char* ptr, ::_pbi::ParseContext* 
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SetModelShow.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -52199,14 +50996,11 @@ uint8_t* SetModelShow::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SetModelShow.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SetModelShow.Params params = 2;
@@ -52232,18 +51026,17 @@ size_t SetModelShow::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.SetModelShow.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -52264,12 +51057,12 @@ void SetModelShow::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::P
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SetModelShow_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -52287,14 +51080,13 @@ bool SetModelShow::IsInitialized() const {
 
 void SetModelShow::InternalSwap(SetModelShow* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SetModelShow, _impl_.action_)
+      + sizeof(SetModelShow::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SetModelShow, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SetModelShow::GetMetadata() const {
@@ -52502,22 +51294,15 @@ DeleteUnidirectionalFriend::DeleteUnidirectionalFriend(const DeleteUnidirectiona
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   DeleteUnidirectionalFriend* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::DeleteUnidirectionalFriend_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.DeleteUnidirectionalFriend)
 }
 
@@ -52526,14 +51311,10 @@ inline void DeleteUnidirectionalFriend::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.params_){nullptr}
+      decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 DeleteUnidirectionalFriend::~DeleteUnidirectionalFriend() {
@@ -52547,7 +51328,6 @@ DeleteUnidirectionalFriend::~DeleteUnidirectionalFriend() {
 
 inline void DeleteUnidirectionalFriend::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
@@ -52561,11 +51341,11 @@ void DeleteUnidirectionalFriend::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -52575,13 +51355,12 @@ const char* DeleteUnidirectionalFriend::_InternalParse(const char* ptr, ::_pbi::
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.DeleteUnidirectionalFriend.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -52622,14 +51401,11 @@ uint8_t* DeleteUnidirectionalFriend::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.DeleteUnidirectionalFriend.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.DeleteUnidirectionalFriend.Params params = 2;
@@ -52655,18 +51431,17 @@ size_t DeleteUnidirectionalFriend::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // .cqhttp.DeleteUnidirectionalFriend.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -52687,12 +51462,12 @@ void DeleteUnidirectionalFriend::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::DeleteUnidirectionalFriend_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -52710,14 +51485,13 @@ bool DeleteUnidirectionalFriend::IsInitialized() const {
 
 void DeleteUnidirectionalFriend::InternalSwap(DeleteUnidirectionalFriend* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DeleteUnidirectionalFriend, _impl_.action_)
+      + sizeof(DeleteUnidirectionalFriend::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(DeleteUnidirectionalFriend, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeleteUnidirectionalFriend::GetMetadata() const {
@@ -52962,20 +51736,12 @@ SendPrivateForwardMsg::SendPrivateForwardMsg(const SendPrivateForwardMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   SendPrivateForwardMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_action().empty()) {
-    _this->_impl_.action_.Set(from._internal_action(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -52987,6 +51753,7 @@ SendPrivateForwardMsg::SendPrivateForwardMsg(const SendPrivateForwardMsg& from)
   if (from._internal_has_params()) {
     _this->_impl_.params_ = new ::cqhttp::SendPrivateForwardMsg_Params(*from._impl_.params_);
   }
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:cqhttp.SendPrivateForwardMsg)
 }
 
@@ -52995,15 +51762,11 @@ inline void SendPrivateForwardMsg::SharedCtor(
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.action_){}
-    , decltype(_impl_.echo_){}
+      decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
+    , decltype(_impl_.action_){0}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.action_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.action_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.echo_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.echo_.Set("", GetArenaForAllocation());
@@ -53021,7 +51784,6 @@ SendPrivateForwardMsg::~SendPrivateForwardMsg() {
 
 inline void SendPrivateForwardMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.action_.Destroy();
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
@@ -53036,12 +51798,12 @@ void SendPrivateForwardMsg::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.action_.ClearToEmpty();
   _impl_.echo_.ClearToEmpty();
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -53051,13 +51813,12 @@ const char* SendPrivateForwardMsg::_InternalParse(const char* ptr, ::_pbi::Parse
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string action = 1;
+      // .cqhttp.Action action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_action();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendPrivateForwardMsg.action"));
+          _internal_set_action(static_cast<::cqhttp::Action>(val));
         } else
           goto handle_unusual;
         continue;
@@ -53108,14 +51869,11 @@ uint8_t* SendPrivateForwardMsg::_InternalSerialize(
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_action().data(), static_cast<int>(this->_internal_action().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendPrivateForwardMsg.action");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_action(), target);
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_action(), target);
   }
 
   // .cqhttp.SendPrivateForwardMsg.Params params = 2;
@@ -53151,13 +51909,6 @@ size_t SendPrivateForwardMsg::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string action = 1;
-  if (!this->_internal_action().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_action());
-  }
-
   // string echo = 3;
   if (!this->_internal_echo().empty()) {
     total_size += 1 +
@@ -53170,6 +51921,12 @@ size_t SendPrivateForwardMsg::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *_impl_.params_);
+  }
+
+  // .cqhttp.Action action = 1;
+  if (this->_internal_action() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
@@ -53190,15 +51947,15 @@ void SendPrivateForwardMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, 
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_action().empty()) {
-    _this->_internal_set_action(from._internal_action());
-  }
   if (!from._internal_echo().empty()) {
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
     _this->_internal_mutable_params()->::cqhttp::SendPrivateForwardMsg_Params::MergeFrom(
         from._internal_params());
+  }
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
@@ -53220,14 +51977,15 @@ void SendPrivateForwardMsg::InternalSwap(SendPrivateForwardMsg* other) {
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.action_, lhs_arena,
-      &other->_impl_.action_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.echo_, lhs_arena,
       &other->_impl_.echo_, rhs_arena
   );
-  swap(_impl_.params_, other->_impl_.params_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SendPrivateForwardMsg, _impl_.action_)
+      + sizeof(SendPrivateForwardMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendPrivateForwardMsg, _impl_.params_)>(
+          reinterpret_cast<char*>(&_impl_.params_),
+          reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SendPrivateForwardMsg::GetMetadata() const {

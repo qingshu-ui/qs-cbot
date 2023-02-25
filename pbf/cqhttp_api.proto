@@ -5,14 +5,14 @@ import "cqhttp_base.proto";
 
 
 message SendPrivateMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
     message Params{
         int64 user_id = 1;
         int64 group_id = 2;
-        string messgae = 3;
+        string message = 3;
         bool auto_escape = 4;
     }
 }
@@ -22,13 +22,13 @@ message SendPrivateMsgResp{
 }
 
 message SendGroupMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
     message Params {
         int64 group_id = 1;
-        int64 messgae = 2;
+        int64 message = 2;
         bool auto_escape = 3;
     }
 }
@@ -38,13 +38,13 @@ message SendGroupMsgResp{
 }
 
 message SendGroupForwardMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
     
     message Params{
         int64 group_id = 1;
-        int64 messgae = 2;
+        int64 message = 2;
     }
 }
 
@@ -54,7 +54,7 @@ message SendGroupForwardMsgResp{
 }
 
 message SendMessage{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -72,7 +72,7 @@ message SendMessageResp{
 }
 
 message DeleteMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -81,7 +81,7 @@ message DeleteMsg{
 }
 
 message getMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -103,7 +103,7 @@ message getMsgResp{
 }
 
 message GetForwardMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -123,7 +123,7 @@ message GetForwardMsgResp{
 }
 
 message GetImage{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -139,7 +139,7 @@ message GetImageResp{
 }
 
 message MarkMsgAsRead{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -148,7 +148,7 @@ message MarkMsgAsRead{
 }
 
 message SetGroupKick{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -159,7 +159,7 @@ message SetGroupKick{
 }
 
 message SetGroupBan{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -170,7 +170,7 @@ message SetGroupBan{
 }
 
 message SetGroupAnonymousBan{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -182,7 +182,7 @@ message SetGroupAnonymousBan{
 }
 
 message SetGroupWholeBan{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -192,7 +192,7 @@ message SetGroupWholeBan{
 }
 
 message SetGroupAdmin{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -203,7 +203,7 @@ message SetGroupAdmin{
 }
 
 message SetGroupAnonymous{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -213,7 +213,7 @@ message SetGroupAnonymous{
 }
 
 message SetGroupCard{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -224,7 +224,7 @@ message SetGroupCard{
 }
 
 message SetGroupName{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -234,7 +234,7 @@ message SetGroupName{
 }
 
 message SetGroupLeave{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -244,7 +244,7 @@ message SetGroupLeave{
 }
 
 message SetGroupSpecialTitle{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -256,7 +256,7 @@ message SetGroupSpecialTitle{
 }
 
 message SendGroupSign{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -265,7 +265,7 @@ message SendGroupSign{
 }
 
 message SetFriendAddRequest{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -276,7 +276,7 @@ message SetFriendAddRequest{
 }
 
 message SetGroupAddRequest{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -288,7 +288,7 @@ message SetGroupAddRequest{
 }
 
 message GetLoginInfo{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -304,7 +304,7 @@ message GetLoginInfoResp{
 }
 
 message QiDianGetAccountInfo{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -315,7 +315,7 @@ message QiDianGetAccountInfoResp{
 }
 
 message SetQQProfile{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -328,7 +328,7 @@ message SetQQProfile{
 }
 
 message GetStrangerInfo{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -349,7 +349,7 @@ message GetStrangerInfoResp{
 }
 
 message GetFriendList{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -364,7 +364,7 @@ message GetFriendListResp{
 }
 
 message UnidirectionalFriendList{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -379,7 +379,7 @@ message UnidirectionalFriendListResp{
 }
 
 message DeleteFriend{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     message Params{
         int64 user_id = 1;
@@ -387,7 +387,7 @@ message DeleteFriend{
 }
 
 message GetGroupInfo{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -408,7 +408,7 @@ message GetGroupInfoResp{
 }
 
 message GetGroupList{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -422,7 +422,7 @@ message GetGroupListResp{
 }
 
 message GetGroupMemberInfo{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -453,7 +453,7 @@ message GetGroupMemberInfoResp{
 }
 
 message GetGroupMemberList{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -468,7 +468,7 @@ message GetGroupMemberListResp{
 }
 
 message GetGroupHonorInfo{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -497,7 +497,7 @@ message GetGroupHonorInfoResp{
 }
 
 message GetCoolies{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -511,7 +511,7 @@ message GetCooliesResp{
 }
 
 message GetCsrfToken{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -520,7 +520,7 @@ message GetCsrfTokenResp{
 }
 
 message GetCredentials{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -535,7 +535,7 @@ message GetCredentialsResp{
 }
 
 message GetRecord{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -550,7 +550,7 @@ message GetRecordResp{
 }
 
 message CanSendImage{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -559,7 +559,7 @@ message CanSendImageResp{
 }
 
 message CanSendRecord{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -568,7 +568,7 @@ message CanSendRecordResp{
 }
 
 message GetVersionInfo{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -590,7 +590,7 @@ message GetVersionInfoResp{
 }
 
 message SetRestart{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -599,11 +599,11 @@ message SetRestart{
 }
 
 message CleanCache{
-    string action = 1;
+    Action action = 1;
 }
 
 message SetGroupPortrait{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -614,7 +614,7 @@ message SetGroupPortrait{
 }
 
 message GetWordSlices{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -628,7 +628,7 @@ message GetWordSlicesResp{
 }
 
 message OcrImage{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -649,7 +649,7 @@ message OcrImageResp{
 }
 
 message GetGroupSystemMsg{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -680,7 +680,7 @@ message GetGroupSystemMsgResp{
 }
 
 message UploadPrivateFile{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -691,7 +691,7 @@ message UploadPrivateFile{
 }
 
 message UploadGroupFile{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -703,7 +703,7 @@ message UploadGroupFile{
 }
 
 message GetGroupFileSystemInfo{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -720,7 +720,7 @@ message GetGroupFileSystemInfoResp{
 }
 
 message GetGroupRootFiles{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -735,7 +735,7 @@ message GetGroupRootFilesResp{
 }
 
 message getGroupFileByFolder{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -751,7 +751,7 @@ message getGroupFileByFolderResp{
 }
 
 message CreateGroupFileFolder{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -762,7 +762,7 @@ message CreateGroupFileFolder{
 }
 
 message DeleteGroupFolder{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -772,7 +772,7 @@ message DeleteGroupFolder{
 }
 
 message DeleteGroupFile{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -783,7 +783,7 @@ message DeleteGroupFile{
 }
 
 message GetGroupFileUrl{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -799,7 +799,7 @@ message GetGroupFileUrlResp{
 }
 
 message GetStatus{
-    string action = 1;
+    Action action = 1;
     string echo = 2;
 }
 
@@ -825,7 +825,7 @@ message GetStatusResp{
 }
 
 message GetGroupAtAllRemain{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -841,7 +841,7 @@ message GetGroupAtAllRemainResp{
 }
 
 message HandleQuickOperation{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -851,7 +851,7 @@ message HandleQuickOperation{
 }
 
 message SendGroupNotice{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -862,7 +862,7 @@ message SendGroupNotice{
 }
 
 message GetGroupNotice{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -893,7 +893,7 @@ message GetGroupNoticeResp{
 }
 
 message ReloadEventFilter{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     
     message Params{
@@ -902,7 +902,7 @@ message ReloadEventFilter{
 }
 
 message DownloadFile{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -918,7 +918,7 @@ message DownloadFileResp{
 }
 
 message GetOnlineClients{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -932,7 +932,7 @@ message GetOnlineClientsResp{
 }
 
 message GetGroupMsgHistory{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -947,7 +947,7 @@ message GetGroupMsgHistoryResp{
 }
 
 message SetEssenceMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     
     message Params{
@@ -956,7 +956,7 @@ message SetEssenceMsg{
 }
 
 message DeleteEssenceMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -965,7 +965,7 @@ message DeleteEssenceMsg{
 }
 
 message GetEssenceMsgList{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -985,7 +985,7 @@ message GetEssenceMsgListResp{
 }
 
 message CheckUlrSafely{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -999,7 +999,7 @@ message CheckUlrSafelyResp{
 }
 
 message GetModelShow{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 
@@ -1018,7 +1018,7 @@ message GetModelShowResp{
 }
 
 message SetModelShow{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -1028,7 +1028,7 @@ message SetModelShow{
 }
 
 message DeleteUnidirectionalFriend{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
 
     message Params{
@@ -1037,7 +1037,7 @@ message DeleteUnidirectionalFriend{
 }
 
 message SendPrivateForwardMsg{
-    string action = 1;
+    Action action = 1;
     Params params = 2;
     string echo = 3;
 

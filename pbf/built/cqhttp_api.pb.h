@@ -930,23 +930,23 @@ class SendPrivateMsg_Params final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessgaeFieldNumber = 3,
+    kMessageFieldNumber = 3,
     kUserIdFieldNumber = 1,
     kGroupIdFieldNumber = 2,
     kAutoEscapeFieldNumber = 4,
   };
-  // string messgae = 3;
-  void clear_messgae();
-  const std::string& messgae() const;
+  // string message = 3;
+  void clear_message();
+  const std::string& message() const;
   template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_messgae(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_messgae();
-  PROTOBUF_NODISCARD std::string* release_messgae();
-  void set_allocated_messgae(std::string* messgae);
+  void set_message(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_message();
+  PROTOBUF_NODISCARD std::string* release_message();
+  void set_allocated_message(std::string* message);
   private:
-  const std::string& _internal_messgae() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_messgae(const std::string& value);
-  std::string* _internal_mutable_messgae();
+  const std::string& _internal_message() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message(const std::string& value);
+  std::string* _internal_mutable_message();
   public:
 
   // int64 user_id = 1;
@@ -984,7 +984,7 @@ class SendPrivateMsg_Params final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr messgae_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
     int64_t user_id_;
     int64_t group_id_;
     bool auto_escape_;
@@ -1118,24 +1118,10 @@ class SendPrivateMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -1168,6 +1154,15 @@ class SendPrivateMsg final :
       ::cqhttp::SendPrivateMsg_Params* params);
   ::cqhttp::SendPrivateMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendPrivateMsg)
  private:
   class _Internal;
@@ -1176,9 +1171,9 @@ class SendPrivateMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::SendPrivateMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1456,7 +1451,7 @@ class SendGroupMsg_Params final :
 
   enum : int {
     kGroupIdFieldNumber = 1,
-    kMessgaeFieldNumber = 2,
+    kMessageFieldNumber = 2,
     kAutoEscapeFieldNumber = 3,
   };
   // int64 group_id = 1;
@@ -1468,13 +1463,13 @@ class SendGroupMsg_Params final :
   void _internal_set_group_id(int64_t value);
   public:
 
-  // int64 messgae = 2;
-  void clear_messgae();
-  int64_t messgae() const;
-  void set_messgae(int64_t value);
+  // int64 message = 2;
+  void clear_message();
+  int64_t message() const;
+  void set_message(int64_t value);
   private:
-  int64_t _internal_messgae() const;
-  void _internal_set_messgae(int64_t value);
+  int64_t _internal_message() const;
+  void _internal_set_message(int64_t value);
   public:
 
   // bool auto_escape = 3;
@@ -1495,7 +1490,7 @@ class SendGroupMsg_Params final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     int64_t group_id_;
-    int64_t messgae_;
+    int64_t message_;
     bool auto_escape_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -1627,24 +1622,10 @@ class SendGroupMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -1677,6 +1658,15 @@ class SendGroupMsg final :
       ::cqhttp::SendGroupMsg_Params* params);
   ::cqhttp::SendGroupMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendGroupMsg)
  private:
   class _Internal;
@@ -1685,9 +1675,9 @@ class SendGroupMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::SendGroupMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -1965,7 +1955,7 @@ class SendGroupForwardMsg_Params final :
 
   enum : int {
     kGroupIdFieldNumber = 1,
-    kMessgaeFieldNumber = 2,
+    kMessageFieldNumber = 2,
   };
   // int64 group_id = 1;
   void clear_group_id();
@@ -1976,13 +1966,13 @@ class SendGroupForwardMsg_Params final :
   void _internal_set_group_id(int64_t value);
   public:
 
-  // int64 messgae = 2;
-  void clear_messgae();
-  int64_t messgae() const;
-  void set_messgae(int64_t value);
+  // int64 message = 2;
+  void clear_message();
+  int64_t message() const;
+  void set_message(int64_t value);
   private:
-  int64_t _internal_messgae() const;
-  void _internal_set_messgae(int64_t value);
+  int64_t _internal_message() const;
+  void _internal_set_message(int64_t value);
   public:
 
   // @@protoc_insertion_point(class_scope:cqhttp.SendGroupForwardMsg.Params)
@@ -1994,7 +1984,7 @@ class SendGroupForwardMsg_Params final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     int64_t group_id_;
-    int64_t messgae_;
+    int64_t message_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2125,24 +2115,10 @@ class SendGroupForwardMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -2175,6 +2151,15 @@ class SendGroupForwardMsg final :
       ::cqhttp::SendGroupForwardMsg_Params* params);
   ::cqhttp::SendGroupForwardMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendGroupForwardMsg)
  private:
   class _Internal;
@@ -2183,9 +2168,9 @@ class SendGroupForwardMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::SendGroupForwardMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -2682,24 +2667,10 @@ class SendMessage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -2732,6 +2703,15 @@ class SendMessage final :
       ::cqhttp::SendMessage_Params* params);
   ::cqhttp::SendMessage_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendMessage)
  private:
   class _Internal;
@@ -2740,9 +2720,9 @@ class SendMessage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::SendMessage_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3169,23 +3149,9 @@ class DeleteMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.DeleteMsg.Params params = 2;
   bool has_params() const;
   private:
@@ -3204,6 +3170,15 @@ class DeleteMsg final :
       ::cqhttp::DeleteMsg_Params* params);
   ::cqhttp::DeleteMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DeleteMsg)
  private:
   class _Internal;
@@ -3212,8 +3187,8 @@ class DeleteMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::DeleteMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -3492,24 +3467,10 @@ class getMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -3542,6 +3503,15 @@ class getMsg final :
       ::cqhttp::getMsg_Params* params);
   ::cqhttp::getMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.getMsg)
  private:
   class _Internal;
@@ -3550,9 +3520,9 @@ class getMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::getMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4096,24 +4066,10 @@ class GetForwardMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -4146,6 +4102,15 @@ class GetForwardMsg final :
       ::cqhttp::GetForwardMsg_Params* params);
   ::cqhttp::GetForwardMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetForwardMsg)
  private:
   class _Internal;
@@ -4154,9 +4119,9 @@ class GetForwardMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetForwardMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -4783,24 +4748,10 @@ class GetImage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -4833,6 +4784,15 @@ class GetImage final :
       ::cqhttp::GetImage_Params* params);
   ::cqhttp::GetImage_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetImage)
  private:
   class _Internal;
@@ -4841,9 +4801,9 @@ class GetImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetImage_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5302,23 +5262,9 @@ class MarkMsgAsRead final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.MarkMsgAsRead.Params params = 2;
   bool has_params() const;
   private:
@@ -5337,6 +5283,15 @@ class MarkMsgAsRead final :
       ::cqhttp::MarkMsgAsRead_Params* params);
   ::cqhttp::MarkMsgAsRead_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.MarkMsgAsRead)
  private:
   class _Internal;
@@ -5345,8 +5300,8 @@ class MarkMsgAsRead final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::MarkMsgAsRead_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5647,23 +5602,9 @@ class SetGroupKick final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupKick.Params params = 2;
   bool has_params() const;
   private:
@@ -5682,6 +5623,15 @@ class SetGroupKick final :
       ::cqhttp::SetGroupKick_Params* params);
   ::cqhttp::SetGroupKick_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupKick)
  private:
   class _Internal;
@@ -5690,8 +5640,8 @@ class SetGroupKick final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupKick_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -5992,23 +5942,9 @@ class SetGroupBan final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupBan.Params params = 2;
   bool has_params() const;
   private:
@@ -6027,6 +5963,15 @@ class SetGroupBan final :
       ::cqhttp::SetGroupBan_Params* params);
   ::cqhttp::SetGroupBan_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupBan)
  private:
   class _Internal;
@@ -6035,8 +5980,8 @@ class SetGroupBan final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupBan_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6362,23 +6307,9 @@ class SetGroupAnonymousBan final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupAnonymousBan.Params params = 2;
   bool has_params() const;
   private:
@@ -6397,6 +6328,15 @@ class SetGroupAnonymousBan final :
       ::cqhttp::SetGroupAnonymousBan_Params* params);
   ::cqhttp::SetGroupAnonymousBan_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupAnonymousBan)
  private:
   class _Internal;
@@ -6405,8 +6345,8 @@ class SetGroupAnonymousBan final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupAnonymousBan_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -6696,23 +6636,9 @@ class SetGroupWholeBan final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupWholeBan.Params params = 2;
   bool has_params() const;
   private:
@@ -6731,6 +6657,15 @@ class SetGroupWholeBan final :
       ::cqhttp::SetGroupWholeBan_Params* params);
   ::cqhttp::SetGroupWholeBan_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupWholeBan)
  private:
   class _Internal;
@@ -6739,8 +6674,8 @@ class SetGroupWholeBan final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupWholeBan_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7041,23 +6976,9 @@ class SetGroupAdmin final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupAdmin.Params params = 2;
   bool has_params() const;
   private:
@@ -7076,6 +6997,15 @@ class SetGroupAdmin final :
       ::cqhttp::SetGroupAdmin_Params* params);
   ::cqhttp::SetGroupAdmin_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupAdmin)
  private:
   class _Internal;
@@ -7084,8 +7014,8 @@ class SetGroupAdmin final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupAdmin_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7375,23 +7305,9 @@ class SetGroupAnonymous final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupAnonymous.Params params = 2;
   bool has_params() const;
   private:
@@ -7410,6 +7326,15 @@ class SetGroupAnonymous final :
       ::cqhttp::SetGroupAnonymous_Params* params);
   ::cqhttp::SetGroupAnonymous_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupAnonymous)
  private:
   class _Internal;
@@ -7418,8 +7343,8 @@ class SetGroupAnonymous final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupAnonymous_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -7725,23 +7650,9 @@ class SetGroupCard final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupCard.Params params = 2;
   bool has_params() const;
   private:
@@ -7760,6 +7671,15 @@ class SetGroupCard final :
       ::cqhttp::SetGroupCard_Params* params);
   ::cqhttp::SetGroupCard_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupCard)
  private:
   class _Internal;
@@ -7768,8 +7688,8 @@ class SetGroupCard final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupCard_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8064,23 +7984,9 @@ class SetGroupName final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupName.Params params = 2;
   bool has_params() const;
   private:
@@ -8099,6 +8005,15 @@ class SetGroupName final :
       ::cqhttp::SetGroupName_Params* params);
   ::cqhttp::SetGroupName_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupName)
  private:
   class _Internal;
@@ -8107,8 +8022,8 @@ class SetGroupName final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupName_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8398,23 +8313,9 @@ class SetGroupLeave final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupLeave.Params params = 2;
   bool has_params() const;
   private:
@@ -8433,6 +8334,15 @@ class SetGroupLeave final :
       ::cqhttp::SetGroupLeave_Params* params);
   ::cqhttp::SetGroupLeave_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupLeave)
  private:
   class _Internal;
@@ -8441,8 +8351,8 @@ class SetGroupLeave final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupLeave_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -8759,23 +8669,9 @@ class SetGroupSpecialTitle final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupSpecialTitle.Params params = 2;
   bool has_params() const;
   private:
@@ -8794,6 +8690,15 @@ class SetGroupSpecialTitle final :
       ::cqhttp::SetGroupSpecialTitle_Params* params);
   ::cqhttp::SetGroupSpecialTitle_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupSpecialTitle)
  private:
   class _Internal;
@@ -8802,8 +8707,8 @@ class SetGroupSpecialTitle final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupSpecialTitle_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -9082,23 +8987,9 @@ class SendGroupSign final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SendGroupSign.Params params = 2;
   bool has_params() const;
   private:
@@ -9117,6 +9008,15 @@ class SendGroupSign final :
       ::cqhttp::SendGroupSign_Params* params);
   ::cqhttp::SendGroupSign_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendGroupSign)
  private:
   class _Internal;
@@ -9125,8 +9025,8 @@ class SendGroupSign final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SendGroupSign_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -9437,23 +9337,9 @@ class SetFriendAddRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetFriendAddRequest.Params params = 2;
   bool has_params() const;
   private:
@@ -9472,6 +9358,15 @@ class SetFriendAddRequest final :
       ::cqhttp::SetFriendAddRequest_Params* params);
   ::cqhttp::SetFriendAddRequest_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetFriendAddRequest)
  private:
   class _Internal;
@@ -9480,8 +9375,8 @@ class SetFriendAddRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetFriendAddRequest_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -9808,23 +9703,9 @@ class SetGroupAddRequest final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupAddRequest.Params params = 2;
   bool has_params() const;
   private:
@@ -9843,6 +9724,15 @@ class SetGroupAddRequest final :
       ::cqhttp::SetGroupAddRequest_Params* params);
   ::cqhttp::SetGroupAddRequest_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupAddRequest)
  private:
   class _Internal;
@@ -9851,8 +9741,8 @@ class SetGroupAddRequest final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupAddRequest_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -10147,24 +10037,10 @@ class GetLoginInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -10197,6 +10073,15 @@ class GetLoginInfo final :
       ::cqhttp::GetLoginInfo_Params* params);
   ::cqhttp::GetLoginInfo_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetLoginInfo)
  private:
   class _Internal;
@@ -10205,9 +10090,9 @@ class GetLoginInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetLoginInfo_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -10500,23 +10385,9 @@ class QiDianGetAccountInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -10531,6 +10402,15 @@ class QiDianGetAccountInfo final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.QiDianGetAccountInfo)
  private:
   class _Internal;
@@ -10539,8 +10419,8 @@ class QiDianGetAccountInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -11063,23 +10943,9 @@ class SetQQProfile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetQQProfile.Params params = 2;
   bool has_params() const;
   private:
@@ -11098,6 +10964,15 @@ class SetQQProfile final :
       ::cqhttp::SetQQProfile_Params* params);
   ::cqhttp::SetQQProfile_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetQQProfile)
  private:
   class _Internal;
@@ -11106,8 +10981,8 @@ class SetQQProfile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetQQProfile_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -11397,24 +11272,10 @@ class GetStrangerInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -11447,6 +11308,15 @@ class GetStrangerInfo final :
       ::cqhttp::GetStrangerInfo_Params* params);
   ::cqhttp::GetStrangerInfo_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetStrangerInfo)
  private:
   class _Internal;
@@ -11455,9 +11325,9 @@ class GetStrangerInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetStrangerInfo_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -11815,23 +11685,9 @@ class GetFriendList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -11846,6 +11702,15 @@ class GetFriendList final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetFriendList)
  private:
   class _Internal;
@@ -11854,8 +11719,8 @@ class GetFriendList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -12323,23 +12188,9 @@ class UnidirectionalFriendList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -12354,6 +12205,15 @@ class UnidirectionalFriendList final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.UnidirectionalFriendList)
  private:
   class _Internal;
@@ -12362,8 +12222,8 @@ class UnidirectionalFriendList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -12981,23 +12841,9 @@ class DeleteFriend final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.DeleteFriend.Params params = 2;
   bool has_params() const;
   private:
@@ -13016,6 +12862,15 @@ class DeleteFriend final :
       ::cqhttp::DeleteFriend_Params* params);
   ::cqhttp::DeleteFriend_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DeleteFriend)
  private:
   class _Internal;
@@ -13024,8 +12879,8 @@ class DeleteFriend final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::DeleteFriend_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -13315,24 +13170,10 @@ class GetGroupInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -13365,6 +13206,15 @@ class GetGroupInfo final :
       ::cqhttp::GetGroupInfo_Params* params);
   ::cqhttp::GetGroupInfo_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupInfo)
  private:
   class _Internal;
@@ -13373,9 +13223,9 @@ class GetGroupInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupInfo_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -13878,24 +13728,10 @@ class GetGroupList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -13928,6 +13764,15 @@ class GetGroupList final :
       ::cqhttp::GetGroupList_Params* params);
   ::cqhttp::GetGroupList_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupList)
  private:
   class _Internal;
@@ -13936,9 +13781,9 @@ class GetGroupList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupList_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -14396,24 +14241,10 @@ class GetGroupMemberInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -14446,6 +14277,15 @@ class GetGroupMemberInfo final :
       ::cqhttp::GetGroupMemberInfo_Params* params);
   ::cqhttp::GetGroupMemberInfo_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupMemberInfo)
  private:
   class _Internal;
@@ -14454,9 +14294,9 @@ class GetGroupMemberInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupMemberInfo_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -15094,24 +14934,10 @@ class GetGroupMemberList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -15144,6 +14970,15 @@ class GetGroupMemberList final :
       ::cqhttp::GetGroupMemberList_Params* params);
   ::cqhttp::GetGroupMemberList_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupMemberList)
  private:
   class _Internal;
@@ -15152,9 +14987,9 @@ class GetGroupMemberList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupMemberList_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -15606,24 +15441,10 @@ class GetGroupHonorInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -15656,6 +15477,15 @@ class GetGroupHonorInfo final :
       ::cqhttp::GetGroupHonorInfo_Params* params);
   ::cqhttp::GetGroupHonorInfo_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupHonorInfo)
  private:
   class _Internal;
@@ -15664,9 +15494,9 @@ class GetGroupHonorInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupHonorInfo_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -16427,24 +16257,10 @@ class GetCoolies final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -16477,6 +16293,15 @@ class GetCoolies final :
       ::cqhttp::GetCoolies_Params* params);
   ::cqhttp::GetCoolies_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetCoolies)
  private:
   class _Internal;
@@ -16485,9 +16310,9 @@ class GetCoolies final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetCoolies_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -16769,23 +16594,9 @@ class GetCsrfToken final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -16800,6 +16611,15 @@ class GetCsrfToken final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetCsrfToken)
  private:
   class _Internal;
@@ -16808,8 +16628,8 @@ class GetCsrfToken final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -17241,24 +17061,10 @@ class GetCredentials final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -17291,6 +17097,15 @@ class GetCredentials final :
       ::cqhttp::GetCredentials_Params* params);
   ::cqhttp::GetCredentials_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetCredentials)
  private:
   class _Internal;
@@ -17299,9 +17114,9 @@ class GetCredentials final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetCredentials_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -17765,24 +17580,10 @@ class GetRecord final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -17815,6 +17616,15 @@ class GetRecord final :
       ::cqhttp::GetRecord_Params* params);
   ::cqhttp::GetRecord_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetRecord)
  private:
   class _Internal;
@@ -17823,9 +17633,9 @@ class GetRecord final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetRecord_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -18107,23 +17917,9 @@ class CanSendImage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -18138,6 +17934,15 @@ class CanSendImage final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.CanSendImage)
  private:
   class _Internal;
@@ -18146,8 +17951,8 @@ class CanSendImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -18424,23 +18229,9 @@ class CanSendRecord final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -18455,6 +18246,15 @@ class CanSendRecord final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.CanSendRecord)
  private:
   class _Internal;
@@ -18463,8 +18263,8 @@ class CanSendRecord final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -18741,23 +18541,9 @@ class GetVersionInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -18772,6 +18558,15 @@ class GetVersionInfo final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetVersionInfo)
  private:
   class _Internal;
@@ -18780,8 +18575,8 @@ class GetVersionInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -19406,23 +19201,9 @@ class SetRestart final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetRestart.Params params = 2;
   bool has_params() const;
   private:
@@ -19441,6 +19222,15 @@ class SetRestart final :
       ::cqhttp::SetRestart_Params* params);
   ::cqhttp::SetRestart_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetRestart)
  private:
   class _Internal;
@@ -19449,8 +19239,8 @@ class SetRestart final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetRestart_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -19581,18 +19371,13 @@ class CleanCache final :
   enum : int {
     kActionFieldNumber = 1,
   };
-  // string action = 1;
+  // .cqhttp.Action action = 1;
   void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
   private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
   public:
 
   // @@protoc_insertion_point(class_scope:cqhttp.CleanCache)
@@ -19603,7 +19388,7 @@ class CleanCache final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -19909,23 +19694,9 @@ class SetGroupPortrait final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetGroupPortrait.Params params = 2;
   bool has_params() const;
   private:
@@ -19944,6 +19715,15 @@ class SetGroupPortrait final :
       ::cqhttp::SetGroupPortrait_Params* params);
   ::cqhttp::SetGroupPortrait_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetGroupPortrait)
  private:
   class _Internal;
@@ -19952,8 +19732,8 @@ class SetGroupPortrait final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetGroupPortrait_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -20237,24 +20017,10 @@ class GetWordSlices final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -20287,6 +20053,15 @@ class GetWordSlices final :
       ::cqhttp::GetWordSlices_Params* params);
   ::cqhttp::GetWordSlices_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetWordSlices)
  private:
   class _Internal;
@@ -20295,9 +20070,9 @@ class GetWordSlices final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetWordSlices_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -20744,24 +20519,10 @@ class OcrImage final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -20794,6 +20555,15 @@ class OcrImage final :
       ::cqhttp::OcrImage_Params* params);
   ::cqhttp::OcrImage_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.OcrImage)
  private:
   class _Internal;
@@ -20802,9 +20572,9 @@ class OcrImage final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::OcrImage_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -21288,23 +21058,9 @@ class GetGroupSystemMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -21319,6 +21075,15 @@ class GetGroupSystemMsg final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupSystemMsg)
  private:
   class _Internal;
@@ -21327,8 +21092,8 @@ class GetGroupSystemMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -22283,23 +22048,9 @@ class UploadPrivateFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.UploadPrivateFile.Params params = 2;
   bool has_params() const;
   private:
@@ -22318,6 +22069,15 @@ class UploadPrivateFile final :
       ::cqhttp::UploadPrivateFile_Params* params);
   ::cqhttp::UploadPrivateFile_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.UploadPrivateFile)
  private:
   class _Internal;
@@ -22326,8 +22086,8 @@ class UploadPrivateFile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::UploadPrivateFile_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -22654,23 +22414,9 @@ class UploadGroupFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.UploadGroupFile.Params params = 2;
   bool has_params() const;
   private:
@@ -22689,6 +22435,15 @@ class UploadGroupFile final :
       ::cqhttp::UploadGroupFile_Params* params);
   ::cqhttp::UploadGroupFile_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.UploadGroupFile)
  private:
   class _Internal;
@@ -22697,8 +22452,8 @@ class UploadGroupFile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::UploadGroupFile_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -22977,24 +22732,10 @@ class GetGroupFileSystemInfo final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -23027,6 +22768,15 @@ class GetGroupFileSystemInfo final :
       ::cqhttp::GetGroupFileSystemInfo_Params* params);
   ::cqhttp::GetGroupFileSystemInfo_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupFileSystemInfo)
  private:
   class _Internal;
@@ -23035,9 +22785,9 @@ class GetGroupFileSystemInfo final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupFileSystemInfo_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -23497,24 +23247,10 @@ class GetGroupRootFiles final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -23547,6 +23283,15 @@ class GetGroupRootFiles final :
       ::cqhttp::GetGroupRootFiles_Params* params);
   ::cqhttp::GetGroupRootFiles_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupRootFiles)
  private:
   class _Internal;
@@ -23555,9 +23300,9 @@ class GetGroupRootFiles final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupRootFiles_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -24029,24 +23774,10 @@ class getGroupFileByFolder final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -24079,6 +23810,15 @@ class getGroupFileByFolder final :
       ::cqhttp::getGroupFileByFolder_Params* params);
   ::cqhttp::getGroupFileByFolder_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.getGroupFileByFolder)
  private:
   class _Internal;
@@ -24087,9 +23827,9 @@ class getGroupFileByFolder final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::getGroupFileByFolder_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -24577,23 +24317,9 @@ class CreateGroupFileFolder final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.CreateGroupFileFolder.Params params = 2;
   bool has_params() const;
   private:
@@ -24612,6 +24338,15 @@ class CreateGroupFileFolder final :
       ::cqhttp::CreateGroupFileFolder_Params* params);
   ::cqhttp::CreateGroupFileFolder_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.CreateGroupFileFolder)
  private:
   class _Internal;
@@ -24620,8 +24355,8 @@ class CreateGroupFileFolder final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::CreateGroupFileFolder_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -24916,23 +24651,9 @@ class DeleteGroupFolder final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.DeleteGroupFolder.Params params = 2;
   bool has_params() const;
   private:
@@ -24951,6 +24672,15 @@ class DeleteGroupFolder final :
       ::cqhttp::DeleteGroupFolder_Params* params);
   ::cqhttp::DeleteGroupFolder_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DeleteGroupFolder)
  private:
   class _Internal;
@@ -24959,8 +24689,8 @@ class DeleteGroupFolder final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::DeleteGroupFolder_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -25266,23 +24996,9 @@ class DeleteGroupFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.DeleteGroupFile.Params params = 2;
   bool has_params() const;
   private:
@@ -25301,6 +25017,15 @@ class DeleteGroupFile final :
       ::cqhttp::DeleteGroupFile_Params* params);
   ::cqhttp::DeleteGroupFile_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DeleteGroupFile)
  private:
   class _Internal;
@@ -25309,8 +25034,8 @@ class DeleteGroupFile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::DeleteGroupFile_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -25616,24 +25341,10 @@ class GetGroupFileUrl final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -25666,6 +25377,15 @@ class GetGroupFileUrl final :
       ::cqhttp::GetGroupFileUrl_Params* params);
   ::cqhttp::GetGroupFileUrl_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupFileUrl)
  private:
   class _Internal;
@@ -25674,9 +25394,9 @@ class GetGroupFileUrl final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupFileUrl_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -25958,23 +25678,9 @@ class GetStatus final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 2;
   void clear_echo();
   const std::string& echo() const;
@@ -25989,6 +25695,15 @@ class GetStatus final :
   std::string* _internal_mutable_echo();
   public:
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetStatus)
  private:
   class _Internal;
@@ -25997,8 +25712,8 @@ class GetStatus final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -26727,24 +26442,10 @@ class GetGroupAtAllRemain final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -26777,6 +26478,15 @@ class GetGroupAtAllRemain final :
       ::cqhttp::GetGroupAtAllRemain_Params* params);
   ::cqhttp::GetGroupAtAllRemain_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupAtAllRemain)
  private:
   class _Internal;
@@ -26785,9 +26495,9 @@ class GetGroupAtAllRemain final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupAtAllRemain_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -27257,23 +26967,9 @@ class HandleQuickOperation final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.HandleQuickOperation.Params params = 2;
   bool has_params() const;
   private:
@@ -27292,6 +26988,15 @@ class HandleQuickOperation final :
       ::cqhttp::HandleQuickOperation_Params* params);
   ::cqhttp::HandleQuickOperation_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.HandleQuickOperation)
  private:
   class _Internal;
@@ -27300,8 +27005,8 @@ class HandleQuickOperation final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::HandleQuickOperation_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -27612,23 +27317,9 @@ class SendGroupNotice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SendGroupNotice.Params params = 2;
   bool has_params() const;
   private:
@@ -27647,6 +27338,15 @@ class SendGroupNotice final :
       ::cqhttp::SendGroupNotice_Params* params);
   ::cqhttp::SendGroupNotice_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendGroupNotice)
  private:
   class _Internal;
@@ -27655,8 +27355,8 @@ class SendGroupNotice final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SendGroupNotice_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -27935,24 +27635,10 @@ class GetGroupNotice final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -27985,6 +27671,15 @@ class GetGroupNotice final :
       ::cqhttp::GetGroupNotice_Params* params);
   ::cqhttp::GetGroupNotice_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupNotice)
  private:
   class _Internal;
@@ -27993,9 +27688,9 @@ class GetGroupNotice final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupNotice_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -28979,23 +28674,9 @@ class ReloadEventFilter final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.ReloadEventFilter.Params params = 2;
   bool has_params() const;
   private:
@@ -29014,6 +28695,15 @@ class ReloadEventFilter final :
       ::cqhttp::ReloadEventFilter_Params* params);
   ::cqhttp::ReloadEventFilter_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.ReloadEventFilter)
  private:
   class _Internal;
@@ -29022,8 +28712,8 @@ class ReloadEventFilter final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::ReloadEventFilter_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -29334,24 +29024,10 @@ class DownloadFile final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -29384,6 +29060,15 @@ class DownloadFile final :
       ::cqhttp::DownloadFile_Params* params);
   ::cqhttp::DownloadFile_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DownloadFile)
  private:
   class _Internal;
@@ -29392,9 +29077,9 @@ class DownloadFile final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::DownloadFile_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -29826,24 +29511,10 @@ class GetOnlineClients final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -29876,6 +29547,15 @@ class GetOnlineClients final :
       ::cqhttp::GetOnlineClients_Params* params);
   ::cqhttp::GetOnlineClients_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetOnlineClients)
  private:
   class _Internal;
@@ -29884,9 +29564,9 @@ class GetOnlineClients final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetOnlineClients_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -30333,24 +30013,10 @@ class GetGroupMsgHistory final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -30383,6 +30049,15 @@ class GetGroupMsgHistory final :
       ::cqhttp::GetGroupMsgHistory_Params* params);
   ::cqhttp::GetGroupMsgHistory_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetGroupMsgHistory)
  private:
   class _Internal;
@@ -30391,9 +30066,9 @@ class GetGroupMsgHistory final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetGroupMsgHistory_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -30835,23 +30510,9 @@ class SetEssenceMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetEssenceMsg.Params params = 2;
   bool has_params() const;
   private:
@@ -30870,6 +30531,15 @@ class SetEssenceMsg final :
       ::cqhttp::SetEssenceMsg_Params* params);
   ::cqhttp::SetEssenceMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetEssenceMsg)
  private:
   class _Internal;
@@ -30878,8 +30548,8 @@ class SetEssenceMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetEssenceMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -31158,23 +30828,9 @@ class DeleteEssenceMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.DeleteEssenceMsg.Params params = 2;
   bool has_params() const;
   private:
@@ -31193,6 +30849,15 @@ class DeleteEssenceMsg final :
       ::cqhttp::DeleteEssenceMsg_Params* params);
   ::cqhttp::DeleteEssenceMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DeleteEssenceMsg)
  private:
   class _Internal;
@@ -31201,8 +30866,8 @@ class DeleteEssenceMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::DeleteEssenceMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -31481,24 +31146,10 @@ class GetEssenceMsgList final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -31531,6 +31182,15 @@ class GetEssenceMsgList final :
       ::cqhttp::GetEssenceMsgList_Params* params);
   ::cqhttp::GetEssenceMsgList_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetEssenceMsgList)
  private:
   class _Internal;
@@ -31539,9 +31199,9 @@ class GetEssenceMsgList final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetEssenceMsgList_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -32049,24 +31709,10 @@ class CheckUlrSafely final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -32099,6 +31745,15 @@ class CheckUlrSafely final :
       ::cqhttp::CheckUlrSafely_Params* params);
   ::cqhttp::CheckUlrSafely_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.CheckUlrSafely)
  private:
   class _Internal;
@@ -32107,9 +31762,9 @@ class CheckUlrSafely final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::CheckUlrSafely_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -32541,24 +32196,10 @@ class GetModelShow final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -32591,6 +32232,15 @@ class GetModelShow final :
       ::cqhttp::GetModelShow_Params* params);
   ::cqhttp::GetModelShow_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.GetModelShow)
  private:
   class _Internal;
@@ -32599,9 +32249,9 @@ class GetModelShow final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::GetModelShow_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -33224,23 +32874,9 @@ class SetModelShow final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.SetModelShow.Params params = 2;
   bool has_params() const;
   private:
@@ -33259,6 +32895,15 @@ class SetModelShow final :
       ::cqhttp::SetModelShow_Params* params);
   ::cqhttp::SetModelShow_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SetModelShow)
  private:
   class _Internal;
@@ -33267,8 +32912,8 @@ class SetModelShow final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::SetModelShow_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -33547,23 +33192,9 @@ class DeleteUnidirectionalFriend final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // .cqhttp.DeleteUnidirectionalFriend.Params params = 2;
   bool has_params() const;
   private:
@@ -33582,6 +33213,15 @@ class DeleteUnidirectionalFriend final :
       ::cqhttp::DeleteUnidirectionalFriend_Params* params);
   ::cqhttp::DeleteUnidirectionalFriend_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.DeleteUnidirectionalFriend)
  private:
   class _Internal;
@@ -33590,8 +33230,8 @@ class DeleteUnidirectionalFriend final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::cqhttp::DeleteUnidirectionalFriend_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -33890,24 +33530,10 @@ class SendPrivateForwardMsg final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kActionFieldNumber = 1,
     kEchoFieldNumber = 3,
     kParamsFieldNumber = 2,
+    kActionFieldNumber = 1,
   };
-  // string action = 1;
-  void clear_action();
-  const std::string& action() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_action(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_action();
-  PROTOBUF_NODISCARD std::string* release_action();
-  void set_allocated_action(std::string* action);
-  private:
-  const std::string& _internal_action() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_action(const std::string& value);
-  std::string* _internal_mutable_action();
-  public:
-
   // string echo = 3;
   void clear_echo();
   const std::string& echo() const;
@@ -33940,6 +33566,15 @@ class SendPrivateForwardMsg final :
       ::cqhttp::SendPrivateForwardMsg_Params* params);
   ::cqhttp::SendPrivateForwardMsg_Params* unsafe_arena_release_params();
 
+  // .cqhttp.Action action = 1;
+  void clear_action();
+  ::cqhttp::Action action() const;
+  void set_action(::cqhttp::Action value);
+  private:
+  ::cqhttp::Action _internal_action() const;
+  void _internal_set_action(::cqhttp::Action value);
+  public:
+
   // @@protoc_insertion_point(class_scope:cqhttp.SendPrivateForwardMsg)
  private:
   class _Internal;
@@ -33948,9 +33583,9 @@ class SendPrivateForwardMsg final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr action_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
     ::cqhttp::SendPrivateForwardMsg_Params* params_;
+    int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -34171,54 +33806,54 @@ inline void SendPrivateMsg_Params::set_group_id(int64_t value) {
   // @@protoc_insertion_point(field_set:cqhttp.SendPrivateMsg.Params.group_id)
 }
 
-// string messgae = 3;
-inline void SendPrivateMsg_Params::clear_messgae() {
-  _impl_.messgae_.ClearToEmpty();
+// string message = 3;
+inline void SendPrivateMsg_Params::clear_message() {
+  _impl_.message_.ClearToEmpty();
 }
-inline const std::string& SendPrivateMsg_Params::messgae() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendPrivateMsg.Params.messgae)
-  return _internal_messgae();
+inline const std::string& SendPrivateMsg_Params::message() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendPrivateMsg.Params.message)
+  return _internal_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SendPrivateMsg_Params::set_messgae(ArgT0&& arg0, ArgT... args) {
+void SendPrivateMsg_Params::set_message(ArgT0&& arg0, ArgT... args) {
  
- _impl_.messgae_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:cqhttp.SendPrivateMsg.Params.messgae)
+ _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:cqhttp.SendPrivateMsg.Params.message)
 }
-inline std::string* SendPrivateMsg_Params::mutable_messgae() {
-  std::string* _s = _internal_mutable_messgae();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendPrivateMsg.Params.messgae)
+inline std::string* SendPrivateMsg_Params::mutable_message() {
+  std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:cqhttp.SendPrivateMsg.Params.message)
   return _s;
 }
-inline const std::string& SendPrivateMsg_Params::_internal_messgae() const {
-  return _impl_.messgae_.Get();
+inline const std::string& SendPrivateMsg_Params::_internal_message() const {
+  return _impl_.message_.Get();
 }
-inline void SendPrivateMsg_Params::_internal_set_messgae(const std::string& value) {
+inline void SendPrivateMsg_Params::_internal_set_message(const std::string& value) {
   
-  _impl_.messgae_.Set(value, GetArenaForAllocation());
+  _impl_.message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SendPrivateMsg_Params::_internal_mutable_messgae() {
+inline std::string* SendPrivateMsg_Params::_internal_mutable_message() {
   
-  return _impl_.messgae_.Mutable(GetArenaForAllocation());
+  return _impl_.message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SendPrivateMsg_Params::release_messgae() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendPrivateMsg.Params.messgae)
-  return _impl_.messgae_.Release();
+inline std::string* SendPrivateMsg_Params::release_message() {
+  // @@protoc_insertion_point(field_release:cqhttp.SendPrivateMsg.Params.message)
+  return _impl_.message_.Release();
 }
-inline void SendPrivateMsg_Params::set_allocated_messgae(std::string* messgae) {
-  if (messgae != nullptr) {
+inline void SendPrivateMsg_Params::set_allocated_message(std::string* message) {
+  if (message != nullptr) {
     
   } else {
     
   }
-  _impl_.messgae_.SetAllocated(messgae, GetArenaForAllocation());
+  _impl_.message_.SetAllocated(message, GetArenaForAllocation());
 #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.messgae_.IsDefault()) {
-    _impl_.messgae_.Set("", GetArenaForAllocation());
+  if (_impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendPrivateMsg.Params.messgae)
+  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendPrivateMsg.Params.message)
 }
 
 // bool auto_escape = 4;
@@ -34245,54 +33880,24 @@ inline void SendPrivateMsg_Params::set_auto_escape(bool value) {
 
 // SendPrivateMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendPrivateMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendPrivateMsg::action() const {
+inline ::cqhttp::Action SendPrivateMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendPrivateMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendPrivateMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendPrivateMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendPrivateMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendPrivateMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendPrivateMsg.action)
-}
-inline std::string* SendPrivateMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendPrivateMsg.action)
-  return _s;
-}
-inline const std::string& SendPrivateMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendPrivateMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendPrivateMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendPrivateMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendPrivateMsg.action)
-  return _impl_.action_.Release();
-}
-inline void SendPrivateMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendPrivateMsg.action)
 }
 
 // .cqhttp.SendPrivateMsg.Params params = 2;
@@ -34483,24 +34088,24 @@ inline void SendGroupMsg_Params::set_group_id(int64_t value) {
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupMsg.Params.group_id)
 }
 
-// int64 messgae = 2;
-inline void SendGroupMsg_Params::clear_messgae() {
-  _impl_.messgae_ = int64_t{0};
+// int64 message = 2;
+inline void SendGroupMsg_Params::clear_message() {
+  _impl_.message_ = int64_t{0};
 }
-inline int64_t SendGroupMsg_Params::_internal_messgae() const {
-  return _impl_.messgae_;
+inline int64_t SendGroupMsg_Params::_internal_message() const {
+  return _impl_.message_;
 }
-inline int64_t SendGroupMsg_Params::messgae() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendGroupMsg.Params.messgae)
-  return _internal_messgae();
+inline int64_t SendGroupMsg_Params::message() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendGroupMsg.Params.message)
+  return _internal_message();
 }
-inline void SendGroupMsg_Params::_internal_set_messgae(int64_t value) {
+inline void SendGroupMsg_Params::_internal_set_message(int64_t value) {
   
-  _impl_.messgae_ = value;
+  _impl_.message_ = value;
 }
-inline void SendGroupMsg_Params::set_messgae(int64_t value) {
-  _internal_set_messgae(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendGroupMsg.Params.messgae)
+inline void SendGroupMsg_Params::set_message(int64_t value) {
+  _internal_set_message(value);
+  // @@protoc_insertion_point(field_set:cqhttp.SendGroupMsg.Params.message)
 }
 
 // bool auto_escape = 3;
@@ -34527,54 +34132,24 @@ inline void SendGroupMsg_Params::set_auto_escape(bool value) {
 
 // SendGroupMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendGroupMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendGroupMsg::action() const {
+inline ::cqhttp::Action SendGroupMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendGroupMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendGroupMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendGroupMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendGroupMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendGroupMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupMsg.action)
-}
-inline std::string* SendGroupMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendGroupMsg.action)
-  return _s;
-}
-inline const std::string& SendGroupMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendGroupMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendGroupMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendGroupMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendGroupMsg.action)
-  return _impl_.action_.Release();
-}
-inline void SendGroupMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendGroupMsg.action)
 }
 
 // .cqhttp.SendGroupMsg.Params params = 2;
@@ -34765,78 +34340,48 @@ inline void SendGroupForwardMsg_Params::set_group_id(int64_t value) {
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupForwardMsg.Params.group_id)
 }
 
-// int64 messgae = 2;
-inline void SendGroupForwardMsg_Params::clear_messgae() {
-  _impl_.messgae_ = int64_t{0};
+// int64 message = 2;
+inline void SendGroupForwardMsg_Params::clear_message() {
+  _impl_.message_ = int64_t{0};
 }
-inline int64_t SendGroupForwardMsg_Params::_internal_messgae() const {
-  return _impl_.messgae_;
+inline int64_t SendGroupForwardMsg_Params::_internal_message() const {
+  return _impl_.message_;
 }
-inline int64_t SendGroupForwardMsg_Params::messgae() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendGroupForwardMsg.Params.messgae)
-  return _internal_messgae();
+inline int64_t SendGroupForwardMsg_Params::message() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendGroupForwardMsg.Params.message)
+  return _internal_message();
 }
-inline void SendGroupForwardMsg_Params::_internal_set_messgae(int64_t value) {
+inline void SendGroupForwardMsg_Params::_internal_set_message(int64_t value) {
   
-  _impl_.messgae_ = value;
+  _impl_.message_ = value;
 }
-inline void SendGroupForwardMsg_Params::set_messgae(int64_t value) {
-  _internal_set_messgae(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendGroupForwardMsg.Params.messgae)
+inline void SendGroupForwardMsg_Params::set_message(int64_t value) {
+  _internal_set_message(value);
+  // @@protoc_insertion_point(field_set:cqhttp.SendGroupForwardMsg.Params.message)
 }
 
 // -------------------------------------------------------------------
 
 // SendGroupForwardMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendGroupForwardMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendGroupForwardMsg::action() const {
+inline ::cqhttp::Action SendGroupForwardMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendGroupForwardMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendGroupForwardMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendGroupForwardMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendGroupForwardMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendGroupForwardMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupForwardMsg.action)
-}
-inline std::string* SendGroupForwardMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendGroupForwardMsg.action)
-  return _s;
-}
-inline const std::string& SendGroupForwardMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendGroupForwardMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendGroupForwardMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendGroupForwardMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendGroupForwardMsg.action)
-  return _impl_.action_.Release();
-}
-inline void SendGroupForwardMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendGroupForwardMsg.action)
 }
 
 // .cqhttp.SendGroupForwardMsg.Params params = 2;
@@ -35221,54 +34766,24 @@ inline void SendMessage_Params::set_auto_escape(bool value) {
 
 // SendMessage
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendMessage::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendMessage::action() const {
+inline ::cqhttp::Action SendMessage::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendMessage::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendMessage.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendMessage::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendMessage::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendMessage::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendMessage.action)
-}
-inline std::string* SendMessage::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendMessage.action)
-  return _s;
-}
-inline const std::string& SendMessage::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendMessage::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendMessage::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendMessage::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendMessage.action)
-  return _impl_.action_.Release();
-}
-inline void SendMessage::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMessage.action)
 }
 
 // .cqhttp.SendMessage.Params params = 2;
@@ -35463,54 +34978,24 @@ inline void DeleteMsg_Params::set_message_id(int32_t value) {
 
 // DeleteMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DeleteMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DeleteMsg::action() const {
+inline ::cqhttp::Action DeleteMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DeleteMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DeleteMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DeleteMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DeleteMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DeleteMsg.action)
-}
-inline std::string* DeleteMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DeleteMsg.action)
-  return _s;
-}
-inline const std::string& DeleteMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DeleteMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DeleteMsg.action)
-  return _impl_.action_.Release();
-}
-inline void DeleteMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DeleteMsg.action)
 }
 
 // .cqhttp.DeleteMsg.Params params = 2;
@@ -35631,54 +35116,24 @@ inline void getMsg_Params::set_message_id(int32_t value) {
 
 // getMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void getMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& getMsg::action() const {
+inline ::cqhttp::Action getMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action getMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.getMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void getMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void getMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void getMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.getMsg.action)
-}
-inline std::string* getMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.getMsg.action)
-  return _s;
-}
-inline const std::string& getMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void getMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* getMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* getMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.getMsg.action)
-  return _impl_.action_.Release();
-}
-inline void getMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.getMsg.action)
 }
 
 // .cqhttp.getMsg.Params params = 2;
@@ -36218,54 +35673,24 @@ inline void GetForwardMsg_Params::set_allocated_message_id(std::string* message_
 
 // GetForwardMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetForwardMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetForwardMsg::action() const {
+inline ::cqhttp::Action GetForwardMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetForwardMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetForwardMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetForwardMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetForwardMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetForwardMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetForwardMsg.action)
-}
-inline std::string* GetForwardMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetForwardMsg.action)
-  return _s;
-}
-inline const std::string& GetForwardMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetForwardMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetForwardMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetForwardMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetForwardMsg.action)
-  return _impl_.action_.Release();
-}
-inline void GetForwardMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetForwardMsg.action)
 }
 
 // .cqhttp.GetForwardMsg.Params params = 2;
@@ -36669,54 +36094,24 @@ inline void GetImage_Params::set_allocated_file(std::string* file) {
 
 // GetImage
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetImage::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetImage::action() const {
+inline ::cqhttp::Action GetImage::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetImage::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetImage.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetImage::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetImage::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetImage::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetImage.action)
-}
-inline std::string* GetImage::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetImage.action)
-  return _s;
-}
-inline const std::string& GetImage::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetImage::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetImage::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetImage::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetImage.action)
-  return _impl_.action_.Release();
-}
-inline void GetImage::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetImage.action)
 }
 
 // .cqhttp.GetImage.Params params = 2;
@@ -37011,54 +36406,24 @@ inline void MarkMsgAsRead_Params::set_message_id(int32_t value) {
 
 // MarkMsgAsRead
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void MarkMsgAsRead::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& MarkMsgAsRead::action() const {
+inline ::cqhttp::Action MarkMsgAsRead::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action MarkMsgAsRead::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.MarkMsgAsRead.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void MarkMsgAsRead::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void MarkMsgAsRead::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void MarkMsgAsRead::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.MarkMsgAsRead.action)
-}
-inline std::string* MarkMsgAsRead::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.MarkMsgAsRead.action)
-  return _s;
-}
-inline const std::string& MarkMsgAsRead::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void MarkMsgAsRead::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* MarkMsgAsRead::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* MarkMsgAsRead::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.MarkMsgAsRead.action)
-  return _impl_.action_.Release();
-}
-inline void MarkMsgAsRead::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.MarkMsgAsRead.action)
 }
 
 // .cqhttp.MarkMsgAsRead.Params params = 2;
@@ -37219,54 +36584,24 @@ inline void SetGroupKick_Params::set_reject_add_request(bool value) {
 
 // SetGroupKick
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupKick::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupKick::action() const {
+inline ::cqhttp::Action SetGroupKick::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupKick::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupKick.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupKick::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupKick::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupKick::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupKick.action)
-}
-inline std::string* SetGroupKick::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupKick.action)
-  return _s;
-}
-inline const std::string& SetGroupKick::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupKick::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupKick::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupKick::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupKick.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupKick::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupKick.action)
 }
 
 // .cqhttp.SetGroupKick.Params params = 2;
@@ -37427,54 +36762,24 @@ inline void SetGroupBan_Params::set_duration(int32_t value) {
 
 // SetGroupBan
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupBan::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupBan::action() const {
+inline ::cqhttp::Action SetGroupBan::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupBan::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupBan.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupBan::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupBan::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupBan::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupBan.action)
-}
-inline std::string* SetGroupBan::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupBan.action)
-  return _s;
-}
-inline const std::string& SetGroupBan::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupBan::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupBan::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupBan::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupBan.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupBan::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupBan.action)
 }
 
 // .cqhttp.SetGroupBan.Params params = 2;
@@ -37750,54 +37055,24 @@ inline void SetGroupAnonymousBan_Params::set_duration(int32_t value) {
 
 // SetGroupAnonymousBan
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupAnonymousBan::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupAnonymousBan::action() const {
+inline ::cqhttp::Action SetGroupAnonymousBan::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupAnonymousBan::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupAnonymousBan.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupAnonymousBan::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupAnonymousBan::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupAnonymousBan::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupAnonymousBan.action)
-}
-inline std::string* SetGroupAnonymousBan::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupAnonymousBan.action)
-  return _s;
-}
-inline const std::string& SetGroupAnonymousBan::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupAnonymousBan::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupAnonymousBan::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupAnonymousBan::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupAnonymousBan.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupAnonymousBan::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupAnonymousBan.action)
 }
 
 // .cqhttp.SetGroupAnonymousBan.Params params = 2;
@@ -37938,54 +37213,24 @@ inline void SetGroupWholeBan_Params::set_enable(bool value) {
 
 // SetGroupWholeBan
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupWholeBan::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupWholeBan::action() const {
+inline ::cqhttp::Action SetGroupWholeBan::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupWholeBan::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupWholeBan.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupWholeBan::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupWholeBan::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupWholeBan::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupWholeBan.action)
-}
-inline std::string* SetGroupWholeBan::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupWholeBan.action)
-  return _s;
-}
-inline const std::string& SetGroupWholeBan::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupWholeBan::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupWholeBan::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupWholeBan::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupWholeBan.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupWholeBan::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupWholeBan.action)
 }
 
 // .cqhttp.SetGroupWholeBan.Params params = 2;
@@ -38146,54 +37391,24 @@ inline void SetGroupAdmin_Params::set_enable(bool value) {
 
 // SetGroupAdmin
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupAdmin::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupAdmin::action() const {
+inline ::cqhttp::Action SetGroupAdmin::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupAdmin::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupAdmin.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupAdmin::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupAdmin::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupAdmin::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupAdmin.action)
-}
-inline std::string* SetGroupAdmin::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupAdmin.action)
-  return _s;
-}
-inline const std::string& SetGroupAdmin::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupAdmin::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupAdmin::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupAdmin::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupAdmin.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupAdmin::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupAdmin.action)
 }
 
 // .cqhttp.SetGroupAdmin.Params params = 2;
@@ -38334,54 +37549,24 @@ inline void SetGroupAnonymous_Params::set_enable(bool value) {
 
 // SetGroupAnonymous
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupAnonymous::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupAnonymous::action() const {
+inline ::cqhttp::Action SetGroupAnonymous::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupAnonymous::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupAnonymous.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupAnonymous::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupAnonymous::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupAnonymous::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupAnonymous.action)
-}
-inline std::string* SetGroupAnonymous::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupAnonymous.action)
-  return _s;
-}
-inline const std::string& SetGroupAnonymous::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupAnonymous::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupAnonymous::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupAnonymous::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupAnonymous.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupAnonymous::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupAnonymous.action)
 }
 
 // .cqhttp.SetGroupAnonymous.Params params = 2;
@@ -38572,54 +37757,24 @@ inline void SetGroupCard_Params::set_allocated_card(std::string* card) {
 
 // SetGroupCard
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupCard::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupCard::action() const {
+inline ::cqhttp::Action SetGroupCard::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupCard::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupCard.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupCard::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupCard::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupCard::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupCard.action)
-}
-inline std::string* SetGroupCard::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupCard.action)
-  return _s;
-}
-inline const std::string& SetGroupCard::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupCard::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupCard::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupCard::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupCard.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupCard::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupCard.action)
 }
 
 // .cqhttp.SetGroupCard.Params params = 2;
@@ -38790,54 +37945,24 @@ inline void SetGroupName_Params::set_allocated_group_name(std::string* group_nam
 
 // SetGroupName
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupName::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupName::action() const {
+inline ::cqhttp::Action SetGroupName::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupName::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupName.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupName::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupName::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupName::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupName.action)
-}
-inline std::string* SetGroupName::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupName.action)
-  return _s;
-}
-inline const std::string& SetGroupName::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupName::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupName::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupName::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupName.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupName::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupName.action)
 }
 
 // .cqhttp.SetGroupName.Params params = 2;
@@ -38978,54 +38103,24 @@ inline void SetGroupLeave_Params::set_is_dismiss(bool value) {
 
 // SetGroupLeave
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupLeave::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupLeave::action() const {
+inline ::cqhttp::Action SetGroupLeave::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupLeave::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupLeave.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupLeave::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupLeave::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupLeave::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupLeave.action)
-}
-inline std::string* SetGroupLeave::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupLeave.action)
-  return _s;
-}
-inline const std::string& SetGroupLeave::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupLeave::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupLeave::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupLeave::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupLeave.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupLeave::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupLeave.action)
 }
 
 // .cqhttp.SetGroupLeave.Params params = 2;
@@ -39236,54 +38331,24 @@ inline void SetGroupSpecialTitle_Params::set_duration(int32_t value) {
 
 // SetGroupSpecialTitle
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupSpecialTitle::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupSpecialTitle::action() const {
+inline ::cqhttp::Action SetGroupSpecialTitle::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupSpecialTitle::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupSpecialTitle.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupSpecialTitle::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupSpecialTitle::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupSpecialTitle::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupSpecialTitle.action)
-}
-inline std::string* SetGroupSpecialTitle::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupSpecialTitle.action)
-  return _s;
-}
-inline const std::string& SetGroupSpecialTitle::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupSpecialTitle::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupSpecialTitle::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupSpecialTitle::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupSpecialTitle.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupSpecialTitle::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupSpecialTitle.action)
 }
 
 // .cqhttp.SetGroupSpecialTitle.Params params = 2;
@@ -39404,54 +38469,24 @@ inline void SendGroupSign_Params::set_group_id(int64_t value) {
 
 // SendGroupSign
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendGroupSign::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendGroupSign::action() const {
+inline ::cqhttp::Action SendGroupSign::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendGroupSign::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendGroupSign.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendGroupSign::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendGroupSign::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendGroupSign::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupSign.action)
-}
-inline std::string* SendGroupSign::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendGroupSign.action)
-  return _s;
-}
-inline const std::string& SendGroupSign::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendGroupSign::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendGroupSign::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendGroupSign::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendGroupSign.action)
-  return _impl_.action_.Release();
-}
-inline void SendGroupSign::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendGroupSign.action)
 }
 
 // .cqhttp.SendGroupSign.Params params = 2;
@@ -39672,54 +38707,24 @@ inline void SetFriendAddRequest_Params::set_allocated_remark(std::string* remark
 
 // SetFriendAddRequest
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetFriendAddRequest::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetFriendAddRequest::action() const {
+inline ::cqhttp::Action SetFriendAddRequest::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetFriendAddRequest::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetFriendAddRequest.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetFriendAddRequest::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetFriendAddRequest::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetFriendAddRequest::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetFriendAddRequest.action)
-}
-inline std::string* SetFriendAddRequest::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetFriendAddRequest.action)
-  return _s;
-}
-inline const std::string& SetFriendAddRequest::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetFriendAddRequest::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetFriendAddRequest::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetFriendAddRequest::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetFriendAddRequest.action)
-  return _impl_.action_.Release();
-}
-inline void SetFriendAddRequest::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetFriendAddRequest.action)
 }
 
 // .cqhttp.SetFriendAddRequest.Params params = 2;
@@ -39990,54 +38995,24 @@ inline void SetGroupAddRequest_Params::set_allocated_reason(std::string* reason)
 
 // SetGroupAddRequest
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupAddRequest::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupAddRequest::action() const {
+inline ::cqhttp::Action SetGroupAddRequest::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupAddRequest::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupAddRequest.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupAddRequest::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupAddRequest::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupAddRequest::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupAddRequest.action)
-}
-inline std::string* SetGroupAddRequest::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupAddRequest.action)
-  return _s;
-}
-inline const std::string& SetGroupAddRequest::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupAddRequest::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupAddRequest::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupAddRequest::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupAddRequest.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupAddRequest::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupAddRequest.action)
 }
 
 // .cqhttp.SetGroupAddRequest.Params params = 2;
@@ -40208,54 +39183,24 @@ inline void GetLoginInfo_Params::set_allocated_nickname(std::string* nickname) {
 
 // GetLoginInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetLoginInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetLoginInfo::action() const {
+inline ::cqhttp::Action GetLoginInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetLoginInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetLoginInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetLoginInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetLoginInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetLoginInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetLoginInfo.action)
-}
-inline std::string* GetLoginInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetLoginInfo.action)
-  return _s;
-}
-inline const std::string& GetLoginInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetLoginInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetLoginInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetLoginInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetLoginInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetLoginInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetLoginInfo.action)
 }
 
 // .cqhttp.GetLoginInfo.Params params = 2;
@@ -40476,54 +39421,24 @@ inline void GetLoginInfoResp::set_allocated_nickname(std::string* nickname) {
 
 // QiDianGetAccountInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void QiDianGetAccountInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& QiDianGetAccountInfo::action() const {
+inline ::cqhttp::Action QiDianGetAccountInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action QiDianGetAccountInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.QiDianGetAccountInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void QiDianGetAccountInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void QiDianGetAccountInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void QiDianGetAccountInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.QiDianGetAccountInfo.action)
-}
-inline std::string* QiDianGetAccountInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.QiDianGetAccountInfo.action)
-  return _s;
-}
-inline const std::string& QiDianGetAccountInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void QiDianGetAccountInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* QiDianGetAccountInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* QiDianGetAccountInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.QiDianGetAccountInfo.action)
-  return _impl_.action_.Release();
-}
-inline void QiDianGetAccountInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.QiDianGetAccountInfo.action)
 }
 
 // string echo = 2;
@@ -40928,54 +39843,24 @@ inline void SetQQProfile_Params::set_allocated_personal_note(std::string* person
 
 // SetQQProfile
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetQQProfile::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetQQProfile::action() const {
+inline ::cqhttp::Action SetQQProfile::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetQQProfile::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetQQProfile.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetQQProfile::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetQQProfile::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetQQProfile::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetQQProfile.action)
-}
-inline std::string* SetQQProfile::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetQQProfile.action)
-  return _s;
-}
-inline const std::string& SetQQProfile::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetQQProfile::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetQQProfile::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetQQProfile::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetQQProfile.action)
-  return _impl_.action_.Release();
-}
-inline void SetQQProfile::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetQQProfile.action)
 }
 
 // .cqhttp.SetQQProfile.Params params = 2;
@@ -41116,54 +40001,24 @@ inline void GetStrangerInfo_Params::set_no_cache(bool value) {
 
 // GetStrangerInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetStrangerInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetStrangerInfo::action() const {
+inline ::cqhttp::Action GetStrangerInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetStrangerInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetStrangerInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetStrangerInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetStrangerInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetStrangerInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetStrangerInfo.action)
-}
-inline std::string* GetStrangerInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetStrangerInfo.action)
-  return _s;
-}
-inline const std::string& GetStrangerInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetStrangerInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetStrangerInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetStrangerInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetStrangerInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetStrangerInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetStrangerInfo.action)
 }
 
 // .cqhttp.GetStrangerInfo.Params params = 2;
@@ -41544,54 +40399,24 @@ inline void GetStrangerInfoResp::set_login_days(int32_t value) {
 
 // GetFriendList
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetFriendList::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetFriendList::action() const {
+inline ::cqhttp::Action GetFriendList::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetFriendList::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetFriendList.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetFriendList::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetFriendList::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetFriendList::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetFriendList.action)
-}
-inline std::string* GetFriendList::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetFriendList.action)
-  return _s;
-}
-inline const std::string& GetFriendList::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetFriendList::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetFriendList::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetFriendList::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetFriendList.action)
-  return _impl_.action_.Release();
-}
-inline void GetFriendList::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetFriendList.action)
 }
 
 // string echo = 2;
@@ -41816,54 +40641,24 @@ GetFriendListResp::friends() const {
 
 // UnidirectionalFriendList
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void UnidirectionalFriendList::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& UnidirectionalFriendList::action() const {
+inline ::cqhttp::Action UnidirectionalFriendList::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action UnidirectionalFriendList::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.UnidirectionalFriendList.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UnidirectionalFriendList::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void UnidirectionalFriendList::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void UnidirectionalFriendList::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.UnidirectionalFriendList.action)
-}
-inline std::string* UnidirectionalFriendList::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.UnidirectionalFriendList.action)
-  return _s;
-}
-inline const std::string& UnidirectionalFriendList::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void UnidirectionalFriendList::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UnidirectionalFriendList::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UnidirectionalFriendList::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.UnidirectionalFriendList.action)
-  return _impl_.action_.Release();
-}
-inline void UnidirectionalFriendList::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.UnidirectionalFriendList.action)
 }
 
 // string echo = 2;
@@ -42112,54 +40907,24 @@ inline void DeleteFriend_Params::set_user_id(int64_t value) {
 
 // DeleteFriend
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DeleteFriend::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DeleteFriend::action() const {
+inline ::cqhttp::Action DeleteFriend::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DeleteFriend::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DeleteFriend.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteFriend::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DeleteFriend::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DeleteFriend::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DeleteFriend.action)
-}
-inline std::string* DeleteFriend::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DeleteFriend.action)
-  return _s;
-}
-inline const std::string& DeleteFriend::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DeleteFriend::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteFriend::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteFriend::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DeleteFriend.action)
-  return _impl_.action_.Release();
-}
-inline void DeleteFriend::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DeleteFriend.action)
 }
 
 // .cqhttp.DeleteFriend.Params params = 2;
@@ -42300,54 +41065,24 @@ inline void GetGroupInfo_Params::set_no_cache(bool value) {
 
 // GetGroupInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupInfo::action() const {
+inline ::cqhttp::Action GetGroupInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupInfo.action)
-}
-inline std::string* GetGroupInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupInfo.action)
-  return _s;
-}
-inline const std::string& GetGroupInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupInfo.action)
 }
 
 // .cqhttp.GetGroupInfo.Params params = 2;
@@ -42722,54 +41457,24 @@ inline void GetGroupList_Params::set_no_cache(bool value) {
 
 // GetGroupList
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupList::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupList::action() const {
+inline ::cqhttp::Action GetGroupList::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupList::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupList.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupList::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupList::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupList::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupList.action)
-}
-inline std::string* GetGroupList::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupList.action)
-  return _s;
-}
-inline const std::string& GetGroupList::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupList::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupList::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupList::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupList.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupList::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupList.action)
 }
 
 // .cqhttp.GetGroupList.Params params = 2;
@@ -43024,54 +41729,24 @@ inline void GetGroupMemberInfo_Params::set_no_cache(bool value) {
 
 // GetGroupMemberInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupMemberInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupMemberInfo::action() const {
+inline ::cqhttp::Action GetGroupMemberInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupMemberInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupMemberInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupMemberInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupMemberInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupMemberInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupMemberInfo.action)
-}
-inline std::string* GetGroupMemberInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupMemberInfo.action)
-  return _s;
-}
-inline const std::string& GetGroupMemberInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupMemberInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupMemberInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupMemberInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupMemberInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupMemberInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupMemberInfo.action)
 }
 
 // .cqhttp.GetGroupMemberInfo.Params params = 2;
@@ -43796,54 +42471,24 @@ inline void GetGroupMemberList_Params::set_no_cache(bool value) {
 
 // GetGroupMemberList
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupMemberList::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupMemberList::action() const {
+inline ::cqhttp::Action GetGroupMemberList::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupMemberList::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupMemberList.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupMemberList::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupMemberList::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupMemberList::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupMemberList.action)
-}
-inline std::string* GetGroupMemberList::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupMemberList.action)
-  return _s;
-}
-inline const std::string& GetGroupMemberList::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupMemberList::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupMemberList::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupMemberList::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupMemberList.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupMemberList::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupMemberList.action)
 }
 
 // .cqhttp.GetGroupMemberList.Params params = 2;
@@ -44108,54 +42753,24 @@ inline void GetGroupHonorInfo_Params::set_allocated_type(std::string* type) {
 
 // GetGroupHonorInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupHonorInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupHonorInfo::action() const {
+inline ::cqhttp::Action GetGroupHonorInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupHonorInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupHonorInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupHonorInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupHonorInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupHonorInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupHonorInfo.action)
-}
-inline std::string* GetGroupHonorInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupHonorInfo.action)
-  return _s;
-}
-inline const std::string& GetGroupHonorInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupHonorInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupHonorInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupHonorInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupHonorInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupHonorInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupHonorInfo.action)
 }
 
 // .cqhttp.GetGroupHonorInfo.Params params = 2;
@@ -44864,54 +43479,24 @@ inline void GetCoolies_Params::set_allocated_domain(std::string* domain) {
 
 // GetCoolies
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetCoolies::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetCoolies::action() const {
+inline ::cqhttp::Action GetCoolies::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetCoolies::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetCoolies.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetCoolies::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetCoolies::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetCoolies::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetCoolies.action)
-}
-inline std::string* GetCoolies::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetCoolies.action)
-  return _s;
-}
-inline const std::string& GetCoolies::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetCoolies::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetCoolies::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetCoolies::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetCoolies.action)
-  return _impl_.action_.Release();
-}
-inline void GetCoolies::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetCoolies.action)
 }
 
 // .cqhttp.GetCoolies.Params params = 2;
@@ -45112,54 +43697,24 @@ inline void GetCooliesResp::set_allocated_cookies(std::string* cookies) {
 
 // GetCsrfToken
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetCsrfToken::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetCsrfToken::action() const {
+inline ::cqhttp::Action GetCsrfToken::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetCsrfToken::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetCsrfToken.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetCsrfToken::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetCsrfToken::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetCsrfToken::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetCsrfToken.action)
-}
-inline std::string* GetCsrfToken::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetCsrfToken.action)
-  return _s;
-}
-inline const std::string& GetCsrfToken::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetCsrfToken::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetCsrfToken::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetCsrfToken::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetCsrfToken.action)
-  return _impl_.action_.Release();
-}
-inline void GetCsrfToken::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetCsrfToken.action)
 }
 
 // string echo = 2;
@@ -45294,54 +43849,24 @@ inline void GetCredentials_Params::set_allocated_domain(std::string* domain) {
 
 // GetCredentials
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetCredentials::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetCredentials::action() const {
+inline ::cqhttp::Action GetCredentials::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetCredentials::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetCredentials.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetCredentials::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetCredentials::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetCredentials::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetCredentials.action)
-}
-inline std::string* GetCredentials::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetCredentials.action)
-  return _s;
-}
-inline const std::string& GetCredentials::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetCredentials::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetCredentials::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetCredentials::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetCredentials.action)
-  return _impl_.action_.Release();
-}
-inline void GetCredentials::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetCredentials.action)
 }
 
 // .cqhttp.GetCredentials.Params params = 2;
@@ -45666,54 +44191,24 @@ inline void GetRecord_Params::set_allocated_out_format(std::string* out_format) 
 
 // GetRecord
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetRecord::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetRecord::action() const {
+inline ::cqhttp::Action GetRecord::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetRecord::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetRecord.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetRecord::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetRecord::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetRecord::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetRecord.action)
-}
-inline std::string* GetRecord::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetRecord.action)
-  return _s;
-}
-inline const std::string& GetRecord::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetRecord::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetRecord::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetRecord::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetRecord.action)
-  return _impl_.action_.Release();
-}
-inline void GetRecord::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetRecord.action)
 }
 
 // .cqhttp.GetRecord.Params params = 2;
@@ -45914,54 +44409,24 @@ inline void GetRecordResp::set_allocated_file(std::string* file) {
 
 // CanSendImage
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void CanSendImage::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& CanSendImage::action() const {
+inline ::cqhttp::Action CanSendImage::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action CanSendImage::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.CanSendImage.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CanSendImage::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void CanSendImage::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void CanSendImage::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.CanSendImage.action)
-}
-inline std::string* CanSendImage::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.CanSendImage.action)
-  return _s;
-}
-inline const std::string& CanSendImage::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void CanSendImage::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CanSendImage::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CanSendImage::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.CanSendImage.action)
-  return _impl_.action_.Release();
-}
-inline void CanSendImage::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.CanSendImage.action)
 }
 
 // string echo = 2;
@@ -46042,54 +44507,24 @@ inline void CanSendImageResp::set_yes(bool value) {
 
 // CanSendRecord
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void CanSendRecord::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& CanSendRecord::action() const {
+inline ::cqhttp::Action CanSendRecord::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action CanSendRecord::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.CanSendRecord.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CanSendRecord::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void CanSendRecord::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void CanSendRecord::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.CanSendRecord.action)
-}
-inline std::string* CanSendRecord::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.CanSendRecord.action)
-  return _s;
-}
-inline const std::string& CanSendRecord::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void CanSendRecord::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CanSendRecord::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CanSendRecord::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.CanSendRecord.action)
-  return _impl_.action_.Release();
-}
-inline void CanSendRecord::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.CanSendRecord.action)
 }
 
 // string echo = 2;
@@ -46170,54 +44605,24 @@ inline void CanSendRecordResp::set_yes(bool value) {
 
 // GetVersionInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetVersionInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetVersionInfo::action() const {
+inline ::cqhttp::Action GetVersionInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetVersionInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetVersionInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetVersionInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetVersionInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetVersionInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetVersionInfo.action)
-}
-inline std::string* GetVersionInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetVersionInfo.action)
-  return _s;
-}
-inline const std::string& GetVersionInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetVersionInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetVersionInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetVersionInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetVersionInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetVersionInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetVersionInfo.action)
 }
 
 // string echo = 2;
@@ -46912,54 +45317,24 @@ inline void SetRestart_Params::set_delay(int32_t value) {
 
 // SetRestart
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetRestart::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetRestart::action() const {
+inline ::cqhttp::Action SetRestart::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetRestart::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetRestart.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetRestart::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetRestart::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetRestart::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetRestart.action)
-}
-inline std::string* SetRestart::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetRestart.action)
-  return _s;
-}
-inline const std::string& SetRestart::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetRestart::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetRestart::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetRestart::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetRestart.action)
-  return _impl_.action_.Release();
-}
-inline void SetRestart::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetRestart.action)
 }
 
 // .cqhttp.SetRestart.Params params = 2;
@@ -47056,54 +45431,24 @@ inline void SetRestart::set_allocated_params(::cqhttp::SetRestart_Params* params
 
 // CleanCache
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void CleanCache::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& CleanCache::action() const {
+inline ::cqhttp::Action CleanCache::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action CleanCache::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.CleanCache.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CleanCache::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void CleanCache::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void CleanCache::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.CleanCache.action)
-}
-inline std::string* CleanCache::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.CleanCache.action)
-  return _s;
-}
-inline const std::string& CleanCache::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void CleanCache::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CleanCache::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CleanCache::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.CleanCache.action)
-  return _impl_.action_.Release();
-}
-inline void CleanCache::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.CleanCache.action)
 }
 
 // -------------------------------------------------------------------
@@ -47204,54 +45549,24 @@ inline void SetGroupPortrait_Params::set_cache(int32_t value) {
 
 // SetGroupPortrait
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetGroupPortrait::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetGroupPortrait::action() const {
+inline ::cqhttp::Action SetGroupPortrait::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetGroupPortrait::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetGroupPortrait.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetGroupPortrait::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetGroupPortrait::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetGroupPortrait::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetGroupPortrait.action)
-}
-inline std::string* SetGroupPortrait::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetGroupPortrait.action)
-  return _s;
-}
-inline const std::string& SetGroupPortrait::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetGroupPortrait::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetGroupPortrait::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetGroupPortrait::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetGroupPortrait.action)
-  return _impl_.action_.Release();
-}
-inline void SetGroupPortrait::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetGroupPortrait.action)
 }
 
 // .cqhttp.SetGroupPortrait.Params params = 2;
@@ -47402,54 +45717,24 @@ inline void GetWordSlices_Params::set_allocated_content(std::string* content) {
 
 // GetWordSlices
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetWordSlices::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetWordSlices::action() const {
+inline ::cqhttp::Action GetWordSlices::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetWordSlices::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetWordSlices.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetWordSlices::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetWordSlices::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetWordSlices::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetWordSlices.action)
-}
-inline std::string* GetWordSlices::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetWordSlices.action)
-  return _s;
-}
-inline const std::string& GetWordSlices::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetWordSlices::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetWordSlices::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetWordSlices::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetWordSlices.action)
-  return _impl_.action_.Release();
-}
-inline void GetWordSlices::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetWordSlices.action)
 }
 
 // .cqhttp.GetWordSlices.Params params = 2;
@@ -47729,54 +46014,24 @@ inline void OcrImage_Params::set_allocated_image(std::string* image) {
 
 // OcrImage
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void OcrImage::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& OcrImage::action() const {
+inline ::cqhttp::Action OcrImage::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action OcrImage::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.OcrImage.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void OcrImage::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void OcrImage::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void OcrImage::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.OcrImage.action)
-}
-inline std::string* OcrImage::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.OcrImage.action)
-  return _s;
-}
-inline const std::string& OcrImage::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void OcrImage::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* OcrImage::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* OcrImage::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.OcrImage.action)
-  return _impl_.action_.Release();
-}
-inline void OcrImage::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.OcrImage.action)
 }
 
 // .cqhttp.OcrImage.Params params = 2;
@@ -48141,54 +46396,24 @@ inline void OcrImageResp::set_allocated_language(std::string* language) {
 
 // GetGroupSystemMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupSystemMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupSystemMsg::action() const {
+inline ::cqhttp::Action GetGroupSystemMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupSystemMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupSystemMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupSystemMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupSystemMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupSystemMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupSystemMsg.action)
-}
-inline std::string* GetGroupSystemMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupSystemMsg.action)
-  return _s;
-}
-inline const std::string& GetGroupSystemMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupSystemMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupSystemMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupSystemMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupSystemMsg.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupSystemMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupSystemMsg.action)
 }
 
 // string echo = 2;
@@ -48911,54 +47136,24 @@ inline void UploadPrivateFile_Params::set_allocated_name(std::string* name) {
 
 // UploadPrivateFile
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void UploadPrivateFile::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& UploadPrivateFile::action() const {
+inline ::cqhttp::Action UploadPrivateFile::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action UploadPrivateFile::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.UploadPrivateFile.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UploadPrivateFile::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void UploadPrivateFile::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void UploadPrivateFile::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.UploadPrivateFile.action)
-}
-inline std::string* UploadPrivateFile::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.UploadPrivateFile.action)
-  return _s;
-}
-inline const std::string& UploadPrivateFile::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void UploadPrivateFile::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UploadPrivateFile::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UploadPrivateFile::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.UploadPrivateFile.action)
-  return _impl_.action_.Release();
-}
-inline void UploadPrivateFile::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.UploadPrivateFile.action)
 }
 
 // .cqhttp.UploadPrivateFile.Params params = 2;
@@ -49229,54 +47424,24 @@ inline void UploadGroupFile_Params::set_allocated_folder(std::string* folder) {
 
 // UploadGroupFile
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void UploadGroupFile::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& UploadGroupFile::action() const {
+inline ::cqhttp::Action UploadGroupFile::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action UploadGroupFile::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.UploadGroupFile.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void UploadGroupFile::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void UploadGroupFile::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void UploadGroupFile::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.UploadGroupFile.action)
-}
-inline std::string* UploadGroupFile::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.UploadGroupFile.action)
-  return _s;
-}
-inline const std::string& UploadGroupFile::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void UploadGroupFile::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* UploadGroupFile::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* UploadGroupFile::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.UploadGroupFile.action)
-  return _impl_.action_.Release();
-}
-inline void UploadGroupFile::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.UploadGroupFile.action)
 }
 
 // .cqhttp.UploadGroupFile.Params params = 2;
@@ -49397,54 +47562,24 @@ inline void GetGroupFileSystemInfo_Params::set_group_id(int64_t value) {
 
 // GetGroupFileSystemInfo
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupFileSystemInfo::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupFileSystemInfo::action() const {
+inline ::cqhttp::Action GetGroupFileSystemInfo::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupFileSystemInfo::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupFileSystemInfo.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupFileSystemInfo::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupFileSystemInfo::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupFileSystemInfo::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupFileSystemInfo.action)
-}
-inline std::string* GetGroupFileSystemInfo::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupFileSystemInfo.action)
-  return _s;
-}
-inline const std::string& GetGroupFileSystemInfo::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupFileSystemInfo::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupFileSystemInfo::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupFileSystemInfo::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupFileSystemInfo.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupFileSystemInfo::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupFileSystemInfo.action)
 }
 
 // .cqhttp.GetGroupFileSystemInfo.Params params = 2;
@@ -49699,54 +47834,24 @@ inline void GetGroupRootFiles_Params::set_group_id(int64_t value) {
 
 // GetGroupRootFiles
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupRootFiles::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupRootFiles::action() const {
+inline ::cqhttp::Action GetGroupRootFiles::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupRootFiles::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupRootFiles.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupRootFiles::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupRootFiles::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupRootFiles::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupRootFiles.action)
-}
-inline std::string* GetGroupRootFiles::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupRootFiles.action)
-  return _s;
-}
-inline const std::string& GetGroupRootFiles::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupRootFiles::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupRootFiles::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupRootFiles::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupRootFiles.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupRootFiles::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupRootFiles.action)
 }
 
 // .cqhttp.GetGroupRootFiles.Params params = 2;
@@ -50045,54 +48150,24 @@ inline void getGroupFileByFolder_Params::set_allocated_folder_id(std::string* fo
 
 // getGroupFileByFolder
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void getGroupFileByFolder::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& getGroupFileByFolder::action() const {
+inline ::cqhttp::Action getGroupFileByFolder::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action getGroupFileByFolder::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.getGroupFileByFolder.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void getGroupFileByFolder::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void getGroupFileByFolder::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void getGroupFileByFolder::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.getGroupFileByFolder.action)
-}
-inline std::string* getGroupFileByFolder::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.getGroupFileByFolder.action)
-  return _s;
-}
-inline const std::string& getGroupFileByFolder::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void getGroupFileByFolder::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* getGroupFileByFolder::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* getGroupFileByFolder::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.getGroupFileByFolder.action)
-  return _impl_.action_.Release();
-}
-inline void getGroupFileByFolder::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.getGroupFileByFolder.action)
 }
 
 // .cqhttp.getGroupFileByFolder.Params params = 2;
@@ -50441,54 +48516,24 @@ inline void CreateGroupFileFolder_Params::set_allocated_parent_id(std::string* p
 
 // CreateGroupFileFolder
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void CreateGroupFileFolder::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& CreateGroupFileFolder::action() const {
+inline ::cqhttp::Action CreateGroupFileFolder::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action CreateGroupFileFolder::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.CreateGroupFileFolder.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CreateGroupFileFolder::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void CreateGroupFileFolder::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void CreateGroupFileFolder::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.CreateGroupFileFolder.action)
-}
-inline std::string* CreateGroupFileFolder::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.CreateGroupFileFolder.action)
-  return _s;
-}
-inline const std::string& CreateGroupFileFolder::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void CreateGroupFileFolder::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CreateGroupFileFolder::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CreateGroupFileFolder::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.CreateGroupFileFolder.action)
-  return _impl_.action_.Release();
-}
-inline void CreateGroupFileFolder::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.CreateGroupFileFolder.action)
 }
 
 // .cqhttp.CreateGroupFileFolder.Params params = 2;
@@ -50659,54 +48704,24 @@ inline void DeleteGroupFolder_Params::set_allocated_folder_id(std::string* folde
 
 // DeleteGroupFolder
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DeleteGroupFolder::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DeleteGroupFolder::action() const {
+inline ::cqhttp::Action DeleteGroupFolder::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DeleteGroupFolder::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DeleteGroupFolder.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteGroupFolder::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DeleteGroupFolder::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DeleteGroupFolder::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DeleteGroupFolder.action)
-}
-inline std::string* DeleteGroupFolder::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DeleteGroupFolder.action)
-  return _s;
-}
-inline const std::string& DeleteGroupFolder::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DeleteGroupFolder::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteGroupFolder::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteGroupFolder::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DeleteGroupFolder.action)
-  return _impl_.action_.Release();
-}
-inline void DeleteGroupFolder::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DeleteGroupFolder.action)
 }
 
 // .cqhttp.DeleteGroupFolder.Params params = 2;
@@ -50897,54 +48912,24 @@ inline void DeleteGroupFile_Params::set_busid(int32_t value) {
 
 // DeleteGroupFile
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DeleteGroupFile::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DeleteGroupFile::action() const {
+inline ::cqhttp::Action DeleteGroupFile::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DeleteGroupFile::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DeleteGroupFile.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteGroupFile::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DeleteGroupFile::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DeleteGroupFile::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DeleteGroupFile.action)
-}
-inline std::string* DeleteGroupFile::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DeleteGroupFile.action)
-  return _s;
-}
-inline const std::string& DeleteGroupFile::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DeleteGroupFile::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteGroupFile::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteGroupFile::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DeleteGroupFile.action)
-  return _impl_.action_.Release();
-}
-inline void DeleteGroupFile::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DeleteGroupFile.action)
 }
 
 // .cqhttp.DeleteGroupFile.Params params = 2;
@@ -51135,54 +49120,24 @@ inline void GetGroupFileUrl_Params::set_busid(int32_t value) {
 
 // GetGroupFileUrl
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupFileUrl::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupFileUrl::action() const {
+inline ::cqhttp::Action GetGroupFileUrl::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupFileUrl::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupFileUrl.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupFileUrl::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupFileUrl::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupFileUrl::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupFileUrl.action)
-}
-inline std::string* GetGroupFileUrl::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupFileUrl.action)
-  return _s;
-}
-inline const std::string& GetGroupFileUrl::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupFileUrl::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupFileUrl::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupFileUrl::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupFileUrl.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupFileUrl::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupFileUrl.action)
 }
 
 // .cqhttp.GetGroupFileUrl.Params params = 2;
@@ -51383,54 +49338,24 @@ inline void GetGroupFileUrlResp::set_allocated_url(std::string* url) {
 
 // GetStatus
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetStatus::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetStatus::action() const {
+inline ::cqhttp::Action GetStatus::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetStatus::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetStatus.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetStatus::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetStatus::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetStatus::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetStatus.action)
-}
-inline std::string* GetStatus::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetStatus.action)
-  return _s;
-}
-inline const std::string& GetStatus::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetStatus::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetStatus::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetStatus::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetStatus.action)
-  return _impl_.action_.Release();
-}
-inline void GetStatus::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetStatus.action)
 }
 
 // string echo = 2;
@@ -51889,54 +49814,24 @@ inline void GetGroupAtAllRemain_Params::set_group_id(int64_t value) {
 
 // GetGroupAtAllRemain
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupAtAllRemain::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupAtAllRemain::action() const {
+inline ::cqhttp::Action GetGroupAtAllRemain::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupAtAllRemain::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupAtAllRemain.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupAtAllRemain::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupAtAllRemain::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupAtAllRemain::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupAtAllRemain.action)
-}
-inline std::string* GetGroupAtAllRemain::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupAtAllRemain.action)
-  return _s;
-}
-inline const std::string& GetGroupAtAllRemain::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupAtAllRemain::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupAtAllRemain::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupAtAllRemain::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupAtAllRemain.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupAtAllRemain::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupAtAllRemain.action)
 }
 
 // .cqhttp.GetGroupAtAllRemain.Params params = 2;
@@ -52251,54 +50146,24 @@ inline void HandleQuickOperation_Params::set_allocated_operation(std::string* op
 
 // HandleQuickOperation
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void HandleQuickOperation::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& HandleQuickOperation::action() const {
+inline ::cqhttp::Action HandleQuickOperation::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action HandleQuickOperation::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.HandleQuickOperation.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void HandleQuickOperation::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void HandleQuickOperation::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void HandleQuickOperation::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.HandleQuickOperation.action)
-}
-inline std::string* HandleQuickOperation::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.HandleQuickOperation.action)
-  return _s;
-}
-inline const std::string& HandleQuickOperation::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void HandleQuickOperation::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* HandleQuickOperation::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* HandleQuickOperation::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.HandleQuickOperation.action)
-  return _impl_.action_.Release();
-}
-inline void HandleQuickOperation::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.HandleQuickOperation.action)
 }
 
 // .cqhttp.HandleQuickOperation.Params params = 2;
@@ -52519,54 +50384,24 @@ inline void SendGroupNotice_Params::set_allocated_image(std::string* image) {
 
 // SendGroupNotice
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendGroupNotice::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendGroupNotice::action() const {
+inline ::cqhttp::Action SendGroupNotice::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendGroupNotice::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendGroupNotice.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendGroupNotice::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendGroupNotice::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendGroupNotice::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendGroupNotice.action)
-}
-inline std::string* SendGroupNotice::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendGroupNotice.action)
-  return _s;
-}
-inline const std::string& SendGroupNotice::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendGroupNotice::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendGroupNotice::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendGroupNotice::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendGroupNotice.action)
-  return _impl_.action_.Release();
-}
-inline void SendGroupNotice::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendGroupNotice.action)
 }
 
 // .cqhttp.SendGroupNotice.Params params = 2;
@@ -52687,54 +50522,24 @@ inline void GetGroupNotice_Params::set_group_id(int64_t value) {
 
 // GetGroupNotice
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupNotice::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupNotice::action() const {
+inline ::cqhttp::Action GetGroupNotice::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupNotice::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupNotice.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupNotice::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupNotice::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupNotice::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupNotice.action)
-}
-inline std::string* GetGroupNotice::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupNotice.action)
-  return _s;
-}
-inline const std::string& GetGroupNotice::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupNotice::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupNotice::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupNotice::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupNotice.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupNotice::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupNotice.action)
 }
 
 // .cqhttp.GetGroupNotice.Params params = 2;
@@ -53361,54 +51166,24 @@ inline void ReloadEventFilter_Params::set_allocated_file(std::string* file) {
 
 // ReloadEventFilter
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void ReloadEventFilter::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& ReloadEventFilter::action() const {
+inline ::cqhttp::Action ReloadEventFilter::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action ReloadEventFilter::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.ReloadEventFilter.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void ReloadEventFilter::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void ReloadEventFilter::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void ReloadEventFilter::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.ReloadEventFilter.action)
-}
-inline std::string* ReloadEventFilter::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.ReloadEventFilter.action)
-  return _s;
-}
-inline const std::string& ReloadEventFilter::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void ReloadEventFilter::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* ReloadEventFilter::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* ReloadEventFilter::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.ReloadEventFilter.action)
-  return _impl_.action_.Release();
-}
-inline void ReloadEventFilter::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.ReloadEventFilter.action)
 }
 
 // .cqhttp.ReloadEventFilter.Params params = 2;
@@ -53629,54 +51404,24 @@ inline void DownloadFile_Params::set_allocated_headers(std::string* headers) {
 
 // DownloadFile
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DownloadFile::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DownloadFile::action() const {
+inline ::cqhttp::Action DownloadFile::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DownloadFile::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DownloadFile.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DownloadFile::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DownloadFile::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DownloadFile::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DownloadFile.action)
-}
-inline std::string* DownloadFile::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DownloadFile.action)
-  return _s;
-}
-inline const std::string& DownloadFile::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DownloadFile::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DownloadFile::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DownloadFile::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DownloadFile.action)
-  return _impl_.action_.Release();
-}
-inline void DownloadFile::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DownloadFile.action)
 }
 
 // .cqhttp.DownloadFile.Params params = 2;
@@ -53901,54 +51646,24 @@ inline void GetOnlineClients_Params::set_no_cache(bool value) {
 
 // GetOnlineClients
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetOnlineClients::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetOnlineClients::action() const {
+inline ::cqhttp::Action GetOnlineClients::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetOnlineClients::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetOnlineClients.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetOnlineClients::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetOnlineClients::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetOnlineClients::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetOnlineClients.action)
-}
-inline std::string* GetOnlineClients::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetOnlineClients.action)
-  return _s;
-}
-inline const std::string& GetOnlineClients::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetOnlineClients::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetOnlineClients::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetOnlineClients::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetOnlineClients.action)
-  return _impl_.action_.Release();
-}
-inline void GetOnlineClients::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetOnlineClients.action)
 }
 
 // .cqhttp.GetOnlineClients.Params params = 2;
@@ -54180,54 +51895,24 @@ inline void GetGroupMsgHistory_Params::set_group_id(int64_t value) {
 
 // GetGroupMsgHistory
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetGroupMsgHistory::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetGroupMsgHistory::action() const {
+inline ::cqhttp::Action GetGroupMsgHistory::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetGroupMsgHistory::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetGroupMsgHistory.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetGroupMsgHistory::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetGroupMsgHistory::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetGroupMsgHistory::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetGroupMsgHistory.action)
-}
-inline std::string* GetGroupMsgHistory::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetGroupMsgHistory.action)
-  return _s;
-}
-inline const std::string& GetGroupMsgHistory::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetGroupMsgHistory::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetGroupMsgHistory::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetGroupMsgHistory::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetGroupMsgHistory.action)
-  return _impl_.action_.Release();
-}
-inline void GetGroupMsgHistory::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetGroupMsgHistory.action)
 }
 
 // .cqhttp.GetGroupMsgHistory.Params params = 2;
@@ -54477,54 +52162,24 @@ inline void SetEssenceMsg_Params::set_message_id(int32_t value) {
 
 // SetEssenceMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetEssenceMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetEssenceMsg::action() const {
+inline ::cqhttp::Action SetEssenceMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetEssenceMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetEssenceMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetEssenceMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetEssenceMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetEssenceMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetEssenceMsg.action)
-}
-inline std::string* SetEssenceMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetEssenceMsg.action)
-  return _s;
-}
-inline const std::string& SetEssenceMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetEssenceMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetEssenceMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetEssenceMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetEssenceMsg.action)
-  return _impl_.action_.Release();
-}
-inline void SetEssenceMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetEssenceMsg.action)
 }
 
 // .cqhttp.SetEssenceMsg.Params params = 2;
@@ -54645,54 +52300,24 @@ inline void DeleteEssenceMsg_Params::set_message_id(int32_t value) {
 
 // DeleteEssenceMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DeleteEssenceMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DeleteEssenceMsg::action() const {
+inline ::cqhttp::Action DeleteEssenceMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DeleteEssenceMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DeleteEssenceMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteEssenceMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DeleteEssenceMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DeleteEssenceMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DeleteEssenceMsg.action)
-}
-inline std::string* DeleteEssenceMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DeleteEssenceMsg.action)
-  return _s;
-}
-inline const std::string& DeleteEssenceMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DeleteEssenceMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteEssenceMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteEssenceMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DeleteEssenceMsg.action)
-  return _impl_.action_.Release();
-}
-inline void DeleteEssenceMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DeleteEssenceMsg.action)
 }
 
 // .cqhttp.DeleteEssenceMsg.Params params = 2;
@@ -54813,54 +52438,24 @@ inline void GetEssenceMsgList_Params::set_group_id(int64_t value) {
 
 // GetEssenceMsgList
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetEssenceMsgList::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetEssenceMsgList::action() const {
+inline ::cqhttp::Action GetEssenceMsgList::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetEssenceMsgList::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetEssenceMsgList.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetEssenceMsgList::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetEssenceMsgList::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetEssenceMsgList::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetEssenceMsgList.action)
-}
-inline std::string* GetEssenceMsgList::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetEssenceMsgList.action)
-  return _s;
-}
-inline const std::string& GetEssenceMsgList::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetEssenceMsgList::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetEssenceMsgList::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetEssenceMsgList::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetEssenceMsgList.action)
-  return _impl_.action_.Release();
-}
-inline void GetEssenceMsgList::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetEssenceMsgList.action)
 }
 
 // .cqhttp.GetEssenceMsgList.Params params = 2;
@@ -55265,54 +52860,24 @@ inline void CheckUlrSafely_Params::set_allocated_url(std::string* url) {
 
 // CheckUlrSafely
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void CheckUlrSafely::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& CheckUlrSafely::action() const {
+inline ::cqhttp::Action CheckUlrSafely::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action CheckUlrSafely::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.CheckUlrSafely.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void CheckUlrSafely::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void CheckUlrSafely::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void CheckUlrSafely::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.CheckUlrSafely.action)
-}
-inline std::string* CheckUlrSafely::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.CheckUlrSafely.action)
-  return _s;
-}
-inline const std::string& CheckUlrSafely::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void CheckUlrSafely::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* CheckUlrSafely::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* CheckUlrSafely::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.CheckUlrSafely.action)
-  return _impl_.action_.Release();
-}
-inline void CheckUlrSafely::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.CheckUlrSafely.action)
 }
 
 // .cqhttp.CheckUlrSafely.Params params = 2;
@@ -55537,54 +53102,24 @@ inline void GetModelShow_Params::set_allocated_model(std::string* model) {
 
 // GetModelShow
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void GetModelShow::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& GetModelShow::action() const {
+inline ::cqhttp::Action GetModelShow::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action GetModelShow::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.GetModelShow.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void GetModelShow::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void GetModelShow::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void GetModelShow::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.GetModelShow.action)
-}
-inline std::string* GetModelShow::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.GetModelShow.action)
-  return _s;
-}
-inline const std::string& GetModelShow::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void GetModelShow::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* GetModelShow::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* GetModelShow::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.GetModelShow.action)
-  return _impl_.action_.Release();
-}
-inline void GetModelShow::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.GetModelShow.action)
 }
 
 // .cqhttp.GetModelShow.Params params = 2;
@@ -55953,54 +53488,24 @@ inline void SetModelShow_Params::set_allocated_model_show(std::string* model_sho
 
 // SetModelShow
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SetModelShow::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SetModelShow::action() const {
+inline ::cqhttp::Action SetModelShow::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SetModelShow::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SetModelShow.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SetModelShow::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SetModelShow::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SetModelShow::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SetModelShow.action)
-}
-inline std::string* SetModelShow::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SetModelShow.action)
-  return _s;
-}
-inline const std::string& SetModelShow::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SetModelShow::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SetModelShow::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SetModelShow::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SetModelShow.action)
-  return _impl_.action_.Release();
-}
-inline void SetModelShow::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SetModelShow.action)
 }
 
 // .cqhttp.SetModelShow.Params params = 2;
@@ -56121,54 +53626,24 @@ inline void DeleteUnidirectionalFriend_Params::set_user_id(int64_t value) {
 
 // DeleteUnidirectionalFriend
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void DeleteUnidirectionalFriend::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& DeleteUnidirectionalFriend::action() const {
+inline ::cqhttp::Action DeleteUnidirectionalFriend::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action DeleteUnidirectionalFriend::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.DeleteUnidirectionalFriend.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void DeleteUnidirectionalFriend::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void DeleteUnidirectionalFriend::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void DeleteUnidirectionalFriend::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.DeleteUnidirectionalFriend.action)
-}
-inline std::string* DeleteUnidirectionalFriend::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.DeleteUnidirectionalFriend.action)
-  return _s;
-}
-inline const std::string& DeleteUnidirectionalFriend::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void DeleteUnidirectionalFriend::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* DeleteUnidirectionalFriend::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* DeleteUnidirectionalFriend::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.DeleteUnidirectionalFriend.action)
-  return _impl_.action_.Release();
-}
-inline void DeleteUnidirectionalFriend::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.DeleteUnidirectionalFriend.action)
 }
 
 // .cqhttp.DeleteUnidirectionalFriend.Params params = 2;
@@ -56326,54 +53801,24 @@ SendPrivateForwardMsg_Params::messages() const {
 
 // SendPrivateForwardMsg
 
-// string action = 1;
+// .cqhttp.Action action = 1;
 inline void SendPrivateForwardMsg::clear_action() {
-  _impl_.action_.ClearToEmpty();
+  _impl_.action_ = 0;
 }
-inline const std::string& SendPrivateForwardMsg::action() const {
+inline ::cqhttp::Action SendPrivateForwardMsg::_internal_action() const {
+  return static_cast< ::cqhttp::Action >(_impl_.action_);
+}
+inline ::cqhttp::Action SendPrivateForwardMsg::action() const {
   // @@protoc_insertion_point(field_get:cqhttp.SendPrivateForwardMsg.action)
   return _internal_action();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendPrivateForwardMsg::set_action(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.action_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+inline void SendPrivateForwardMsg::_internal_set_action(::cqhttp::Action value) {
+  
+  _impl_.action_ = value;
+}
+inline void SendPrivateForwardMsg::set_action(::cqhttp::Action value) {
+  _internal_set_action(value);
   // @@protoc_insertion_point(field_set:cqhttp.SendPrivateForwardMsg.action)
-}
-inline std::string* SendPrivateForwardMsg::mutable_action() {
-  std::string* _s = _internal_mutable_action();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendPrivateForwardMsg.action)
-  return _s;
-}
-inline const std::string& SendPrivateForwardMsg::_internal_action() const {
-  return _impl_.action_.Get();
-}
-inline void SendPrivateForwardMsg::_internal_set_action(const std::string& value) {
-  
-  _impl_.action_.Set(value, GetArenaForAllocation());
-}
-inline std::string* SendPrivateForwardMsg::_internal_mutable_action() {
-  
-  return _impl_.action_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendPrivateForwardMsg::release_action() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendPrivateForwardMsg.action)
-  return _impl_.action_.Release();
-}
-inline void SendPrivateForwardMsg::set_allocated_action(std::string* action) {
-  if (action != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.action_.SetAllocated(action, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.action_.IsDefault()) {
-    _impl_.action_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendPrivateForwardMsg.action)
 }
 
 // .cqhttp.SendPrivateForwardMsg.Params params = 2;

@@ -214,7 +214,7 @@ struct ForwardMessageDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ForwardMessageDefaultTypeInternal _ForwardMessage_default_instance_;
 }  // namespace cqhttp
 static ::_pb::Metadata file_level_metadata_cqhttp_5fbase_2eproto[11];
-static const ::_pb::EnumDescriptor* file_level_enum_descriptors_cqhttp_5fbase_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_cqhttp_5fbase_2eproto[2];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_cqhttp_5fbase_2eproto = nullptr;
 
 const uint32_t TableStruct_cqhttp_5fbase_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -417,11 +417,52 @@ const char descriptor_table_protodef_cqhttp_5fbase_2eproto[] PROTOBUF_SECTION_VA
   "tify\020\026\022\t\n\005honor\020\027\022\010\n\004poke\020\030\022\016\n\nlucky_kin"
   "g\020\031\022\t\n\005title\020\032\022\r\n\tlifecycle\020\033\022\r\n\theartbe"
   "at\020\034\022\n\n\006enable\020\035\022\013\n\007disable\020\'\022\013\n\007connect"
-  "\020\037b\006proto3"
+  "\020\037*\341\014\n\006Action\022\024\n\020send_private_msg\020\000\022\022\n\016s"
+  "end_group_msg\020\001\022\032\n\026send_group_forward_ms"
+  "g\020\002\022\014\n\010send_msg\020\003\022\016\n\ndelete_msg\020\004\022\013\n\007get"
+  "_msg\020\005\022\023\n\017get_forward_msg\020\006\022\r\n\tget_image"
+  "\020\007\022\024\n\020mark_msg_as_read\020\010\022\022\n\016set_group_ki"
+  "ck\020\t\022\021\n\rset_group_ban\020\n\022\033\n\027set_group_ano"
+  "nymous_ban\020\013\022\027\n\023set_group_whole_ban\020\014\022\023\n"
+  "\017set_group_admin\020\r\022\027\n\023set_group_anonymou"
+  "s\020\016\022\022\n\016set_group_card\020\017\022\022\n\016set_group_nam"
+  "e\020\020\022\023\n\017set_group_leave\020\021\022\033\n\027set_group_sp"
+  "ecial_title\020\022\022\023\n\017send_group_sign\020\023\022\032\n\026se"
+  "t_friend_add_request\020\024\022\031\n\025set_group_add_"
+  "request\020\025\022\022\n\016get_login_info\020\026\022\033\n\027qidian_"
+  "get_account_info\020\027\022\022\n\016set_qq_profile\020\030\022\025"
+  "\n\021get_stranger_info\020\031\022\023\n\017get_friend_list"
+  "\020\032\022\"\n\036get_unidirectional_friend_list\020\033\022\021"
+  "\n\rdelete_friend\020\034\022\022\n\016get_group_info\020\035\022\022\n"
+  "\016get_group_list\020\036\022\031\n\025get_group_member_in"
+  "fo\020\037\022\031\n\025get_group_member_list\020 \022\030\n\024get_g"
+  "roup_honor_info\020!\022\017\n\013get_cookies\020\"\022\022\n\016ge"
+  "t_csrf_token\020#\022\023\n\017get_credentials\020$\022\016\n\ng"
+  "et_record\020%\022\022\n\016can_send_image\020&\022\023\n\017can_s"
+  "end_record\020\'\022\024\n\020get_version_info\020(\022\017\n\013se"
+  "t_restart\020)\022\017\n\013clean_cache\020*\022\026\n\022set_grou"
+  "p_portrait\020+\022\r\n\tocr_image\020,\022\030\n\024get_group"
+  "_system_msg\020-\022\027\n\023upload_private_file\020.\022\025"
+  "\n\021upload_group_file\020/\022\036\n\032get_group_file_"
+  "system_info\0200\022\030\n\024get_group_root_files\0201\022"
+  "\035\n\031get_group_files_by_folder\0202\022\034\n\030create"
+  "_group_file_folder\0203\022\027\n\023delete_group_fol"
+  "der\0204\022\025\n\021delete_group_file\0205\022\026\n\022get_grou"
+  "p_file_url\0206\022\016\n\nget_status\0207\022\033\n\027get_grou"
+  "p_at_all_remain\0208\022\026\n\022_send_group_notice\020"
+  "9\022\025\n\021_get_group_notice\020:\022\027\n\023reload_event"
+  "_filter\020;\022\021\n\rdownload_file\020<\022\026\n\022get_onli"
+  "ne_clients\020=\022\031\n\025get_group_msg_history\020>\022"
+  "\023\n\017set_essence_msg\020\?\022\026\n\022delete_essence_m"
+  "sg\020@\022\030\n\024get_essence_msg_list\020A\022\024\n\020check_"
+  "url_safely\020B\022\023\n\017_get_model_show\020C\022\023\n\017_se"
+  "t_model_show\020D\022 \n\034delete_unidirectional_"
+  "friend\020E\022\034\n\030send_private_forward_msg\020Fb\006"
+  "proto3"
   ;
 static ::_pbi::once_flag descriptor_table_cqhttp_5fbase_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_cqhttp_5fbase_2eproto = {
-    false, false, 1770, descriptor_table_protodef_cqhttp_5fbase_2eproto,
+    false, false, 3406, descriptor_table_protodef_cqhttp_5fbase_2eproto,
     "cqhttp_base.proto",
     &descriptor_table_cqhttp_5fbase_2eproto_once, nullptr, 0, 11,
     schemas, file_default_instances, TableStruct_cqhttp_5fbase_2eproto::offsets,
@@ -473,6 +514,89 @@ bool CQHTTP_TYPE_IsValid(int value) {
     case 29:
     case 31:
     case 39:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Action_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_cqhttp_5fbase_2eproto);
+  return file_level_enum_descriptors_cqhttp_5fbase_2eproto[1];
+}
+bool Action_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+    case 16:
+    case 17:
+    case 18:
+    case 19:
+    case 20:
+    case 21:
+    case 22:
+    case 23:
+    case 24:
+    case 25:
+    case 26:
+    case 27:
+    case 28:
+    case 29:
+    case 30:
+    case 31:
+    case 32:
+    case 33:
+    case 34:
+    case 35:
+    case 36:
+    case 37:
+    case 38:
+    case 39:
+    case 40:
+    case 41:
+    case 42:
+    case 43:
+    case 44:
+    case 45:
+    case 46:
+    case 47:
+    case 48:
+    case 49:
+    case 50:
+    case 51:
+    case 52:
+    case 53:
+    case 54:
+    case 55:
+    case 56:
+    case 57:
+    case 58:
+    case 59:
+    case 60:
+    case 61:
+    case 62:
+    case 63:
+    case 64:
+    case 65:
+    case 66:
+    case 67:
+    case 68:
+    case 69:
+    case 70:
       return true;
     default:
       return false;

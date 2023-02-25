@@ -2,6 +2,14 @@ syntax = "proto3";
 package cqhttp;
 import "cqhttp_base.proto";
 
+message BaseEvent{
+    CQHTTP_TYPE post_type = 1;
+    CQHTTP_TYPE message_type = 2;
+    CQHTTP_TYPE notice_type = 3;
+    CQHTTP_TYPE request_type = 4;    
+    CQHTTP_TYPE meta_event_type = 5;
+}
+
 message PrivateMessageEvent {
     int64 time = 1;
     int64 self_id = 2;
@@ -108,7 +116,7 @@ message GroupBanEvent{
     int64 duration = 9;
 }
 
-message FriednAddEvent{
+message FriendAddEvent{
     int64 time = 1;
     int64 self_id = 2;
     CQHTTP_TYPE post_type = 3;

@@ -21,6 +21,23 @@ namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
 namespace cqhttp {
+PROTOBUF_CONSTEXPR BaseEvent::BaseEvent(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.post_type_)*/0
+  , /*decltype(_impl_.message_type_)*/0
+  , /*decltype(_impl_.notice_type_)*/0
+  , /*decltype(_impl_.request_type_)*/0
+  , /*decltype(_impl_.meta_event_type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct BaseEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR BaseEventDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~BaseEventDefaultTypeInternal() {}
+  union {
+    BaseEvent _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BaseEventDefaultTypeInternal _BaseEvent_default_instance_;
 PROTOBUF_CONSTEXPR PrivateMessageEvent::PrivateMessageEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -207,7 +224,7 @@ struct GroupBanEventDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GroupBanEventDefaultTypeInternal _GroupBanEvent_default_instance_;
-PROTOBUF_CONSTEXPR FriednAddEvent::FriednAddEvent(
+PROTOBUF_CONSTEXPR FriendAddEvent::FriendAddEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.time_)*/int64_t{0}
   , /*decltype(_impl_.self_id_)*/int64_t{0}
@@ -215,15 +232,15 @@ PROTOBUF_CONSTEXPR FriednAddEvent::FriednAddEvent(
   , /*decltype(_impl_.notice_type_)*/0
   , /*decltype(_impl_.user_id_)*/int64_t{0}
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct FriednAddEventDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR FriednAddEventDefaultTypeInternal()
+struct FriendAddEventDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FriendAddEventDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~FriednAddEventDefaultTypeInternal() {}
+  ~FriendAddEventDefaultTypeInternal() {}
   union {
-    FriednAddEvent _instance;
+    FriendAddEvent _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FriednAddEventDefaultTypeInternal _FriednAddEvent_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FriendAddEventDefaultTypeInternal _FriendAddEvent_default_instance_;
 PROTOBUF_CONSTEXPR NotifyEvent::NotifyEvent(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.honor_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -400,11 +417,22 @@ struct LifecycleEventDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LifecycleEventDefaultTypeInternal _LifecycleEvent_default_instance_;
 }  // namespace cqhttp
-static ::_pb::Metadata file_level_metadata_cqhttp_5fevent_2eproto[19];
+static ::_pb::Metadata file_level_metadata_cqhttp_5fevent_2eproto[20];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_cqhttp_5fevent_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_cqhttp_5fevent_2eproto = nullptr;
 
 const uint32_t TableStruct_cqhttp_5fevent_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::cqhttp::BaseEvent, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::cqhttp::BaseEvent, _impl_.post_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::BaseEvent, _impl_.message_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::BaseEvent, _impl_.notice_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::BaseEvent, _impl_.request_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::BaseEvent, _impl_.meta_event_type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::PrivateMessageEvent, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -538,16 +566,16 @@ const uint32_t TableStruct_cqhttp_5fevent_2eproto::offsets[] PROTOBUF_SECTION_VA
   PROTOBUF_FIELD_OFFSET(::cqhttp::GroupBanEvent, _impl_.user_id_),
   PROTOBUF_FIELD_OFFSET(::cqhttp::GroupBanEvent, _impl_.duration_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::FriednAddEvent, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::FriendAddEvent, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::FriednAddEvent, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::FriednAddEvent, _impl_.self_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::FriednAddEvent, _impl_.post_type_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::FriednAddEvent, _impl_.notice_type_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::FriednAddEvent, _impl_.user_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::FriendAddEvent, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::FriendAddEvent, _impl_.self_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::FriendAddEvent, _impl_.post_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::FriendAddEvent, _impl_.notice_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::FriendAddEvent, _impl_.user_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::NotifyEvent, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -671,28 +699,30 @@ const uint32_t TableStruct_cqhttp_5fevent_2eproto::offsets[] PROTOBUF_SECTION_VA
   PROTOBUF_FIELD_OFFSET(::cqhttp::LifecycleEvent, _impl_.sub_type_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::cqhttp::PrivateMessageEvent)},
-  { 18, -1, -1, sizeof(::cqhttp::GroupMessageEvent)},
-  { 37, -1, -1, sizeof(::cqhttp::FriendRecallEvent)},
-  { 49, -1, -1, sizeof(::cqhttp::GroupRecallEvent)},
-  { 63, -1, -1, sizeof(::cqhttp::GroupIncreaseEvent)},
-  { 77, -1, -1, sizeof(::cqhttp::GroupDecreaseEvent)},
-  { 91, -1, -1, sizeof(::cqhttp::GroupAdminChangeEvent)},
-  { 104, -1, -1, sizeof(::cqhttp::GroupFileUploadEvent)},
-  { 117, -1, -1, sizeof(::cqhttp::GroupBanEvent)},
-  { 132, -1, -1, sizeof(::cqhttp::FriednAddEvent)},
-  { 143, -1, -1, sizeof(::cqhttp::NotifyEvent)},
-  { 160, -1, -1, sizeof(::cqhttp::GroupCardChangedEvent)},
-  { 174, -1, -1, sizeof(::cqhttp::ReceviedOfflineFileEvent)},
-  { 186, -1, -1, sizeof(::cqhttp::ClientChangedEvent)},
-  { 196, -1, -1, sizeof(::cqhttp::EssenceMsgChangedEvent)},
-  { 211, -1, -1, sizeof(::cqhttp::FriendAddRequestEvent)},
-  { 224, -1, -1, sizeof(::cqhttp::GroupAddRequestEvent)},
-  { 239, -1, -1, sizeof(::cqhttp::MetaEvent)},
-  { 251, -1, -1, sizeof(::cqhttp::LifecycleEvent)},
+  { 0, -1, -1, sizeof(::cqhttp::BaseEvent)},
+  { 11, -1, -1, sizeof(::cqhttp::PrivateMessageEvent)},
+  { 29, -1, -1, sizeof(::cqhttp::GroupMessageEvent)},
+  { 48, -1, -1, sizeof(::cqhttp::FriendRecallEvent)},
+  { 60, -1, -1, sizeof(::cqhttp::GroupRecallEvent)},
+  { 74, -1, -1, sizeof(::cqhttp::GroupIncreaseEvent)},
+  { 88, -1, -1, sizeof(::cqhttp::GroupDecreaseEvent)},
+  { 102, -1, -1, sizeof(::cqhttp::GroupAdminChangeEvent)},
+  { 115, -1, -1, sizeof(::cqhttp::GroupFileUploadEvent)},
+  { 128, -1, -1, sizeof(::cqhttp::GroupBanEvent)},
+  { 143, -1, -1, sizeof(::cqhttp::FriendAddEvent)},
+  { 154, -1, -1, sizeof(::cqhttp::NotifyEvent)},
+  { 171, -1, -1, sizeof(::cqhttp::GroupCardChangedEvent)},
+  { 185, -1, -1, sizeof(::cqhttp::ReceviedOfflineFileEvent)},
+  { 197, -1, -1, sizeof(::cqhttp::ClientChangedEvent)},
+  { 207, -1, -1, sizeof(::cqhttp::EssenceMsgChangedEvent)},
+  { 222, -1, -1, sizeof(::cqhttp::FriendAddRequestEvent)},
+  { 235, -1, -1, sizeof(::cqhttp::GroupAddRequestEvent)},
+  { 250, -1, -1, sizeof(::cqhttp::MetaEvent)},
+  { 262, -1, -1, sizeof(::cqhttp::LifecycleEvent)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
+  &::cqhttp::_BaseEvent_default_instance_._instance,
   &::cqhttp::_PrivateMessageEvent_default_instance_._instance,
   &::cqhttp::_GroupMessageEvent_default_instance_._instance,
   &::cqhttp::_FriendRecallEvent_default_instance_._instance,
@@ -702,7 +732,7 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::cqhttp::_GroupAdminChangeEvent_default_instance_._instance,
   &::cqhttp::_GroupFileUploadEvent_default_instance_._instance,
   &::cqhttp::_GroupBanEvent_default_instance_._instance,
-  &::cqhttp::_FriednAddEvent_default_instance_._instance,
+  &::cqhttp::_FriendAddEvent_default_instance_._instance,
   &::cqhttp::_NotifyEvent_default_instance_._instance,
   &::cqhttp::_GroupCardChangedEvent_default_instance_._instance,
   &::cqhttp::_ReceviedOfflineFileEvent_default_instance_._instance,
@@ -716,119 +746,125 @@ static const ::_pb::Message* const file_default_instances[] = {
 
 const char descriptor_table_protodef_cqhttp_5fevent_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\022cqhttp_event.proto\022\006cqhttp\032\021cqhttp_bas"
-  "e.proto\"\274\002\n\023PrivateMessageEvent\022\014\n\004time\030"
-  "\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001("
-  "\0162\023.cqhttp.CQHTTP_TYPE\022)\n\014message_type\030\004"
-  " \001(\0162\023.cqhttp.CQHTTP_TYPE\022%\n\010sub_type\030\005 "
-  "\001(\0162\023.cqhttp.CQHTTP_TYPE\022\022\n\nmessage_id\030\006"
-  " \001(\005\022\017\n\007user_id\030\007 \001(\003\022\017\n\007message\030\010 \001(\t\022\023"
-  "\n\013raw_message\030\t \001(\t\022\014\n\004font\030\n \001(\005\022\036\n\006sen"
-  "der\030\013 \001(\0132\016.cqhttp.Sender\022\023\n\013temp_source"
-  "\030\014 \001(\005\"\335\002\n\021GroupMessageEvent\022\014\n\004time\030\001 \001"
-  "(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023"
-  ".cqhttp.CQHTTP_TYPE\022)\n\014message_type\030\004 \001("
-  "\0162\023.cqhttp.CQHTTP_TYPE\022%\n\010sub_type\030\005 \001(\016"
-  "2\023.cqhttp.CQHTTP_TYPE\022\022\n\nmessage_id\030\006 \001("
-  "\005\022\017\n\007user_id\030\007 \001(\003\022\017\n\007message\030\010 \001(\t\022\023\n\013r"
-  "aw_message\030\t \001(\t\022\014\n\004font\030\n \001(\005\022\036\n\006sender"
-  "\030\013 \001(\0132\016.cqhttp.Sender\022\020\n\010group_id\030\014 \001(\003"
-  "\022$\n\tanonymous\030\r \001(\0132\021.cqhttp.Anonymous\"\251"
-  "\001\n\021FriendRecallEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007se"
-  "lf_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp."
-  "CQHTTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhtt"
-  "p.CQHTTP_TYPE\022\017\n\007user_id\030\005 \001(\003\022\022\n\nmessag"
-  "e_id\030\006 \001(\003\"\317\001\n\020GroupRecallEvent\022\014\n\004time\030"
+  "e.proto\"\341\001\n\tBaseEvent\022&\n\tpost_type\030\001 \001(\016"
+  "2\023.cqhttp.CQHTTP_TYPE\022)\n\014message_type\030\002 "
+  "\001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030"
+  "\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022)\n\014request_ty"
+  "pe\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022,\n\017meta_ev"
+  "ent_type\030\005 \001(\0162\023.cqhttp.CQHTTP_TYPE\"\274\002\n\023"
+  "PrivateMessageEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007sel"
+  "f_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.C"
+  "QHTTP_TYPE\022)\n\014message_type\030\004 \001(\0162\023.cqhtt"
+  "p.CQHTTP_TYPE\022%\n\010sub_type\030\005 \001(\0162\023.cqhttp"
+  ".CQHTTP_TYPE\022\022\n\nmessage_id\030\006 \001(\005\022\017\n\007user"
+  "_id\030\007 \001(\003\022\017\n\007message\030\010 \001(\t\022\023\n\013raw_messag"
+  "e\030\t \001(\t\022\014\n\004font\030\n \001(\005\022\036\n\006sender\030\013 \001(\0132\016."
+  "cqhttp.Sender\022\023\n\013temp_source\030\014 \001(\005\"\335\002\n\021G"
+  "roupMessageEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_i"
+  "d\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHT"
+  "TP_TYPE\022)\n\014message_type\030\004 \001(\0162\023.cqhttp.C"
+  "QHTTP_TYPE\022%\n\010sub_type\030\005 \001(\0162\023.cqhttp.CQ"
+  "HTTP_TYPE\022\022\n\nmessage_id\030\006 \001(\005\022\017\n\007user_id"
+  "\030\007 \001(\003\022\017\n\007message\030\010 \001(\t\022\023\n\013raw_message\030\t"
+  " \001(\t\022\014\n\004font\030\n \001(\005\022\036\n\006sender\030\013 \001(\0132\016.cqh"
+  "ttp.Sender\022\020\n\010group_id\030\014 \001(\003\022$\n\tanonymou"
+  "s\030\r \001(\0132\021.cqhttp.Anonymous\"\251\001\n\021FriendRec"
+  "allEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022"
+  "&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022"
+  "(\n\013notice_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYP"
+  "E\022\017\n\007user_id\030\005 \001(\003\022\022\n\nmessage_id\030\006 \001(\003\"\317"
+  "\001\n\020GroupRecallEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007sel"
+  "f_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.C"
+  "QHTTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp"
+  ".CQHTTP_TYPE\022\020\n\010group_id\030\005 \001(\003\022\017\n\007user_i"
+  "d\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\022\n\nmessage_"
+  "id\030\010 \001(\003\"\317\001\n\022GroupIncreaseEvent\022\014\n\004time\030"
   "\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001("
   "\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030\004 "
-  "\001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010group_id\030\005 \001"
-  "(\003\022\017\n\007user_id\030\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003"
-  "\022\022\n\nmessage_id\030\010 \001(\003\"\317\001\n\022GroupIncreaseEv"
-  "ent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpo"
-  "st_type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013no"
-  "tice_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010"
-  "sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013oper"
-  "ator_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\"\317\001\n\022Group"
-  "DecreaseEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002"
-  " \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP_"
-  "TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp.CQHTT"
-  "P_TYPE\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001"
-  "(\003\022\023\n\013operator_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003"
-  "\"\275\001\n\025GroupAdminChangeEvent\022\014\n\004time\030\001 \001(\003"
-  "\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.c"
-  "qhttp.CQHTTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023"
-  ".cqhttp.CQHTTP_TYPE\022\020\n\010sub_type\030\005 \001(\t\022\020\n"
-  "\010group_id\030\006 \001(\003\022\017\n\007user_id\030\007 \001(\003\"\313\001\n\024Gro"
-  "upFileUploadEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_"
-  "id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQH"
-  "TTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp.C"
-  "QHTTP_TYPE\022\020\n\010group_id\030\005 \001(\003\022\017\n\007user_id\030"
-  "\006 \001(\003\022\037\n\004file\030\007 \001(\0132\021.cqhttp.GroupFile\"\334"
-  "\001\n\rGroupBanEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_i"
-  "d\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHT"
-  "TP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp.CQ"
-  "HTTP_TYPE\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030"
-  "\006 \001(\003\022\023\n\013operator_id\030\007 \001(\003\022\017\n\007user_id\030\010 "
-  "\001(\003\022\020\n\010duration\030\t \001(\003\"\222\001\n\016FriednAddEvent"
-  "\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_"
-  "type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013notic"
-  "e_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\017\n\007use"
-  "r_id\030\005 \001(\003\"\221\002\n\013NotifyEvent\022\014\n\004time\030\001 \001(\003"
-  "\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.c"
-  "qhttp.CQHTTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023"
-  ".cqhttp.CQHTTP_TYPE\022%\n\010sub_type\030\005 \001(\0162\023."
-  "cqhttp.CQHTTP_TYPE\022\021\n\tsender_id\030\006 \001(\003\022\017\n"
-  "\007user_id\030\007 \001(\003\022\021\n\ttarget_id\030\010 \001(\003\022\020\n\010gro"
-  "up_id\030\t \001(\003\022\022\n\nhonor_type\030\n \001(\t\022\r\n\005title"
-  "\030\013 \001(\t\"\317\001\n\025GroupCardChangedEvent\022\014\n\004time"
-  "\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001"
-  "(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030\004"
-  " \001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010group_id\030\005 "
-  "\001(\003\022\017\n\007user_id\030\006 \001(\003\022\020\n\010card_new\030\007 \001(\t\022\020"
-  "\n\010card_old\030\010 \001(\t\"\277\001\n\030ReceviedOfflineFile"
+  "\001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010sub_type\030\005 \001"
+  "(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013operator_id\030\007 \001("
+  "\003\022\017\n\007user_id\030\010 \001(\003\"\317\001\n\022GroupDecreaseEven"
+  "t\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost"
+  "_type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013noti"
+  "ce_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010su"
+  "b_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013operat"
+  "or_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\"\275\001\n\025GroupAd"
+  "minChangeEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030"
+  "\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP"
+  "_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp.CQHT"
+  "TP_TYPE\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 "
+  "\001(\003\022\017\n\007user_id\030\007 \001(\003\"\313\001\n\024GroupFileUpload"
   "Event\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\t"
   "post_type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013"
-  "notice_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\017"
-  "\n\007user_id\030\005 \001(\003\022!\n\004file\030\006 \001(\0132\023.cqhttp.O"
-  "fflineFile\"\226\001\n\022ClientChangedEvent\022&\n\tpos"
-  "t_type\030\001 \001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013not"
-  "ice_type\030\002 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\036\n\006c"
-  "lient\030\003 \001(\0132\016.cqhttp.Device\022\016\n\006online\030\004 "
-  "\001(\010\"\351\001\n\026EssenceMsgChangedEvent\022\014\n\004time\030\001"
-  " \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\016"
-  "2\023.cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030\004 \001"
-  "(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010sub_type\030\005 \001("
-  "\t\022\020\n\010group_id\030\006 \001(\003\022\021\n\tsender_id\030\007 \001(\003\022\023"
-  "\n\013operator_id\030\010 \001(\003\022\022\n\nmessage_id\030\t \001(\005\""
-  "\271\001\n\025FriendAddRequestEvent\022\014\n\004time\030\001 \001(\003\022"
-  "\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cq"
-  "http.CQHTTP_TYPE\022)\n\014request_type\030\004 \001(\0162\023"
-  ".cqhttp.CQHTTP_TYPE\022\017\n\007user_id\030\005 \001(\003\022\017\n\007"
-  "comment\030\006 \001(\t\022\014\n\004flag\030\007 \001(\t\"\334\001\n\024GroupAdd"
-  "RequestEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 "
+  "notice_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\020"
+  "\n\010group_id\030\005 \001(\003\022\017\n\007user_id\030\006 \001(\003\022\037\n\004fil"
+  "e\030\007 \001(\0132\021.cqhttp.GroupFile\"\334\001\n\rGroupBanE"
+  "vent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tp"
+  "ost_type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013n"
+  "otice_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n"
+  "\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\023\n\013ope"
+  "rator_id\030\007 \001(\003\022\017\n\007user_id\030\010 \001(\003\022\020\n\010durat"
+  "ion\030\t \001(\003\"\222\001\n\016FriendAddEvent\022\014\n\004time\030\001 \001"
+  "(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023"
+  ".cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030\004 \001(\016"
+  "2\023.cqhttp.CQHTTP_TYPE\022\017\n\007user_id\030\005 \001(\003\"\221"
+  "\002\n\013NotifyEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030"
+  "\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP"
+  "_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp.CQHT"
+  "TP_TYPE\022%\n\010sub_type\030\005 \001(\0162\023.cqhttp.CQHTT"
+  "P_TYPE\022\021\n\tsender_id\030\006 \001(\003\022\017\n\007user_id\030\007 \001"
+  "(\003\022\021\n\ttarget_id\030\010 \001(\003\022\020\n\010group_id\030\t \001(\003\022"
+  "\022\n\nhonor_type\030\n \001(\t\022\r\n\005title\030\013 \001(\t\"\317\001\n\025G"
+  "roupCardChangedEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007se"
+  "lf_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp."
+  "CQHTTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhtt"
+  "p.CQHTTP_TYPE\022\020\n\010group_id\030\005 \001(\003\022\017\n\007user_"
+  "id\030\006 \001(\003\022\020\n\010card_new\030\007 \001(\t\022\020\n\010card_old\030\010"
+  " \001(\t\"\277\001\n\030ReceviedOfflineFileEvent\022\014\n\004tim"
+  "e\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 "
+  "\001(\0162\023.cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030"
+  "\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\017\n\007user_id\030\005 "
+  "\001(\003\022!\n\004file\030\006 \001(\0132\023.cqhttp.OfflineFile\"\226"
+  "\001\n\022ClientChangedEvent\022&\n\tpost_type\030\001 \001(\016"
+  "2\023.cqhttp.CQHTTP_TYPE\022(\n\013notice_type\030\002 \001"
+  "(\0162\023.cqhttp.CQHTTP_TYPE\022\036\n\006client\030\003 \001(\0132"
+  "\016.cqhttp.Device\022\016\n\006online\030\004 \001(\010\"\351\001\n\026Esse"
+  "nceMsgChangedEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self"
+  "_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQ"
+  "HTTP_TYPE\022(\n\013notice_type\030\004 \001(\0162\023.cqhttp."
+  "CQHTTP_TYPE\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_i"
+  "d\030\006 \001(\003\022\021\n\tsender_id\030\007 \001(\003\022\023\n\013operator_i"
+  "d\030\010 \001(\003\022\022\n\nmessage_id\030\t \001(\005\"\271\001\n\025FriendAd"
+  "dRequestEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002"
+  " \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP_"
+  "TYPE\022)\n\014request_type\030\004 \001(\0162\023.cqhttp.CQHT"
+  "TP_TYPE\022\017\n\007user_id\030\005 \001(\003\022\017\n\007comment\030\006 \001("
+  "\t\022\014\n\004flag\030\007 \001(\t\"\334\001\n\024GroupAddRequestEvent"
+  "\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_"
+  "type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022)\n\014reque"
+  "st_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\020\n\010su"
+  "b_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001(\003\022\017\n\007user_i"
+  "d\030\007 \001(\003\022\017\n\007comment\030\010 \001(\t\022\014\n\004flag\030\t \001(\t\"\262"
+  "\001\n\tMetaEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 "
   "\001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP_T"
-  "YPE\022)\n\014request_type\030\004 \001(\0162\023.cqhttp.CQHTT"
-  "P_TYPE\022\020\n\010sub_type\030\005 \001(\t\022\020\n\010group_id\030\006 \001"
-  "(\003\022\017\n\007user_id\030\007 \001(\003\022\017\n\007comment\030\010 \001(\t\022\014\n\004"
-  "flag\030\t \001(\t\"\262\001\n\tMetaEvent\022\014\n\004time\030\001 \001(\003\022\017"
-  "\n\007self_id\030\002 \001(\003\022&\n\tpost_type\030\003 \001(\0162\023.cqh"
-  "ttp.CQHTTP_TYPE\022,\n\017meta_event_type\030\004 \001(\016"
-  "2\023.cqhttp.CQHTTP_TYPE\022\036\n\006status\030\005 \001(\0132\016."
-  "cqhttp.Status\022\020\n\010interval\030\006 \001(\003\"\336\001\n\016Life"
-  "cycleEvent\022\014\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001("
-  "\003\022&\n\tpost_type\030\003 \001(\0162\023.cqhttp.CQHTTP_TYP"
-  "E\022,\n\017meta_event_type\030\004 \001(\0162\023.cqhttp.CQHT"
-  "TP_TYPE\022\036\n\006status\030\005 \001(\0132\016.cqhttp.Status\022"
-  "\020\n\010interval\030\006 \001(\003\022%\n\010sub_type\030\007 \001(\0162\023.cq"
-  "http.CQHTTP_TYPEb\006proto3"
+  "YPE\022,\n\017meta_event_type\030\004 \001(\0162\023.cqhttp.CQ"
+  "HTTP_TYPE\022\036\n\006status\030\005 \001(\0132\016.cqhttp.Statu"
+  "s\022\020\n\010interval\030\006 \001(\003\"\336\001\n\016LifecycleEvent\022\014"
+  "\n\004time\030\001 \001(\003\022\017\n\007self_id\030\002 \001(\003\022&\n\tpost_ty"
+  "pe\030\003 \001(\0162\023.cqhttp.CQHTTP_TYPE\022,\n\017meta_ev"
+  "ent_type\030\004 \001(\0162\023.cqhttp.CQHTTP_TYPE\022\036\n\006s"
+  "tatus\030\005 \001(\0132\016.cqhttp.Status\022\020\n\010interval\030"
+  "\006 \001(\003\022%\n\010sub_type\030\007 \001(\0162\023.cqhttp.CQHTTP_"
+  "TYPEb\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_cqhttp_5fevent_2eproto_deps[1] = {
   &::descriptor_table_cqhttp_5fbase_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_cqhttp_5fevent_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_cqhttp_5fevent_2eproto = {
-    false, false, 4184, descriptor_table_protodef_cqhttp_5fevent_2eproto,
+    false, false, 4412, descriptor_table_protodef_cqhttp_5fevent_2eproto,
     "cqhttp_event.proto",
-    &descriptor_table_cqhttp_5fevent_2eproto_once, descriptor_table_cqhttp_5fevent_2eproto_deps, 1, 19,
+    &descriptor_table_cqhttp_5fevent_2eproto_once, descriptor_table_cqhttp_5fevent_2eproto_deps, 1, 20,
     schemas, file_default_instances, TableStruct_cqhttp_5fevent_2eproto::offsets,
     file_level_metadata_cqhttp_5fevent_2eproto, file_level_enum_descriptors_cqhttp_5fevent_2eproto,
     file_level_service_descriptors_cqhttp_5fevent_2eproto,
@@ -840,6 +876,304 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_cqhttp_5
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_cqhttp_5fevent_2eproto(&descriptor_table_cqhttp_5fevent_2eproto);
 namespace cqhttp {
+
+// ===================================================================
+
+class BaseEvent::_Internal {
+ public:
+};
+
+BaseEvent::BaseEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
+  // @@protoc_insertion_point(arena_constructor:cqhttp.BaseEvent)
+}
+BaseEvent::BaseEvent(const BaseEvent& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BaseEvent* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.post_type_){}
+    , decltype(_impl_.message_type_){}
+    , decltype(_impl_.notice_type_){}
+    , decltype(_impl_.request_type_){}
+    , decltype(_impl_.meta_event_type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&_impl_.post_type_, &from._impl_.post_type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.meta_event_type_) -
+    reinterpret_cast<char*>(&_impl_.post_type_)) + sizeof(_impl_.meta_event_type_));
+  // @@protoc_insertion_point(copy_constructor:cqhttp.BaseEvent)
+}
+
+inline void BaseEvent::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.post_type_){0}
+    , decltype(_impl_.message_type_){0}
+    , decltype(_impl_.notice_type_){0}
+    , decltype(_impl_.request_type_){0}
+    , decltype(_impl_.meta_event_type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+}
+
+BaseEvent::~BaseEvent() {
+  // @@protoc_insertion_point(destructor:cqhttp.BaseEvent)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
+  SharedDtor();
+}
+
+inline void BaseEvent::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+}
+
+void BaseEvent::SetCachedSize(int size) const {
+  _impl_._cached_size_.Set(size);
+}
+
+void BaseEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.BaseEvent)
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&_impl_.post_type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.meta_event_type_) -
+      reinterpret_cast<char*>(&_impl_.post_type_)) + sizeof(_impl_.meta_event_type_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* BaseEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
+    switch (tag >> 3) {
+      // .cqhttp.CQHTTP_TYPE post_type = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_post_type(static_cast<::cqhttp::CQHTTP_TYPE>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // .cqhttp.CQHTTP_TYPE message_type = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_message_type(static_cast<::cqhttp::CQHTTP_TYPE>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // .cqhttp.CQHTTP_TYPE notice_type = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_notice_type(static_cast<::cqhttp::CQHTTP_TYPE>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // .cqhttp.CQHTTP_TYPE request_type = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_request_type(static_cast<::cqhttp::CQHTTP_TYPE>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      // .cqhttp.CQHTTP_TYPE meta_event_type = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_meta_event_type(static_cast<::cqhttp::CQHTTP_TYPE>(val));
+        } else
+          goto handle_unusual;
+        continue;
+      default:
+        goto handle_unusual;
+    }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
+  }  // while
+message_done:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto message_done;
+#undef CHK_
+}
+
+uint8_t* BaseEvent::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.BaseEvent)
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .cqhttp.CQHTTP_TYPE post_type = 1;
+  if (this->_internal_post_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_post_type(), target);
+  }
+
+  // .cqhttp.CQHTTP_TYPE message_type = 2;
+  if (this->_internal_message_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_message_type(), target);
+  }
+
+  // .cqhttp.CQHTTP_TYPE notice_type = 3;
+  if (this->_internal_notice_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      3, this->_internal_notice_type(), target);
+  }
+
+  // .cqhttp.CQHTTP_TYPE request_type = 4;
+  if (this->_internal_request_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_request_type(), target);
+  }
+
+  // .cqhttp.CQHTTP_TYPE meta_event_type = 5;
+  if (this->_internal_meta_event_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      5, this->_internal_meta_event_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.BaseEvent)
+  return target;
+}
+
+size_t BaseEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.BaseEvent)
+  size_t total_size = 0;
+
+  uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .cqhttp.CQHTTP_TYPE post_type = 1;
+  if (this->_internal_post_type() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_post_type());
+  }
+
+  // .cqhttp.CQHTTP_TYPE message_type = 2;
+  if (this->_internal_message_type() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_message_type());
+  }
+
+  // .cqhttp.CQHTTP_TYPE notice_type = 3;
+  if (this->_internal_notice_type() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_notice_type());
+  }
+
+  // .cqhttp.CQHTTP_TYPE request_type = 4;
+  if (this->_internal_request_type() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_request_type());
+  }
+
+  // .cqhttp.CQHTTP_TYPE meta_event_type = 5;
+  if (this->_internal_meta_event_type() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_meta_event_type());
+  }
+
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+}
+
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BaseEvent::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BaseEvent::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BaseEvent::GetClassData() const { return &_class_data_; }
+
+
+void BaseEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BaseEvent*>(&to_msg);
+  auto& from = static_cast<const BaseEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.BaseEvent)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from._internal_post_type() != 0) {
+    _this->_internal_set_post_type(from._internal_post_type());
+  }
+  if (from._internal_message_type() != 0) {
+    _this->_internal_set_message_type(from._internal_message_type());
+  }
+  if (from._internal_notice_type() != 0) {
+    _this->_internal_set_notice_type(from._internal_notice_type());
+  }
+  if (from._internal_request_type() != 0) {
+    _this->_internal_set_request_type(from._internal_request_type());
+  }
+  if (from._internal_meta_event_type() != 0) {
+    _this->_internal_set_meta_event_type(from._internal_meta_event_type());
+  }
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void BaseEvent::CopyFrom(const BaseEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.BaseEvent)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool BaseEvent::IsInitialized() const {
+  return true;
+}
+
+void BaseEvent::InternalSwap(BaseEvent* other) {
+  using std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(BaseEvent, _impl_.meta_event_type_)
+      + sizeof(BaseEvent::_impl_.meta_event_type_)
+      - PROTOBUF_FIELD_OFFSET(BaseEvent, _impl_.post_type_)>(
+          reinterpret_cast<char*>(&_impl_.post_type_),
+          reinterpret_cast<char*>(&other->_impl_.post_type_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata BaseEvent::GetMetadata() const {
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
+      file_level_metadata_cqhttp_5fevent_2eproto[0]);
+}
 
 // ===================================================================
 
@@ -1375,7 +1709,7 @@ void PrivateMessageEvent::InternalSwap(PrivateMessageEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata PrivateMessageEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[0]);
+      file_level_metadata_cqhttp_5fevent_2eproto[1]);
 }
 
 // ===================================================================
@@ -1959,7 +2293,7 @@ void GroupMessageEvent::InternalSwap(GroupMessageEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupMessageEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[1]);
+      file_level_metadata_cqhttp_5fevent_2eproto[2]);
 }
 
 // ===================================================================
@@ -2272,7 +2606,7 @@ void FriendRecallEvent::InternalSwap(FriendRecallEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FriendRecallEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[2]);
+      file_level_metadata_cqhttp_5fevent_2eproto[3]);
 }
 
 // ===================================================================
@@ -2633,7 +2967,7 @@ void GroupRecallEvent::InternalSwap(GroupRecallEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupRecallEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[3]);
+      file_level_metadata_cqhttp_5fevent_2eproto[4]);
 }
 
 // ===================================================================
@@ -3022,7 +3356,7 @@ void GroupIncreaseEvent::InternalSwap(GroupIncreaseEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupIncreaseEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[4]);
+      file_level_metadata_cqhttp_5fevent_2eproto[5]);
 }
 
 // ===================================================================
@@ -3411,7 +3745,7 @@ void GroupDecreaseEvent::InternalSwap(GroupDecreaseEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupDecreaseEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[5]);
+      file_level_metadata_cqhttp_5fevent_2eproto[6]);
 }
 
 // ===================================================================
@@ -3776,7 +4110,7 @@ void GroupAdminChangeEvent::InternalSwap(GroupAdminChangeEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupAdminChangeEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[6]);
+      file_level_metadata_cqhttp_5fevent_2eproto[7]);
 }
 
 // ===================================================================
@@ -4136,7 +4470,7 @@ void GroupFileUploadEvent::InternalSwap(GroupFileUploadEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupFileUploadEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[7]);
+      file_level_metadata_cqhttp_5fevent_2eproto[8]);
 }
 
 // ===================================================================
@@ -4549,24 +4883,24 @@ void GroupBanEvent::InternalSwap(GroupBanEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupBanEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[8]);
+      file_level_metadata_cqhttp_5fevent_2eproto[9]);
 }
 
 // ===================================================================
 
-class FriednAddEvent::_Internal {
+class FriendAddEvent::_Internal {
  public:
 };
 
-FriednAddEvent::FriednAddEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+FriendAddEvent::FriendAddEvent(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.FriednAddEvent)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.FriendAddEvent)
 }
-FriednAddEvent::FriednAddEvent(const FriednAddEvent& from)
+FriendAddEvent::FriendAddEvent(const FriendAddEvent& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  FriednAddEvent* const _this = this; (void)_this;
+  FriendAddEvent* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.time_){}
     , decltype(_impl_.self_id_){}
@@ -4579,10 +4913,10 @@ FriednAddEvent::FriednAddEvent(const FriednAddEvent& from)
   ::memcpy(&_impl_.time_, &from._impl_.time_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.user_id_) -
     reinterpret_cast<char*>(&_impl_.time_)) + sizeof(_impl_.user_id_));
-  // @@protoc_insertion_point(copy_constructor:cqhttp.FriednAddEvent)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.FriendAddEvent)
 }
 
-inline void FriednAddEvent::SharedCtor(
+inline void FriendAddEvent::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -4596,8 +4930,8 @@ inline void FriednAddEvent::SharedCtor(
   };
 }
 
-FriednAddEvent::~FriednAddEvent() {
-  // @@protoc_insertion_point(destructor:cqhttp.FriednAddEvent)
+FriendAddEvent::~FriendAddEvent() {
+  // @@protoc_insertion_point(destructor:cqhttp.FriendAddEvent)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4605,16 +4939,16 @@ FriednAddEvent::~FriednAddEvent() {
   SharedDtor();
 }
 
-inline void FriednAddEvent::SharedDtor() {
+inline void FriendAddEvent::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void FriednAddEvent::SetCachedSize(int size) const {
+void FriendAddEvent::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void FriednAddEvent::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.FriednAddEvent)
+void FriendAddEvent::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.FriendAddEvent)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4625,7 +4959,7 @@ void FriednAddEvent::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FriednAddEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* FriendAddEvent::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -4696,9 +5030,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* FriednAddEvent::_InternalSerialize(
+uint8_t* FriendAddEvent::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.FriednAddEvent)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.FriendAddEvent)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4738,12 +5072,12 @@ uint8_t* FriednAddEvent::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.FriednAddEvent)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.FriendAddEvent)
   return target;
 }
 
-size_t FriednAddEvent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.FriednAddEvent)
+size_t FriendAddEvent::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.FriendAddEvent)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4780,17 +5114,17 @@ size_t FriednAddEvent::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FriednAddEvent::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FriendAddEvent::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    FriednAddEvent::MergeImpl
+    FriendAddEvent::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FriednAddEvent::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FriendAddEvent::GetClassData() const { return &_class_data_; }
 
 
-void FriednAddEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<FriednAddEvent*>(&to_msg);
-  auto& from = static_cast<const FriednAddEvent&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.FriednAddEvent)
+void FriendAddEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FriendAddEvent*>(&to_msg);
+  auto& from = static_cast<const FriendAddEvent&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.FriendAddEvent)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4813,32 +5147,32 @@ void FriednAddEvent::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const :
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void FriednAddEvent::CopyFrom(const FriednAddEvent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.FriednAddEvent)
+void FriendAddEvent::CopyFrom(const FriendAddEvent& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.FriendAddEvent)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FriednAddEvent::IsInitialized() const {
+bool FriendAddEvent::IsInitialized() const {
   return true;
 }
 
-void FriednAddEvent::InternalSwap(FriednAddEvent* other) {
+void FriendAddEvent::InternalSwap(FriendAddEvent* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FriednAddEvent, _impl_.user_id_)
-      + sizeof(FriednAddEvent::_impl_.user_id_)
-      - PROTOBUF_FIELD_OFFSET(FriednAddEvent, _impl_.time_)>(
+      PROTOBUF_FIELD_OFFSET(FriendAddEvent, _impl_.user_id_)
+      + sizeof(FriendAddEvent::_impl_.user_id_)
+      - PROTOBUF_FIELD_OFFSET(FriendAddEvent, _impl_.time_)>(
           reinterpret_cast<char*>(&_impl_.time_),
           reinterpret_cast<char*>(&other->_impl_.time_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata FriednAddEvent::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FriendAddEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[9]);
+      file_level_metadata_cqhttp_5fevent_2eproto[10]);
 }
 
 // ===================================================================
@@ -5328,7 +5662,7 @@ void NotifyEvent::InternalSwap(NotifyEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata NotifyEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[10]);
+      file_level_metadata_cqhttp_5fevent_2eproto[11]);
 }
 
 // ===================================================================
@@ -5743,7 +6077,7 @@ void GroupCardChangedEvent::InternalSwap(GroupCardChangedEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupCardChangedEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[11]);
+      file_level_metadata_cqhttp_5fevent_2eproto[12]);
 }
 
 // ===================================================================
@@ -6079,7 +6413,7 @@ void ReceviedOfflineFileEvent::InternalSwap(ReceviedOfflineFileEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ReceviedOfflineFileEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[12]);
+      file_level_metadata_cqhttp_5fevent_2eproto[13]);
 }
 
 // ===================================================================
@@ -6367,7 +6701,7 @@ void ClientChangedEvent::InternalSwap(ClientChangedEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata ClientChangedEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[13]);
+      file_level_metadata_cqhttp_5fevent_2eproto[14]);
 }
 
 // ===================================================================
@@ -6780,7 +7114,7 @@ void EssenceMsgChangedEvent::InternalSwap(EssenceMsgChangedEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata EssenceMsgChangedEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[14]);
+      file_level_metadata_cqhttp_5fevent_2eproto[15]);
 }
 
 // ===================================================================
@@ -7171,7 +7505,7 @@ void FriendAddRequestEvent::InternalSwap(FriendAddRequestEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata FriendAddRequestEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[15]);
+      file_level_metadata_cqhttp_5fevent_2eproto[16]);
 }
 
 // ===================================================================
@@ -7636,7 +7970,7 @@ void GroupAddRequestEvent::InternalSwap(GroupAddRequestEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata GroupAddRequestEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[16]);
+      file_level_metadata_cqhttp_5fevent_2eproto[17]);
 }
 
 // ===================================================================
@@ -7972,7 +8306,7 @@ void MetaEvent::InternalSwap(MetaEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata MetaEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[17]);
+      file_level_metadata_cqhttp_5fevent_2eproto[18]);
 }
 
 // ===================================================================
@@ -8335,12 +8669,16 @@ void LifecycleEvent::InternalSwap(LifecycleEvent* other) {
 ::PROTOBUF_NAMESPACE_ID::Metadata LifecycleEvent::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fevent_2eproto_getter, &descriptor_table_cqhttp_5fevent_2eproto_once,
-      file_level_metadata_cqhttp_5fevent_2eproto[18]);
+      file_level_metadata_cqhttp_5fevent_2eproto[19]);
 }
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace cqhttp
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::cqhttp::BaseEvent*
+Arena::CreateMaybeMessage< ::cqhttp::BaseEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::BaseEvent >(arena);
+}
 template<> PROTOBUF_NOINLINE ::cqhttp::PrivateMessageEvent*
 Arena::CreateMaybeMessage< ::cqhttp::PrivateMessageEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::cqhttp::PrivateMessageEvent >(arena);
@@ -8377,9 +8715,9 @@ template<> PROTOBUF_NOINLINE ::cqhttp::GroupBanEvent*
 Arena::CreateMaybeMessage< ::cqhttp::GroupBanEvent >(Arena* arena) {
   return Arena::CreateMessageInternal< ::cqhttp::GroupBanEvent >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::FriednAddEvent*
-Arena::CreateMaybeMessage< ::cqhttp::FriednAddEvent >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::FriednAddEvent >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::FriendAddEvent*
+Arena::CreateMaybeMessage< ::cqhttp::FriendAddEvent >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::FriendAddEvent >(arena);
 }
 template<> PROTOBUF_NOINLINE ::cqhttp::NotifyEvent*
 Arena::CreateMaybeMessage< ::cqhttp::NotifyEvent >(Arena* arena) {

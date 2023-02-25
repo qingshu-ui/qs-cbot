@@ -5,7 +5,7 @@ include(CTest)
 enable_testing()
 
 set(CMAKE_CXX_STANDARD 17)
-file(GLOB_RECURSE SOURCES src/*.cpp src/*.h)
+file(GLOB_RECURSE SOURCES src/*.cpp src/*.h pbf/built/*.cc pbf/built/*.h)
 
 add_executable(cq-websocket-server main.cpp ${SOURCES})
 

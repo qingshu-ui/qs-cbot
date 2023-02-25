@@ -150,6 +150,100 @@ inline bool CQHTTP_TYPE_Parse(
   return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<CQHTTP_TYPE>(
     CQHTTP_TYPE_descriptor(), name, value);
 }
+enum Action : int {
+  send_private_msg = 0,
+  send_group_msg = 1,
+  send_group_forward_msg = 2,
+  send_msg = 3,
+  delete_msg = 4,
+  get_msg = 5,
+  get_forward_msg = 6,
+  get_image = 7,
+  mark_msg_as_read = 8,
+  set_group_kick = 9,
+  set_group_ban = 10,
+  set_group_anonymous_ban = 11,
+  set_group_whole_ban = 12,
+  set_group_admin = 13,
+  set_group_anonymous = 14,
+  set_group_card = 15,
+  set_group_name = 16,
+  set_group_leave = 17,
+  set_group_special_title = 18,
+  send_group_sign = 19,
+  set_friend_add_request = 20,
+  set_group_add_request = 21,
+  get_login_info = 22,
+  qidian_get_account_info = 23,
+  set_qq_profile = 24,
+  get_stranger_info = 25,
+  get_friend_list = 26,
+  get_unidirectional_friend_list = 27,
+  delete_friend = 28,
+  get_group_info = 29,
+  get_group_list = 30,
+  get_group_member_info = 31,
+  get_group_member_list = 32,
+  get_group_honor_info = 33,
+  get_cookies = 34,
+  get_csrf_token = 35,
+  get_credentials = 36,
+  get_record = 37,
+  can_send_image = 38,
+  can_send_record = 39,
+  get_version_info = 40,
+  set_restart = 41,
+  clean_cache = 42,
+  set_group_portrait = 43,
+  ocr_image = 44,
+  get_group_system_msg = 45,
+  upload_private_file = 46,
+  upload_group_file = 47,
+  get_group_file_system_info = 48,
+  get_group_root_files = 49,
+  get_group_files_by_folder = 50,
+  create_group_file_folder = 51,
+  delete_group_folder = 52,
+  delete_group_file = 53,
+  get_group_file_url = 54,
+  get_status = 55,
+  get_group_at_all_remain = 56,
+  _send_group_notice = 57,
+  _get_group_notice = 58,
+  reload_event_filter = 59,
+  download_file = 60,
+  get_online_clients = 61,
+  get_group_msg_history = 62,
+  set_essence_msg = 63,
+  delete_essence_msg = 64,
+  get_essence_msg_list = 65,
+  check_url_safely = 66,
+  _get_model_show = 67,
+  _set_model_show = 68,
+  delete_unidirectional_friend = 69,
+  send_private_forward_msg = 70,
+  Action_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  Action_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool Action_IsValid(int value);
+constexpr Action Action_MIN = send_private_msg;
+constexpr Action Action_MAX = send_private_forward_msg;
+constexpr int Action_ARRAYSIZE = Action_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Action_descriptor();
+template<typename T>
+inline const std::string& Action_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, Action>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function Action_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    Action_descriptor(), enum_t_value);
+}
+inline bool Action_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Action* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Action>(
+    Action_descriptor(), name, value);
+}
 // ===================================================================
 
 class Sender final :
@@ -4606,6 +4700,11 @@ template <> struct is_proto_enum< ::cqhttp::CQHTTP_TYPE> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::cqhttp::CQHTTP_TYPE>() {
   return ::cqhttp::CQHTTP_TYPE_descriptor();
+}
+template <> struct is_proto_enum< ::cqhttp::Action> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::cqhttp::Action>() {
+  return ::cqhttp::Action_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE
