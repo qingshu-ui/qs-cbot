@@ -151,51 +151,51 @@ struct SendGroupForwardMsgRespDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendGroupForwardMsgRespDefaultTypeInternal _SendGroupForwardMsgResp_default_instance_;
-PROTOBUF_CONSTEXPR SendMessage_Params::SendMessage_Params(
+PROTOBUF_CONSTEXPR SendMsg_Params::SendMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.message_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+    /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.user_id_)*/int64_t{0}
   , /*decltype(_impl_.group_id_)*/int64_t{0}
+  , /*decltype(_impl_.message_type_)*/0
   , /*decltype(_impl_.auto_escape_)*/false
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct SendMessage_ParamsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SendMessage_ParamsDefaultTypeInternal()
+struct SendMsg_ParamsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SendMsg_ParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SendMessage_ParamsDefaultTypeInternal() {}
+  ~SendMsg_ParamsDefaultTypeInternal() {}
   union {
-    SendMessage_Params _instance;
+    SendMsg_Params _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMessage_ParamsDefaultTypeInternal _SendMessage_Params_default_instance_;
-PROTOBUF_CONSTEXPR SendMessage::SendMessage(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMsg_ParamsDefaultTypeInternal _SendMsg_Params_default_instance_;
+PROTOBUF_CONSTEXPR SendMsg::SendMsg(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
   , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct SendMessageDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SendMessageDefaultTypeInternal()
+struct SendMsgDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SendMsgDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SendMessageDefaultTypeInternal() {}
+  ~SendMsgDefaultTypeInternal() {}
   union {
-    SendMessage _instance;
+    SendMsg _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMessageDefaultTypeInternal _SendMessage_default_instance_;
-PROTOBUF_CONSTEXPR SendMessageResp::SendMessageResp(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMsgDefaultTypeInternal _SendMsg_default_instance_;
+PROTOBUF_CONSTEXPR SendMsgResp::SendMsgResp(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_id_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct SendMessageRespDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR SendMessageRespDefaultTypeInternal()
+struct SendMsgRespDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SendMsgRespDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~SendMessageRespDefaultTypeInternal() {}
+  ~SendMsgRespDefaultTypeInternal() {}
   union {
-    SendMessageResp _instance;
+    SendMsgResp _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMessageRespDefaultTypeInternal _SendMessageResp_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SendMsgRespDefaultTypeInternal _SendMsgResp_default_instance_;
 PROTOBUF_CONSTEXPR DeleteMsg_Params::DeleteMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_id_)*/0
@@ -2854,32 +2854,32 @@ const uint32_t TableStruct_cqhttp_5fapi_2eproto::offsets[] PROTOBUF_SECTION_VARI
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupForwardMsgResp, _impl_.message_id_),
   PROTOBUF_FIELD_OFFSET(::cqhttp::SendGroupForwardMsgResp, _impl_.forward_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage_Params, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg_Params, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage_Params, _impl_.message_type_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage_Params, _impl_.user_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage_Params, _impl_.group_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage_Params, _impl_.message_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage_Params, _impl_.auto_escape_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg_Params, _impl_.message_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg_Params, _impl_.user_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg_Params, _impl_.group_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg_Params, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg_Params, _impl_.auto_escape_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage, _impl_.action_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage, _impl_.params_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessage, _impl_.echo_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg, _impl_.action_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg, _impl_.params_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsg, _impl_.echo_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessageResp, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsgResp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMessageResp, _impl_.message_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::SendMsgResp, _impl_.message_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::DeleteMsg_Params, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -4404,9 +4404,9 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 51, -1, -1, sizeof(::cqhttp::SendGroupForwardMsg_Params)},
   { 59, -1, -1, sizeof(::cqhttp::SendGroupForwardMsg)},
   { 68, -1, -1, sizeof(::cqhttp::SendGroupForwardMsgResp)},
-  { 76, -1, -1, sizeof(::cqhttp::SendMessage_Params)},
-  { 87, -1, -1, sizeof(::cqhttp::SendMessage)},
-  { 96, -1, -1, sizeof(::cqhttp::SendMessageResp)},
+  { 76, -1, -1, sizeof(::cqhttp::SendMsg_Params)},
+  { 87, -1, -1, sizeof(::cqhttp::SendMsg)},
+  { 96, -1, -1, sizeof(::cqhttp::SendMsgResp)},
   { 103, -1, -1, sizeof(::cqhttp::DeleteMsg_Params)},
   { 110, -1, -1, sizeof(::cqhttp::DeleteMsg)},
   { 118, -1, -1, sizeof(::cqhttp::getMsg_Params)},
@@ -4596,9 +4596,9 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::cqhttp::_SendGroupForwardMsg_Params_default_instance_._instance,
   &::cqhttp::_SendGroupForwardMsg_default_instance_._instance,
   &::cqhttp::_SendGroupForwardMsgResp_default_instance_._instance,
-  &::cqhttp::_SendMessage_Params_default_instance_._instance,
-  &::cqhttp::_SendMessage_default_instance_._instance,
-  &::cqhttp::_SendMessageResp_default_instance_._instance,
+  &::cqhttp::_SendMsg_Params_default_instance_._instance,
+  &::cqhttp::_SendMsg_default_instance_._instance,
+  &::cqhttp::_SendMsgResp_default_instance_._instance,
   &::cqhttp::_DeleteMsg_Params_default_instance_._instance,
   &::cqhttp::_DeleteMsg_default_instance_._instance,
   &::cqhttp::_getMsg_Params_default_instance_._instance,
@@ -4797,387 +4797,387 @@ const char descriptor_table_protodef_cqhttp_5fapi_2eproto[] PROTOBUF_SECTION_VAR
   "rams\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\020\n\010group_id"
   "\030\001 \001(\003\022\017\n\007message\030\002 \001(\t\"A\n\027SendGroupForw"
   "ardMsgResp\022\022\n\nmessage_id\030\001 \001(\003\022\022\n\nforwar"
-  "d_id\030\002 \001(\t\"\320\001\n\013SendMessage\022\036\n\006action\030\001 \001"
-  "(\0162\016.cqhttp.Action\022*\n\006params\030\002 \001(\0132\032.cqh"
-  "ttp.SendMessage.Params\022\014\n\004echo\030\003 \001(\t\032g\n\006"
-  "Params\022\024\n\014message_type\030\001 \001(\t\022\017\n\007user_id\030"
-  "\002 \001(\003\022\020\n\010group_id\030\003 \001(\003\022\017\n\007message\030\004 \001(\t"
-  "\022\023\n\013auto_escape\030\005 \001(\010\"%\n\017SendMessageResp"
-  "\022\022\n\nmessage_id\030\002 \001(\005\"s\n\tDeleteMsg\022\036\n\006act"
-  "ion\030\001 \001(\0162\016.cqhttp.Action\022(\n\006params\030\002 \001("
-  "\0132\030.cqhttp.DeleteMsg.Params\032\034\n\006Params\022\022\n"
-  "\nmessage_id\030\001 \001(\005\"{\n\006getMsg\022\036\n\006action\030\001 "
-  "\001(\0162\016.cqhttp.Action\022%\n\006params\030\002 \001(\0132\025.cq"
-  "http.getMsg.Params\022\014\n\004echo\030\003 \001(\t\032\034\n\006Para"
-  "ms\022\022\n\nmessage_id\030\001 \001(\005\"\274\001\n\ngetMsgResp\022\r\n"
-  "\005group\030\001 \001(\010\022\020\n\010group_id\030\002 \001(\003\022\022\n\nmessag"
-  "e_id\030\003 \001(\005\022\017\n\007real_id\030\004 \001(\005\022\024\n\014message_t"
-  "ype\030\005 \001(\t\022\036\n\006sender\030\006 \001(\0132\016.cqhttp.Sende"
-  "r\022\014\n\004time\030\007 \001(\005\022\017\n\007message\030\010 \001(\t\022\023\n\013raw_"
-  "message\030\t \001(\t\"\211\001\n\rGetForwardMsg\022\036\n\006actio"
-  "n\030\001 \001(\0162\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132"
-  "\034.cqhttp.GetForwardMsg.Params\022\014\n\004echo\030\003 "
-  "\001(\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\t\"\224\001\n\021Ge"
-  "tForwardMsgResp\0224\n\010messages\030\001 \003(\0132\".cqht"
-  "tp.GetForwardMsgResp.Messages\032I\n\010Message"
-  "s\022\017\n\007content\030\001 \001(\t\022\036\n\006sender\030\002 \001(\0132\016.cqh"
-  "ttp.Sender\022\014\n\004time\030\003 \001(\003\"y\n\010GetImage\022\036\n\006"
-  "action\030\001 \001(\0162\016.cqhttp.Action\022\'\n\006params\030\002"
-  " \001(\0132\027.cqhttp.GetImage.Params\022\014\n\004echo\030\003 "
-  "\001(\t\032\026\n\006Params\022\014\n\004file\030\001 \001(\t\";\n\014GetImageR"
-  "esp\022\014\n\004size\030\001 \001(\005\022\020\n\010filename\030\002 \001(\t\022\013\n\003u"
-  "rl\030\003 \001(\t\"{\n\rMarkMsgAsRead\022\036\n\006action\030\001 \001("
-  "\0162\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132\034.cqht"
-  "tp.MarkMsgAsRead.Params\032\034\n\006Params\022\022\n\nmes"
-  "sage_id\030\001 \001(\005\"\246\001\n\014SetGroupKick\022\036\n\006action"
-  "\030\001 \001(\0162\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033"
-  ".cqhttp.SetGroupKick.Params\032I\n\006Params\022\022\n"
-  "\nmessage_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\032\n\022re"
-  "ject_add_request\030\003 \001(\010\"\230\001\n\013SetGroupBan\022\036"
-  "\n\006action\030\001 \001(\0162\016.cqhttp.Action\022*\n\006params"
-  "\030\002 \001(\0132\032.cqhttp.SetGroupBan.Params\032=\n\006Pa"
-  "rams\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022"
-  "\020\n\010duration\030\003 \001(\005\"\327\001\n\024SetGroupAnonymousB"
-  "an\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0223\n\006pa"
-  "rams\030\002 \001(\0132#.cqhttp.SetGroupAnonymousBan"
-  ".Params\032j\n\006Params\022\020\n\010group_id\030\001 \001(\003\022$\n\ta"
-  "nonymous\030\002 \001(\0132\021.cqhttp.Anonymous\022\026\n\016ano"
-  "nymous_flag\030\003 \001(\t\022\020\n\010duration\030\004 \001(\005\"\217\001\n\020"
-  "SetGroupWholeBan\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
-  "p.Action\022/\n\006params\030\002 \001(\0132\037.cqhttp.SetGro"
-  "upWholeBan.Params\032*\n\006Params\022\020\n\010group_id\030"
-  "\001 \001(\003\022\016\n\006enable\030\002 \001(\010\"\232\001\n\rSetGroupAdmin\022"
-  "\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022,\n\006param"
-  "s\030\002 \001(\0132\034.cqhttp.SetGroupAdmin.Params\032;\n"
-  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001"
-  "(\003\022\016\n\006enable\030\003 \001(\010\"\221\001\n\021SetGroupAnonymous"
-  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0220\n\006para"
-  "ms\030\002 \001(\0132 .cqhttp.SetGroupAnonymous.Para"
-  "ms\032*\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\016\n\006enable"
-  "\030\002 \001(\010\"\226\001\n\014SetGroupCard\022\036\n\006action\030\001 \001(\0162"
-  "\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp"
-  ".SetGroupCard.Params\0329\n\006Params\022\020\n\010group_"
-  "id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\014\n\004card\030\003 \001(\t\""
-  "\213\001\n\014SetGroupName\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
-  "p.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.SetGro"
-  "upName.Params\032.\n\006Params\022\020\n\010group_id\030\001 \001("
-  "\003\022\022\n\ngroup_name\030\002 \001(\t\"\215\001\n\rSetGroupLeave\022"
-  "\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022,\n\006param"
-  "s\030\002 \001(\0132\034.cqhttp.SetGroupLeave.Params\032.\n"
-  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\022\n\nis_dismiss\030"
-  "\002 \001(\010\"\301\001\n\024SetGroupSpecialTitle\022\036\n\006action"
-  "\030\001 \001(\0162\016.cqhttp.Action\0223\n\006params\030\002 \001(\0132#"
-  ".cqhttp.SetGroupSpecialTitle.Params\032T\n\006P"
-  "arams\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003"
-  "\022\025\n\rspecial_title\030\003 \001(\t\022\020\n\010duration\030\004 \001("
-  "\005\"y\n\rSendGroupSign\022\036\n\006action\030\001 \001(\0162\016.cqh"
-  "ttp.Action\022,\n\006params\030\002 \001(\0132\034.cqhttp.Send"
-  "GroupSign.Params\032\032\n\006Params\022\020\n\010group_id\030\001"
-  " \001(\003\"\242\001\n\023SetFriendAddRequest\022\036\n\006action\030\001"
-  " \001(\0162\016.cqhttp.Action\0222\n\006params\030\002 \001(\0132\".c"
-  "qhttp.SetFriendAddRequest.Params\0327\n\006Para"
-  "ms\022\014\n\004flag\030\001 \001(\t\022\017\n\007approve\030\002 \001(\010\022\016\n\006rem"
-  "ark\030\003 \001(\t\"\262\001\n\022SetGroupAddRequest\022\036\n\006acti"
-  "on\030\001 \001(\0162\016.cqhttp.Action\0221\n\006params\030\002 \001(\013"
-  "2!.cqhttp.SetGroupAddRequest.Params\032I\n\006P"
-  "arams\022\014\n\004flag\030\001 \001(\t\022\020\n\010sub_type\030\002 \001(\t\022\017\n"
-  "\007approve\030\003 \001(\010\022\016\n\006reason\030\004 \001(\t\"\226\001\n\014GetLo"
-  "ginInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022"
-  "+\n\006params\030\002 \001(\0132\033.cqhttp.GetLoginInfo.Pa"
-  "rams\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\017\n\007user_id\030"
-  "\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\"5\n\020GetLoginInfoR"
-  "esp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\"D"
-  "\n\024QiDianGetAccountInfo\022\036\n\006action\030\001 \001(\0162\016"
-  ".cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"T\n\030QiDianGe"
-  "tAccountInfoResp\022\021\n\tmaster_id\030\001 \001(\003\022\020\n\010e"
-  "xt_name\030\002 \001(\t\022\023\n\013create_time\030\003 \001(\003\"\277\001\n\014S"
-  "etQQProfile\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
-  "ion\022+\n\006params\030\002 \001(\0132\033.cqhttp.SetQQProfil"
-  "e.Params\032b\n\006Params\022\020\n\010nickname\030\001 \001(\t\022\017\n\007"
-  "company\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007college\030"
-  "\004 \001(\t\022\025\n\rpersonal_note\030\005 \001(\t\"\234\001\n\017GetStra"
-  "ngerInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action"
-  "\022.\n\006params\030\002 \001(\0132\036.cqhttp.GetStrangerInf"
-  "o.Params\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\017\n\007user"
-  "_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"\202\001\n\023GetStran"
-  "gerInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname"
-  "\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022\013\n\003age\030\004 \001(\005\022\013\n\003qid\030"
-  "\005 \001(\t\022\r\n\005level\030\006 \001(\005\022\022\n\nlogin_days\030\007 \001(\005"
-  "\"=\n\rGetFriendList\022\036\n\006action\030\001 \001(\0162\016.cqht"
-  "tp.Action\022\014\n\004echo\030\002 \001(\t\"\203\001\n\021GetFriendLis"
-  "tResp\0221\n\007friends\030\001 \003(\0132 .cqhttp.GetFrien"
-  "dListResp.Friend\032;\n\006Friend\022\017\n\007user_id\030\001 "
-  "\001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006remark\030\003 \001(\t\"H\n"
-  "\030UnidirectionalFriendList\022\036\n\006action\030\001 \001("
-  "\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\230\001\n\034Unid"
-  "irectionalFriendListResp\022;\n\006friend\030\001 \003(\013"
-  "2+.cqhttp.UnidirectionalFriendListResp.F"
-  "riend\032;\n\006Friend\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nick"
-  "name\030\002 \001(\t\022\016\n\006source\030\003 \001(\t\"v\n\014DeleteFrie"
-  "nd\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006pa"
-  "rams\030\002 \001(\0132\033.cqhttp.DeleteFriend.Params\032"
-  "\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\227\001\n\014GetGroupI"
-  "nfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006p"
-  "arams\030\002 \001(\0132\033.cqhttp.GetGroupInfo.Params"
-  "\022\014\n\004echo\030\003 \001(\t\032,\n\006Params\022\020\n\010group_id\030\001 \001"
-  "(\003\022\020\n\010no_cache\030\002 \001(\010\"\254\001\n\020GetGroupInfoRes"
-  "p\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\022"
-  "\022\n\ngroup_memo\030\003 \001(\t\022\031\n\021group_create_time"
-  "\030\004 \001(\r\022\023\n\013group_level\030\005 \001(\r\022\024\n\014member_co"
-  "unt\030\006 \001(\005\022\030\n\020max_member_count\030\007 \001(\005\"\205\001\n\014"
-  "GetGroupList\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
-  "tion\022+\n\006params\030\002 \001(\0132\033.cqhttp.GetGroupLi"
-  "st.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010no_"
-  "cache\030\001 \001(\010\"@\n\020GetGroupListResp\022,\n\ngroup"
-  "_list\030\001 \003(\0132\030.cqhttp.GetGroupInfoResp\"\264\001"
-  "\n\022GetGroupMemberInfo\022\036\n\006action\030\001 \001(\0162\016.c"
-  "qhttp.Action\0221\n\006params\030\002 \001(\0132!.cqhttp.Ge"
-  "tGroupMemberInfo.Params\022\014\n\004echo\030\003 \001(\t\032=\n"
-  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001"
-  "(\003\022\020\n\010no_cache\030\003 \001(\010\"\275\002\n\026GetGroupMemberI"
-  "nfoResp\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001"
-  "(\003\022\020\n\010nickname\030\003 \001(\t\022\014\n\004card\030\004 \001(\t\022\013\n\003se"
-  "x\030\005 \001(\t\022\013\n\003age\030\006 \001(\005\022\014\n\004area\030\007 \001(\t\022\021\n\tjo"
-  "in_time\030\010 \001(\005\022\026\n\016last_sent_time\030\t \001(\005\022\r\n"
-  "\005level\030\n \001(\t\022\014\n\004role\030\013 \001(\t\022\022\n\nunfriendly"
-  "\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\031\n\021title_expire_ti"
-  "me\030\016 \001(\003\022\027\n\017card_changeable\030\017 \001(\010\022\031\n\021shu"
-  "t_up_timestamp\030\020 \001(\003\"\243\001\n\022GetGroupMemberL"
-  "ist\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0221\n\006p"
-  "arams\030\002 \001(\0132!.cqhttp.GetGroupMemberList."
-  "Params\022\014\n\004echo\030\003 \001(\t\032,\n\006Params\022\020\n\010group_"
-  "id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"S\n\026GetGroupMe"
-  "mberListResp\0229\n\021group_member_list\030\001 \003(\0132"
-  "\036.cqhttp.GetGroupMemberInfoResp\"\235\001\n\021GetG"
-  "roupHonorInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.A"
-  "ction\0220\n\006params\030\002 \001(\0132 .cqhttp.GetGroupH"
-  "onorInfo.Params\022\014\n\004echo\030\003 \001(\t\032(\n\006Params\022"
-  "\020\n\010group_id\030\001 \001(\003\022\014\n\004type\030\002 \001(\t\"\231\004\n\025GetG"
-  "roupHonorInfoResp\022\020\n\010group_id\030\001 \001(\003\022B\n\021c"
-  "urrent_talkative\030\002 \001(\0132\'.cqhttp.GetGroup"
-  "HonorInfoResp.Talkative\022\?\n\016talkative_lis"
-  "t\030\003 \003(\0132\'.cqhttp.GetGroupHonorInfoResp.T"
-  "alkative\022\?\n\016performer_list\030\004 \003(\0132\'.cqhtt"
-  "p.GetGroupHonorInfoResp.Talkative\022<\n\013leg"
-  "end_list\030\005 \003(\0132\'.cqhttp.GetGroupHonorInf"
-  "oResp.Talkative\022C\n\022strong_newbie_list\030\006 "
-  "\003(\0132\'.cqhttp.GetGroupHonorInfoResp.Talka"
-  "tive\022=\n\014emotion_list\030\007 \003(\0132\'.cqhttp.GetG"
-  "roupHonorInfoResp.Talkative\032f\n\tTalkative"
-  "\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006a"
-  "vatar\030\003 \001(\t\022\021\n\tday_count\030\004 \001(\005\022\023\n\013descri"
-  "ption\030\005 \001(\t\"\177\n\nGetCoolies\022\036\n\006action\030\001 \001("
-  "\0162\016.cqhttp.Action\022)\n\006params\030\002 \001(\0132\031.cqht"
-  "tp.GetCoolies.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Pa"
-  "rams\022\016\n\006domain\030\001 \001(\t\"!\n\016GetCooliesResp\022\017"
-  "\n\007cookies\030\001 \001(\t\"<\n\014GetCsrfToken\022\036\n\006actio"
-  "n\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"!\n"
-  "\020GetCsrfTokenResp\022\r\n\005token\030\001 \001(\005\"\207\001\n\016Get"
-  "Credentials\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
-  "ion\022-\n\006params\030\002 \001(\0132\035.cqhttp.GetCredenti"
-  "als.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Params\022\016\n\006do"
-  "main\030\001 \001(\t\"9\n\022GetCredentialsResp\022\017\n\007cook"
-  "ies\030\001 \001(\t\022\022\n\ncsrf_token\030\002 \001(\005\"\217\001\n\tGetRec"
-  "ord\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022(\n\006p"
-  "arams\030\002 \001(\0132\030.cqhttp.GetRecord.Params\022\014\n"
-  "\004echo\030\003 \001(\t\032*\n\006Params\022\014\n\004file\030\001 \001(\t\022\022\n\no"
-  "ut_format\030\002 \001(\t\"\035\n\rGetRecordResp\022\014\n\004file"
-  "\030\001 \001(\t\"<\n\014CanSendImage\022\036\n\006action\030\001 \001(\0162\016"
-  ".cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\037\n\020CanSendI"
-  "mageResp\022\013\n\003yes\030\001 \001(\010\"=\n\rCanSendRecord\022\036"
-  "\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002"
-  " \001(\t\" \n\021CanSendRecordResp\022\013\n\003yes\030\001 \001(\010\">"
-  "\n\016GetVersionInfo\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
-  "p.Action\022\014\n\004echo\030\002 \001(\t\"\325\002\n\022GetVersionInf"
-  "oResp\022\020\n\010app_name\030\001 \001(\t\022\023\n\013app_version\030\002"
-  " \001(\t\022\025\n\rapp_full_name\030\003 \001(\t\022\030\n\020protocol_"
-  "version\030\004 \001(\t\022\025\n\rcoolq_edition\030\005 \001(\t\022\027\n\017"
-  "coolq_directory\030\006 \001(\t\022\016\n\006cqhttp\030\007 \001(\010\022\026\n"
-  "\016plugin_version\030\010 \001(\t\022\033\n\023plugin_build_nu"
-  "mber\030\t \001(\005\022\"\n\032plugin_build_configuration"
-  "\030\n \001(\t\022\027\n\017runtime_version\030\013 \001(\t\022\022\n\nrunti"
-  "me_os\030\014 \001(\t\022\017\n\007version\030\r \001(\t\022\020\n\010protocol"
-  "\030\016 \001(\005\"p\n\nSetRestart\022\036\n\006action\030\001 \001(\0162\016.c"
-  "qhttp.Action\022)\n\006params\030\002 \001(\0132\031.cqhttp.Se"
-  "tRestart.Params\032\027\n\006Params\022\r\n\005delay\030\001 \001(\005"
-  "\",\n\nCleanCache\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
-  "Action\"\234\001\n\020SetGroupPortrait\022\036\n\006action\030\001 "
-  "\001(\0162\016.cqhttp.Action\022/\n\006params\030\002 \001(\0132\037.cq"
-  "http.SetGroupPortrait.Params\0327\n\006Params\022\020"
-  "\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022\r\n\005cache\030"
-  "\003 \001(\005\"\206\001\n\rGetWordSlices\022\036\n\006action\030\001 \001(\0162"
-  "\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132\034.cqhttp"
-  ".GetWordSlices.Params\022\014\n\004echo\030\003 \001(\t\032\031\n\006P"
-  "arams\022\017\n\007content\030\001 \001(\t\"#\n\021GetWordSlicesR"
-  "esp\022\016\n\006slices\030\001 \003(\t\"z\n\010OcrImage\022\036\n\006actio"
-  "n\030\001 \001(\0162\016.cqhttp.Action\022\'\n\006params\030\002 \001(\0132"
-  "\027.cqhttp.OcrImage.Params\022\014\n\004echo\030\003 \001(\t\032\027"
-  "\n\006Params\022\r\n\005image\030\001 \001(\t\"\233\001\n\014OcrImageResp"
-  "\0221\n\005texts\030\001 \003(\0132\".cqhttp.OcrImageResp.Te"
-  "xtDetection\022\020\n\010language\030\002 \001(\t\032F\n\rTextDet"
-  "ection\022\014\n\004text\030\001 \001(\t\022\022\n\nconfidence\030\002 \001(\005"
-  "\022\023\n\013coordinates\030\003 \001(\t\"A\n\021GetGroupSystemM"
-  "sg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004ec"
-  "ho\030\002 \001(\t\"\343\003\n\025GetGroupSystemMsgResp\022F\n\020in"
-  "vited_requests\030\001 \003(\0132,.cqhttp.GetGroupSy"
-  "stemMsgResp.InvitedRequest\022@\n\rjoin_reque"
-  "sts\030\002 \003(\0132).cqhttp.GetGroupSystemMsgResp"
-  ".JoinRequest\032\225\001\n\016InvitedRequest\022\022\n\nreque"
-  "st_id\030\001 \001(\003\022\023\n\013invitor_uin\030\002 \001(\003\022\024\n\014invi"
-  "tor_nick\030\003 \001(\t\022\020\n\010group_id\030\004 \001(\003\022\022\n\ngrou"
-  "p_name\030\005 \001(\t\022\017\n\007checked\030\006 \001(\010\022\r\n\005actor\030\007"
-  " \001(\003\032\247\001\n\013JoinRequest\022\022\n\nrequest_id\030\001 \001(\003"
-  "\022\025\n\rrequester_uin\030\002 \001(\003\022\026\n\016requester_nic"
-  "k\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\020\n\010group_id\030\005 \001"
-  "(\003\022\022\n\ngroup_name\030\006 \001(\t\022\017\n\007checked\030\007 \001(\010\022"
-  "\r\n\005actor\030\010 \001(\003\"\234\001\n\021UploadPrivateFile\022\036\n\006"
-  "action\030\001 \001(\0162\016.cqhttp.Action\0220\n\006params\030\002"
-  " \001(\0132 .cqhttp.UploadPrivateFile.Params\0325"
-  "\n\006Params\022\017\n\007user_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022"
-  "\014\n\004name\030\003 \001(\t\"\251\001\n\017UploadGroupFile\022\036\n\006act"
-  "ion\030\001 \001(\0162\016.cqhttp.Action\022.\n\006params\030\002 \001("
-  "\0132\036.cqhttp.UploadGroupFile.Params\032F\n\006Par"
-  "ams\022\020\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022\014\n\004n"
-  "ame\030\003 \001(\t\022\016\n\006folder\030\004 \001(\t\"\231\001\n\026GetGroupFi"
-  "leSystemInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
-  "tion\0225\n\006params\030\002 \001(\0132%.cqhttp.GetGroupFi"
-  "leSystemInfo.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Par"
-  "ams\022\020\n\010group_id\030\001 \001(\003\"n\n\032GetGroupFileSys"
-  "temInfoResp\022\022\n\nfile_count\030\001 \001(\005\022\023\n\013limit"
-  "_count\030\002 \001(\005\022\022\n\nused_space\030\003 \001(\003\022\023\n\013tota"
-  "l_space\030\004 \001(\003\"\217\001\n\021GetGroupRootFiles\022\036\n\006a"
-  "ction\030\001 \001(\0162\016.cqhttp.Action\0220\n\006params\030\002 "
-  "\001(\0132 .cqhttp.GetGroupRootFiles.Params\022\014\n"
-  "\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003\""
-  "U\n\025GetGroupRootFilesResp\022\033\n\005files\030\001 \003(\0132"
-  "\014.cqhttp.File\022\037\n\007folders\030\002 \003(\0132\016.cqhttp."
-  "Folder\"\250\001\n\024getGroupFileByFolder\022\036\n\006actio"
-  "n\030\001 \001(\0162\016.cqhttp.Action\0223\n\006params\030\002 \001(\0132"
-  "#.cqhttp.getGroupFileByFolder.Params\022\014\n\004"
-  "echo\030\003 \001(\t\032-\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\021"
-  "\n\tfolder_id\030\002 \001(\t\"X\n\030getGroupFileByFolde"
-  "rResp\022\033\n\005files\030\001 \003(\0132\014.cqhttp.File\022\037\n\007fo"
-  "lders\030\002 \003(\0132\016.cqhttp.Folder\"\252\001\n\025CreateGr"
-  "oupFileFolder\022\036\n\006action\030\001 \001(\0162\016.cqhttp.A"
-  "ction\0224\n\006params\030\002 \001(\0132$.cqhttp.CreateGro"
-  "upFileFolder.Params\032;\n\006Params\022\020\n\010group_i"
-  "d\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\021\n\tparent_id\030\003 \001(\t"
-  "\"\224\001\n\021DeleteGroupFolder\022\036\n\006action\030\001 \001(\0162\016"
-  ".cqhttp.Action\0220\n\006params\030\002 \001(\0132 .cqhttp."
-  "DeleteGroupFolder.Params\032-\n\006Params\022\020\n\010gr"
-  "oup_id\030\001 \001(\003\022\021\n\tfolder_id\030\002 \001(\t\"\235\001\n\017Dele"
-  "teGroupFile\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
-  "ion\022.\n\006params\030\002 \001(\0132\036.cqhttp.DeleteGroup"
-  "File.Params\032:\n\006Params\022\020\n\010group_id\030\001 \001(\003\022"
-  "\017\n\007file_id\030\002 \001(\t\022\r\n\005busid\030\003 \001(\005\"\253\001\n\017GetG"
-  "roupFileUrl\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
-  "ion\022.\n\006params\030\002 \001(\0132\036.cqhttp.GetGroupFil"
-  "eUrl.Params\022\014\n\004echo\030\003 \001(\t\032:\n\006Params\022\020\n\010g"
-  "roup_id\030\001 \001(\003\022\017\n\007file_id\030\002 \001(\t\022\r\n\005busid\030"
-  "\003 \001(\005\"\"\n\023GetGroupFileUrlResp\022\013\n\003url\030\001 \001("
-  "\t\"9\n\tGetStatus\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
-  "Action\022\014\n\004echo\030\002 \001(\t\"\365\002\n\rGetStatusResp\022\027"
-  "\n\017app_initialized\030\001 \001(\010\022\023\n\013app_enabled\030\002"
-  " \001(\010\022\024\n\014plugins_good\030\003 \001(\010\022\020\n\010app_good\030\004"
-  " \001(\010\022\016\n\006online\030\005 \001(\010\022\014\n\004good\030\006 \001(\010\022.\n\004st"
-  "at\030\007 \001(\0132 .cqhttp.GetStatusResp.Statisti"
-  "cs\032\277\001\n\nStatistics\022\026\n\016PacketReceived\030\001 \001("
-  "\004\022\022\n\nPacketSent\030\002 \001(\004\022\022\n\nPacketLost\030\003 \001("
-  "\r\022\027\n\017MessageReceived\030\004 \001(\004\022\023\n\013MessageSen"
-  "t\030\005 \001(\004\022\027\n\017DisconnectTimes\030\006 \001(\r\022\021\n\tLost"
-  "Times\030\007 \001(\r\022\027\n\017LastMessageTime\030\010 \001(\003\"\223\001\n"
-  "\023GetGroupAtAllRemain\022\036\n\006action\030\001 \001(\0162\016.c"
-  "qhttp.Action\0222\n\006params\030\002 \001(\0132\".cqhttp.Ge"
-  "tGroupAtAllRemain.Params\022\014\n\004echo\030\003 \001(\t\032\032"
-  "\n\006Params\022\020\n\010group_id\030\001 \001(\003\"y\n\027GetGroupAt"
-  "AllRemainResp\022\022\n\ncan_at_all\030\001 \001(\010\022%\n\035rem"
-  "ain_at_all_count_for_group\030\002 \001(\005\022#\n\033rema"
-  "in_at_all_count_for_uin\030\003 \001(\005\"\231\001\n\024Handle"
-  "QuickOperation\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
-  "Action\0223\n\006params\030\002 \001(\0132#.cqhttp.HandleQu"
-  "ickOperation.Params\032,\n\006Params\022\017\n\007content"
-  "\030\001 \001(\t\022\021\n\toperation\030\002 \001(\t\"\235\001\n\017SendGroupN"
-  "otice\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022.\n"
-  "\006params\030\002 \001(\0132\036.cqhttp.SendGroupNotice.P"
-  "arams\032:\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007con"
-  "tent\030\002 \001(\t\022\r\n\005image\030\003 \001(\t\"\211\001\n\016GetGroupNo"
-  "tice\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022-\n\006"
-  "params\030\002 \001(\0132\035.cqhttp.GetGroupNotice.Par"
-  "ams\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_id\030"
-  "\001 \001(\003\"\331\002\n\022GetGroupNoticeResp\0222\n\007notices\030"
-  "\001 \003(\0132!.cqhttp.GetGroupNoticeResp.Notice"
-  "\032\216\002\n\006Notice\022\021\n\tsender_id\030\001 \001(\003\022\024\n\014publis"
-  "h_time\030\002 \001(\003\022@\n\007message\030\003 \001(\0132/.cqhttp.G"
-  "etGroupNoticeResp.Notice.NoticeMessage\032\230"
-  "\001\n\rNoticeMessage\022\014\n\004text\030\001 \001(\t\022E\n\006images"
-  "\030\002 \003(\01325.cqhttp.GetGroupNoticeResp.Notic"
-  "e.NoticeMessage.Image\0322\n\005Image\022\016\n\006height"
-  "\030\001 \001(\t\022\r\n\005width\030\002 \001(\t\022\n\n\002id\030\003 \001(\t\"}\n\021Rel"
-  "oadEventFilter\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
-  "Action\0220\n\006params\030\002 \001(\0132 .cqhttp.ReloadEv"
-  "entFilter.Params\032\026\n\006Params\022\014\n\004file\030\001 \001(\t"
-  "\"\247\001\n\014DownloadFile\022\036\n\006action\030\001 \001(\0162\016.cqht"
-  "tp.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.Downl"
-  "oadFile.Params\022\014\n\004echo\030\003 \001(\t\032<\n\006Params\022\013"
-  "\n\003url\030\001 \001(\t\022\024\n\014thread_count\030\002 \001(\005\022\017\n\007hea"
-  "ders\030\003 \001(\t\" \n\020DownloadFileResp\022\014\n\004file\030\001"
-  " \001(\t\"\215\001\n\020GetOnlineClients\022\036\n\006action\030\001 \001("
+  "d_id\030\002 \001(\t\"\335\001\n\007SendMsg\022\036\n\006action\030\001 \001(\0162\016"
+  ".cqhttp.Action\022&\n\006params\030\002 \001(\0132\026.cqhttp."
+  "SendMsg.Params\022\014\n\004echo\030\003 \001(\t\032|\n\006Params\022)"
+  "\n\014message_type\030\001 \001(\0162\023.cqhttp.CQHTTP_TYP"
+  "E\022\017\n\007user_id\030\002 \001(\003\022\020\n\010group_id\030\003 \001(\003\022\017\n\007"
+  "message\030\004 \001(\t\022\023\n\013auto_escape\030\005 \001(\010\"!\n\013Se"
+  "ndMsgResp\022\022\n\nmessage_id\030\002 \001(\005\"s\n\tDeleteM"
+  "sg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022(\n\006pa"
+  "rams\030\002 \001(\0132\030.cqhttp.DeleteMsg.Params\032\034\n\006"
+  "Params\022\022\n\nmessage_id\030\001 \001(\005\"{\n\006getMsg\022\036\n\006"
+  "action\030\001 \001(\0162\016.cqhttp.Action\022%\n\006params\030\002"
+  " \001(\0132\025.cqhttp.getMsg.Params\022\014\n\004echo\030\003 \001("
+  "\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\274\001\n\ngetM"
+  "sgResp\022\r\n\005group\030\001 \001(\010\022\020\n\010group_id\030\002 \001(\003\022"
+  "\022\n\nmessage_id\030\003 \001(\005\022\017\n\007real_id\030\004 \001(\005\022\024\n\014"
+  "message_type\030\005 \001(\t\022\036\n\006sender\030\006 \001(\0132\016.cqh"
+  "ttp.Sender\022\014\n\004time\030\007 \001(\005\022\017\n\007message\030\010 \001("
+  "\t\022\023\n\013raw_message\030\t \001(\t\"\211\001\n\rGetForwardMsg"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022,\n\006para"
+  "ms\030\002 \001(\0132\034.cqhttp.GetForwardMsg.Params\022\014"
+  "\n\004echo\030\003 \001(\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001"
+  "(\t\"\224\001\n\021GetForwardMsgResp\0224\n\010messages\030\001 \003"
+  "(\0132\".cqhttp.GetForwardMsgResp.Messages\032I"
+  "\n\010Messages\022\017\n\007content\030\001 \001(\t\022\036\n\006sender\030\002 "
+  "\001(\0132\016.cqhttp.Sender\022\014\n\004time\030\003 \001(\003\"y\n\010Get"
+  "Image\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\'\n"
+  "\006params\030\002 \001(\0132\027.cqhttp.GetImage.Params\022\014"
+  "\n\004echo\030\003 \001(\t\032\026\n\006Params\022\014\n\004file\030\001 \001(\t\";\n\014"
+  "GetImageResp\022\014\n\004size\030\001 \001(\005\022\020\n\010filename\030\002"
+  " \001(\t\022\013\n\003url\030\003 \001(\t\"{\n\rMarkMsgAsRead\022\036\n\006ac"
+  "tion\030\001 \001(\0162\016.cqhttp.Action\022,\n\006params\030\002 \001"
+  "(\0132\034.cqhttp.MarkMsgAsRead.Params\032\034\n\006Para"
+  "ms\022\022\n\nmessage_id\030\001 \001(\005\"\246\001\n\014SetGroupKick\022"
+  "\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006param"
+  "s\030\002 \001(\0132\033.cqhttp.SetGroupKick.Params\032I\n\006"
+  "Params\022\022\n\nmessage_id\030\001 \001(\003\022\017\n\007user_id\030\002 "
+  "\001(\003\022\032\n\022reject_add_request\030\003 \001(\010\"\230\001\n\013SetG"
+  "roupBan\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022"
+  "*\n\006params\030\002 \001(\0132\032.cqhttp.SetGroupBan.Par"
+  "ams\032=\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user_"
+  "id\030\002 \001(\003\022\020\n\010duration\030\003 \001(\005\"\327\001\n\024SetGroupA"
+  "nonymousBan\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\0223\n\006params\030\002 \001(\0132#.cqhttp.SetGroupAno"
+  "nymousBan.Params\032j\n\006Params\022\020\n\010group_id\030\001"
+  " \001(\003\022$\n\tanonymous\030\002 \001(\0132\021.cqhttp.Anonymo"
+  "us\022\026\n\016anonymous_flag\030\003 \001(\t\022\020\n\010duration\030\004"
+  " \001(\005\"\217\001\n\020SetGroupWholeBan\022\036\n\006action\030\001 \001("
   "\0162\016.cqhttp.Action\022/\n\006params\030\002 \001(\0132\037.cqht"
-  "tp.GetOnlineClients.Params\022\014\n\004echo\030\003 \001(\t"
-  "\032\032\n\006Params\022\020\n\010no_cache\030\001 \001(\010\"7\n\024GetOnlin"
-  "eClientsResp\022\037\n\007clients\030\001 \003(\0132\016.cqhttp.D"
-  "evice\"\246\001\n\022GetGroupMsgHistory\022\036\n\006action\030\001"
-  " \001(\0162\016.cqhttp.Action\0221\n\006params\030\002 \001(\0132!.c"
-  "qhttp.GetGroupMsgHistory.Params\022\014\n\004echo\030"
-  "\003 \001(\t\032/\n\006Params\022\023\n\013message_seq\030\001 \001(\003\022\020\n\010"
-  "group_id\030\002 \001(\003\"*\n\026GetGroupMsgHistoryResp"
-  "\022\020\n\010messages\030\001 \003(\t\"{\n\rSetEssenceMsg\022\036\n\006a"
-  "ction\030\001 \001(\0162\016.cqhttp.Action\022,\n\006params\030\002 "
-  "\001(\0132\034.cqhttp.SetEssenceMsg.Params\032\034\n\006Par"
-  "ams\022\022\n\nmessage_id\030\001 \001(\005\"\201\001\n\020DeleteEssenc"
-  "eMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022/\n\006"
-  "params\030\002 \001(\0132\037.cqhttp.DeleteEssenceMsg.P"
-  "arams\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\217\001\n\021"
-  "GetEssenceMsgList\022\036\n\006action\030\001 \001(\0162\016.cqht"
-  "tp.Action\0220\n\006params\030\002 \001(\0132 .cqhttp.GetEs"
-  "senceMsgList.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Par"
-  "ams\022\020\n\010group_id\030\001 \001(\003\"\253\001\n\025GetEssenceMsgL"
-  "istResp\022\021\n\tsender_id\030\001 \001(\003\022\023\n\013sender_nic"
-  "k\030\002 \001(\t\022\023\n\013sender_time\030\003 \001(\003\022\023\n\013operator"
-  "_id\030\004 \001(\003\022\025\n\roperator_nick\030\005 \001(\t\022\025\n\roper"
-  "ator_time\030\006 \001(\003\022\022\n\nmessage_id\030\007 \001(\005\"\204\001\n\016"
-  "CheckUlrSafely\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
-  "Action\022-\n\006params\030\002 \001(\0132\035.cqhttp.CheckUlr"
-  "Safely.Params\022\014\n\004echo\030\003 \001(\t\032\025\n\006Params\022\013\n"
-  "\003url\030\001 \001(\t\"#\n\022CheckUlrSafelyResp\022\r\n\005leve"
-  "l\030\001 \001(\005\"\202\001\n\014GetModelShow\022\036\n\006action\030\001 \001(\016"
-  "2\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqhtt"
-  "p.GetModelShow.Params\022\014\n\004echo\030\003 \001(\t\032\027\n\006P"
-  "arams\022\r\n\005model\030\001 \001(\t\"w\n\020GetModelShowResp"
-  "\0222\n\010variants\030\001 \003(\0132 .cqhttp.GetModelShow"
-  "Resp.Variant\032/\n\007Variant\022\022\n\nmodel_show\030\001 "
-  "\001(\t\022\020\n\010need_pay\030\002 \001(\010\"\210\001\n\014SetModelShow\022\036"
-  "\n\006action\030\001 \001(\0162\016.cqhttp.Action\022+\n\006params"
-  "\030\002 \001(\0132\033.cqhttp.SetModelShow.Params\032+\n\006P"
-  "arams\022\r\n\005model\030\001 \001(\t\022\022\n\nmodel_show\030\002 \001(\t"
-  "\"\222\001\n\032DeleteUnidirectionalFriend\022\036\n\006actio"
-  "n\030\001 \001(\0162\016.cqhttp.Action\0229\n\006params\030\002 \001(\0132"
-  ").cqhttp.DeleteUnidirectionalFriend.Para"
-  "ms\032\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\300\001\n\025SendPr"
-  "ivateForwardMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp"
-  ".Action\0224\n\006params\030\002 \001(\0132$.cqhttp.SendPri"
-  "vateForwardMsg.Params\022\014\n\004echo\030\003 \001(\t\032C\n\006P"
-  "arams\022\017\n\007user_id\030\001 \001(\003\022(\n\010messages\030\002 \003(\013"
-  "2\026.cqhttp.ForwardMessage\"C\n\031SendPrivateF"
-  "orwardMsgResp\022\022\n\nmessage_id\030\001 \001(\003\022\022\n\nfor"
-  "ward_id\030\002 \001(\tb\006proto3"
+  "tp.SetGroupWholeBan.Params\032*\n\006Params\022\020\n\010"
+  "group_id\030\001 \001(\003\022\016\n\006enable\030\002 \001(\010\"\232\001\n\rSetGr"
+  "oupAdmin\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action"
+  "\022,\n\006params\030\002 \001(\0132\034.cqhttp.SetGroupAdmin."
+  "Params\032;\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007us"
+  "er_id\030\002 \001(\003\022\016\n\006enable\030\003 \001(\010\"\221\001\n\021SetGroup"
+  "Anonymous\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Actio"
+  "n\0220\n\006params\030\002 \001(\0132 .cqhttp.SetGroupAnony"
+  "mous.Params\032*\n\006Params\022\020\n\010group_id\030\001 \001(\003\022"
+  "\016\n\006enable\030\002 \001(\010\"\226\001\n\014SetGroupCard\022\036\n\006acti"
+  "on\030\001 \001(\0162\016.cqhttp.Action\022+\n\006params\030\002 \001(\013"
+  "2\033.cqhttp.SetGroupCard.Params\0329\n\006Params\022"
+  "\020\n\010group_id\030\001 \001(\003\022\017\n\007user_id\030\002 \001(\003\022\014\n\004ca"
+  "rd\030\003 \001(\t\"\213\001\n\014SetGroupName\022\036\n\006action\030\001 \001("
+  "\0162\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqht"
+  "tp.SetGroupName.Params\032.\n\006Params\022\020\n\010grou"
+  "p_id\030\001 \001(\003\022\022\n\ngroup_name\030\002 \001(\t\"\215\001\n\rSetGr"
+  "oupLeave\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action"
+  "\022,\n\006params\030\002 \001(\0132\034.cqhttp.SetGroupLeave."
+  "Params\032.\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\022\n\nis"
+  "_dismiss\030\002 \001(\010\"\301\001\n\024SetGroupSpecialTitle\022"
+  "\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0223\n\006param"
+  "s\030\002 \001(\0132#.cqhttp.SetGroupSpecialTitle.Pa"
+  "rams\032T\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007user"
+  "_id\030\002 \001(\003\022\025\n\rspecial_title\030\003 \001(\t\022\020\n\010dura"
+  "tion\030\004 \001(\005\"y\n\rSendGroupSign\022\036\n\006action\030\001 "
+  "\001(\0162\016.cqhttp.Action\022,\n\006params\030\002 \001(\0132\034.cq"
+  "http.SendGroupSign.Params\032\032\n\006Params\022\020\n\010g"
+  "roup_id\030\001 \001(\003\"\242\001\n\023SetFriendAddRequest\022\036\n"
+  "\006action\030\001 \001(\0162\016.cqhttp.Action\0222\n\006params\030"
+  "\002 \001(\0132\".cqhttp.SetFriendAddRequest.Param"
+  "s\0327\n\006Params\022\014\n\004flag\030\001 \001(\t\022\017\n\007approve\030\002 \001"
+  "(\010\022\016\n\006remark\030\003 \001(\t\"\262\001\n\022SetGroupAddReques"
+  "t\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0221\n\006par"
+  "ams\030\002 \001(\0132!.cqhttp.SetGroupAddRequest.Pa"
+  "rams\032I\n\006Params\022\014\n\004flag\030\001 \001(\t\022\020\n\010sub_type"
+  "\030\002 \001(\t\022\017\n\007approve\030\003 \001(\010\022\016\n\006reason\030\004 \001(\t\""
+  "\226\001\n\014GetLoginInfo\022\036\n\006action\030\001 \001(\0162\016.cqhtt"
+  "p.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.GetLog"
+  "inInfo.Params\022\014\n\004echo\030\003 \001(\t\032+\n\006Params\022\017\n"
+  "\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\"5\n\020GetL"
+  "oginInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nicknam"
+  "e\030\002 \001(\t\"D\n\024QiDianGetAccountInfo\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"T\n"
+  "\030QiDianGetAccountInfoResp\022\021\n\tmaster_id\030\001"
+  " \001(\003\022\020\n\010ext_name\030\002 \001(\t\022\023\n\013create_time\030\003 "
+  "\001(\003\"\277\001\n\014SetQQProfile\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.Se"
+  "tQQProfile.Params\032b\n\006Params\022\020\n\010nickname\030"
+  "\001 \001(\t\022\017\n\007company\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n"
+  "\007college\030\004 \001(\t\022\025\n\rpersonal_note\030\005 \001(\t\"\234\001"
+  "\n\017GetStrangerInfo\022\036\n\006action\030\001 \001(\0162\016.cqht"
+  "tp.Action\022.\n\006params\030\002 \001(\0132\036.cqhttp.GetSt"
+  "rangerInfo.Params\022\014\n\004echo\030\003 \001(\t\032+\n\006Param"
+  "s\022\017\n\007user_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"\202\001\n"
+  "\023GetStrangerInfoResp\022\017\n\007user_id\030\001 \001(\003\022\020\n"
+  "\010nickname\030\002 \001(\t\022\013\n\003sex\030\003 \001(\t\022\013\n\003age\030\004 \001("
+  "\005\022\013\n\003qid\030\005 \001(\t\022\r\n\005level\030\006 \001(\005\022\022\n\nlogin_d"
+  "ays\030\007 \001(\005\"=\n\rGetFriendList\022\036\n\006action\030\001 \001"
+  "(\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\203\001\n\021Get"
+  "FriendListResp\0221\n\007friends\030\001 \003(\0132 .cqhttp"
+  ".GetFriendListResp.Friend\032;\n\006Friend\022\017\n\007u"
+  "ser_id\030\001 \001(\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006remark"
+  "\030\003 \001(\t\"H\n\030UnidirectionalFriendList\022\036\n\006ac"
+  "tion\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t"
+  "\"\230\001\n\034UnidirectionalFriendListResp\022;\n\006fri"
+  "end\030\001 \003(\0132+.cqhttp.UnidirectionalFriendL"
+  "istResp.Friend\032;\n\006Friend\022\017\n\007user_id\030\001 \001("
+  "\003\022\020\n\010nickname\030\002 \001(\t\022\016\n\006source\030\003 \001(\t\"v\n\014D"
+  "eleteFriend\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\022+\n\006params\030\002 \001(\0132\033.cqhttp.DeleteFrien"
+  "d.Params\032\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\227\001\n\014"
+  "GetGroupInfo\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
+  "tion\022+\n\006params\030\002 \001(\0132\033.cqhttp.GetGroupIn"
+  "fo.Params\022\014\n\004echo\030\003 \001(\t\032,\n\006Params\022\020\n\010gro"
+  "up_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"\254\001\n\020GetGro"
+  "upInfoResp\022\020\n\010group_id\030\001 \001(\003\022\022\n\ngroup_na"
+  "me\030\002 \001(\t\022\022\n\ngroup_memo\030\003 \001(\t\022\031\n\021group_cr"
+  "eate_time\030\004 \001(\r\022\023\n\013group_level\030\005 \001(\r\022\024\n\014"
+  "member_count\030\006 \001(\005\022\030\n\020max_member_count\030\007"
+  " \001(\005\"\205\001\n\014GetGroupList\022\036\n\006action\030\001 \001(\0162\016."
+  "cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqhttp.G"
+  "etGroupList.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Para"
+  "ms\022\020\n\010no_cache\030\001 \001(\010\"@\n\020GetGroupListResp"
+  "\022,\n\ngroup_list\030\001 \003(\0132\030.cqhttp.GetGroupIn"
+  "foResp\"\264\001\n\022GetGroupMemberInfo\022\036\n\006action\030"
+  "\001 \001(\0162\016.cqhttp.Action\0221\n\006params\030\002 \001(\0132!."
+  "cqhttp.GetGroupMemberInfo.Params\022\014\n\004echo"
+  "\030\003 \001(\t\032=\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\017\n\007us"
+  "er_id\030\002 \001(\003\022\020\n\010no_cache\030\003 \001(\010\"\275\002\n\026GetGro"
+  "upMemberInfoResp\022\020\n\010group_id\030\001 \001(\003\022\017\n\007us"
+  "er_id\030\002 \001(\003\022\020\n\010nickname\030\003 \001(\t\022\014\n\004card\030\004 "
+  "\001(\t\022\013\n\003sex\030\005 \001(\t\022\013\n\003age\030\006 \001(\005\022\014\n\004area\030\007 "
+  "\001(\t\022\021\n\tjoin_time\030\010 \001(\005\022\026\n\016last_sent_time"
+  "\030\t \001(\005\022\r\n\005level\030\n \001(\t\022\014\n\004role\030\013 \001(\t\022\022\n\nu"
+  "nfriendly\030\014 \001(\010\022\r\n\005title\030\r \001(\t\022\031\n\021title_"
+  "expire_time\030\016 \001(\003\022\027\n\017card_changeable\030\017 \001"
+  "(\010\022\031\n\021shut_up_timestamp\030\020 \001(\003\"\243\001\n\022GetGro"
+  "upMemberList\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
+  "tion\0221\n\006params\030\002 \001(\0132!.cqhttp.GetGroupMe"
+  "mberList.Params\022\014\n\004echo\030\003 \001(\t\032,\n\006Params\022"
+  "\020\n\010group_id\030\001 \001(\003\022\020\n\010no_cache\030\002 \001(\010\"S\n\026G"
+  "etGroupMemberListResp\0229\n\021group_member_li"
+  "st\030\001 \003(\0132\036.cqhttp.GetGroupMemberInfoResp"
+  "\"\235\001\n\021GetGroupHonorInfo\022\036\n\006action\030\001 \001(\0162\016"
+  ".cqhttp.Action\0220\n\006params\030\002 \001(\0132 .cqhttp."
+  "GetGroupHonorInfo.Params\022\014\n\004echo\030\003 \001(\t\032("
+  "\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004type\030\002 \001(\t"
+  "\"\231\004\n\025GetGroupHonorInfoResp\022\020\n\010group_id\030\001"
+  " \001(\003\022B\n\021current_talkative\030\002 \001(\0132\'.cqhttp"
+  ".GetGroupHonorInfoResp.Talkative\022\?\n\016talk"
+  "ative_list\030\003 \003(\0132\'.cqhttp.GetGroupHonorI"
+  "nfoResp.Talkative\022\?\n\016performer_list\030\004 \003("
+  "\0132\'.cqhttp.GetGroupHonorInfoResp.Talkati"
+  "ve\022<\n\013legend_list\030\005 \003(\0132\'.cqhttp.GetGrou"
+  "pHonorInfoResp.Talkative\022C\n\022strong_newbi"
+  "e_list\030\006 \003(\0132\'.cqhttp.GetGroupHonorInfoR"
+  "esp.Talkative\022=\n\014emotion_list\030\007 \003(\0132\'.cq"
+  "http.GetGroupHonorInfoResp.Talkative\032f\n\t"
+  "Talkative\022\017\n\007user_id\030\001 \001(\003\022\020\n\010nickname\030\002"
+  " \001(\t\022\016\n\006avatar\030\003 \001(\t\022\021\n\tday_count\030\004 \001(\005\022"
+  "\023\n\013description\030\005 \001(\t\"\177\n\nGetCoolies\022\036\n\006ac"
+  "tion\030\001 \001(\0162\016.cqhttp.Action\022)\n\006params\030\002 \001"
+  "(\0132\031.cqhttp.GetCoolies.Params\022\014\n\004echo\030\003 "
+  "\001(\t\032\030\n\006Params\022\016\n\006domain\030\001 \001(\t\"!\n\016GetCool"
+  "iesResp\022\017\n\007cookies\030\001 \001(\t\"<\n\014GetCsrfToken"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo"
+  "\030\002 \001(\t\"!\n\020GetCsrfTokenResp\022\r\n\005token\030\001 \001("
+  "\005\"\207\001\n\016GetCredentials\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\022-\n\006params\030\002 \001(\0132\035.cqhttp.Ge"
+  "tCredentials.Params\022\014\n\004echo\030\003 \001(\t\032\030\n\006Par"
+  "ams\022\016\n\006domain\030\001 \001(\t\"9\n\022GetCredentialsRes"
+  "p\022\017\n\007cookies\030\001 \001(\t\022\022\n\ncsrf_token\030\002 \001(\005\"\217"
+  "\001\n\tGetRecord\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Ac"
+  "tion\022(\n\006params\030\002 \001(\0132\030.cqhttp.GetRecord."
+  "Params\022\014\n\004echo\030\003 \001(\t\032*\n\006Params\022\014\n\004file\030\001"
+  " \001(\t\022\022\n\nout_format\030\002 \001(\t\"\035\n\rGetRecordRes"
+  "p\022\014\n\004file\030\001 \001(\t\"<\n\014CanSendImage\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\037\n"
+  "\020CanSendImageResp\022\013\n\003yes\030\001 \001(\010\"=\n\rCanSen"
+  "dRecord\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022"
+  "\014\n\004echo\030\002 \001(\t\" \n\021CanSendRecordResp\022\013\n\003ye"
+  "s\030\001 \001(\010\">\n\016GetVersionInfo\022\036\n\006action\030\001 \001("
+  "\0162\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\325\002\n\022GetV"
+  "ersionInfoResp\022\020\n\010app_name\030\001 \001(\t\022\023\n\013app_"
+  "version\030\002 \001(\t\022\025\n\rapp_full_name\030\003 \001(\t\022\030\n\020"
+  "protocol_version\030\004 \001(\t\022\025\n\rcoolq_edition\030"
+  "\005 \001(\t\022\027\n\017coolq_directory\030\006 \001(\t\022\016\n\006cqhttp"
+  "\030\007 \001(\010\022\026\n\016plugin_version\030\010 \001(\t\022\033\n\023plugin"
+  "_build_number\030\t \001(\005\022\"\n\032plugin_build_conf"
+  "iguration\030\n \001(\t\022\027\n\017runtime_version\030\013 \001(\t"
+  "\022\022\n\nruntime_os\030\014 \001(\t\022\017\n\007version\030\r \001(\t\022\020\n"
+  "\010protocol\030\016 \001(\005\"p\n\nSetRestart\022\036\n\006action\030"
+  "\001 \001(\0162\016.cqhttp.Action\022)\n\006params\030\002 \001(\0132\031."
+  "cqhttp.SetRestart.Params\032\027\n\006Params\022\r\n\005de"
+  "lay\030\001 \001(\005\",\n\nCleanCache\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\"\234\001\n\020SetGroupPortrait\022\036\n\006"
+  "action\030\001 \001(\0162\016.cqhttp.Action\022/\n\006params\030\002"
+  " \001(\0132\037.cqhttp.SetGroupPortrait.Params\0327\n"
+  "\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002 \001(\t\022"
+  "\r\n\005cache\030\003 \001(\005\"\206\001\n\rGetWordSlices\022\036\n\006acti"
+  "on\030\001 \001(\0162\016.cqhttp.Action\022,\n\006params\030\002 \001(\013"
+  "2\034.cqhttp.GetWordSlices.Params\022\014\n\004echo\030\003"
+  " \001(\t\032\031\n\006Params\022\017\n\007content\030\001 \001(\t\"#\n\021GetWo"
+  "rdSlicesResp\022\016\n\006slices\030\001 \003(\t\"z\n\010OcrImage"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022\'\n\006para"
+  "ms\030\002 \001(\0132\027.cqhttp.OcrImage.Params\022\014\n\004ech"
+  "o\030\003 \001(\t\032\027\n\006Params\022\r\n\005image\030\001 \001(\t\"\233\001\n\014Ocr"
+  "ImageResp\0221\n\005texts\030\001 \003(\0132\".cqhttp.OcrIma"
+  "geResp.TextDetection\022\020\n\010language\030\002 \001(\t\032F"
+  "\n\rTextDetection\022\014\n\004text\030\001 \001(\t\022\022\n\nconfide"
+  "nce\030\002 \001(\005\022\023\n\013coordinates\030\003 \001(\t\"A\n\021GetGro"
+  "upSystemMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Act"
+  "ion\022\014\n\004echo\030\002 \001(\t\"\343\003\n\025GetGroupSystemMsgR"
+  "esp\022F\n\020invited_requests\030\001 \003(\0132,.cqhttp.G"
+  "etGroupSystemMsgResp.InvitedRequest\022@\n\rj"
+  "oin_requests\030\002 \003(\0132).cqhttp.GetGroupSyst"
+  "emMsgResp.JoinRequest\032\225\001\n\016InvitedRequest"
+  "\022\022\n\nrequest_id\030\001 \001(\003\022\023\n\013invitor_uin\030\002 \001("
+  "\003\022\024\n\014invitor_nick\030\003 \001(\t\022\020\n\010group_id\030\004 \001("
+  "\003\022\022\n\ngroup_name\030\005 \001(\t\022\017\n\007checked\030\006 \001(\010\022\r"
+  "\n\005actor\030\007 \001(\003\032\247\001\n\013JoinRequest\022\022\n\nrequest"
+  "_id\030\001 \001(\003\022\025\n\rrequester_uin\030\002 \001(\003\022\026\n\016requ"
+  "ester_nick\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\020\n\010gro"
+  "up_id\030\005 \001(\003\022\022\n\ngroup_name\030\006 \001(\t\022\017\n\007check"
+  "ed\030\007 \001(\010\022\r\n\005actor\030\010 \001(\003\"\234\001\n\021UploadPrivat"
+  "eFile\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0220\n"
+  "\006params\030\002 \001(\0132 .cqhttp.UploadPrivateFile"
+  ".Params\0325\n\006Params\022\017\n\007user_id\030\001 \001(\003\022\014\n\004fi"
+  "le\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"\251\001\n\017UploadGroupFi"
+  "le\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022.\n\006pa"
+  "rams\030\002 \001(\0132\036.cqhttp.UploadGroupFile.Para"
+  "ms\032F\n\006Params\022\020\n\010group_id\030\001 \001(\003\022\014\n\004file\030\002"
+  " \001(\t\022\014\n\004name\030\003 \001(\t\022\016\n\006folder\030\004 \001(\t\"\231\001\n\026G"
+  "etGroupFileSystemInfo\022\036\n\006action\030\001 \001(\0162\016."
+  "cqhttp.Action\0225\n\006params\030\002 \001(\0132%.cqhttp.G"
+  "etGroupFileSystemInfo.Params\022\014\n\004echo\030\003 \001"
+  "(\t\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003\"n\n\032GetGro"
+  "upFileSystemInfoResp\022\022\n\nfile_count\030\001 \001(\005"
+  "\022\023\n\013limit_count\030\002 \001(\005\022\022\n\nused_space\030\003 \001("
+  "\003\022\023\n\013total_space\030\004 \001(\003\"\217\001\n\021GetGroupRootF"
+  "iles\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0220\n\006"
+  "params\030\002 \001(\0132 .cqhttp.GetGroupRootFiles."
+  "Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_"
+  "id\030\001 \001(\003\"U\n\025GetGroupRootFilesResp\022\033\n\005fil"
+  "es\030\001 \003(\0132\014.cqhttp.File\022\037\n\007folders\030\002 \003(\0132"
+  "\016.cqhttp.Folder\"\250\001\n\024getGroupFileByFolder"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0223\n\006para"
+  "ms\030\002 \001(\0132#.cqhttp.getGroupFileByFolder.P"
+  "arams\022\014\n\004echo\030\003 \001(\t\032-\n\006Params\022\020\n\010group_i"
+  "d\030\001 \001(\003\022\021\n\tfolder_id\030\002 \001(\t\"X\n\030getGroupFi"
+  "leByFolderResp\022\033\n\005files\030\001 \003(\0132\014.cqhttp.F"
+  "ile\022\037\n\007folders\030\002 \003(\0132\016.cqhttp.Folder\"\252\001\n"
+  "\025CreateGroupFileFolder\022\036\n\006action\030\001 \001(\0162\016"
+  ".cqhttp.Action\0224\n\006params\030\002 \001(\0132$.cqhttp."
+  "CreateGroupFileFolder.Params\032;\n\006Params\022\020"
+  "\n\010group_id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\021\n\tparent"
+  "_id\030\003 \001(\t\"\224\001\n\021DeleteGroupFolder\022\036\n\006actio"
+  "n\030\001 \001(\0162\016.cqhttp.Action\0220\n\006params\030\002 \001(\0132"
+  " .cqhttp.DeleteGroupFolder.Params\032-\n\006Par"
+  "ams\022\020\n\010group_id\030\001 \001(\003\022\021\n\tfolder_id\030\002 \001(\t"
+  "\"\235\001\n\017DeleteGroupFile\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\022.\n\006params\030\002 \001(\0132\036.cqhttp.De"
+  "leteGroupFile.Params\032:\n\006Params\022\020\n\010group_"
+  "id\030\001 \001(\003\022\017\n\007file_id\030\002 \001(\t\022\r\n\005busid\030\003 \001(\005"
+  "\"\253\001\n\017GetGroupFileUrl\022\036\n\006action\030\001 \001(\0162\016.c"
+  "qhttp.Action\022.\n\006params\030\002 \001(\0132\036.cqhttp.Ge"
+  "tGroupFileUrl.Params\022\014\n\004echo\030\003 \001(\t\032:\n\006Pa"
+  "rams\022\020\n\010group_id\030\001 \001(\003\022\017\n\007file_id\030\002 \001(\t\022"
+  "\r\n\005busid\030\003 \001(\005\"\"\n\023GetGroupFileUrlResp\022\013\n"
+  "\003url\030\001 \001(\t\"9\n\tGetStatus\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\022\014\n\004echo\030\002 \001(\t\"\365\002\n\rGetSta"
+  "tusResp\022\027\n\017app_initialized\030\001 \001(\010\022\023\n\013app_"
+  "enabled\030\002 \001(\010\022\024\n\014plugins_good\030\003 \001(\010\022\020\n\010a"
+  "pp_good\030\004 \001(\010\022\016\n\006online\030\005 \001(\010\022\014\n\004good\030\006 "
+  "\001(\010\022.\n\004stat\030\007 \001(\0132 .cqhttp.GetStatusResp"
+  ".Statistics\032\277\001\n\nStatistics\022\026\n\016PacketRece"
+  "ived\030\001 \001(\004\022\022\n\nPacketSent\030\002 \001(\004\022\022\n\nPacket"
+  "Lost\030\003 \001(\r\022\027\n\017MessageReceived\030\004 \001(\004\022\023\n\013M"
+  "essageSent\030\005 \001(\004\022\027\n\017DisconnectTimes\030\006 \001("
+  "\r\022\021\n\tLostTimes\030\007 \001(\r\022\027\n\017LastMessageTime\030"
+  "\010 \001(\003\"\223\001\n\023GetGroupAtAllRemain\022\036\n\006action\030"
+  "\001 \001(\0162\016.cqhttp.Action\0222\n\006params\030\002 \001(\0132\"."
+  "cqhttp.GetGroupAtAllRemain.Params\022\014\n\004ech"
+  "o\030\003 \001(\t\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003\"y\n\027G"
+  "etGroupAtAllRemainResp\022\022\n\ncan_at_all\030\001 \001"
+  "(\010\022%\n\035remain_at_all_count_for_group\030\002 \001("
+  "\005\022#\n\033remain_at_all_count_for_uin\030\003 \001(\005\"\231"
+  "\001\n\024HandleQuickOperation\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\0223\n\006params\030\002 \001(\0132#.cqhttp"
+  ".HandleQuickOperation.Params\032,\n\006Params\022\017"
+  "\n\007content\030\001 \001(\t\022\021\n\toperation\030\002 \001(\t\"\235\001\n\017S"
+  "endGroupNotice\022\036\n\006action\030\001 \001(\0162\016.cqhttp."
+  "Action\022.\n\006params\030\002 \001(\0132\036.cqhttp.SendGrou"
+  "pNotice.Params\032:\n\006Params\022\020\n\010group_id\030\001 \001"
+  "(\003\022\017\n\007content\030\002 \001(\t\022\r\n\005image\030\003 \001(\t\"\211\001\n\016G"
+  "etGroupNotice\022\036\n\006action\030\001 \001(\0162\016.cqhttp.A"
+  "ction\022-\n\006params\030\002 \001(\0132\035.cqhttp.GetGroupN"
+  "otice.Params\022\014\n\004echo\030\003 \001(\t\032\032\n\006Params\022\020\n\010"
+  "group_id\030\001 \001(\003\"\331\002\n\022GetGroupNoticeResp\0222\n"
+  "\007notices\030\001 \003(\0132!.cqhttp.GetGroupNoticeRe"
+  "sp.Notice\032\216\002\n\006Notice\022\021\n\tsender_id\030\001 \001(\003\022"
+  "\024\n\014publish_time\030\002 \001(\003\022@\n\007message\030\003 \001(\0132/"
+  ".cqhttp.GetGroupNoticeResp.Notice.Notice"
+  "Message\032\230\001\n\rNoticeMessage\022\014\n\004text\030\001 \001(\t\022"
+  "E\n\006images\030\002 \003(\01325.cqhttp.GetGroupNoticeR"
+  "esp.Notice.NoticeMessage.Image\0322\n\005Image\022"
+  "\016\n\006height\030\001 \001(\t\022\r\n\005width\030\002 \001(\t\022\n\n\002id\030\003 \001"
+  "(\t\"}\n\021ReloadEventFilter\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\0220\n\006params\030\002 \001(\0132 .cqhttp"
+  ".ReloadEventFilter.Params\032\026\n\006Params\022\014\n\004f"
+  "ile\030\001 \001(\t\"\247\001\n\014DownloadFile\022\036\n\006action\030\001 \001"
+  "(\0162\016.cqhttp.Action\022+\n\006params\030\002 \001(\0132\033.cqh"
+  "ttp.DownloadFile.Params\022\014\n\004echo\030\003 \001(\t\032<\n"
+  "\006Params\022\013\n\003url\030\001 \001(\t\022\024\n\014thread_count\030\002 \001"
+  "(\005\022\017\n\007headers\030\003 \001(\t\" \n\020DownloadFileResp\022"
+  "\014\n\004file\030\001 \001(\t\"\215\001\n\020GetOnlineClients\022\036\n\006ac"
+  "tion\030\001 \001(\0162\016.cqhttp.Action\022/\n\006params\030\002 \001"
+  "(\0132\037.cqhttp.GetOnlineClients.Params\022\014\n\004e"
+  "cho\030\003 \001(\t\032\032\n\006Params\022\020\n\010no_cache\030\001 \001(\010\"7\n"
+  "\024GetOnlineClientsResp\022\037\n\007clients\030\001 \003(\0132\016"
+  ".cqhttp.Device\"\246\001\n\022GetGroupMsgHistory\022\036\n"
+  "\006action\030\001 \001(\0162\016.cqhttp.Action\0221\n\006params\030"
+  "\002 \001(\0132!.cqhttp.GetGroupMsgHistory.Params"
+  "\022\014\n\004echo\030\003 \001(\t\032/\n\006Params\022\023\n\013message_seq\030"
+  "\001 \001(\003\022\020\n\010group_id\030\002 \001(\003\"*\n\026GetGroupMsgHi"
+  "storyResp\022\020\n\010messages\030\001 \003(\t\"{\n\rSetEssenc"
+  "eMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022,\n\006"
+  "params\030\002 \001(\0132\034.cqhttp.SetEssenceMsg.Para"
+  "ms\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\201\001\n\020Del"
+  "eteEssenceMsg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.A"
+  "ction\022/\n\006params\030\002 \001(\0132\037.cqhttp.DeleteEss"
+  "enceMsg.Params\032\034\n\006Params\022\022\n\nmessage_id\030\001"
+  " \001(\005\"\217\001\n\021GetEssenceMsgList\022\036\n\006action\030\001 \001"
+  "(\0162\016.cqhttp.Action\0220\n\006params\030\002 \001(\0132 .cqh"
+  "ttp.GetEssenceMsgList.Params\022\014\n\004echo\030\003 \001"
+  "(\t\032\032\n\006Params\022\020\n\010group_id\030\001 \001(\003\"\253\001\n\025GetEs"
+  "senceMsgListResp\022\021\n\tsender_id\030\001 \001(\003\022\023\n\013s"
+  "ender_nick\030\002 \001(\t\022\023\n\013sender_time\030\003 \001(\003\022\023\n"
+  "\013operator_id\030\004 \001(\003\022\025\n\roperator_nick\030\005 \001("
+  "\t\022\025\n\roperator_time\030\006 \001(\003\022\022\n\nmessage_id\030\007"
+  " \001(\005\"\204\001\n\016CheckUlrSafely\022\036\n\006action\030\001 \001(\0162"
+  "\016.cqhttp.Action\022-\n\006params\030\002 \001(\0132\035.cqhttp"
+  ".CheckUlrSafely.Params\022\014\n\004echo\030\003 \001(\t\032\025\n\006"
+  "Params\022\013\n\003url\030\001 \001(\t\"#\n\022CheckUlrSafelyRes"
+  "p\022\r\n\005level\030\001 \001(\005\"\202\001\n\014GetModelShow\022\036\n\006act"
+  "ion\030\001 \001(\0162\016.cqhttp.Action\022+\n\006params\030\002 \001("
+  "\0132\033.cqhttp.GetModelShow.Params\022\014\n\004echo\030\003"
+  " \001(\t\032\027\n\006Params\022\r\n\005model\030\001 \001(\t\"w\n\020GetMode"
+  "lShowResp\0222\n\010variants\030\001 \003(\0132 .cqhttp.Get"
+  "ModelShowResp.Variant\032/\n\007Variant\022\022\n\nmode"
+  "l_show\030\001 \001(\t\022\020\n\010need_pay\030\002 \001(\010\"\210\001\n\014SetMo"
+  "delShow\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022"
+  "+\n\006params\030\002 \001(\0132\033.cqhttp.SetModelShow.Pa"
+  "rams\032+\n\006Params\022\r\n\005model\030\001 \001(\t\022\022\n\nmodel_s"
+  "how\030\002 \001(\t\"\222\001\n\032DeleteUnidirectionalFriend"
+  "\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\0229\n\006para"
+  "ms\030\002 \001(\0132).cqhttp.DeleteUnidirectionalFr"
+  "iend.Params\032\031\n\006Params\022\017\n\007user_id\030\001 \001(\003\"\300"
+  "\001\n\025SendPrivateForwardMsg\022\036\n\006action\030\001 \001(\016"
+  "2\016.cqhttp.Action\0224\n\006params\030\002 \001(\0132$.cqhtt"
+  "p.SendPrivateForwardMsg.Params\022\014\n\004echo\030\003"
+  " \001(\t\032C\n\006Params\022\017\n\007user_id\030\001 \001(\003\022(\n\010messa"
+  "ges\030\002 \003(\0132\026.cqhttp.ForwardMessage\"C\n\031Sen"
+  "dPrivateForwardMsgResp\022\022\n\nmessage_id\030\001 \001"
+  "(\003\022\022\n\nforward_id\030\002 \001(\tb\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_cqhttp_5fapi_2eproto_deps[1] = {
   &::descriptor_table_cqhttp_5fbase_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_cqhttp_5fapi_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_cqhttp_5fapi_2eproto = {
-    false, false, 15661, descriptor_table_protodef_cqhttp_5fapi_2eproto,
+    false, false, 15670, descriptor_table_protodef_cqhttp_5fapi_2eproto,
     "cqhttp_api.proto",
     &descriptor_table_cqhttp_5fapi_2eproto_once, descriptor_table_cqhttp_5fapi_2eproto_deps, 1, 189,
     schemas, file_default_instances, TableStruct_cqhttp_5fapi_2eproto::offsets,
@@ -7397,36 +7397,28 @@ void SendGroupForwardMsgResp::InternalSwap(SendGroupForwardMsgResp* other) {
 
 // ===================================================================
 
-class SendMessage_Params::_Internal {
+class SendMsg_Params::_Internal {
  public:
 };
 
-SendMessage_Params::SendMessage_Params(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+SendMsg_Params::SendMsg_Params(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.SendMessage.Params)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.SendMsg.Params)
 }
-SendMessage_Params::SendMessage_Params(const SendMessage_Params& from)
+SendMsg_Params::SendMsg_Params(const SendMsg_Params& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  SendMessage_Params* const _this = this; (void)_this;
+  SendMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_type_){}
-    , decltype(_impl_.message_){}
+      decltype(_impl_.message_){}
     , decltype(_impl_.user_id_){}
     , decltype(_impl_.group_id_){}
+    , decltype(_impl_.message_type_){}
     , decltype(_impl_.auto_escape_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.message_type_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_type_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message_type().empty()) {
-    _this->_impl_.message_type_.Set(from._internal_message_type(), 
-      _this->GetArenaForAllocation());
-  }
   _impl_.message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.message_.Set("", GetArenaForAllocation());
@@ -7438,33 +7430,29 @@ SendMessage_Params::SendMessage_Params(const SendMessage_Params& from)
   ::memcpy(&_impl_.user_id_, &from._impl_.user_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.auto_escape_) -
     reinterpret_cast<char*>(&_impl_.user_id_)) + sizeof(_impl_.auto_escape_));
-  // @@protoc_insertion_point(copy_constructor:cqhttp.SendMessage.Params)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.SendMsg.Params)
 }
 
-inline void SendMessage_Params::SharedCtor(
+inline void SendMsg_Params::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
   new (&_impl_) Impl_{
-      decltype(_impl_.message_type_){}
-    , decltype(_impl_.message_){}
+      decltype(_impl_.message_){}
     , decltype(_impl_.user_id_){int64_t{0}}
     , decltype(_impl_.group_id_){int64_t{0}}
+    , decltype(_impl_.message_type_){0}
     , decltype(_impl_.auto_escape_){false}
     , /*decltype(_impl_._cached_size_)*/{}
   };
-  _impl_.message_type_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.message_type_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   _impl_.message_.InitDefault();
   #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
     _impl_.message_.Set("", GetArenaForAllocation());
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-SendMessage_Params::~SendMessage_Params() {
-  // @@protoc_insertion_point(destructor:cqhttp.SendMessage.Params)
+SendMsg_Params::~SendMsg_Params() {
+  // @@protoc_insertion_point(destructor:cqhttp.SendMsg.Params)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7472,23 +7460,21 @@ SendMessage_Params::~SendMessage_Params() {
   SharedDtor();
 }
 
-inline void SendMessage_Params::SharedDtor() {
+inline void SendMsg_Params::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.message_type_.Destroy();
   _impl_.message_.Destroy();
 }
 
-void SendMessage_Params::SetCachedSize(int size) const {
+void SendMsg_Params::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void SendMessage_Params::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.SendMessage.Params)
+void SendMsg_Params::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.SendMsg.Params)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.message_type_.ClearToEmpty();
   _impl_.message_.ClearToEmpty();
   ::memset(&_impl_.user_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&_impl_.auto_escape_) -
@@ -7496,19 +7482,18 @@ void SendMessage_Params::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SendMessage_Params::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* SendMsg_Params::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
     ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
-      // string message_type = 1;
+      // .cqhttp.CQHTTP_TYPE message_type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
-          auto str = _internal_mutable_message_type();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendMessage.Params.message_type"));
+          _internal_set_message_type(static_cast<::cqhttp::CQHTTP_TYPE>(val));
         } else
           goto handle_unusual;
         continue;
@@ -7534,7 +7519,7 @@ const char* SendMessage_Params::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendMessage.Params.message"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendMsg.Params.message"));
         } else
           goto handle_unusual;
         continue;
@@ -7569,20 +7554,17 @@ failure:
 #undef CHK_
 }
 
-uint8_t* SendMessage_Params::_InternalSerialize(
+uint8_t* SendMsg_Params::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.SendMessage.Params)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.SendMsg.Params)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string message_type = 1;
-  if (!this->_internal_message_type().empty()) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message_type().data(), static_cast<int>(this->_internal_message_type().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendMessage.Params.message_type");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_message_type(), target);
+  // .cqhttp.CQHTTP_TYPE message_type = 1;
+  if (this->_internal_message_type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_message_type(), target);
   }
 
   // int64 user_id = 2;
@@ -7602,7 +7584,7 @@ uint8_t* SendMessage_Params::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendMessage.Params.message");
+      "cqhttp.SendMsg.Params.message");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_message(), target);
   }
@@ -7617,24 +7599,17 @@ uint8_t* SendMessage_Params::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.SendMessage.Params)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.SendMsg.Params)
   return target;
 }
 
-size_t SendMessage_Params::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.SendMessage.Params)
+size_t SendMsg_Params::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.SendMsg.Params)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // string message_type = 1;
-  if (!this->_internal_message_type().empty()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message_type());
-  }
 
   // string message = 4;
   if (!this->_internal_message().empty()) {
@@ -7653,6 +7628,12 @@ size_t SendMessage_Params::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int64SizePlusOne(this->_internal_group_id());
   }
 
+  // .cqhttp.CQHTTP_TYPE message_type = 1;
+  if (this->_internal_message_type() != 0) {
+    total_size += 1 +
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_message_type());
+  }
+
   // bool auto_escape = 5;
   if (this->_internal_auto_escape() != 0) {
     total_size += 1 + 1;
@@ -7661,24 +7642,21 @@ size_t SendMessage_Params::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendMessage_Params::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendMsg_Params::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SendMessage_Params::MergeImpl
+    SendMsg_Params::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendMessage_Params::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendMsg_Params::GetClassData() const { return &_class_data_; }
 
 
-void SendMessage_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SendMessage_Params*>(&to_msg);
-  auto& from = static_cast<const SendMessage_Params&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.SendMessage.Params)
+void SendMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SendMsg_Params*>(&to_msg);
+  auto& from = static_cast<const SendMsg_Params&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.SendMsg.Params)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_message_type().empty()) {
-    _this->_internal_set_message_type(from._internal_message_type());
-  }
   if (!from._internal_message().empty()) {
     _this->_internal_set_message(from._internal_message());
   }
@@ -7688,45 +7666,44 @@ void SendMessage_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, con
   if (from._internal_group_id() != 0) {
     _this->_internal_set_group_id(from._internal_group_id());
   }
+  if (from._internal_message_type() != 0) {
+    _this->_internal_set_message_type(from._internal_message_type());
+  }
   if (from._internal_auto_escape() != 0) {
     _this->_internal_set_auto_escape(from._internal_auto_escape());
   }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void SendMessage_Params::CopyFrom(const SendMessage_Params& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.SendMessage.Params)
+void SendMsg_Params::CopyFrom(const SendMsg_Params& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.SendMsg.Params)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SendMessage_Params::IsInitialized() const {
+bool SendMsg_Params::IsInitialized() const {
   return true;
 }
 
-void SendMessage_Params::InternalSwap(SendMessage_Params* other) {
+void SendMsg_Params::InternalSwap(SendMsg_Params* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.message_type_, lhs_arena,
-      &other->_impl_.message_type_, rhs_arena
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
       &_impl_.message_, lhs_arena,
       &other->_impl_.message_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SendMessage_Params, _impl_.auto_escape_)
-      + sizeof(SendMessage_Params::_impl_.auto_escape_)
-      - PROTOBUF_FIELD_OFFSET(SendMessage_Params, _impl_.user_id_)>(
+      PROTOBUF_FIELD_OFFSET(SendMsg_Params, _impl_.auto_escape_)
+      + sizeof(SendMsg_Params::_impl_.auto_escape_)
+      - PROTOBUF_FIELD_OFFSET(SendMsg_Params, _impl_.user_id_)>(
           reinterpret_cast<char*>(&_impl_.user_id_),
           reinterpret_cast<char*>(&other->_impl_.user_id_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SendMessage_Params::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata SendMsg_Params::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fapi_2eproto_getter, &descriptor_table_cqhttp_5fapi_2eproto_once,
       file_level_metadata_cqhttp_5fapi_2eproto[9]);
@@ -7734,24 +7711,24 @@ void SendMessage_Params::InternalSwap(SendMessage_Params* other) {
 
 // ===================================================================
 
-class SendMessage::_Internal {
+class SendMsg::_Internal {
  public:
-  static const ::cqhttp::SendMessage_Params& params(const SendMessage* msg);
+  static const ::cqhttp::SendMsg_Params& params(const SendMsg* msg);
 };
 
-const ::cqhttp::SendMessage_Params&
-SendMessage::_Internal::params(const SendMessage* msg) {
+const ::cqhttp::SendMsg_Params&
+SendMsg::_Internal::params(const SendMsg* msg) {
   return *msg->_impl_.params_;
 }
-SendMessage::SendMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+SendMsg::SendMsg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.SendMessage)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.SendMsg)
 }
-SendMessage::SendMessage(const SendMessage& from)
+SendMsg::SendMsg(const SendMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  SendMessage* const _this = this; (void)_this;
+  SendMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
@@ -7768,13 +7745,13 @@ SendMessage::SendMessage(const SendMessage& from)
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_params()) {
-    _this->_impl_.params_ = new ::cqhttp::SendMessage_Params(*from._impl_.params_);
+    _this->_impl_.params_ = new ::cqhttp::SendMsg_Params(*from._impl_.params_);
   }
   _this->_impl_.action_ = from._impl_.action_;
-  // @@protoc_insertion_point(copy_constructor:cqhttp.SendMessage)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.SendMsg)
 }
 
-inline void SendMessage::SharedCtor(
+inline void SendMsg::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -7790,8 +7767,8 @@ inline void SendMessage::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-SendMessage::~SendMessage() {
-  // @@protoc_insertion_point(destructor:cqhttp.SendMessage)
+SendMsg::~SendMsg() {
+  // @@protoc_insertion_point(destructor:cqhttp.SendMsg)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -7799,18 +7776,18 @@ SendMessage::~SendMessage() {
   SharedDtor();
 }
 
-inline void SendMessage::SharedDtor() {
+inline void SendMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
-void SendMessage::SetCachedSize(int size) const {
+void SendMsg::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void SendMessage::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.SendMessage)
+void SendMsg::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.SendMsg)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -7824,7 +7801,7 @@ void SendMessage::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SendMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* SendMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -7839,7 +7816,7 @@ const char* SendMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
         } else
           goto handle_unusual;
         continue;
-      // .cqhttp.SendMessage.Params params = 2;
+      // .cqhttp.SendMsg.Params params = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_params(), ptr);
@@ -7853,7 +7830,7 @@ const char* SendMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_echo();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendMessage.echo"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.SendMsg.echo"));
         } else
           goto handle_unusual;
         continue;
@@ -7880,9 +7857,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* SendMessage::_InternalSerialize(
+uint8_t* SendMsg::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.SendMessage)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.SendMsg)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -7893,7 +7870,7 @@ uint8_t* SendMessage::_InternalSerialize(
       1, this->_internal_action(), target);
   }
 
-  // .cqhttp.SendMessage.Params params = 2;
+  // .cqhttp.SendMsg.Params params = 2;
   if (this->_internal_has_params()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::params(this),
@@ -7905,7 +7882,7 @@ uint8_t* SendMessage::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_echo().data(), static_cast<int>(this->_internal_echo().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.SendMessage.echo");
+      "cqhttp.SendMsg.echo");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_echo(), target);
   }
@@ -7914,12 +7891,12 @@ uint8_t* SendMessage::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.SendMessage)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.SendMsg)
   return target;
 }
 
-size_t SendMessage::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.SendMessage)
+size_t SendMsg::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.SendMsg)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -7933,7 +7910,7 @@ size_t SendMessage::ByteSizeLong() const {
         this->_internal_echo());
   }
 
-  // .cqhttp.SendMessage.Params params = 2;
+  // .cqhttp.SendMsg.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -7949,17 +7926,17 @@ size_t SendMessage::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendMessage::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendMsg::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SendMessage::MergeImpl
+    SendMsg::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendMessage::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendMsg::GetClassData() const { return &_class_data_; }
 
 
-void SendMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SendMessage*>(&to_msg);
-  auto& from = static_cast<const SendMessage&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.SendMessage)
+void SendMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SendMsg*>(&to_msg);
+  auto& from = static_cast<const SendMsg&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.SendMsg)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -7968,7 +7945,7 @@ void SendMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
-    _this->_internal_mutable_params()->::cqhttp::SendMessage_Params::MergeFrom(
+    _this->_internal_mutable_params()->::cqhttp::SendMsg_Params::MergeFrom(
         from._internal_params());
   }
   if (from._internal_action() != 0) {
@@ -7977,18 +7954,18 @@ void SendMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PR
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void SendMessage::CopyFrom(const SendMessage& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.SendMessage)
+void SendMsg::CopyFrom(const SendMsg& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.SendMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SendMessage::IsInitialized() const {
+bool SendMsg::IsInitialized() const {
   return true;
 }
 
-void SendMessage::InternalSwap(SendMessage* other) {
+void SendMsg::InternalSwap(SendMsg* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -7998,14 +7975,14 @@ void SendMessage::InternalSwap(SendMessage* other) {
       &other->_impl_.echo_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(SendMessage, _impl_.action_)
-      + sizeof(SendMessage::_impl_.action_)
-      - PROTOBUF_FIELD_OFFSET(SendMessage, _impl_.params_)>(
+      PROTOBUF_FIELD_OFFSET(SendMsg, _impl_.action_)
+      + sizeof(SendMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(SendMsg, _impl_.params_)>(
           reinterpret_cast<char*>(&_impl_.params_),
           reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SendMessage::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata SendMsg::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fapi_2eproto_getter, &descriptor_table_cqhttp_5fapi_2eproto_once,
       file_level_metadata_cqhttp_5fapi_2eproto[10]);
@@ -8013,29 +7990,29 @@ void SendMessage::InternalSwap(SendMessage* other) {
 
 // ===================================================================
 
-class SendMessageResp::_Internal {
+class SendMsgResp::_Internal {
  public:
 };
 
-SendMessageResp::SendMessageResp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+SendMsgResp::SendMsgResp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.SendMessageResp)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.SendMsgResp)
 }
-SendMessageResp::SendMessageResp(const SendMessageResp& from)
+SendMsgResp::SendMsgResp(const SendMsgResp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  SendMessageResp* const _this = this; (void)_this;
+  SendMsgResp* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.message_id_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.message_id_ = from._impl_.message_id_;
-  // @@protoc_insertion_point(copy_constructor:cqhttp.SendMessageResp)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.SendMsgResp)
 }
 
-inline void SendMessageResp::SharedCtor(
+inline void SendMsgResp::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -8045,8 +8022,8 @@ inline void SendMessageResp::SharedCtor(
   };
 }
 
-SendMessageResp::~SendMessageResp() {
-  // @@protoc_insertion_point(destructor:cqhttp.SendMessageResp)
+SendMsgResp::~SendMsgResp() {
+  // @@protoc_insertion_point(destructor:cqhttp.SendMsgResp)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -8054,16 +8031,16 @@ SendMessageResp::~SendMessageResp() {
   SharedDtor();
 }
 
-inline void SendMessageResp::SharedDtor() {
+inline void SendMsgResp::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void SendMessageResp::SetCachedSize(int size) const {
+void SendMsgResp::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void SendMessageResp::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.SendMessageResp)
+void SendMsgResp::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.SendMsgResp)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8072,7 +8049,7 @@ void SendMessageResp::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SendMessageResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* SendMsgResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -8109,9 +8086,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* SendMessageResp::_InternalSerialize(
+uint8_t* SendMsgResp::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.SendMessageResp)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.SendMsgResp)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8125,12 +8102,12 @@ uint8_t* SendMessageResp::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.SendMessageResp)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.SendMsgResp)
   return target;
 }
 
-size_t SendMessageResp::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.SendMessageResp)
+size_t SendMsgResp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.SendMsgResp)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8145,17 +8122,17 @@ size_t SendMessageResp::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendMessageResp::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SendMsgResp::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    SendMessageResp::MergeImpl
+    SendMsgResp::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendMessageResp::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SendMsgResp::GetClassData() const { return &_class_data_; }
 
 
-void SendMessageResp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<SendMessageResp*>(&to_msg);
-  auto& from = static_cast<const SendMessageResp&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.SendMessageResp)
+void SendMsgResp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SendMsgResp*>(&to_msg);
+  auto& from = static_cast<const SendMsgResp&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.SendMsgResp)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8166,24 +8143,24 @@ void SendMessageResp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const 
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void SendMessageResp::CopyFrom(const SendMessageResp& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.SendMessageResp)
+void SendMsgResp::CopyFrom(const SendMsgResp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.SendMsgResp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SendMessageResp::IsInitialized() const {
+bool SendMsgResp::IsInitialized() const {
   return true;
 }
 
-void SendMessageResp::InternalSwap(SendMessageResp* other) {
+void SendMsgResp::InternalSwap(SendMsgResp* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_.message_id_, other->_impl_.message_id_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata SendMessageResp::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata SendMsgResp::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fapi_2eproto_getter, &descriptor_table_cqhttp_5fapi_2eproto_once,
       file_level_metadata_cqhttp_5fapi_2eproto[11]);
@@ -52310,17 +52287,17 @@ template<> PROTOBUF_NOINLINE ::cqhttp::SendGroupForwardMsgResp*
 Arena::CreateMaybeMessage< ::cqhttp::SendGroupForwardMsgResp >(Arena* arena) {
   return Arena::CreateMessageInternal< ::cqhttp::SendGroupForwardMsgResp >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::SendMessage_Params*
-Arena::CreateMaybeMessage< ::cqhttp::SendMessage_Params >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::SendMessage_Params >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::SendMsg_Params*
+Arena::CreateMaybeMessage< ::cqhttp::SendMsg_Params >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::SendMsg_Params >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::SendMessage*
-Arena::CreateMaybeMessage< ::cqhttp::SendMessage >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::SendMessage >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::SendMsg*
+Arena::CreateMaybeMessage< ::cqhttp::SendMsg >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::SendMsg >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::SendMessageResp*
-Arena::CreateMaybeMessage< ::cqhttp::SendMessageResp >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::SendMessageResp >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::SendMsgResp*
+Arena::CreateMaybeMessage< ::cqhttp::SendMsgResp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::SendMsgResp >(arena);
 }
 template<> PROTOBUF_NOINLINE ::cqhttp::DeleteMsg_Params*
 Arena::CreateMaybeMessage< ::cqhttp::DeleteMsg_Params >(Arena* arena) {

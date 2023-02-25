@@ -445,15 +445,15 @@ extern SendGroupSignDefaultTypeInternal _SendGroupSign_default_instance_;
 class SendGroupSign_Params;
 struct SendGroupSign_ParamsDefaultTypeInternal;
 extern SendGroupSign_ParamsDefaultTypeInternal _SendGroupSign_Params_default_instance_;
-class SendMessage;
-struct SendMessageDefaultTypeInternal;
-extern SendMessageDefaultTypeInternal _SendMessage_default_instance_;
-class SendMessageResp;
-struct SendMessageRespDefaultTypeInternal;
-extern SendMessageRespDefaultTypeInternal _SendMessageResp_default_instance_;
-class SendMessage_Params;
-struct SendMessage_ParamsDefaultTypeInternal;
-extern SendMessage_ParamsDefaultTypeInternal _SendMessage_Params_default_instance_;
+class SendMsg;
+struct SendMsgDefaultTypeInternal;
+extern SendMsgDefaultTypeInternal _SendMsg_default_instance_;
+class SendMsgResp;
+struct SendMsgRespDefaultTypeInternal;
+extern SendMsgRespDefaultTypeInternal _SendMsgResp_default_instance_;
+class SendMsg_Params;
+struct SendMsg_ParamsDefaultTypeInternal;
+extern SendMsg_ParamsDefaultTypeInternal _SendMsg_Params_default_instance_;
 class SendPrivateForwardMsg;
 struct SendPrivateForwardMsgDefaultTypeInternal;
 extern SendPrivateForwardMsgDefaultTypeInternal _SendPrivateForwardMsg_default_instance_;
@@ -748,9 +748,9 @@ template<> ::cqhttp::SendGroupNotice* Arena::CreateMaybeMessage<::cqhttp::SendGr
 template<> ::cqhttp::SendGroupNotice_Params* Arena::CreateMaybeMessage<::cqhttp::SendGroupNotice_Params>(Arena*);
 template<> ::cqhttp::SendGroupSign* Arena::CreateMaybeMessage<::cqhttp::SendGroupSign>(Arena*);
 template<> ::cqhttp::SendGroupSign_Params* Arena::CreateMaybeMessage<::cqhttp::SendGroupSign_Params>(Arena*);
-template<> ::cqhttp::SendMessage* Arena::CreateMaybeMessage<::cqhttp::SendMessage>(Arena*);
-template<> ::cqhttp::SendMessageResp* Arena::CreateMaybeMessage<::cqhttp::SendMessageResp>(Arena*);
-template<> ::cqhttp::SendMessage_Params* Arena::CreateMaybeMessage<::cqhttp::SendMessage_Params>(Arena*);
+template<> ::cqhttp::SendMsg* Arena::CreateMaybeMessage<::cqhttp::SendMsg>(Arena*);
+template<> ::cqhttp::SendMsgResp* Arena::CreateMaybeMessage<::cqhttp::SendMsgResp>(Arena*);
+template<> ::cqhttp::SendMsg_Params* Arena::CreateMaybeMessage<::cqhttp::SendMsg_Params>(Arena*);
 template<> ::cqhttp::SendPrivateForwardMsg* Arena::CreateMaybeMessage<::cqhttp::SendPrivateForwardMsg>(Arena*);
 template<> ::cqhttp::SendPrivateForwardMsgResp* Arena::CreateMaybeMessage<::cqhttp::SendPrivateForwardMsgResp>(Arena*);
 template<> ::cqhttp::SendPrivateForwardMsg_Params* Arena::CreateMaybeMessage<::cqhttp::SendPrivateForwardMsg_Params>(Arena*);
@@ -2352,24 +2352,24 @@ class SendGroupForwardMsgResp final :
 };
 // -------------------------------------------------------------------
 
-class SendMessage_Params final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:cqhttp.SendMessage.Params) */ {
+class SendMsg_Params final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:cqhttp.SendMsg.Params) */ {
  public:
-  inline SendMessage_Params() : SendMessage_Params(nullptr) {}
-  ~SendMessage_Params() override;
-  explicit PROTOBUF_CONSTEXPR SendMessage_Params(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline SendMsg_Params() : SendMsg_Params(nullptr) {}
+  ~SendMsg_Params() override;
+  explicit PROTOBUF_CONSTEXPR SendMsg_Params(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  SendMessage_Params(const SendMessage_Params& from);
-  SendMessage_Params(SendMessage_Params&& from) noexcept
-    : SendMessage_Params() {
+  SendMsg_Params(const SendMsg_Params& from);
+  SendMsg_Params(SendMsg_Params&& from) noexcept
+    : SendMsg_Params() {
     *this = ::std::move(from);
   }
 
-  inline SendMessage_Params& operator=(const SendMessage_Params& from) {
+  inline SendMsg_Params& operator=(const SendMsg_Params& from) {
     CopyFrom(from);
     return *this;
   }
-  inline SendMessage_Params& operator=(SendMessage_Params&& from) noexcept {
+  inline SendMsg_Params& operator=(SendMsg_Params&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2392,20 +2392,20 @@ class SendMessage_Params final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const SendMessage_Params& default_instance() {
+  static const SendMsg_Params& default_instance() {
     return *internal_default_instance();
   }
-  static inline const SendMessage_Params* internal_default_instance() {
-    return reinterpret_cast<const SendMessage_Params*>(
-               &_SendMessage_Params_default_instance_);
+  static inline const SendMsg_Params* internal_default_instance() {
+    return reinterpret_cast<const SendMsg_Params*>(
+               &_SendMsg_Params_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(SendMessage_Params& a, SendMessage_Params& b) {
+  friend void swap(SendMsg_Params& a, SendMsg_Params& b) {
     a.Swap(&b);
   }
-  inline void Swap(SendMessage_Params* other) {
+  inline void Swap(SendMsg_Params* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2418,7 +2418,7 @@ class SendMessage_Params final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(SendMessage_Params* other) {
+  void UnsafeArenaSwap(SendMsg_Params* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2426,14 +2426,14 @@ class SendMessage_Params final :
 
   // implements Message ----------------------------------------------
 
-  SendMessage_Params* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<SendMessage_Params>(arena);
+  SendMsg_Params* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SendMsg_Params>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const SendMessage_Params& from);
+  void CopyFrom(const SendMsg_Params& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SendMessage_Params& from) {
-    SendMessage_Params::MergeImpl(*this, from);
+  void MergeFrom( const SendMsg_Params& from) {
+    SendMsg_Params::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2451,15 +2451,15 @@ class SendMessage_Params final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(SendMessage_Params* other);
+  void InternalSwap(SendMsg_Params* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "cqhttp.SendMessage.Params";
+    return "cqhttp.SendMsg.Params";
   }
   protected:
-  explicit SendMessage_Params(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit SendMsg_Params(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2473,26 +2473,12 @@ class SendMessage_Params final :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kMessageTypeFieldNumber = 1,
     kMessageFieldNumber = 4,
     kUserIdFieldNumber = 2,
     kGroupIdFieldNumber = 3,
+    kMessageTypeFieldNumber = 1,
     kAutoEscapeFieldNumber = 5,
   };
-  // string message_type = 1;
-  void clear_message_type();
-  const std::string& message_type() const;
-  template <typename ArgT0 = const std::string&, typename... ArgT>
-  void set_message_type(ArgT0&& arg0, ArgT... args);
-  std::string* mutable_message_type();
-  PROTOBUF_NODISCARD std::string* release_message_type();
-  void set_allocated_message_type(std::string* message_type);
-  private:
-  const std::string& _internal_message_type() const;
-  inline PROTOBUF_ALWAYS_INLINE void _internal_set_message_type(const std::string& value);
-  std::string* _internal_mutable_message_type();
-  public:
-
   // string message = 4;
   void clear_message();
   const std::string& message() const;
@@ -2525,6 +2511,15 @@ class SendMessage_Params final :
   void _internal_set_group_id(int64_t value);
   public:
 
+  // .cqhttp.CQHTTP_TYPE message_type = 1;
+  void clear_message_type();
+  ::cqhttp::CQHTTP_TYPE message_type() const;
+  void set_message_type(::cqhttp::CQHTTP_TYPE value);
+  private:
+  ::cqhttp::CQHTTP_TYPE _internal_message_type() const;
+  void _internal_set_message_type(::cqhttp::CQHTTP_TYPE value);
+  public:
+
   // bool auto_escape = 5;
   void clear_auto_escape();
   bool auto_escape() const;
@@ -2534,7 +2529,7 @@ class SendMessage_Params final :
   void _internal_set_auto_escape(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:cqhttp.SendMessage.Params)
+  // @@protoc_insertion_point(class_scope:cqhttp.SendMsg.Params)
  private:
   class _Internal;
 
@@ -2542,10 +2537,10 @@ class SendMessage_Params final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_type_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
     int64_t user_id_;
     int64_t group_id_;
+    int message_type_;
     bool auto_escape_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -2554,24 +2549,24 @@ class SendMessage_Params final :
 };
 // -------------------------------------------------------------------
 
-class SendMessage final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:cqhttp.SendMessage) */ {
+class SendMsg final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:cqhttp.SendMsg) */ {
  public:
-  inline SendMessage() : SendMessage(nullptr) {}
-  ~SendMessage() override;
-  explicit PROTOBUF_CONSTEXPR SendMessage(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline SendMsg() : SendMsg(nullptr) {}
+  ~SendMsg() override;
+  explicit PROTOBUF_CONSTEXPR SendMsg(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  SendMessage(const SendMessage& from);
-  SendMessage(SendMessage&& from) noexcept
-    : SendMessage() {
+  SendMsg(const SendMsg& from);
+  SendMsg(SendMsg&& from) noexcept
+    : SendMsg() {
     *this = ::std::move(from);
   }
 
-  inline SendMessage& operator=(const SendMessage& from) {
+  inline SendMsg& operator=(const SendMsg& from) {
     CopyFrom(from);
     return *this;
   }
-  inline SendMessage& operator=(SendMessage&& from) noexcept {
+  inline SendMsg& operator=(SendMsg&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2594,20 +2589,20 @@ class SendMessage final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const SendMessage& default_instance() {
+  static const SendMsg& default_instance() {
     return *internal_default_instance();
   }
-  static inline const SendMessage* internal_default_instance() {
-    return reinterpret_cast<const SendMessage*>(
-               &_SendMessage_default_instance_);
+  static inline const SendMsg* internal_default_instance() {
+    return reinterpret_cast<const SendMsg*>(
+               &_SendMsg_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     10;
 
-  friend void swap(SendMessage& a, SendMessage& b) {
+  friend void swap(SendMsg& a, SendMsg& b) {
     a.Swap(&b);
   }
-  inline void Swap(SendMessage* other) {
+  inline void Swap(SendMsg* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2620,7 +2615,7 @@ class SendMessage final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(SendMessage* other) {
+  void UnsafeArenaSwap(SendMsg* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2628,14 +2623,14 @@ class SendMessage final :
 
   // implements Message ----------------------------------------------
 
-  SendMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<SendMessage>(arena);
+  SendMsg* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SendMsg>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const SendMessage& from);
+  void CopyFrom(const SendMsg& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SendMessage& from) {
-    SendMessage::MergeImpl(*this, from);
+  void MergeFrom( const SendMsg& from) {
+    SendMsg::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2653,15 +2648,15 @@ class SendMessage final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(SendMessage* other);
+  void InternalSwap(SendMsg* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "cqhttp.SendMessage";
+    return "cqhttp.SendMsg";
   }
   protected:
-  explicit SendMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit SendMsg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2672,7 +2667,7 @@ class SendMessage final :
 
   // nested types ----------------------------------------------------
 
-  typedef SendMessage_Params Params;
+  typedef SendMsg_Params Params;
 
   // accessors -------------------------------------------------------
 
@@ -2695,23 +2690,23 @@ class SendMessage final :
   std::string* _internal_mutable_echo();
   public:
 
-  // .cqhttp.SendMessage.Params params = 2;
+  // .cqhttp.SendMsg.Params params = 2;
   bool has_params() const;
   private:
   bool _internal_has_params() const;
   public:
   void clear_params();
-  const ::cqhttp::SendMessage_Params& params() const;
-  PROTOBUF_NODISCARD ::cqhttp::SendMessage_Params* release_params();
-  ::cqhttp::SendMessage_Params* mutable_params();
-  void set_allocated_params(::cqhttp::SendMessage_Params* params);
+  const ::cqhttp::SendMsg_Params& params() const;
+  PROTOBUF_NODISCARD ::cqhttp::SendMsg_Params* release_params();
+  ::cqhttp::SendMsg_Params* mutable_params();
+  void set_allocated_params(::cqhttp::SendMsg_Params* params);
   private:
-  const ::cqhttp::SendMessage_Params& _internal_params() const;
-  ::cqhttp::SendMessage_Params* _internal_mutable_params();
+  const ::cqhttp::SendMsg_Params& _internal_params() const;
+  ::cqhttp::SendMsg_Params* _internal_mutable_params();
   public:
   void unsafe_arena_set_allocated_params(
-      ::cqhttp::SendMessage_Params* params);
-  ::cqhttp::SendMessage_Params* unsafe_arena_release_params();
+      ::cqhttp::SendMsg_Params* params);
+  ::cqhttp::SendMsg_Params* unsafe_arena_release_params();
 
   // .cqhttp.Action action = 1;
   void clear_action();
@@ -2722,7 +2717,7 @@ class SendMessage final :
   void _internal_set_action(::cqhttp::Action value);
   public:
 
-  // @@protoc_insertion_point(class_scope:cqhttp.SendMessage)
+  // @@protoc_insertion_point(class_scope:cqhttp.SendMsg)
  private:
   class _Internal;
 
@@ -2731,7 +2726,7 @@ class SendMessage final :
   typedef void DestructorSkippable_;
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr echo_;
-    ::cqhttp::SendMessage_Params* params_;
+    ::cqhttp::SendMsg_Params* params_;
     int action_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -2740,24 +2735,24 @@ class SendMessage final :
 };
 // -------------------------------------------------------------------
 
-class SendMessageResp final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:cqhttp.SendMessageResp) */ {
+class SendMsgResp final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:cqhttp.SendMsgResp) */ {
  public:
-  inline SendMessageResp() : SendMessageResp(nullptr) {}
-  ~SendMessageResp() override;
-  explicit PROTOBUF_CONSTEXPR SendMessageResp(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline SendMsgResp() : SendMsgResp(nullptr) {}
+  ~SendMsgResp() override;
+  explicit PROTOBUF_CONSTEXPR SendMsgResp(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  SendMessageResp(const SendMessageResp& from);
-  SendMessageResp(SendMessageResp&& from) noexcept
-    : SendMessageResp() {
+  SendMsgResp(const SendMsgResp& from);
+  SendMsgResp(SendMsgResp&& from) noexcept
+    : SendMsgResp() {
     *this = ::std::move(from);
   }
 
-  inline SendMessageResp& operator=(const SendMessageResp& from) {
+  inline SendMsgResp& operator=(const SendMsgResp& from) {
     CopyFrom(from);
     return *this;
   }
-  inline SendMessageResp& operator=(SendMessageResp&& from) noexcept {
+  inline SendMsgResp& operator=(SendMsgResp&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2780,20 +2775,20 @@ class SendMessageResp final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const SendMessageResp& default_instance() {
+  static const SendMsgResp& default_instance() {
     return *internal_default_instance();
   }
-  static inline const SendMessageResp* internal_default_instance() {
-    return reinterpret_cast<const SendMessageResp*>(
-               &_SendMessageResp_default_instance_);
+  static inline const SendMsgResp* internal_default_instance() {
+    return reinterpret_cast<const SendMsgResp*>(
+               &_SendMsgResp_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     11;
 
-  friend void swap(SendMessageResp& a, SendMessageResp& b) {
+  friend void swap(SendMsgResp& a, SendMsgResp& b) {
     a.Swap(&b);
   }
-  inline void Swap(SendMessageResp* other) {
+  inline void Swap(SendMsgResp* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2806,7 +2801,7 @@ class SendMessageResp final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(SendMessageResp* other) {
+  void UnsafeArenaSwap(SendMsgResp* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2814,14 +2809,14 @@ class SendMessageResp final :
 
   // implements Message ----------------------------------------------
 
-  SendMessageResp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<SendMessageResp>(arena);
+  SendMsgResp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<SendMsgResp>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const SendMessageResp& from);
+  void CopyFrom(const SendMsgResp& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const SendMessageResp& from) {
-    SendMessageResp::MergeImpl(*this, from);
+  void MergeFrom( const SendMsgResp& from) {
+    SendMsgResp::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2839,15 +2834,15 @@ class SendMessageResp final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(SendMessageResp* other);
+  void InternalSwap(SendMsgResp* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "cqhttp.SendMessageResp";
+    return "cqhttp.SendMsgResp";
   }
   protected:
-  explicit SendMessageResp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit SendMsgResp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2872,7 +2867,7 @@ class SendMessageResp final :
   void _internal_set_message_id(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:cqhttp.SendMessageResp)
+  // @@protoc_insertion_point(class_scope:cqhttp.SendMsgResp)
  private:
   class _Internal;
 
@@ -34670,134 +34665,104 @@ inline void SendGroupForwardMsgResp::set_allocated_forward_id(std::string* forwa
 
 // -------------------------------------------------------------------
 
-// SendMessage_Params
+// SendMsg_Params
 
-// string message_type = 1;
-inline void SendMessage_Params::clear_message_type() {
-  _impl_.message_type_.ClearToEmpty();
+// .cqhttp.CQHTTP_TYPE message_type = 1;
+inline void SendMsg_Params::clear_message_type() {
+  _impl_.message_type_ = 0;
 }
-inline const std::string& SendMessage_Params::message_type() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.Params.message_type)
+inline ::cqhttp::CQHTTP_TYPE SendMsg_Params::_internal_message_type() const {
+  return static_cast< ::cqhttp::CQHTTP_TYPE >(_impl_.message_type_);
+}
+inline ::cqhttp::CQHTTP_TYPE SendMsg_Params::message_type() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.Params.message_type)
   return _internal_message_type();
 }
-template <typename ArgT0, typename... ArgT>
-inline PROTOBUF_ALWAYS_INLINE
-void SendMessage_Params::set_message_type(ArgT0&& arg0, ArgT... args) {
- 
- _impl_.message_type_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.Params.message_type)
-}
-inline std::string* SendMessage_Params::mutable_message_type() {
-  std::string* _s = _internal_mutable_message_type();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendMessage.Params.message_type)
-  return _s;
-}
-inline const std::string& SendMessage_Params::_internal_message_type() const {
-  return _impl_.message_type_.Get();
-}
-inline void SendMessage_Params::_internal_set_message_type(const std::string& value) {
+inline void SendMsg_Params::_internal_set_message_type(::cqhttp::CQHTTP_TYPE value) {
   
-  _impl_.message_type_.Set(value, GetArenaForAllocation());
+  _impl_.message_type_ = value;
 }
-inline std::string* SendMessage_Params::_internal_mutable_message_type() {
-  
-  return _impl_.message_type_.Mutable(GetArenaForAllocation());
-}
-inline std::string* SendMessage_Params::release_message_type() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendMessage.Params.message_type)
-  return _impl_.message_type_.Release();
-}
-inline void SendMessage_Params::set_allocated_message_type(std::string* message_type) {
-  if (message_type != nullptr) {
-    
-  } else {
-    
-  }
-  _impl_.message_type_.SetAllocated(message_type, GetArenaForAllocation());
-#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (_impl_.message_type_.IsDefault()) {
-    _impl_.message_type_.Set("", GetArenaForAllocation());
-  }
-#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMessage.Params.message_type)
+inline void SendMsg_Params::set_message_type(::cqhttp::CQHTTP_TYPE value) {
+  _internal_set_message_type(value);
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.Params.message_type)
 }
 
 // int64 user_id = 2;
-inline void SendMessage_Params::clear_user_id() {
+inline void SendMsg_Params::clear_user_id() {
   _impl_.user_id_ = int64_t{0};
 }
-inline int64_t SendMessage_Params::_internal_user_id() const {
+inline int64_t SendMsg_Params::_internal_user_id() const {
   return _impl_.user_id_;
 }
-inline int64_t SendMessage_Params::user_id() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.Params.user_id)
+inline int64_t SendMsg_Params::user_id() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.Params.user_id)
   return _internal_user_id();
 }
-inline void SendMessage_Params::_internal_set_user_id(int64_t value) {
+inline void SendMsg_Params::_internal_set_user_id(int64_t value) {
   
   _impl_.user_id_ = value;
 }
-inline void SendMessage_Params::set_user_id(int64_t value) {
+inline void SendMsg_Params::set_user_id(int64_t value) {
   _internal_set_user_id(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.Params.user_id)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.Params.user_id)
 }
 
 // int64 group_id = 3;
-inline void SendMessage_Params::clear_group_id() {
+inline void SendMsg_Params::clear_group_id() {
   _impl_.group_id_ = int64_t{0};
 }
-inline int64_t SendMessage_Params::_internal_group_id() const {
+inline int64_t SendMsg_Params::_internal_group_id() const {
   return _impl_.group_id_;
 }
-inline int64_t SendMessage_Params::group_id() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.Params.group_id)
+inline int64_t SendMsg_Params::group_id() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.Params.group_id)
   return _internal_group_id();
 }
-inline void SendMessage_Params::_internal_set_group_id(int64_t value) {
+inline void SendMsg_Params::_internal_set_group_id(int64_t value) {
   
   _impl_.group_id_ = value;
 }
-inline void SendMessage_Params::set_group_id(int64_t value) {
+inline void SendMsg_Params::set_group_id(int64_t value) {
   _internal_set_group_id(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.Params.group_id)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.Params.group_id)
 }
 
 // string message = 4;
-inline void SendMessage_Params::clear_message() {
+inline void SendMsg_Params::clear_message() {
   _impl_.message_.ClearToEmpty();
 }
-inline const std::string& SendMessage_Params::message() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.Params.message)
+inline const std::string& SendMsg_Params::message() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.Params.message)
   return _internal_message();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SendMessage_Params::set_message(ArgT0&& arg0, ArgT... args) {
+void SendMsg_Params::set_message(ArgT0&& arg0, ArgT... args) {
  
  _impl_.message_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.Params.message)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.Params.message)
 }
-inline std::string* SendMessage_Params::mutable_message() {
+inline std::string* SendMsg_Params::mutable_message() {
   std::string* _s = _internal_mutable_message();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendMessage.Params.message)
+  // @@protoc_insertion_point(field_mutable:cqhttp.SendMsg.Params.message)
   return _s;
 }
-inline const std::string& SendMessage_Params::_internal_message() const {
+inline const std::string& SendMsg_Params::_internal_message() const {
   return _impl_.message_.Get();
 }
-inline void SendMessage_Params::_internal_set_message(const std::string& value) {
+inline void SendMsg_Params::_internal_set_message(const std::string& value) {
   
   _impl_.message_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SendMessage_Params::_internal_mutable_message() {
+inline std::string* SendMsg_Params::_internal_mutable_message() {
   
   return _impl_.message_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SendMessage_Params::release_message() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendMessage.Params.message)
+inline std::string* SendMsg_Params::release_message() {
+  // @@protoc_insertion_point(field_release:cqhttp.SendMsg.Params.message)
   return _impl_.message_.Release();
 }
-inline void SendMessage_Params::set_allocated_message(std::string* message) {
+inline void SendMsg_Params::set_allocated_message(std::string* message) {
   if (message != nullptr) {
     
   } else {
@@ -34809,77 +34774,77 @@ inline void SendMessage_Params::set_allocated_message(std::string* message) {
     _impl_.message_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMessage.Params.message)
+  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMsg.Params.message)
 }
 
 // bool auto_escape = 5;
-inline void SendMessage_Params::clear_auto_escape() {
+inline void SendMsg_Params::clear_auto_escape() {
   _impl_.auto_escape_ = false;
 }
-inline bool SendMessage_Params::_internal_auto_escape() const {
+inline bool SendMsg_Params::_internal_auto_escape() const {
   return _impl_.auto_escape_;
 }
-inline bool SendMessage_Params::auto_escape() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.Params.auto_escape)
+inline bool SendMsg_Params::auto_escape() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.Params.auto_escape)
   return _internal_auto_escape();
 }
-inline void SendMessage_Params::_internal_set_auto_escape(bool value) {
+inline void SendMsg_Params::_internal_set_auto_escape(bool value) {
   
   _impl_.auto_escape_ = value;
 }
-inline void SendMessage_Params::set_auto_escape(bool value) {
+inline void SendMsg_Params::set_auto_escape(bool value) {
   _internal_set_auto_escape(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.Params.auto_escape)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.Params.auto_escape)
 }
 
 // -------------------------------------------------------------------
 
-// SendMessage
+// SendMsg
 
 // .cqhttp.Action action = 1;
-inline void SendMessage::clear_action() {
+inline void SendMsg::clear_action() {
   _impl_.action_ = 0;
 }
-inline ::cqhttp::Action SendMessage::_internal_action() const {
+inline ::cqhttp::Action SendMsg::_internal_action() const {
   return static_cast< ::cqhttp::Action >(_impl_.action_);
 }
-inline ::cqhttp::Action SendMessage::action() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.action)
+inline ::cqhttp::Action SendMsg::action() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.action)
   return _internal_action();
 }
-inline void SendMessage::_internal_set_action(::cqhttp::Action value) {
+inline void SendMsg::_internal_set_action(::cqhttp::Action value) {
   
   _impl_.action_ = value;
 }
-inline void SendMessage::set_action(::cqhttp::Action value) {
+inline void SendMsg::set_action(::cqhttp::Action value) {
   _internal_set_action(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.action)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.action)
 }
 
-// .cqhttp.SendMessage.Params params = 2;
-inline bool SendMessage::_internal_has_params() const {
+// .cqhttp.SendMsg.Params params = 2;
+inline bool SendMsg::_internal_has_params() const {
   return this != internal_default_instance() && _impl_.params_ != nullptr;
 }
-inline bool SendMessage::has_params() const {
+inline bool SendMsg::has_params() const {
   return _internal_has_params();
 }
-inline void SendMessage::clear_params() {
+inline void SendMsg::clear_params() {
   if (GetArenaForAllocation() == nullptr && _impl_.params_ != nullptr) {
     delete _impl_.params_;
   }
   _impl_.params_ = nullptr;
 }
-inline const ::cqhttp::SendMessage_Params& SendMessage::_internal_params() const {
-  const ::cqhttp::SendMessage_Params* p = _impl_.params_;
-  return p != nullptr ? *p : reinterpret_cast<const ::cqhttp::SendMessage_Params&>(
-      ::cqhttp::_SendMessage_Params_default_instance_);
+inline const ::cqhttp::SendMsg_Params& SendMsg::_internal_params() const {
+  const ::cqhttp::SendMsg_Params* p = _impl_.params_;
+  return p != nullptr ? *p : reinterpret_cast<const ::cqhttp::SendMsg_Params&>(
+      ::cqhttp::_SendMsg_Params_default_instance_);
 }
-inline const ::cqhttp::SendMessage_Params& SendMessage::params() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.params)
+inline const ::cqhttp::SendMsg_Params& SendMsg::params() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.params)
   return _internal_params();
 }
-inline void SendMessage::unsafe_arena_set_allocated_params(
-    ::cqhttp::SendMessage_Params* params) {
+inline void SendMsg::unsafe_arena_set_allocated_params(
+    ::cqhttp::SendMsg_Params* params) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.params_);
   }
@@ -34889,11 +34854,11 @@ inline void SendMessage::unsafe_arena_set_allocated_params(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:cqhttp.SendMessage.params)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:cqhttp.SendMsg.params)
 }
-inline ::cqhttp::SendMessage_Params* SendMessage::release_params() {
+inline ::cqhttp::SendMsg_Params* SendMsg::release_params() {
   
-  ::cqhttp::SendMessage_Params* temp = _impl_.params_;
+  ::cqhttp::SendMsg_Params* temp = _impl_.params_;
   _impl_.params_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -34906,27 +34871,27 @@ inline ::cqhttp::SendMessage_Params* SendMessage::release_params() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::cqhttp::SendMessage_Params* SendMessage::unsafe_arena_release_params() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendMessage.params)
+inline ::cqhttp::SendMsg_Params* SendMsg::unsafe_arena_release_params() {
+  // @@protoc_insertion_point(field_release:cqhttp.SendMsg.params)
   
-  ::cqhttp::SendMessage_Params* temp = _impl_.params_;
+  ::cqhttp::SendMsg_Params* temp = _impl_.params_;
   _impl_.params_ = nullptr;
   return temp;
 }
-inline ::cqhttp::SendMessage_Params* SendMessage::_internal_mutable_params() {
+inline ::cqhttp::SendMsg_Params* SendMsg::_internal_mutable_params() {
   
   if (_impl_.params_ == nullptr) {
-    auto* p = CreateMaybeMessage<::cqhttp::SendMessage_Params>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::cqhttp::SendMsg_Params>(GetArenaForAllocation());
     _impl_.params_ = p;
   }
   return _impl_.params_;
 }
-inline ::cqhttp::SendMessage_Params* SendMessage::mutable_params() {
-  ::cqhttp::SendMessage_Params* _msg = _internal_mutable_params();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendMessage.params)
+inline ::cqhttp::SendMsg_Params* SendMsg::mutable_params() {
+  ::cqhttp::SendMsg_Params* _msg = _internal_mutable_params();
+  // @@protoc_insertion_point(field_mutable:cqhttp.SendMsg.params)
   return _msg;
 }
-inline void SendMessage::set_allocated_params(::cqhttp::SendMessage_Params* params) {
+inline void SendMsg::set_allocated_params(::cqhttp::SendMsg_Params* params) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.params_;
@@ -34943,45 +34908,45 @@ inline void SendMessage::set_allocated_params(::cqhttp::SendMessage_Params* para
     
   }
   _impl_.params_ = params;
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMessage.params)
+  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMsg.params)
 }
 
 // string echo = 3;
-inline void SendMessage::clear_echo() {
+inline void SendMsg::clear_echo() {
   _impl_.echo_.ClearToEmpty();
 }
-inline const std::string& SendMessage::echo() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessage.echo)
+inline const std::string& SendMsg::echo() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsg.echo)
   return _internal_echo();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void SendMessage::set_echo(ArgT0&& arg0, ArgT... args) {
+void SendMsg::set_echo(ArgT0&& arg0, ArgT... args) {
  
  _impl_.echo_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessage.echo)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsg.echo)
 }
-inline std::string* SendMessage::mutable_echo() {
+inline std::string* SendMsg::mutable_echo() {
   std::string* _s = _internal_mutable_echo();
-  // @@protoc_insertion_point(field_mutable:cqhttp.SendMessage.echo)
+  // @@protoc_insertion_point(field_mutable:cqhttp.SendMsg.echo)
   return _s;
 }
-inline const std::string& SendMessage::_internal_echo() const {
+inline const std::string& SendMsg::_internal_echo() const {
   return _impl_.echo_.Get();
 }
-inline void SendMessage::_internal_set_echo(const std::string& value) {
+inline void SendMsg::_internal_set_echo(const std::string& value) {
   
   _impl_.echo_.Set(value, GetArenaForAllocation());
 }
-inline std::string* SendMessage::_internal_mutable_echo() {
+inline std::string* SendMsg::_internal_mutable_echo() {
   
   return _impl_.echo_.Mutable(GetArenaForAllocation());
 }
-inline std::string* SendMessage::release_echo() {
-  // @@protoc_insertion_point(field_release:cqhttp.SendMessage.echo)
+inline std::string* SendMsg::release_echo() {
+  // @@protoc_insertion_point(field_release:cqhttp.SendMsg.echo)
   return _impl_.echo_.Release();
 }
-inline void SendMessage::set_allocated_echo(std::string* echo) {
+inline void SendMsg::set_allocated_echo(std::string* echo) {
   if (echo != nullptr) {
     
   } else {
@@ -34993,31 +34958,31 @@ inline void SendMessage::set_allocated_echo(std::string* echo) {
     _impl_.echo_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMessage.echo)
+  // @@protoc_insertion_point(field_set_allocated:cqhttp.SendMsg.echo)
 }
 
 // -------------------------------------------------------------------
 
-// SendMessageResp
+// SendMsgResp
 
 // int32 message_id = 2;
-inline void SendMessageResp::clear_message_id() {
+inline void SendMsgResp::clear_message_id() {
   _impl_.message_id_ = 0;
 }
-inline int32_t SendMessageResp::_internal_message_id() const {
+inline int32_t SendMsgResp::_internal_message_id() const {
   return _impl_.message_id_;
 }
-inline int32_t SendMessageResp::message_id() const {
-  // @@protoc_insertion_point(field_get:cqhttp.SendMessageResp.message_id)
+inline int32_t SendMsgResp::message_id() const {
+  // @@protoc_insertion_point(field_get:cqhttp.SendMsgResp.message_id)
   return _internal_message_id();
 }
-inline void SendMessageResp::_internal_set_message_id(int32_t value) {
+inline void SendMsgResp::_internal_set_message_id(int32_t value) {
   
   _impl_.message_id_ = value;
 }
-inline void SendMessageResp::set_message_id(int32_t value) {
+inline void SendMsgResp::set_message_id(int32_t value) {
   _internal_set_message_id(value);
-  // @@protoc_insertion_point(field_set:cqhttp.SendMessageResp.message_id)
+  // @@protoc_insertion_point(field_set:cqhttp.SendMsgResp.message_id)
 }
 
 // -------------------------------------------------------------------

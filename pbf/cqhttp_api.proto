@@ -53,13 +53,13 @@ message SendGroupForwardMsgResp{
     string forward_id = 2;
 }
 
-message SendMessage{
+message SendMsg{
     Action action = 1;
     Params params = 2;
     string echo = 3;
 
     message Params{
-        string message_type = 1;
+        CQHTTP_TYPE message_type = 1;
         int64 user_id = 2;
         int64 group_id = 3;
         string message = 4;
@@ -67,7 +67,7 @@ message SendMessage{
     }
 }
 
-message SendMessageResp{
+message SendMsgResp{
     int32 message_id = 2;
 }
 

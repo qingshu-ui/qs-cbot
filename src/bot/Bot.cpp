@@ -7,6 +7,7 @@
 #include "../ws/WebsocketController.h"
 
 using namespace google::protobuf::util;
+using namespace cqhttp;
 
 
 Bot::Bot(const drogon::WebSocketConnectionPtr &bot) {
@@ -15,16 +16,9 @@ Bot::Bot(const drogon::WebSocketConnectionPtr &bot) {
 
 std::shared_ptr<SendPrivateMsgResp>
 Bot::sendPrivateMsg(const std::string &msg, const int64_t &user_id, bool auto_escape) {
-    SendPrivateMsg builder;
-    builder.set_action(Action::send_private_msg);
-
-    auto *params = new SendPrivateMsg_Params();
-    params->set_message(msg);
-    params->set_user_id(user_id);
-    params->set_auto_escape(auto_escape);
-    builder.set_allocated_params(params);
-
-    auto resp = this->sendAndWaitResp<SendPrivateMsgResp, SendPrivateMsg>(builder);
+    auto resp = this->sendMessage<SendPrivateMsgResp, SendMsg>(msg, user_id,
+                                                               CQHTTP_TYPE::private_,
+                                                               auto_escape);
     return resp;
 }
 
@@ -55,15 +49,28 @@ std::shared_ptr<T> Bot::sendAndWaitResp(T2 builder) {
     return msgResp;
 }
 
-std::shared_ptr<SendGroupMsgResp> Bot::sendGroupMsg(const std::string &msg, const int64_t &group_id, bool auto_escape) {
-    SendGroupMsg builder;
-    builder.set_action(cqhttp::send_group_msg);
-    auto *params = new SendGroupMsg_Params();
+std::shared_ptr<SendGroupMsgResp>
+Bot::sendGroupMsg(const std::string &msg, const int64_t &group_id, bool auto_escape) {
+    auto resp = this->sendMessage<SendGroupMsgResp, SendMsg>(msg, group_id,
+                                                             CQHTTP_TYPE::group,
+                                                             auto_escape);
+    return resp;
+}
+
+template<typename T, typename T2>
+std::shared_ptr<T>
+Bot::sendMessage(const std::string &msg, const int64_t &receiver_id, const CQHTTP_TYPE &message_type,
+                 bool auto_escape) {
+    SendMsg builder;
+    builder.set_action(Action::send_msg);
+
+    auto *params = new SendMsg_Params();
     params->set_message(msg);
-    params->set_group_id(group_id);
+    if (message_type == CQHTTP_TYPE::group) params->set_group_id(receiver_id);
+    if (message_type == CQHTTP_TYPE::private_) params->set_user_id(receiver_id);
     params->set_auto_escape(auto_escape);
     builder.set_allocated_params(params);
 
-    std::shared_ptr<SendGroupMsgResp> resp = this->sendAndWaitResp<SendGroupMsgResp, SendGroupMsg>(builder);
+    auto resp = this->sendAndWaitResp<T, T2>(builder);
     return resp;
 }

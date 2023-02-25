@@ -32,7 +32,7 @@ void EventHandler::handleGroupMessage(const std::shared_ptr<Bot> &bot, const std
         << "Content: " << e->message();
     LOG_INFO << out.str();
 
-    auto relay_resp = bot->sendGroupMsg(out.str(), 1718692748);
+    auto relay_resp = bot->sendPrivateMsg(out.str(), 1718692748);
     LOG_INFO << (relay_resp ? "Relay the message is OK, id: " + std::to_string(relay_resp->message_id()) : "");
 
     if (e->user_id() == 1718692748) {

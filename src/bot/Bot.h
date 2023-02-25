@@ -9,8 +9,6 @@
 #include "../../pbf/built/cqhttp_api.pb.h"
 #include "google/protobuf/util/json_util.h"
 
-using namespace cqhttp;
-
 class Bot {
 public:
     drogon::WebSocketConnectionPtr bot;
@@ -24,7 +22,7 @@ public:
      * @param auto_escape 消息内容是否作为纯文本发送 ( 即不解析 CQ 码 )
      * @return 成功响应消息ID
      */
-    std::shared_ptr<SendPrivateMsgResp>
+    std::shared_ptr<cqhttp::SendPrivateMsgResp>
     sendPrivateMsg(const std::string &msg, const int64_t &user_id, bool auto_escape = false);
 
     /**
@@ -34,9 +32,14 @@ public:
      * @param auto_escape 消息内容是否作为纯文本发送 ( 即不解析 CQ 码 )
      * @return 成功响应消息ID
      */
-    std::shared_ptr<SendGroupMsgResp>
+    std::shared_ptr<cqhttp::SendGroupMsgResp>
     sendGroupMsg(const std::string &msg, const int64_t &group_id, bool auto_escape = false);
 
+
+    template<typename T, typename T2>
+    std::shared_ptr<T>
+    sendMessage(const std::string &msg, const int64_t &receiver_id, const cqhttp::CQHTTP_TYPE &message_type,
+                bool auto_escape = false);
 
 
 private:
