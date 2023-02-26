@@ -35,7 +35,14 @@ void EventHandler::handleGroupMessage(const std::shared_ptr<Bot> &bot, const std
     auto relay_resp = bot->sendPrivateMsg(out.str(), 1718692748);
     LOG_INFO << (relay_resp ? "Relay the message is OK, id: " + std::to_string(relay_resp->message_id()) : "");
 
+
     if (e->user_id() == 1718692748) {
+
+        if (e->message() == "宝，撤回我这条消息吧！") {
+            bot->deleteMsg(e->message_id());
+            return;
+        }
+
         auto resp = bot->sendGroupMsg("宝，当海王真不好，当海王事不少，天天都有人找，好烦恼好烦恼~", e->group_id());
         if (nullptr != resp) {
             LOG_INFO << "Send group message is successfully, id: " << resp->message_id();
@@ -58,7 +65,23 @@ void EventHandler::handleFriendRecall(const std::shared_ptr<Bot> &bot, const std
 }
 
 void EventHandler::handleGroupRecall(const std::shared_ptr<Bot> &bot, const std::shared_ptr<GroupRecallEvent> &e) {
+    std::ostringstream msg;
+    auto message_info = bot->getMessage((int32_t) e->message_id());
 
+    struct tm info{};
+    time_t t = message_info->time();
+    char buffer[80];
+    localtime_s(&info, &t);
+    strftime(buffer, sizeof buffer, "%H:%M:%S", &info);
+
+    msg << "Message recall detected." << std::endl << std::endl
+        << "Sender_ID: " << message_info->sender().user_id() << std::endl
+        << "Sender_Name: " << message_info->sender().nickname() << std::endl
+        << "Message_Text: " << message_info->message() << std::endl << std::endl
+        << "Recall_Time: " << buffer;
+
+
+    bot->sendGroupMsg(msg.str(), e->group_id());
 }
 
 void EventHandler::handleGroupIncrease(const std::shared_ptr<Bot> &bot, const std::shared_ptr<GroupIncreaseEvent> &e) {

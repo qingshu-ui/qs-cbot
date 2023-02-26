@@ -80,7 +80,7 @@ message DeleteMsg{
     }
 }
 
-message getMsg{
+message GetMsg{
     Action action = 1;
     Params params = 2;
     string echo = 3;
@@ -90,7 +90,7 @@ message getMsg{
     }
 }
 
-message getMsgResp{
+message GetMsgResp{
     bool group = 1;
     int64 group_id = 2;
     int32 message_id = 3;

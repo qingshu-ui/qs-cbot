@@ -223,35 +223,35 @@ struct DeleteMsgDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeleteMsgDefaultTypeInternal _DeleteMsg_default_instance_;
-PROTOBUF_CONSTEXPR getMsg_Params::getMsg_Params(
+PROTOBUF_CONSTEXPR GetMsg_Params::GetMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_id_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct getMsg_ParamsDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR getMsg_ParamsDefaultTypeInternal()
+struct GetMsg_ParamsDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetMsg_ParamsDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~getMsg_ParamsDefaultTypeInternal() {}
+  ~GetMsg_ParamsDefaultTypeInternal() {}
   union {
-    getMsg_Params _instance;
+    GetMsg_Params _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 getMsg_ParamsDefaultTypeInternal _getMsg_Params_default_instance_;
-PROTOBUF_CONSTEXPR getMsg::getMsg(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetMsg_ParamsDefaultTypeInternal _GetMsg_Params_default_instance_;
+PROTOBUF_CONSTEXPR GetMsg::GetMsg(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.echo_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.params_)*/nullptr
   , /*decltype(_impl_.action_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct getMsgDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR getMsgDefaultTypeInternal()
+struct GetMsgDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetMsgDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~getMsgDefaultTypeInternal() {}
+  ~GetMsgDefaultTypeInternal() {}
   union {
-    getMsg _instance;
+    GetMsg _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 getMsgDefaultTypeInternal _getMsg_default_instance_;
-PROTOBUF_CONSTEXPR getMsgResp::getMsgResp(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetMsgDefaultTypeInternal _GetMsg_default_instance_;
+PROTOBUF_CONSTEXPR GetMsgResp::GetMsgResp(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_type_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
   , /*decltype(_impl_.message_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -263,15 +263,15 @@ PROTOBUF_CONSTEXPR getMsgResp::getMsgResp(
   , /*decltype(_impl_.real_id_)*/0
   , /*decltype(_impl_.time_)*/0
   , /*decltype(_impl_._cached_size_)*/{}} {}
-struct getMsgRespDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR getMsgRespDefaultTypeInternal()
+struct GetMsgRespDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetMsgRespDefaultTypeInternal()
       : _instance(::_pbi::ConstantInitialized{}) {}
-  ~getMsgRespDefaultTypeInternal() {}
+  ~GetMsgRespDefaultTypeInternal() {}
   union {
-    getMsgResp _instance;
+    GetMsgResp _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 getMsgRespDefaultTypeInternal _getMsgResp_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetMsgRespDefaultTypeInternal _GetMsgResp_default_instance_;
 PROTOBUF_CONSTEXPR GetForwardMsg_Params::GetForwardMsg_Params(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.message_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -2896,36 +2896,36 @@ const uint32_t TableStruct_cqhttp_5fapi_2eproto::offsets[] PROTOBUF_SECTION_VARI
   PROTOBUF_FIELD_OFFSET(::cqhttp::DeleteMsg, _impl_.action_),
   PROTOBUF_FIELD_OFFSET(::cqhttp::DeleteMsg, _impl_.params_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsg_Params, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsg_Params, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsg_Params, _impl_.message_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsg_Params, _impl_.message_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsg, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsg, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsg, _impl_.action_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsg, _impl_.params_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsg, _impl_.echo_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsg, _impl_.action_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsg, _impl_.params_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsg, _impl_.echo_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.group_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.group_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.message_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.real_id_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.message_type_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.sender_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.time_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.message_),
-  PROTOBUF_FIELD_OFFSET(::cqhttp::getMsgResp, _impl_.raw_message_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.group_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.group_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.message_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.real_id_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.message_type_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.sender_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.time_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.message_),
+  PROTOBUF_FIELD_OFFSET(::cqhttp::GetMsgResp, _impl_.raw_message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::cqhttp::GetForwardMsg_Params, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -4409,9 +4409,9 @@ static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protode
   { 96, -1, -1, sizeof(::cqhttp::SendMsgResp)},
   { 103, -1, -1, sizeof(::cqhttp::DeleteMsg_Params)},
   { 110, -1, -1, sizeof(::cqhttp::DeleteMsg)},
-  { 118, -1, -1, sizeof(::cqhttp::getMsg_Params)},
-  { 125, -1, -1, sizeof(::cqhttp::getMsg)},
-  { 134, -1, -1, sizeof(::cqhttp::getMsgResp)},
+  { 118, -1, -1, sizeof(::cqhttp::GetMsg_Params)},
+  { 125, -1, -1, sizeof(::cqhttp::GetMsg)},
+  { 134, -1, -1, sizeof(::cqhttp::GetMsgResp)},
   { 149, -1, -1, sizeof(::cqhttp::GetForwardMsg_Params)},
   { 156, -1, -1, sizeof(::cqhttp::GetForwardMsg)},
   { 165, -1, -1, sizeof(::cqhttp::GetForwardMsgResp_Messages)},
@@ -4601,9 +4601,9 @@ static const ::_pb::Message* const file_default_instances[] = {
   &::cqhttp::_SendMsgResp_default_instance_._instance,
   &::cqhttp::_DeleteMsg_Params_default_instance_._instance,
   &::cqhttp::_DeleteMsg_default_instance_._instance,
-  &::cqhttp::_getMsg_Params_default_instance_._instance,
-  &::cqhttp::_getMsg_default_instance_._instance,
-  &::cqhttp::_getMsgResp_default_instance_._instance,
+  &::cqhttp::_GetMsg_Params_default_instance_._instance,
+  &::cqhttp::_GetMsg_default_instance_._instance,
+  &::cqhttp::_GetMsgResp_default_instance_._instance,
   &::cqhttp::_GetForwardMsg_Params_default_instance_._instance,
   &::cqhttp::_GetForwardMsg_default_instance_._instance,
   &::cqhttp::_GetForwardMsgResp_Messages_default_instance_._instance,
@@ -4806,10 +4806,10 @@ const char descriptor_table_protodef_cqhttp_5fapi_2eproto[] PROTOBUF_SECTION_VAR
   "ndMsgResp\022\022\n\nmessage_id\030\002 \001(\005\"s\n\tDeleteM"
   "sg\022\036\n\006action\030\001 \001(\0162\016.cqhttp.Action\022(\n\006pa"
   "rams\030\002 \001(\0132\030.cqhttp.DeleteMsg.Params\032\034\n\006"
-  "Params\022\022\n\nmessage_id\030\001 \001(\005\"{\n\006getMsg\022\036\n\006"
+  "Params\022\022\n\nmessage_id\030\001 \001(\005\"{\n\006GetMsg\022\036\n\006"
   "action\030\001 \001(\0162\016.cqhttp.Action\022%\n\006params\030\002"
-  " \001(\0132\025.cqhttp.getMsg.Params\022\014\n\004echo\030\003 \001("
-  "\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\274\001\n\ngetM"
+  " \001(\0132\025.cqhttp.GetMsg.Params\022\014\n\004echo\030\003 \001("
+  "\t\032\034\n\006Params\022\022\n\nmessage_id\030\001 \001(\005\"\274\001\n\nGetM"
   "sgResp\022\r\n\005group\030\001 \001(\010\022\020\n\010group_id\030\002 \001(\003\022"
   "\022\n\nmessage_id\030\003 \001(\005\022\017\n\007real_id\030\004 \001(\005\022\024\n\014"
   "message_type\030\005 \001(\t\022\036\n\006sender\030\006 \001(\0132\016.cqh"
@@ -8573,29 +8573,29 @@ void DeleteMsg::InternalSwap(DeleteMsg* other) {
 
 // ===================================================================
 
-class getMsg_Params::_Internal {
+class GetMsg_Params::_Internal {
  public:
 };
 
-getMsg_Params::getMsg_Params(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+GetMsg_Params::GetMsg_Params(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.getMsg.Params)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.GetMsg.Params)
 }
-getMsg_Params::getMsg_Params(const getMsg_Params& from)
+GetMsg_Params::GetMsg_Params(const GetMsg_Params& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  getMsg_Params* const _this = this; (void)_this;
+  GetMsg_Params* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.message_id_){}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   _this->_impl_.message_id_ = from._impl_.message_id_;
-  // @@protoc_insertion_point(copy_constructor:cqhttp.getMsg.Params)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.GetMsg.Params)
 }
 
-inline void getMsg_Params::SharedCtor(
+inline void GetMsg_Params::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -8605,8 +8605,8 @@ inline void getMsg_Params::SharedCtor(
   };
 }
 
-getMsg_Params::~getMsg_Params() {
-  // @@protoc_insertion_point(destructor:cqhttp.getMsg.Params)
+GetMsg_Params::~GetMsg_Params() {
+  // @@protoc_insertion_point(destructor:cqhttp.GetMsg.Params)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -8614,16 +8614,16 @@ getMsg_Params::~getMsg_Params() {
   SharedDtor();
 }
 
-inline void getMsg_Params::SharedDtor() {
+inline void GetMsg_Params::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void getMsg_Params::SetCachedSize(int size) const {
+void GetMsg_Params::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void getMsg_Params::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.getMsg.Params)
+void GetMsg_Params::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.GetMsg.Params)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8632,7 +8632,7 @@ void getMsg_Params::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* getMsg_Params::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* GetMsg_Params::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -8669,9 +8669,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* getMsg_Params::_InternalSerialize(
+uint8_t* GetMsg_Params::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.getMsg.Params)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.GetMsg.Params)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8685,12 +8685,12 @@ uint8_t* getMsg_Params::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.getMsg.Params)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.GetMsg.Params)
   return target;
 }
 
-size_t getMsg_Params::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.getMsg.Params)
+size_t GetMsg_Params::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.GetMsg.Params)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8705,17 +8705,17 @@ size_t getMsg_Params::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData getMsg_Params::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetMsg_Params::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    getMsg_Params::MergeImpl
+    GetMsg_Params::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*getMsg_Params::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetMsg_Params::GetClassData() const { return &_class_data_; }
 
 
-void getMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<getMsg_Params*>(&to_msg);
-  auto& from = static_cast<const getMsg_Params&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.getMsg.Params)
+void GetMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetMsg_Params*>(&to_msg);
+  auto& from = static_cast<const GetMsg_Params&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.GetMsg.Params)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8726,24 +8726,24 @@ void getMsg_Params::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void getMsg_Params::CopyFrom(const getMsg_Params& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.getMsg.Params)
+void GetMsg_Params::CopyFrom(const GetMsg_Params& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.GetMsg.Params)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool getMsg_Params::IsInitialized() const {
+bool GetMsg_Params::IsInitialized() const {
   return true;
 }
 
-void getMsg_Params::InternalSwap(getMsg_Params* other) {
+void GetMsg_Params::InternalSwap(GetMsg_Params* other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_.message_id_, other->_impl_.message_id_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata getMsg_Params::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetMsg_Params::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fapi_2eproto_getter, &descriptor_table_cqhttp_5fapi_2eproto_once,
       file_level_metadata_cqhttp_5fapi_2eproto[14]);
@@ -8751,24 +8751,24 @@ void getMsg_Params::InternalSwap(getMsg_Params* other) {
 
 // ===================================================================
 
-class getMsg::_Internal {
+class GetMsg::_Internal {
  public:
-  static const ::cqhttp::getMsg_Params& params(const getMsg* msg);
+  static const ::cqhttp::GetMsg_Params& params(const GetMsg* msg);
 };
 
-const ::cqhttp::getMsg_Params&
-getMsg::_Internal::params(const getMsg* msg) {
+const ::cqhttp::GetMsg_Params&
+GetMsg::_Internal::params(const GetMsg* msg) {
   return *msg->_impl_.params_;
 }
-getMsg::getMsg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+GetMsg::GetMsg(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.getMsg)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.GetMsg)
 }
-getMsg::getMsg(const getMsg& from)
+GetMsg::GetMsg(const GetMsg& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  getMsg* const _this = this; (void)_this;
+  GetMsg* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.echo_){}
     , decltype(_impl_.params_){nullptr}
@@ -8785,13 +8785,13 @@ getMsg::getMsg(const getMsg& from)
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_params()) {
-    _this->_impl_.params_ = new ::cqhttp::getMsg_Params(*from._impl_.params_);
+    _this->_impl_.params_ = new ::cqhttp::GetMsg_Params(*from._impl_.params_);
   }
   _this->_impl_.action_ = from._impl_.action_;
-  // @@protoc_insertion_point(copy_constructor:cqhttp.getMsg)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.GetMsg)
 }
 
-inline void getMsg::SharedCtor(
+inline void GetMsg::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -8807,8 +8807,8 @@ inline void getMsg::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-getMsg::~getMsg() {
-  // @@protoc_insertion_point(destructor:cqhttp.getMsg)
+GetMsg::~GetMsg() {
+  // @@protoc_insertion_point(destructor:cqhttp.GetMsg)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -8816,18 +8816,18 @@ getMsg::~getMsg() {
   SharedDtor();
 }
 
-inline void getMsg::SharedDtor() {
+inline void GetMsg::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.echo_.Destroy();
   if (this != internal_default_instance()) delete _impl_.params_;
 }
 
-void getMsg::SetCachedSize(int size) const {
+void GetMsg::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void getMsg::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.getMsg)
+void GetMsg::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.GetMsg)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -8841,7 +8841,7 @@ void getMsg::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* getMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* GetMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -8856,7 +8856,7 @@ const char* getMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         } else
           goto handle_unusual;
         continue;
-      // .cqhttp.getMsg.Params params = 2;
+      // .cqhttp.GetMsg.Params params = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_params(), ptr);
@@ -8870,7 +8870,7 @@ const char* getMsg::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
           auto str = _internal_mutable_echo();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.getMsg.echo"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetMsg.echo"));
         } else
           goto handle_unusual;
         continue;
@@ -8897,9 +8897,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* getMsg::_InternalSerialize(
+uint8_t* GetMsg::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.getMsg)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.GetMsg)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -8910,7 +8910,7 @@ uint8_t* getMsg::_InternalSerialize(
       1, this->_internal_action(), target);
   }
 
-  // .cqhttp.getMsg.Params params = 2;
+  // .cqhttp.GetMsg.Params params = 2;
   if (this->_internal_has_params()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(2, _Internal::params(this),
@@ -8922,7 +8922,7 @@ uint8_t* getMsg::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_echo().data(), static_cast<int>(this->_internal_echo().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.getMsg.echo");
+      "cqhttp.GetMsg.echo");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_echo(), target);
   }
@@ -8931,12 +8931,12 @@ uint8_t* getMsg::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.getMsg)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.GetMsg)
   return target;
 }
 
-size_t getMsg::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.getMsg)
+size_t GetMsg::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.GetMsg)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -8950,7 +8950,7 @@ size_t getMsg::ByteSizeLong() const {
         this->_internal_echo());
   }
 
-  // .cqhttp.getMsg.Params params = 2;
+  // .cqhttp.GetMsg.Params params = 2;
   if (this->_internal_has_params()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -8966,17 +8966,17 @@ size_t getMsg::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData getMsg::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetMsg::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    getMsg::MergeImpl
+    GetMsg::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*getMsg::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetMsg::GetClassData() const { return &_class_data_; }
 
 
-void getMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<getMsg*>(&to_msg);
-  auto& from = static_cast<const getMsg&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.getMsg)
+void GetMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetMsg*>(&to_msg);
+  auto& from = static_cast<const GetMsg&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.GetMsg)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -8985,7 +8985,7 @@ void getMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBU
     _this->_internal_set_echo(from._internal_echo());
   }
   if (from._internal_has_params()) {
-    _this->_internal_mutable_params()->::cqhttp::getMsg_Params::MergeFrom(
+    _this->_internal_mutable_params()->::cqhttp::GetMsg_Params::MergeFrom(
         from._internal_params());
   }
   if (from._internal_action() != 0) {
@@ -8994,18 +8994,18 @@ void getMsg::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBU
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void getMsg::CopyFrom(const getMsg& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.getMsg)
+void GetMsg::CopyFrom(const GetMsg& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.GetMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool getMsg::IsInitialized() const {
+bool GetMsg::IsInitialized() const {
   return true;
 }
 
-void getMsg::InternalSwap(getMsg* other) {
+void GetMsg::InternalSwap(GetMsg* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -9015,14 +9015,14 @@ void getMsg::InternalSwap(getMsg* other) {
       &other->_impl_.echo_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(getMsg, _impl_.action_)
-      + sizeof(getMsg::_impl_.action_)
-      - PROTOBUF_FIELD_OFFSET(getMsg, _impl_.params_)>(
+      PROTOBUF_FIELD_OFFSET(GetMsg, _impl_.action_)
+      + sizeof(GetMsg::_impl_.action_)
+      - PROTOBUF_FIELD_OFFSET(GetMsg, _impl_.params_)>(
           reinterpret_cast<char*>(&_impl_.params_),
           reinterpret_cast<char*>(&other->_impl_.params_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata getMsg::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetMsg::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fapi_2eproto_getter, &descriptor_table_cqhttp_5fapi_2eproto_once,
       file_level_metadata_cqhttp_5fapi_2eproto[15]);
@@ -9030,30 +9030,30 @@ void getMsg::InternalSwap(getMsg* other) {
 
 // ===================================================================
 
-class getMsgResp::_Internal {
+class GetMsgResp::_Internal {
  public:
-  static const ::cqhttp::Sender& sender(const getMsgResp* msg);
+  static const ::cqhttp::Sender& sender(const GetMsgResp* msg);
 };
 
 const ::cqhttp::Sender&
-getMsgResp::_Internal::sender(const getMsgResp* msg) {
+GetMsgResp::_Internal::sender(const GetMsgResp* msg) {
   return *msg->_impl_.sender_;
 }
-void getMsgResp::clear_sender() {
+void GetMsgResp::clear_sender() {
   if (GetArenaForAllocation() == nullptr && _impl_.sender_ != nullptr) {
     delete _impl_.sender_;
   }
   _impl_.sender_ = nullptr;
 }
-getMsgResp::getMsgResp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+GetMsgResp::GetMsgResp(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:cqhttp.getMsgResp)
+  // @@protoc_insertion_point(arena_constructor:cqhttp.GetMsgResp)
 }
-getMsgResp::getMsgResp(const getMsgResp& from)
+GetMsgResp::GetMsgResp(const GetMsgResp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  getMsgResp* const _this = this; (void)_this;
+  GetMsgResp* const _this = this; (void)_this;
   new (&_impl_) Impl_{
       decltype(_impl_.message_type_){}
     , decltype(_impl_.message_){}
@@ -9097,10 +9097,10 @@ getMsgResp::getMsgResp(const getMsgResp& from)
   ::memcpy(&_impl_.group_id_, &from._impl_.group_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.time_) -
     reinterpret_cast<char*>(&_impl_.group_id_)) + sizeof(_impl_.time_));
-  // @@protoc_insertion_point(copy_constructor:cqhttp.getMsgResp)
+  // @@protoc_insertion_point(copy_constructor:cqhttp.GetMsgResp)
 }
 
-inline void getMsgResp::SharedCtor(
+inline void GetMsgResp::SharedCtor(
     ::_pb::Arena* arena, bool is_message_owned) {
   (void)arena;
   (void)is_message_owned;
@@ -9130,8 +9130,8 @@ inline void getMsgResp::SharedCtor(
   #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
-getMsgResp::~getMsgResp() {
-  // @@protoc_insertion_point(destructor:cqhttp.getMsgResp)
+GetMsgResp::~GetMsgResp() {
+  // @@protoc_insertion_point(destructor:cqhttp.GetMsgResp)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -9139,7 +9139,7 @@ getMsgResp::~getMsgResp() {
   SharedDtor();
 }
 
-inline void getMsgResp::SharedDtor() {
+inline void GetMsgResp::SharedDtor() {
   GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
   _impl_.message_type_.Destroy();
   _impl_.message_.Destroy();
@@ -9147,12 +9147,12 @@ inline void getMsgResp::SharedDtor() {
   if (this != internal_default_instance()) delete _impl_.sender_;
 }
 
-void getMsgResp::SetCachedSize(int size) const {
+void GetMsgResp::SetCachedSize(int size) const {
   _impl_._cached_size_.Set(size);
 }
 
-void getMsgResp::Clear() {
-// @@protoc_insertion_point(message_clear_start:cqhttp.getMsgResp)
+void GetMsgResp::Clear() {
+// @@protoc_insertion_point(message_clear_start:cqhttp.GetMsgResp)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -9170,7 +9170,7 @@ void getMsgResp::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* getMsgResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* GetMsgResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     uint32_t tag;
@@ -9214,7 +9214,7 @@ const char* getMsgResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_message_type();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.getMsgResp.message_type"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetMsgResp.message_type"));
         } else
           goto handle_unusual;
         continue;
@@ -9240,7 +9240,7 @@ const char* getMsgResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.getMsgResp.message"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetMsgResp.message"));
         } else
           goto handle_unusual;
         continue;
@@ -9250,7 +9250,7 @@ const char* getMsgResp::_InternalParse(const char* ptr, ::_pbi::ParseContext* ct
           auto str = _internal_mutable_raw_message();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.getMsgResp.raw_message"));
+          CHK_(::_pbi::VerifyUTF8(str, "cqhttp.GetMsgResp.raw_message"));
         } else
           goto handle_unusual;
         continue;
@@ -9277,9 +9277,9 @@ failure:
 #undef CHK_
 }
 
-uint8_t* getMsgResp::_InternalSerialize(
+uint8_t* GetMsgResp::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.getMsgResp)
+  // @@protoc_insertion_point(serialize_to_array_start:cqhttp.GetMsgResp)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -9312,7 +9312,7 @@ uint8_t* getMsgResp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message_type().data(), static_cast<int>(this->_internal_message_type().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.getMsgResp.message_type");
+      "cqhttp.GetMsgResp.message_type");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_message_type(), target);
   }
@@ -9335,7 +9335,7 @@ uint8_t* getMsgResp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.getMsgResp.message");
+      "cqhttp.GetMsgResp.message");
     target = stream->WriteStringMaybeAliased(
         8, this->_internal_message(), target);
   }
@@ -9345,7 +9345,7 @@ uint8_t* getMsgResp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_raw_message().data(), static_cast<int>(this->_internal_raw_message().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "cqhttp.getMsgResp.raw_message");
+      "cqhttp.GetMsgResp.raw_message");
     target = stream->WriteStringMaybeAliased(
         9, this->_internal_raw_message(), target);
   }
@@ -9354,12 +9354,12 @@ uint8_t* getMsgResp::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.getMsgResp)
+  // @@protoc_insertion_point(serialize_to_array_end:cqhttp.GetMsgResp)
   return target;
 }
 
-size_t getMsgResp::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:cqhttp.getMsgResp)
+size_t GetMsgResp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:cqhttp.GetMsgResp)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -9422,17 +9422,17 @@ size_t getMsgResp::ByteSizeLong() const {
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData getMsgResp::_class_data_ = {
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GetMsgResp::_class_data_ = {
     ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    getMsgResp::MergeImpl
+    GetMsgResp::MergeImpl
 };
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*getMsgResp::GetClassData() const { return &_class_data_; }
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GetMsgResp::GetClassData() const { return &_class_data_; }
 
 
-void getMsgResp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<getMsgResp*>(&to_msg);
-  auto& from = static_cast<const getMsgResp&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.getMsgResp)
+void GetMsgResp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GetMsgResp*>(&to_msg);
+  auto& from = static_cast<const GetMsgResp&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:cqhttp.GetMsgResp)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -9468,18 +9468,18 @@ void getMsgResp::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PRO
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
-void getMsgResp::CopyFrom(const getMsgResp& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.getMsgResp)
+void GetMsgResp::CopyFrom(const GetMsgResp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:cqhttp.GetMsgResp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool getMsgResp::IsInitialized() const {
+bool GetMsgResp::IsInitialized() const {
   return true;
 }
 
-void getMsgResp::InternalSwap(getMsgResp* other) {
+void GetMsgResp::InternalSwap(GetMsgResp* other) {
   using std::swap;
   auto* lhs_arena = GetArenaForAllocation();
   auto* rhs_arena = other->GetArenaForAllocation();
@@ -9497,14 +9497,14 @@ void getMsgResp::InternalSwap(getMsgResp* other) {
       &other->_impl_.raw_message_, rhs_arena
   );
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(getMsgResp, _impl_.time_)
-      + sizeof(getMsgResp::_impl_.time_)
-      - PROTOBUF_FIELD_OFFSET(getMsgResp, _impl_.sender_)>(
+      PROTOBUF_FIELD_OFFSET(GetMsgResp, _impl_.time_)
+      + sizeof(GetMsgResp::_impl_.time_)
+      - PROTOBUF_FIELD_OFFSET(GetMsgResp, _impl_.sender_)>(
           reinterpret_cast<char*>(&_impl_.sender_),
           reinterpret_cast<char*>(&other->_impl_.sender_));
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata getMsgResp::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetMsgResp::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_cqhttp_5fapi_2eproto_getter, &descriptor_table_cqhttp_5fapi_2eproto_once,
       file_level_metadata_cqhttp_5fapi_2eproto[16]);
@@ -52307,17 +52307,17 @@ template<> PROTOBUF_NOINLINE ::cqhttp::DeleteMsg*
 Arena::CreateMaybeMessage< ::cqhttp::DeleteMsg >(Arena* arena) {
   return Arena::CreateMessageInternal< ::cqhttp::DeleteMsg >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::getMsg_Params*
-Arena::CreateMaybeMessage< ::cqhttp::getMsg_Params >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::getMsg_Params >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::GetMsg_Params*
+Arena::CreateMaybeMessage< ::cqhttp::GetMsg_Params >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::GetMsg_Params >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::getMsg*
-Arena::CreateMaybeMessage< ::cqhttp::getMsg >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::getMsg >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::GetMsg*
+Arena::CreateMaybeMessage< ::cqhttp::GetMsg >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::GetMsg >(arena);
 }
-template<> PROTOBUF_NOINLINE ::cqhttp::getMsgResp*
-Arena::CreateMaybeMessage< ::cqhttp::getMsgResp >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::cqhttp::getMsgResp >(arena);
+template<> PROTOBUF_NOINLINE ::cqhttp::GetMsgResp*
+Arena::CreateMaybeMessage< ::cqhttp::GetMsgResp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::cqhttp::GetMsgResp >(arena);
 }
 template<> PROTOBUF_NOINLINE ::cqhttp::GetForwardMsg_Params*
 Arena::CreateMaybeMessage< ::cqhttp::GetForwardMsg_Params >(Arena* arena) {

@@ -23,7 +23,7 @@ Bot::sendPrivateMsg(const std::string &msg, const int64_t &user_id, bool auto_es
 }
 
 template<typename T, typename T2>
-std::shared_ptr<T> Bot::sendAndWaitResp(T2 builder) {
+std::shared_ptr<T> Bot::sendAndWaitResp(T2 &builder) {
     time_t echo;
     std::string echo_str = Action_Name(builder.action()) + "_" + std::to_string(time(&echo));
     builder.set_echo(echo_str);
@@ -73,4 +73,38 @@ Bot::sendMessage(const std::string &msg, const int64_t &receiver_id, const CQHTT
 
     auto resp = this->sendAndWaitResp<T, T2>(builder);
     return resp;
+}
+
+std::shared_ptr<cqhttp::GetMsgResp> Bot::getMessage(const int32_t &message_id) {
+    GetMsg builder;
+    builder.set_action(cqhttp::Action::get_msg);
+    auto *params = new GetMsg_Params; // 不用手动 delete, 由 protobuf 为我们 delete
+    params->set_message_id(message_id);
+    builder.set_allocated_params(params);
+
+    return this->sendAndWaitResp<GetMsgResp, GetMsg>(builder);
+}
+
+void Bot::deleteMsg(const int32_t &message_id) {
+    DeleteMsg builder;
+    builder.set_action(cqhttp::Action::delete_msg);
+    DeleteMsg_Params *params = builder.mutable_params();
+    params->set_message_id(message_id);
+
+    this->sendOnly<DeleteMsg>(builder);
+}
+
+template<typename T>
+void Bot::sendOnly(T &builder) {
+    std::string builder_str;
+    status_internal::Status status;
+    status = MessageToJsonString(builder, &builder_str, print_options);
+
+    if (!status.ok()) {
+        LOG_INFO << "Failed to parse the message as string.";
+        return;
+    }
+    m_mutex.lock();
+    this->bot->send(builder_str);
+    m_mutex.unlock();
 }
